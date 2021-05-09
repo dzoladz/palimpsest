@@ -1,0 +1,777 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.82.0" /><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>Derek C. Zoladz</title><meta property="og:title" content="" />
+<meta property="og:description" content="EZproxy A snippet of fragments useful for administering EZproxy
+Reject connections that originate from IPs outside of Ohio region. Region codes should be specified using the two-character ISO 3166-2 subcountry code for the US.
+GeoLite data must also be configured on EZproxy (see the Location section of the EZproxy manual).
+::Common Set access = &#34;deny&#34;; If Region() eq &#34;OH&#34;; Set access = &#34;allow&#34; If access eq &#34;deny&#34;; Deny irefused.htm /Common Regex for use in the main authentication block." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/docs/notebooks/ezproxy/" /><meta property="article:section" content="docs" />
+
+<meta property="article:modified_time" content="2021-05-09T17:51:15-04:00" /><meta property="og:site_name" content="Derek C. Zoladz" />
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="EZproxy A snippet of fragments useful for administering EZproxy
+Reject connections that originate from IPs outside of Ohio region. Region codes should be specified using the two-character ISO 3166-2 subcountry code for the US.
+GeoLite data must also be configured on EZproxy (see the Location section of the EZproxy manual).
+::Common Set access = &#34;deny&#34;; If Region() eq &#34;OH&#34;; Set access = &#34;allow&#34; If access eq &#34;deny&#34;; Deny irefused.htm /Common Regex for use in the main authentication block.">
+<meta itemprop="dateModified" content="2021-05-09T17:51:15-04:00" />
+<meta itemprop="wordCount" content="566">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="EZproxy A snippet of fragments useful for administering EZproxy
+Reject connections that originate from IPs outside of Ohio region. Region codes should be specified using the two-character ISO 3166-2 subcountry code for the US.
+GeoLite data must also be configured on EZproxy (see the Location section of the EZproxy manual).
+::Common Set access = &#34;deny&#34;; If Region() eq &#34;OH&#34;; Set access = &#34;allow&#34; If access eq &#34;deny&#34;; Deny irefused.htm /Common Regex for use in the main authentication block."/>
+
+
+
+
+
+<link rel="preload" href="/scss/main.min.d1d57f58ee9f13ead47fdf56f912d0ae112fcd034d8628a99a475f1d8d524d48.css" as="style">
+<link href="/scss/main.min.d1d57f58ee9f13ead47fdf56f912d0ae112fcd034d8628a99a475f1d8d524d48.css" rel="stylesheet" integrity="">
+
+
+<script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+
+
+
+
+
+  </head>
+  <body class="td-page">
+    <header>
+      
+<nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+        <a class="navbar-brand" href="/">
+		<span class="navbar-logo"></span>
+	</a>
+	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+		<ul class="navbar-nav mt-2 mt-lg-0">
+			
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				<a  class="nav-link" href="/" ><span>Home</span></a>
+			</li>
+			
+			
+			
+		</ul>
+	</div>
+	<div class="navbar-nav d-none d-lg-block">
+</div>
+</nav>
+
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            
+
+
+
+
+<div id="td-sidebar-menu" class="td-sidebar__inner">
+  
+  <form class="td-sidebar__search d-flex align-items-center d-lg-none">
+    
+
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button" data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  
+  <nav class="collapse td-sidebar-nav" id="td-section-nav">
+    
+    
+    
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Docs</a>
+  </li>
+  <ul>
+    <li class="collapse show" id="docs">
+      
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/notebooks/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">Notebooks</a>
+  </li>
+  <ul>
+    <li class="collapse show" id="docsnotebooks">
+      
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebooksbusiness_apps" href="/docs/notebooks/business_apps/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebookscertbot" href="/docs/notebooks/certbot/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebookschroot-sftp-setup" href="/docs/notebooks/chroot-sftp-setup/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebookscron" href="/docs/notebooks/cron/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebooksdocker" href="/docs/notebooks/docker/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebooksexpand_volumes" href="/docs/notebooks/expand_volumes/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page  active" id="m-docsnotebooksezproxy" href="/docs/notebooks/ezproxy/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebooksfail2ban" href="/docs/notebooks/fail2ban/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebooksfolio" href="/docs/notebooks/folio/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebooksformats" href="/docs/notebooks/formats/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebooksgit" href="/docs/notebooks/git/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebooksgithub_topic_browse" href="/docs/notebooks/github_topic_browse/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebooksgpg" href="/docs/notebooks/gpg/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebooksgraphing" href="/docs/notebooks/graphing/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebooksjs_forms" href="/docs/notebooks/js_forms/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebookskeycloak_docker" href="/docs/notebooks/keycloak_docker/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebookslvm" href="/docs/notebooks/lvm/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebooksmailman" href="/docs/notebooks/mailman/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebooksmonit" href="/docs/notebooks/monit/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebooksnetworker_commands" href="/docs/notebooks/networker_commands/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebooksnetworking" href="/docs/notebooks/networking/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebookspackages" href="/docs/notebooks/packages/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebooksperlbrew" href="/docs/notebooks/perlbrew/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebookspostfix" href="/docs/notebooks/postfix/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebookspostgres" href="/docs/notebooks/postgres/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebookspython4lib" href="/docs/notebooks/python4lib/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebooksreact" href="/docs/notebooks/react/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebooksreadme" href="/docs/notebooks/readme/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebookssamba" href="/docs/notebooks/samba/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebookssed_awk" href="/docs/notebooks/sed_awk/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebookssip" href="/docs/notebooks/sip/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebooksssh" href="/docs/notebooks/ssh/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebooksssl" href="/docs/notebooks/ssl/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebookstasks" href="/docs/notebooks/tasks/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebooksyaz" href="/docs/notebooks/yaz/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebookshomebrew" href="/docs/notebooks/homebrew/">Homebrew</a>
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+  </nav>
+</div>
+
+
+
+
+          </div>
+          <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
+            
+
+
+
+
+
+
+<div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
+
+
+
+
+
+
+
+
+
+
+
+<a href="https://github.com/google/docsy-example/edit/master/content/en/docs/Notebooks/ezproxy.md" target="_blank"><i class="fa fa-edit fa-fw"></i> Edit this page</a>
+<a href="https://github.com/google/docsy-example/new/master/content/en/docs/Notebooks/ezproxy.md?filename=change-me.md&amp;value=---%0Atitle%3A&#43;%22Long&#43;Page&#43;Title%22%0AlinkTitle%3A&#43;%22Short&#43;Nav&#43;Title%22%0Aweight%3A&#43;100%0Adescription%3A&#43;%3E-%0A&#43;&#43;&#43;&#43;&#43;Page&#43;description&#43;for&#43;heading&#43;and&#43;indexes.%0A---%0A%0A%23%23&#43;Heading%0A%0AEdit&#43;this&#43;template&#43;to&#43;create&#43;your&#43;new&#43;page.%0A%0A%2A&#43;Give&#43;it&#43;a&#43;good&#43;name%2C&#43;ending&#43;in&#43;%60.md%60&#43;-&#43;e.g.&#43;%60getting-started.md%60%0A%2A&#43;Edit&#43;the&#43;%22front&#43;matter%22&#43;section&#43;at&#43;the&#43;top&#43;of&#43;the&#43;page&#43;%28weight&#43;controls&#43;how&#43;its&#43;ordered&#43;amongst&#43;other&#43;pages&#43;in&#43;the&#43;same&#43;directory%3B&#43;lowest&#43;number&#43;first%29.%0A%2A&#43;Add&#43;a&#43;good&#43;commit&#43;message&#43;at&#43;the&#43;bottom&#43;of&#43;the&#43;page&#43;%28%3C80&#43;characters%3B&#43;use&#43;the&#43;extended&#43;description&#43;field&#43;for&#43;more&#43;detail%29.%0A%2A&#43;Create&#43;a&#43;new&#43;branch&#43;so&#43;you&#43;can&#43;preview&#43;your&#43;new&#43;file&#43;and&#43;request&#43;a&#43;review&#43;via&#43;Pull&#43;Request.%0A" target="_blank"><i class="fa fa-edit fa-fw"></i> Create child page</a>
+<a href="https://github.com/google/docsy-example/issues/new?title=" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
+
+
+<a href="https://github.com/google/docsy/issues/new" target="_blank"><i class="fas fa-tasks fa-fw"></i> Create project issue</a>
+
+
+
+<a id="print" href="/docs/notebooks/_print/"><i class="fa fa-print fa-fw"></i> Print entire section</a>
+
+
+
+</div>
+
+
+
+
+
+
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#reject-connections-that-originate-from-ips-outside-of-ohio-region">Reject connections that originate from IPs outside of Ohio region.</a></li>
+    <li><a href="#supply-resource-credentials-within-an-iframe">Supply Resource Credentials within an iFrame</a></li>
+    <li><a href="#regex-validation-of-saml-attributes-in-the-auth-namespace">Regex Validation of SAML Attributes in the Auth: Namespace</a></li>
+    <li><a href="#auto-trigger-attribute-replacement-via-ezproxy-findreplace">Auto-trigger attribute replacement via EZproxy Find/Replace</a></li>
+    <li><a href="#cron-jobs-for-monitoring-activity">Cron Jobs for Monitoring Activity</a></li>
+    <li><a href="#strip-parameters-from-dois">Strip Parameters from DOIs</a></li>
+    <li><a href="#group-based-access-to-loggedin-files">Group-based Access to /Loggedin Files</a></li>
+    <li><a href="#issue-a-manual-call-to-the-sierra-patron-api">Issue a Manual Call to the Sierra Patron API</a></li>
+  </ul>
+</nav>
+
+
+
+          </div>
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="d-none d-md-block d-print-none">
+	<ol class="breadcrumb spb-1">
+		
+
+
+
+
+
+
+
+
+
+
+<li class="breadcrumb-item" >
+	<a href="/docs/">Docs</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item" >
+	<a href="/docs/notebooks/">Notebooks</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item active" aria-current="page">
+	<a href="/docs/notebooks/ezproxy/"></a>
+</li>
+
+	</ol>
+</nav	>
+
+            
+<div class="td-content">
+	<h1></h1>
+    
+	       
+	<h1 id="ezproxy">EZproxy</h1>
+<p>A snippet of fragments useful for administering EZproxy</p>
+<h2 id="reject-connections-that-originate-from-ips-outside-of-ohio-region">Reject connections that originate from IPs outside of Ohio region.</h2>
+<p>Region codes should be specified using the two-character <a href="https://geolite.maxmind.com/download/geoip/misc/region_codes.csv">ISO 3166-2 subcountry code for the US</a>.</p>
+<p>GeoLite data must also be configured on EZproxy (see the <a href="https://help.oclc.org/Library_Management/EZproxy/Configure_resources/Location">Location</a> section of the EZproxy manual).</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">::Common
+Set <span style="color:#000">access</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;deny&#34;</span><span style="color:#000;font-weight:bold">;</span>
+If Region<span style="color:#ce5c00;font-weight:bold">()</span> eq <span style="color:#4e9a06">&#34;OH&#34;</span><span style="color:#000;font-weight:bold">;</span> Set <span style="color:#000">access</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;allow&#34;</span>
+If access eq <span style="color:#4e9a06">&#34;deny&#34;</span><span style="color:#000;font-weight:bold">;</span> Deny irefused.htm
+/Common
+</code></pre></div><p>Regex for use in the main authentication block. Deny all access, unless the location contains OH, IA, OR MI in the string.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Set <span style="color:#000">access</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;deny&#34;</span><span style="color:#000;font-weight:bold">;</span>
+If Region<span style="color:#ce5c00;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">=</span>~ <span style="color:#4e9a06">&#34;/.*(OH|IA|MI).*/&#34;</span><span style="color:#000;font-weight:bold">;</span> Set <span style="color:#000">access</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;allow&#34;</span>
+If access eq <span style="color:#4e9a06">&#34;deny&#34;</span><span style="color:#000;font-weight:bold">;</span> Deny irefused.htm
+</code></pre></div><p>The above should be placed before any <code>IfRefused; Deny irefused.htm</code> or <code>IfExpired; Deny iexpired.htm</code> directives in the main authentication block.</p>
+<p>It&rsquo;s also possible to restrict authentication to US-based IPs, using the <code>IfCountry</code> function. <code>IfCountry</code> used the two-letter <a href="https://dev.maxmind.com/geoip/legacy/codes/iso3166/">ISO 3166 Country Codes</a>.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Set <span style="color:#000">access</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;deny&#34;</span><span style="color:#000;font-weight:bold">;</span>
+IfCountry US<span style="color:#000;font-weight:bold">;</span> Set <span style="color:#000">access</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;allow&#34;</span>
+If access eq <span style="color:#4e9a06">&#34;deny&#34;</span><span style="color:#000;font-weight:bold">;</span> Deny irefused.htm
+</code></pre></div><p><strong>NOTE</strong>: The above snippet of code needs to be placed <strong>within</strong> the authentication block to be actively restriction authentication attempts that originate from a non-US country code.</p>
+<h2 id="supply-resource-credentials-within-an-iframe">Supply Resource Credentials within an iFrame</h2>
+<p>There are times when you might need to Find/Replace username and password values within an <code>&lt;iframe&gt;</code> element The example below is a working draft of two auto-triggered functions to input credentials into the proper form fields.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Find &lt;/iframe&gt;
+Replace &lt;/iframe&gt;&lt;script&gt;<span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">function</span><span style="color:#ce5c00;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">{</span> setTimeout<span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">function</span><span style="color:#ce5c00;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">{</span>window.frames<span style="color:#ce5c00;font-weight:bold">[</span>0<span style="color:#ce5c00;font-weight:bold">]</span>.document.getElementById<span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#39;username&#39;</span><span style="color:#ce5c00;font-weight:bold">)</span>.value <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;USERNAME&#34;</span><span style="color:#000;font-weight:bold">;</span><span style="color:#ce5c00;font-weight:bold">}</span>, 1000<span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#ce5c00;font-weight:bold">})()</span><span style="color:#000;font-weight:bold">;</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">function</span><span style="color:#ce5c00;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">{</span> setTimeout<span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">function</span><span style="color:#ce5c00;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">{</span>window.frames<span style="color:#ce5c00;font-weight:bold">[</span>0<span style="color:#ce5c00;font-weight:bold">]</span>.document.getElementById<span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#39;password&#39;</span><span style="color:#ce5c00;font-weight:bold">)</span>.value <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;PASSWORD&#34;</span><span style="color:#000;font-weight:bold">;</span><span style="color:#ce5c00;font-weight:bold">}</span>, 1000<span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#ce5c00;font-weight:bold">})()</span><span style="color:#000;font-weight:bold">;</span>&lt;/script&gt;
+</code></pre></div><h2 id="regex-validation-of-saml-attributes-in-the-auth-namespace">Regex Validation of SAML Attributes in the Auth: Namespace</h2>
+<p>SAML authorization check, within <code>shibuser.txt</code>, against the <code>userid</code> attribute released to EZproxy</p>
+<blockquote>
+<p>Authorize <code>userid</code>, if it begins with  1, 3, or 5. Otherwise, record <code>userid</code> and deny with <code>itype.htm</code></p>
+</blockquote>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">If !<span style="color:#ce5c00;font-weight:bold">(</span>auth:userid <span style="color:#ce5c00;font-weight:bold">=</span>~ <span style="color:#4e9a06">&#34;/^(1|3|5).+</span>$<span style="color:#4e9a06">/&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span> Audit -expr auth:userid<span style="color:#000;font-weight:bold">;</span> Deny itype.htm<span style="color:#000;font-weight:bold">;</span> Stop
+</code></pre></div><h2 id="auto-trigger-attribute-replacement-via-ezproxy-findreplace">Auto-trigger attribute replacement via EZproxy Find/Replace</h2>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">function</span><span style="color:#ce5c00;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+        var <span style="color:#000">url</span> <span style="color:#ce5c00;font-weight:bold">=</span> document.getElementById<span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#39;ctl00_BodyContent_ucShare_txtTitleURL&#39;</span><span style="color:#ce5c00;font-weight:bold">)</span>.value<span style="color:#000;font-weight:bold">;</span>
+        var <span style="color:#000">fixed_url</span> <span style="color:#ce5c00;font-weight:bold">=</span> url.replace<span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#39;fod.infobase.com&#39;</span>, <span style="color:#4e9a06">&#39;fod-infobase-com&#39;</span><span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+        document.getElementById<span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#39;ctl00_BodyContent_ucShare_txtTitleURL&#39;</span><span style="color:#ce5c00;font-weight:bold">)</span>.setAttribute<span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#39;value&#39;</span>, fixed_url<span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+<span style="color:#ce5c00;font-weight:bold">})()</span><span style="color:#000;font-weight:bold">;</span>
+</code></pre></div><h2 id="cron-jobs-for-monitoring-activity">Cron Jobs for Monitoring Activity</h2>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#0000cf;font-weight:bold">10</span> <span style="color:#0000cf;font-weight:bold">0</span> * * * find /usr/local -name messages.txt <span style="color:#000;font-weight:bold">|</span> xargs grep -E <span style="color:#4e9a06">&#34;Unrecognized|DANGER|hosts\s36[0-9][0-9]&#34;</span> <span style="color:#000;font-weight:bold">|</span> mail -E -s <span style="color:#4e9a06">&#34;EZproxy Warning Messages&#34;</span> -a <span style="color:#4e9a06">&#34;From: root \&lt;root@{hostname}\&gt;&#34;</span> recipient@derekzoladz.com
+
+<span style="color:#0000cf;font-weight:bold">20</span> <span style="color:#0000cf;font-weight:bold">0</span> * * * find /usr/local/ezproxy/audit/<span style="color:#204a87;font-weight:bold">$(</span>date --date<span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;yesterday&#39;</span> <span style="color:#4e9a06">&#34;+\%Y\%m\%d&#34;</span><span style="color:#204a87;font-weight:bold">)</span>.txt -type f <span style="color:#000;font-weight:bold">|</span> xargs grep -E <span style="color:#4e9a06">&#34;exceeded&#34;</span> <span style="color:#000;font-weight:bold">|</span> mail -E -s <span style="color:#4e9a06">&#34;EZproxy Exceeding Usage Limit&#34;</span> -a <span style="color:#4e9a06">&#34;From: root \&lt;root@{hostname}\&gt;&#34;</span> recipient@derekzoladz.com
+
+<span style="color:#0000cf;font-weight:bold">30</span> <span style="color:#0000cf;font-weight:bold">0</span> * * * find /usr/local/ezproxy/audit/<span style="color:#204a87;font-weight:bold">$(</span>date --date<span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;yesterday&#39;</span> <span style="color:#4e9a06">&#34;+\%Y\%m\%d&#34;</span><span style="color:#204a87;font-weight:bold">)</span>.txt -type f -print<span style="color:#000;font-weight:bold">|</span> xargs grep -E <span style="color:#4e9a06">&#34;Login.Intruder.IP&#34;</span> <span style="color:#000;font-weight:bold">|</span> mail -E -s <span style="color:#4e9a06">&#34;EZproxy Login.Intruder.IP&#34;</span> -a <span style="color:#4e9a06">&#34;From: root \&lt;root@{hostname}\&gt;&#34;</span> recipient@derekzoladz.com
+
+<span style="color:#0000cf;font-weight:bold">40</span> <span style="color:#0000cf;font-weight:bold">0</span> * * * find /usr/local/ezproxy/audit/<span style="color:#204a87;font-weight:bold">$(</span>date --date<span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;yesterday&#39;</span> <span style="color:#4e9a06">&#34;+\%Y\%m\%d&#34;</span><span style="color:#204a87;font-weight:bold">)</span>.txt -type f -print <span style="color:#000;font-weight:bold">|</span> xargs grep -E <span style="color:#4e9a06">&#34;Session.ReconnectBlocked&#34;</span> <span style="color:#000;font-weight:bold">|</span> mail -E -s <span style="color:#4e9a06">&#34;EZproxy Session.ReconnectBlocked&#34;</span> -a <span style="color:#4e9a06">&#34;From: root \&lt;root@{hostname}\&gt;&#34;</span> recipient@derekzoladz.com
+
+<span style="color:#0000cf;font-weight:bold">00</span> <span style="color:#0000cf;font-weight:bold">8</span> * * 1-5 find /usr/local/ezproxy/cookies -cmin +720 -type f <span style="color:#000;font-weight:bold">|</span> mail -E -s <span style="color:#4e9a06">&#34;EZproxy Sessions Over 12 Hours&#34;</span> -a <span style="color:#4e9a06">&#34;From: root \&lt;root@{hostname}\&gt;&#34;</span> recipient@derekzoladz.com
+</code></pre></div><h2 id="strip-parameters-from-dois">Strip Parameters from DOIs</h2>
+<p>Although valid extensions of the Document Object Model, passing parameters in the doi can cause resolution issues within EZproxy sessions.</p>
+<blockquote>
+<p>{host}?locatt=label:secondary_bloomsburyCollections</p>
+</blockquote>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">SPUEditVar <span style="color:#000">proxy_login</span><span style="color:#ce5c00;font-weight:bold">=</span>login?url<span style="color:#ce5c00;font-weight:bold">=</span>
+SPUEdit @^<span style="color:#ce5c00;font-weight:bold">(</span>https:<span style="color:#4e9a06">\/\/</span>doi.org<span style="color:#4e9a06">\/</span><span style="color:#ce5c00;font-weight:bold">)(</span>10.<span style="color:#ce5c00;font-weight:bold">[</span>0-9<span style="color:#ce5c00;font-weight:bold">]</span>*<span style="color:#4e9a06">\/</span><span style="color:#ce5c00;font-weight:bold">)([</span>0-9<span style="color:#ce5c00;font-weight:bold">]</span>*<span style="color:#ce5c00;font-weight:bold">)(</span><span style="color:#4e9a06">\?</span><span style="color:#000">locatt</span><span style="color:#ce5c00;font-weight:bold">=</span>label.*<span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000">$@</span><span style="color:#4e9a06">${</span><span style="color:#000">proxy_login</span><span style="color:#4e9a06">}</span><span style="color:#000">$1$2$3</span>@ir
+</code></pre></div><h2 id="group-based-access-to-loggedin-files">Group-based Access to /Loggedin Files</h2>
+<ol>
+<li>In <code>user.txt</code>, create the authenticated group</li>
+</ol>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">::group<span style="color:#ce5c00;font-weight:bold">=</span>SecretFiles+Admin.Groups
+user:password
+</code></pre></div><ol start="2">
+<li>Establish a <code>../loggedin/</code> directory for the named Group from <code>user.txt</code></li>
+</ol>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./docs/loggedin/SecretFiles
+</code></pre></div><h2 id="issue-a-manual-call-to-the-sierra-patron-api">Issue a Manual Call to the Sierra Patron API</h2>
+<p>Given a Sierra Patron Record containing <code>P BARCODE[pb]=fakeuser1234</code></p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl --interface eth0:48 https://<span style="color:#ce5c00;font-weight:bold">{</span>sierra-server-domain<span style="color:#ce5c00;font-weight:bold">}</span>:54620/PATRONAPI/fakeuser1234/dump
+</code></pre></div><p>If successful, the call will return patron data; otherwise, a failure message will be returned with additional information to diagnose the issue. For example:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&lt;BODY&gt;ERRNUM<span style="color:#ce5c00;font-weight:bold">=</span>2&lt;BR&gt;
+<span style="color:#000">ERRMSG</span><span style="color:#ce5c00;font-weight:bold">=</span>Record ID not unique&lt;BR&gt;
+&lt;/BODY&gt;
+</code></pre></div>
+	
+		<style>
+  .feedback--answer {
+    display: inline-block;
+  }
+  .feedback--answer-no {
+    margin-left: 1em;
+  }
+  .feedback--response {
+    display: none;
+    margin-top: 1em;
+  }
+  .feedback--response__visible {
+    display: block;
+  }
+</style>
+<div class="d-print-none">
+<h2 class="feedback--title">Feedback</h2>
+<p class="feedback--question">Was this page helpful?</p>
+<button class="feedback--answer feedback--answer-yes">Yes</button>
+<button class="feedback--answer feedback--answer-no">No</button>
+<p class="feedback--response feedback--response-yes">
+  Glad to hear it! Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.
+</p>
+<p class="feedback--response feedback--response-no">
+  Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.
+</p>
+</div>
+<script>
+  const yesButton = document.querySelector('.feedback--answer-yes');
+  const noButton = document.querySelector('.feedback--answer-no');
+  const yesResponse = document.querySelector('.feedback--response-yes');
+  const noResponse = document.querySelector('.feedback--response-no');
+  const disableButtons = () => {
+    yesButton.disabled = true;
+    noButton.disabled = true;
+  };
+  const sendFeedback = (value) => {
+    if (typeof ga !== 'function') return;
+    const args = {
+      command: 'send',
+      hitType: 'event',
+      category: 'Helpful',
+      action: 'click',
+      label: window.location.pathname,
+      value: value
+    };
+    ga(args.command, args.hitType, args.category, args.action, args.label, args.value);
+  };
+  yesButton.addEventListener('click', () => {
+    yesResponse.classList.add('feedback--response__visible');
+    disableButtons();
+    sendFeedback(1);
+  });
+  noButton.addEventListener('click', () => {
+    noResponse.classList.add('feedback--response__visible');
+    disableButtons();
+    sendFeedback(0);
+  });
+</script>
+
+		<br />
+	
+	
+	<div class="text-muted mt-5 pt-3 border-top">Last modified May 9, 2021: <a  href="https://github.com/google/docsy-example/commit/b0b92f21decebdaa4fc7da4ea7c8c00ca2fcf9c2">initial commit (b0b92f2)</a>
+</div>
+</div>
+
+
+          </main>
+        </div>
+      </div>
+      
+<footer class="bg-dark py-5 row d-print-none">
+  <div class="container-fluid mx-sm-5">
+    <div class="row">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Email" aria-label="Email">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="mailto:derek@derekzoladz.com">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Twitter" aria-label="Twitter">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://example.org/derek_zoladz">
+      <i class="fab fa-twitter"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="GitHub" aria-label="GitHub">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://github.com/dzoladz">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Website" aria-label="Website">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://www.derekzoladz.com/">
+      <i class="fas fa-globe-americas"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+        <small class="text-white">&copy; 2021 Derek Zoladz. Theme by <a href="https://www.docsy.dev/docs/">Docsy</a>.<br/>
+          Made with ❤️ in Columbus, OH</small>
+        
+	
+		
+	
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/main.min.5c74b870c6953931a705f390a49c7e4c0a842ec5c83b24354758dd674343ed0d.js" integrity="sha256-XHS4cMaVOTGnBfOQpJx&#43;TAqELsXIOyQ1R1jdZ0ND7Q0=" crossorigin="anonymous"></script>
+
+
+
+
+  </body>
+</html>

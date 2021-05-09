@@ -1,0 +1,792 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.82.0" /><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>Derek C. Zoladz</title><meta property="og:title" content="" />
+<meta property="og:description" content="Logical Volume Manager References  Kernel Device Naming LVM Anatomy  LVM Storage Management is divided into three parts:  Physical Volumes (PV) – Actual disks or disk partitions (e.g. /dev/sda, /dev/sda2) Volume Groups (VG) – Physical volumes are combined into volume groups. (e.g. VolGroup1 = /dev/sda &#43; /dev/sdb2) Logical Volumes (LV) – Volume groups are divided into logical volumes (e.g. VolGroup1 = LogicalVol1/data, LogicalVol2/home)  Commands Display Disk Information" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/docs/notebooks/lvm/" /><meta property="article:section" content="docs" />
+
+<meta property="article:modified_time" content="2021-05-09T17:51:15-04:00" /><meta property="og:site_name" content="Derek C. Zoladz" />
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="Logical Volume Manager References  Kernel Device Naming LVM Anatomy  LVM Storage Management is divided into three parts:  Physical Volumes (PV) – Actual disks or disk partitions (e.g. /dev/sda, /dev/sda2) Volume Groups (VG) – Physical volumes are combined into volume groups. (e.g. VolGroup1 = /dev/sda &#43; /dev/sdb2) Logical Volumes (LV) – Volume groups are divided into logical volumes (e.g. VolGroup1 = LogicalVol1/data, LogicalVol2/home)  Commands Display Disk Information">
+<meta itemprop="dateModified" content="2021-05-09T17:51:15-04:00" />
+<meta itemprop="wordCount" content="425">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="Logical Volume Manager References  Kernel Device Naming LVM Anatomy  LVM Storage Management is divided into three parts:  Physical Volumes (PV) – Actual disks or disk partitions (e.g. /dev/sda, /dev/sda2) Volume Groups (VG) – Physical volumes are combined into volume groups. (e.g. VolGroup1 = /dev/sda &#43; /dev/sdb2) Logical Volumes (LV) – Volume groups are divided into logical volumes (e.g. VolGroup1 = LogicalVol1/data, LogicalVol2/home)  Commands Display Disk Information"/>
+
+
+
+
+
+<link rel="preload" href="/scss/main.min.d1d57f58ee9f13ead47fdf56f912d0ae112fcd034d8628a99a475f1d8d524d48.css" as="style">
+<link href="/scss/main.min.d1d57f58ee9f13ead47fdf56f912d0ae112fcd034d8628a99a475f1d8d524d48.css" rel="stylesheet" integrity="">
+
+
+<script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+
+
+
+
+
+  </head>
+  <body class="td-page">
+    <header>
+      
+<nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+        <a class="navbar-brand" href="/">
+		<span class="navbar-logo"></span>
+	</a>
+	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+		<ul class="navbar-nav mt-2 mt-lg-0">
+			
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				<a  class="nav-link" href="/" ><span>Home</span></a>
+			</li>
+			
+			
+			
+		</ul>
+	</div>
+	<div class="navbar-nav d-none d-lg-block">
+</div>
+</nav>
+
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            
+
+
+
+
+<div id="td-sidebar-menu" class="td-sidebar__inner">
+  
+  <form class="td-sidebar__search d-flex align-items-center d-lg-none">
+    
+
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button" data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  
+  <nav class="collapse td-sidebar-nav" id="td-section-nav">
+    
+    
+    
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Docs</a>
+  </li>
+  <ul>
+    <li class="collapse show" id="docs">
+      
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/notebooks/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">Notebooks</a>
+  </li>
+  <ul>
+    <li class="collapse show" id="docsnotebooks">
+      
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebooksbusiness_apps" href="/docs/notebooks/business_apps/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebookscertbot" href="/docs/notebooks/certbot/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebookschroot-sftp-setup" href="/docs/notebooks/chroot-sftp-setup/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebookscron" href="/docs/notebooks/cron/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebooksdocker" href="/docs/notebooks/docker/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebooksexpand_volumes" href="/docs/notebooks/expand_volumes/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebooksezproxy" href="/docs/notebooks/ezproxy/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebooksfail2ban" href="/docs/notebooks/fail2ban/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebooksfolio" href="/docs/notebooks/folio/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebooksformats" href="/docs/notebooks/formats/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebooksgit" href="/docs/notebooks/git/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebooksgithub_topic_browse" href="/docs/notebooks/github_topic_browse/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebooksgpg" href="/docs/notebooks/gpg/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebooksgraphing" href="/docs/notebooks/graphing/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebooksjs_forms" href="/docs/notebooks/js_forms/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebookskeycloak_docker" href="/docs/notebooks/keycloak_docker/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page  active" id="m-docsnotebookslvm" href="/docs/notebooks/lvm/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebooksmailman" href="/docs/notebooks/mailman/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebooksmonit" href="/docs/notebooks/monit/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebooksnetworker_commands" href="/docs/notebooks/networker_commands/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebooksnetworking" href="/docs/notebooks/networking/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebookspackages" href="/docs/notebooks/packages/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebooksperlbrew" href="/docs/notebooks/perlbrew/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebookspostfix" href="/docs/notebooks/postfix/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebookspostgres" href="/docs/notebooks/postgres/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebookspython4lib" href="/docs/notebooks/python4lib/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebooksreact" href="/docs/notebooks/react/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebooksreadme" href="/docs/notebooks/readme/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebookssamba" href="/docs/notebooks/samba/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebookssed_awk" href="/docs/notebooks/sed_awk/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebookssip" href="/docs/notebooks/sip/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebooksssh" href="/docs/notebooks/ssh/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebooksssl" href="/docs/notebooks/ssl/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebookstasks" href="/docs/notebooks/tasks/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebooksyaz" href="/docs/notebooks/yaz/"></a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsnotebookshomebrew" href="/docs/notebooks/homebrew/">Homebrew</a>
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+  </nav>
+</div>
+
+
+
+
+          </div>
+          <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
+            
+
+
+
+
+
+
+<div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
+
+
+
+
+
+
+
+
+
+
+
+<a href="https://github.com/google/docsy-example/edit/master/content/en/docs/Notebooks/lvm.md" target="_blank"><i class="fa fa-edit fa-fw"></i> Edit this page</a>
+<a href="https://github.com/google/docsy-example/new/master/content/en/docs/Notebooks/lvm.md?filename=change-me.md&amp;value=---%0Atitle%3A&#43;%22Long&#43;Page&#43;Title%22%0AlinkTitle%3A&#43;%22Short&#43;Nav&#43;Title%22%0Aweight%3A&#43;100%0Adescription%3A&#43;%3E-%0A&#43;&#43;&#43;&#43;&#43;Page&#43;description&#43;for&#43;heading&#43;and&#43;indexes.%0A---%0A%0A%23%23&#43;Heading%0A%0AEdit&#43;this&#43;template&#43;to&#43;create&#43;your&#43;new&#43;page.%0A%0A%2A&#43;Give&#43;it&#43;a&#43;good&#43;name%2C&#43;ending&#43;in&#43;%60.md%60&#43;-&#43;e.g.&#43;%60getting-started.md%60%0A%2A&#43;Edit&#43;the&#43;%22front&#43;matter%22&#43;section&#43;at&#43;the&#43;top&#43;of&#43;the&#43;page&#43;%28weight&#43;controls&#43;how&#43;its&#43;ordered&#43;amongst&#43;other&#43;pages&#43;in&#43;the&#43;same&#43;directory%3B&#43;lowest&#43;number&#43;first%29.%0A%2A&#43;Add&#43;a&#43;good&#43;commit&#43;message&#43;at&#43;the&#43;bottom&#43;of&#43;the&#43;page&#43;%28%3C80&#43;characters%3B&#43;use&#43;the&#43;extended&#43;description&#43;field&#43;for&#43;more&#43;detail%29.%0A%2A&#43;Create&#43;a&#43;new&#43;branch&#43;so&#43;you&#43;can&#43;preview&#43;your&#43;new&#43;file&#43;and&#43;request&#43;a&#43;review&#43;via&#43;Pull&#43;Request.%0A" target="_blank"><i class="fa fa-edit fa-fw"></i> Create child page</a>
+<a href="https://github.com/google/docsy-example/issues/new?title=" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
+
+
+<a href="https://github.com/google/docsy/issues/new" target="_blank"><i class="fas fa-tasks fa-fw"></i> Create project issue</a>
+
+
+
+<a id="print" href="/docs/notebooks/_print/"><i class="fa fa-print fa-fw"></i> Print entire section</a>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+          </div>
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="d-none d-md-block d-print-none">
+	<ol class="breadcrumb spb-1">
+		
+
+
+
+
+
+
+
+
+
+
+<li class="breadcrumb-item" >
+	<a href="/docs/">Docs</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item" >
+	<a href="/docs/notebooks/">Notebooks</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item active" aria-current="page">
+	<a href="/docs/notebooks/lvm/"></a>
+</li>
+
+	</ol>
+</nav	>
+
+            
+<div class="td-content">
+	<h1></h1>
+    
+	       
+	<h1 id="logical-volume-manager">Logical Volume Manager</h1>
+<p><img src="img/lvm_diagram.png" alt="LVM Diagram"></p>
+<h4 id="references">References</h4>
+<ul>
+<li><a href="https://www.kernel.org/doc/Documentation/admin-guide/devices.txt">Kernel Device Naming</a></li>
+<li><a href="https://tldp.org/HOWTO/LVM-HOWTO/anatomy.html">LVM Anatomy</a></li>
+</ul>
+<h4 id="lvm-storage-management-is-divided-into-three-parts">LVM Storage Management is divided into three parts:</h4>
+<ul>
+<li><strong>Physical Volumes (PV)</strong> – Actual disks or disk partitions (e.g. /dev/sda, /dev/sda2)</li>
+<li><strong>Volume Groups (VG)</strong> – Physical volumes are combined into volume groups. (e.g. VolGroup1 = /dev/sda + /dev/sdb2)</li>
+<li><strong>Logical Volumes (LV)</strong> – Volume groups are divided into logical volumes (e.g. VolGroup1 = LogicalVol1/data, LogicalVol2/home)</li>
+</ul>
+<h4 id="commands">Commands</h4>
+<p>Display Disk Information</p>
+<ul>
+<li><code>fdisk -l</code></li>
+</ul>
+<p>Display LVM Mapping</p>
+<ul>
+<li><code>lvmdiskscan</code></li>
+</ul>
+<p>Display Physical Volumes</p>
+<ul>
+<li><code>pvs</code></li>
+<li><code>pvdisplay</code></li>
+</ul>
+<p>Display Volume Groups</p>
+<ul>
+<li><code>vgs</code></li>
+<li><code>vgdisplay</code></li>
+</ul>
+<p>Display Logical Volumes</p>
+<ul>
+<li><code>lvs</code></li>
+<li><code>lvdisplay</code></li>
+</ul>
+<hr>
+<p>STEPS</p>
+<ol>
+<li>Run LVM Scan to determine available disks - <code>lvmdiskscan</code></li>
+</ol>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">root@hostname:/# lvmdiskscan
+  /dev/VolGroup1/LogicalVol1 [       3.72 GiB]
+  /dev/sda1                  [     285.00 MiB]
+  /dev/VolGroup1/LogicalVol2 [       3.72 GiB]
+  /dev/VolGroup1/LogicalVol3 [     &lt;20.49 GiB]
+  /dev/VolGroup1/LogicalVol4 [      16.76 GiB]
+  /dev/VolGroup1/LogicalVol5 [      18.62 GiB]
+  /dev/sda5                  [     &lt;79.72 GiB] LVM physical volume
+  /dev/VolGroup1/LogicalVol0 [      &lt;7.45 GiB]
+  /dev/sdb                   [      40.00 GiB]
+  1 disk
+  7 partitions
+  0 LVM physical volume whole disks
+  1 LVM physical volume
+</code></pre></div><ol start="2">
+<li>Establish another Physical Volume (PV) for the newly installed SCSI disk /dev/sbd - <code>pvcreate</code></li>
+</ol>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">root@hostname:/# pvcreate /dev/sdb
+  Physical volume &#34;/dev/sdb&#34; successfully created.
+</code></pre></div><ol start="3">
+<li>List available Volume Groups (VG) - <code>vgs</code></li>
+</ol>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">root@hostname:/# vgs
+  VG        #PV #LV #SN Attr   VSize  VFree
+  VolGroup1   1   6   0 wz--n- 79.71g &lt;8.95g
+</code></pre></div><ol start="4">
+<li>Add new PV to current VG (VolGroup1) - <code>vgextend</code></li>
+</ol>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">root@hostname:/# vgextend VolGroup1 /dev/sdb
+  Volume group &#34;VolGroup1&#34; successfully extended
+</code></pre></div><ol start="5">
+<li>Find the Logical Volume to extend - <code>lsblk</code></li>
+</ol>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">root@hostname:/# lsblk
+NAME                      MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+fd0                         2:0    1    4K  0 disk
+sda                         8:0    0   80G  0 disk
+├─sda1                      8:1    0  285M  0 part /boot
+├─sda2                      8:2    0    1K  0 part
+└─sda5                      8:5    0 79.7G  0 part
+  ├─VolGroup1-LogicalVol1 253:0    0  3.7G  0 lvm  /
+  ├─VolGroup1-LogicalVol2 253:1    0  3.7G  0 lvm  /tmp
+  ├─VolGroup1-LogicalVol3 253:2    0 20.5G  0 lvm  /usr
+  ├─VolGroup1-LogicalVol4 253:3    0 46.8G  0 lvm  /var
+  ├─VolGroup1-LogicalVol5 253:4    0 18.6G  0 lvm  /home
+  └─VolGroup1-LogicalVol0 253:5    0  7.5G  0 lvm  [SWAP]
+sdb                         8:16   0   40G  0 disk
+└─VolGroup1-LogicalVol4   253:3    0 46.8G  0 lvm  /var
+sr0                        11:0    1 1024M  0 rom
+</code></pre></div><ol start="6">
+<li>Extend the logical volume by 30GB - <code>lvextend</code></li>
+</ol>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">root@hostname:/# lvextend -L+30G /dev/VolGroup1/LogicalVol4
+  Size of logical volume VolGroup1/LogicalVol4 changed from 16.76 GiB (4291 extents) to 46.76 GiB (11971 extents).
+  Logical volume VolGroup1/LogicalVol4 successfully resized.
+</code></pre></div><p>It&rsquo;s also possible to <em><strong>extend the logical volume to an exact size</strong></em>, using <code>lvextend -L50G /dev/VolGroup1/LogicalVol4</code> would expand the LV to 50GB</p>
+<ol start="7">
+<li>Extend the file system on <code>/dev/VolGroup1/LogicalVol4</code> to include the new storage capacity - <code>resize2fs</code></li>
+</ol>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">
+root@hostname:/# resize2fs /dev/VolGroup1/LogicalVol4
+resize2fs 1.44.1 (24-Mar-2018)
+Filesystem at /dev/VolGroup1/LogicalVol4 is mounted on /var; on-line resizing required
+old_desc_blocks = 2, new_desc_blocks = 3
+The filesystem on /dev/VolGroup1/LogicalVol4 is now 12258304 (4k) blocks long.
+</code></pre></div>
+	
+		<style>
+  .feedback--answer {
+    display: inline-block;
+  }
+  .feedback--answer-no {
+    margin-left: 1em;
+  }
+  .feedback--response {
+    display: none;
+    margin-top: 1em;
+  }
+  .feedback--response__visible {
+    display: block;
+  }
+</style>
+<div class="d-print-none">
+<h2 class="feedback--title">Feedback</h2>
+<p class="feedback--question">Was this page helpful?</p>
+<button class="feedback--answer feedback--answer-yes">Yes</button>
+<button class="feedback--answer feedback--answer-no">No</button>
+<p class="feedback--response feedback--response-yes">
+  Glad to hear it! Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.
+</p>
+<p class="feedback--response feedback--response-no">
+  Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.
+</p>
+</div>
+<script>
+  const yesButton = document.querySelector('.feedback--answer-yes');
+  const noButton = document.querySelector('.feedback--answer-no');
+  const yesResponse = document.querySelector('.feedback--response-yes');
+  const noResponse = document.querySelector('.feedback--response-no');
+  const disableButtons = () => {
+    yesButton.disabled = true;
+    noButton.disabled = true;
+  };
+  const sendFeedback = (value) => {
+    if (typeof ga !== 'function') return;
+    const args = {
+      command: 'send',
+      hitType: 'event',
+      category: 'Helpful',
+      action: 'click',
+      label: window.location.pathname,
+      value: value
+    };
+    ga(args.command, args.hitType, args.category, args.action, args.label, args.value);
+  };
+  yesButton.addEventListener('click', () => {
+    yesResponse.classList.add('feedback--response__visible');
+    disableButtons();
+    sendFeedback(1);
+  });
+  noButton.addEventListener('click', () => {
+    noResponse.classList.add('feedback--response__visible');
+    disableButtons();
+    sendFeedback(0);
+  });
+</script>
+
+		<br />
+	
+	
+	<div class="text-muted mt-5 pt-3 border-top">Last modified May 9, 2021: <a  href="https://github.com/google/docsy-example/commit/b0b92f21decebdaa4fc7da4ea7c8c00ca2fcf9c2">initial commit (b0b92f2)</a>
+</div>
+</div>
+
+
+          </main>
+        </div>
+      </div>
+      
+<footer class="bg-dark py-5 row d-print-none">
+  <div class="container-fluid mx-sm-5">
+    <div class="row">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Email" aria-label="Email">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="mailto:derek@derekzoladz.com">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Twitter" aria-label="Twitter">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://example.org/derek_zoladz">
+      <i class="fab fa-twitter"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="GitHub" aria-label="GitHub">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://github.com/dzoladz">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Website" aria-label="Website">
+    <a class="text-white" target="_blank" rel="noopener noreferrer" href="https://www.derekzoladz.com/">
+      <i class="fas fa-globe-americas"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+        <small class="text-white">&copy; 2021 Derek Zoladz. Theme by <a href="https://www.docsy.dev/docs/">Docsy</a>.<br/>
+          Made with ❤️ in Columbus, OH</small>
+        
+	
+		
+	
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/main.min.5c74b870c6953931a705f390a49c7e4c0a842ec5c83b24354758dd674343ed0d.js" integrity="sha256-XHS4cMaVOTGnBfOQpJx&#43;TAqELsXIOyQ1R1jdZ0ND7Q0=" crossorigin="anonymous"></script>
+
+
+
+
+  </body>
+</html>
