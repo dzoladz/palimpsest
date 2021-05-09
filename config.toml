@@ -1,5 +1,5 @@
 baseURL = "/"
-title = "Goldydocs"
+title = "Derek C. Zoladz"
 
 enableRobotsTXT = true
 
@@ -41,7 +41,7 @@ latexDashes = true
 # Image processing configuration.
 [imaging]
 resampleFilter = "CatmullRom"
-quality = 75
+quality = 85
 anchor = "smart"
 
 [services]
@@ -53,26 +53,11 @@ id = "UA-00000000-0"
 
 [languages]
 [languages.en]
-title = "Goldydocs"
-description = "A Docsy example site"
+title = "Derek C. Zoladz"
+description = "Palimpsest"
 languageName ="English"
 # Weight used for sorting.
 weight = 1
-[languages.no]
-title = "Goldydocs"
-description = "Docsy er operativsystem for skyen"
-languageName ="Norsk"
-contentDir = "content/no"
-time_format_default = "02.01.2006"
-time_format_blog = "02.01.2006"
-
-[languages.fa]
-title = "اسناد گلدی"
-description = "یک نمونه برای پوسته داکسی"
-languageName ="فارسی"
-contentDir = "content/fa"
-time_format_default = "2006.01.02"
-time_format_blog = "2006.01.02"
 
 [markup]
   [markup.goldmark]
@@ -91,8 +76,11 @@ time_format_blog = "2006.01.02"
 section = ["HTML", "print"]
 
 [params]
-copyright = "The Docsy Authors"
-privacy_policy = "https://policies.google.com/privacy"
+copyright = "Derek Zoladz"
+location = "Columbus, OH"
+theme_name = "Docsy"
+theme_url = "https://www.docsy.dev/docs/"
+privacy_policy = ""
 
 # First one is picked as the Twitter card image if not set on page.
 # images = ["images/project-illustration.png"]
@@ -128,7 +116,7 @@ github_project_repo = "https://github.com/google/docsy"
 # github_branch= "main"
 
 # Google Custom Search Engine ID. Remove or comment out to disable search.
-gcs_engine_id = "d72aa9b2712488cc3"
+#gcs_engine_id = "d72aa9b2712488cc3"
 
 # Enable Algolia DocSearch
 algolia_docsearch = false
@@ -148,7 +136,9 @@ breadcrumb_disable = false
 #  Set to true to hide the sidebar search box (the top nav search box will still be displayed if search is enabled)
 sidebar_search_disable = false
 #  Set to false if you don't want to display a logo (/assets/icons/logo.svg) in the top nav bar
-navbar_logo = true
+navbar_logo = false
+#  Set to false if you don't want to display a site title in the top nav bar
+navbar_title = false
 # Set to true to disable the About link in the site footer
 footer_about_disable = false
 
@@ -171,34 +161,33 @@ enable = false
 [params.links]
 # End user relevant links. These will show up on left side of footer and in the community page if you have one.
 [[params.links.user]]
-	name = "User mailing list"
-	url = "https://example.org/mail"
+	name = "Email"
+	url = "mailto:derek@derekzoladz.com"
 	icon = "fa fa-envelope"
-        desc = "Discussion and help from your fellow users"
+        desc = "Send me a message"
 [[params.links.user]]
 	name ="Twitter"
-	url = "https://example.org/twitter"
+	url = "https://example.org/derek_zoladz"
 	icon = "fab fa-twitter"
-        desc = "Follow us on Twitter to get the latest news!"
-[[params.links.user]]
-	name = "Stack Overflow"
-	url = "https://example.org/stack"
-	icon = "fab fa-stack-overflow"
-        desc = "Practical questions and curated answers"
+        desc = "Follow me on Twitter for random thoughts!"
 # Developer relevant links. These will show up on right side of footer and in the community page if you have one.
 [[params.links.developer]]
 	name = "GitHub"
-	url = "https://github.com/google/docsy"
+	url = "https://github.com/dzoladz"
 	icon = "fab fa-github"
         desc = "Development takes place here!"
 [[params.links.developer]]
-	name = "Slack"
-	url = "https://example.org/slack"
-	icon = "fab fa-slack"
-        desc = "Chat with other project developers"
-[[params.links.developer]]
-	name = "Developer mailing list"
-	url = "https://example.org/mail"
-	icon = "fa fa-envelope"
-        desc = "Discuss development issues around the project"
+	name = "Website"
+	url = "https://www.derekzoladz.com/"
+	icon = "fas fa-globe-americas"
+        desc = "More info on my website"
 
+
+[menu]
+
+  [[menu.main]]
+    identifier = ""
+    name = "Home"
+    pre = "<i class='fa fa-door-open'></i>"
+    url = "/"
+    weight = 10
