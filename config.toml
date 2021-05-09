@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "/palimpsest/"
 title = "Derek C. Zoladz"
 
 enableRobotsTXT = true
