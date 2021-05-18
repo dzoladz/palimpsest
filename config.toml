@@ -1,5 +1,5 @@
-baseURL = "/palimpsest/"
-#baseURL = ""
+#baseURL = "/palimpsest/"
+baseURL = ""
 title = "Derek C. Zoladz"
 
 enableRobotsTXT = true
