@@ -1,5 +1,5 @@
-#baseURL = "/palimpsest/"
-baseURL = ""
+baseURL = "/palimpsest/" # GITHUB DEPLOY
+#baseURL = ""  # LOCAL DEPLOY
 title = "Derek C. Zoladz"
 
 enableRobotsTXT = true
