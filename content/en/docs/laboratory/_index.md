@@ -4,6 +4,7 @@ linkTitle: "Laboratory"
 weight: 1
 description: >
   Laboratory
+hide_feedback: true
 ---
 
 This is the future location for all of my application hosting experiments at OhioNET that are unusable by the organization. The idea is to build an environment for continued independent learning in technological areas that are focused on developing custom library-adjacent research applications, but are well beyond the capacities of my day job.
