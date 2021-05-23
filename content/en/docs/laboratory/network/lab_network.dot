@@ -1,0 +1,120 @@
+strict digraph ZoladzLabNetwork
+{
+  rankdir=TB;  // graph orientation
+  splines=ortho;
+  compound=true;
+  node  [style="rounded,filled,bold", shape=box, fixedsize=true, width=1.6, fontname="Arial"];
+
+// UTILITY ARCHIVE
+// invisible1[style="invis"];
+// { rank=same; "unknown"; invisible1; invisible2; }
+// https://dreampuf.github.io/GraphvizOnline
+
+
+// Graph Clusters
+// ------------------------------------
+  subgraph clusterISP { label="Spectrum Modem"; style="rounded"; bgcolor="orange";
+    "WAN"
+    }
+
+// ------------------------------
+// 192.168.1.x  -- Private Subnet
+// ------------------------------
+  subgraph clusterNetwork { label="192.168.1.x"; style="rounded"; bgcolor="royalblue"; fontcolor="yellow"; fontsize="14";
+
+    // -----
+    // Nodes
+    // -----
+
+    // PiHole
+    "Pihole" [style="rounded,filled", label="Pi-Hole\n192.168.1.51", color="white", fontcolor="black"]
+
+    //Koha ILS (Dell Laptop)
+    "Koha" [style="rounded,filled", label="Koha\n192.168.1.50", color="white", fontcolor="black"]
+
+    //UniFi Cloud Key Plus 2
+    "Cloud Key" [style="rounded,filled", label="Cloud Key\n192.168.1.2", color="white", fontcolor="black", height="1"]
+
+    //UniFi Security Gateway
+    "Security Gateway" [style="rounded,filled", label="Security Gateway\n192.168.1.1", color="white", fontcolor="black", width="2", height="1"]
+
+    // Samba Backups (Time Machine)
+    "Samba" [style="rounded,filled", label="Samba\n192.168.1.52", color="white", fontcolor="black"]
+    "Backup Disk" [shape=cylinder];
+
+    // Ligotti - Raspberry Pi 4, Model B, Distributed Compute Cluster
+    "Ligotti" [style="rounded,filled", label="Ligotti\n192.168.10", color="white", fontcolor="black", width="2"]
+    "Ligotti-Worker-One" [style="rounded,filled", label="Ligotti-Worker-One\n192.168.11", color="white", fontcolor="black", width="2"]
+    "Ligotti-Worker-Two" [style="rounded,filled", label="Ligotti-Worker-Two\n192.168.12", color="white", fontcolor="black", width="2"]
+
+
+    // --------
+    // Switches
+    // --------
+    "TPLink Switch 5a" [style="box,filled", color="yellow", fontcolor="black", width="2"]
+    "TPLink Switch 5b" [style="box,filled", color="yellow", fontcolor="black", width="2"]
+    "UniFi Switch 8" [style="box,filled", label="UniFi Switch 8\n192.168.1.3", color="yellow", fontcolor="black", width="4", height=".7"]
+
+
+    // -------------
+    // Access Points
+    // -------------
+    "UniFi AP" [shape="circle", label="UniFi AP\n192.168.1.4", color="green"]
+
+    // -------------------------
+    // Graph: Visual Orientation
+    // -------------------------
+    // INVISIBLE NODES
+    "inv1" [style="invis"]
+    // RANK
+    { rank=max; "Samba", "Koha", "Pihole" }
+    { rank=min; "Security Gateway", "WAN" }
+    { rank=same; "UniFi AP", "Cloud Key" }
+    { rank=same; "UniFi Switch 8" }
+    { rank=max; "Ligotti", "Ligotti-Worker-One", "Ligotti-Worker-Two" }
+    { rank=same; "TPLink Switch 5a", "TPLink Switch 5b" }
+
+
+  }
+
+    // ---------
+    // DHCP Pool
+    // ---------
+    // subgraph clusterDHCPpool { label="DHCP Pool\n192.168.1.x"; style="rounded"; bgcolor="white"; fontcolor="black";
+    //    DCHP [style=box, shape=plaintext, label="PS4\niPads\niPhones\nSamsung TV\nMacBooks\nApple TV\nApple Watch", height=2];
+    // }
+
+
+
+// EDGES
+// ------------------------------------
+
+  // ----------
+  // Bold Edges
+  // ----------
+  edge  [style=bold, fontname="Arial", weight=100]
+    "WAN" -> "Security Gateway";
+    "Security Gateway" -> "WAN";
+
+  // ------------
+  // Dotted Edges
+  // ------------
+  edge [color="#aaaaaa", weight=1]
+     "UniFi AP" -> "UniFi Switch 8" [style="dashed", arrowhead=both];
+     "Cloud Key" -> "UniFi Switch 8" [style="dashed", arrowhead=none];
+     "UniFi Switch 8" -> "TPLink Switch 5a" [style="dashed", arrowhead=none];
+     "Koha" -> "TPLink Switch 5a" [style="dashed", arrowhead=none];
+     "Pihole" -> "TPLink Switch 5a" [style="dashed", arrowhead=none];
+     "Samba" -> "TPLink Switch 5a" [style="dashed", arrowhead=none];
+     "Security Gateway" -> "UniFi Switch 8" [style="dashed", arrowhead=none];
+     "UniFi Switch 8" -> "TPLink Switch 5b" [style="dashed", arrowhead=none];
+     "Ligotti" -> "TPLink Switch 5b" [style="dashed", arrowhead=none];
+     "Ligotti-Worker-One" -> "TPLink Switch 5b" [style="dashed", arrowhead=none];
+     "Ligotti-Worker-Two" -> "TPLink Switch 5b" [style="dashed", arrowhead=none];
+
+  // ----------
+  // Thin Edges
+  // ----------
+  edge  [color="#aaaaaa", weight=1]
+    "Samba" -> "Backup Disk" [arrowhead=none];
+}
