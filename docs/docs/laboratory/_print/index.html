@@ -127,7 +127,7 @@ This the multi-page printable view of this section.
     
     
 	
-<li>2: <a href="#pg-1589b8d2a4885b24db8ab843ed0dccb3">Rancher</a></li>
+<li>2: <a href="#pg-82e44b04aac7309cf87baad80429e4e8">Network Description</a></li>
 
 
     
@@ -135,7 +135,15 @@ This the multi-page printable view of this section.
     
     
 	
-<li>3: <a href="#pg-22343580056d27515aa2241b541fb0dc">Raspberry Pi Cluster</a></li>
+<li>3: <a href="#pg-1589b8d2a4885b24db8ab843ed0dccb3">Rancher</a></li>
+
+
+    
+  
+    
+    
+	
+<li>4: <a href="#pg-22343580056d27515aa2241b541fb0dc">Raspberry Pi Cluster</a></li>
 
 
     
@@ -206,7 +214,98 @@ This the multi-page printable view of this section.
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-1589b8d2a4885b24db8ab843ed0dccb3">2 - Rancher</h1>
+	<h1 id="pg-82e44b04aac7309cf87baad80429e4e8">2 - Network Description</h1>
+    <div class="lead">Networking Gear and Diagram</div>
+	<h2 id="equipment">Equipment</h2>
+<table>
+<thead>
+<tr>
+<th>Device</th>
+<th>Manufacturer</th>
+<th>Model</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cable Modem, Spectrum</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Router/Firewall</td>
+<td>Ubiquiti</td>
+<td>UniFi Security Gateway</td>
+</tr>
+<tr>
+<td>UniFi Network Manager</td>
+<td>Ubiquiti</td>
+<td>UniFi Cloud Key Gen2 Plus</td>
+</tr>
+<tr>
+<td>Switch, S8a</td>
+<td>Ubiquiti</td>
+<td>8-Port Managed with 802.3af PoE</td>
+</tr>
+<tr>
+<td>Access Point</td>
+<td>Ubiquiti</td>
+<td>24V 802.3 af/A - AP AC LR</td>
+</tr>
+<tr>
+<td>Backup Disk</td>
+<td>NexStar</td>
+<td>3.5 SATA 6 Gbps</td>
+</tr>
+<tr>
+<td>Switch, S5a</td>
+<td>TPLink</td>
+<td>5-Port Unmanaged</td>
+</tr>
+<tr>
+<td>Switch, S5b</td>
+<td>TPLink</td>
+<td>5-Port Unmanaged</td>
+</tr>
+<tr>
+<td>PiHole</td>
+<td>Raspberry Pi Foundation</td>
+<td>Pi 3, Model B, 1 GB</td>
+</tr>
+<tr>
+<td>Samba Server</td>
+<td>Raspberry Pi Foundation</td>
+<td>Pi 4, Model B, 2 GB</td>
+</tr>
+<tr>
+<td>Koha ILS</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Ligotti, Pi Cluster</td>
+<td>Raspberry Pi Foundation</td>
+<td>Pi 4, Model B, 4 GB</td>
+</tr>
+</tbody>
+</table>
+<h2 id="network-diagram">Network Diagram</h2>
+<p><img src="../img/lab_network.png" alt="Lab Network Diagram"></p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-1589b8d2a4885b24db8ab843ed0dccb3">3 - Rancher</h1>
     <div class="lead">Kubernetes management platform</div>
 	<p>As of Rancher v2.5, Rancher can be installed on any Kubernetes cluster.</p>
 <ul>
@@ -268,7 +367,7 @@ This the multi-page printable view of this section.
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-22343580056d27515aa2241b541fb0dc">3 - Raspberry Pi Cluster</h1>
+	<h1 id="pg-22343580056d27515aa2241b541fb0dc">4 - Raspberry Pi Cluster</h1>
     <div class="lead">Raspberry Pi 4, Model B Cluster - Distributed Computing</div>
 	<p><strong>Ligotti</strong> - this 3 node pi cluster - is named after the philosophical horror writer <a href="https://en.wikipedia.org/wiki/Thomas_Ligotti">Thomas Ligotti</a></p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ligotti             192.168.1.10  <span style="color:#000;font-weight:bold">|</span> Controller, Master 
