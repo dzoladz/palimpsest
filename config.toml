@@ -9,7 +9,7 @@ theme = ["docsy"]
 publishDir = "docs"
 
 # Will give values to .Lastmod etc.
-enableGitInfo = false
+enableGitInfo = true
 
 # Language settings
 contentDir = "content/en"
