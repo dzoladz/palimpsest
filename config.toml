@@ -1,26 +1,37 @@
 baseURL = "/palimpsest/" # GITHUB DEPLOY
 #baseURL = ""  # LOCAL DEPLOY
 title = "Derek C. Zoladz"
-
 enableRobotsTXT = true
 
+
+# ----------------------------------------------------------------------------------
+# THEME
 # Hugo allows theme composition (and inheritance). The precedence is from left to right.
+# ----------------------------------------------------------------------------------
 theme = ["docsy"]
 publishDir = "docs"
 
+
+# ----------------------------------------------------------------------------------
 # Will give values to .Lastmod etc.
+# ----------------------------------------------------------------------------------
 enableGitInfo = true
 
-# Language settings
+
+# ----------------------------------------------------------------------------------
+# Language settings - See LANGUAGE below
+# ----------------------------------------------------------------------------------
 contentDir = "content/en"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 # Useful when translating.
 enableMissingTranslationPlaceholders = true
-
 disableKinds = ["taxonomy", "taxonomyTerm"]
 
+
+# ----------------------------------------------------------------------------------
 # Highlighting config
+# ----------------------------------------------------------------------------------
 pygmentsCodeFences = true
 pygmentsUseClasses = false
 # Use the new Chroma Go highlighter in Hugo.
@@ -29,30 +40,45 @@ pygmentsUseClassic = false
 # See https://help.farbox.com/pygments.html
 pygmentsStyle = "tango"
 
-# Configure how URLs look like per section.
+
+# ----------------------------------------------------------------------------------
+# PERMALINKS - Configure how URLs look like per section.
+# ----------------------------------------------------------------------------------
 [permalinks]
 blog = "/:section/:year/:month/:day/:slug/"
 
+
+# ----------------------------------------------------------------------------------
 ## Configuration for BlackFriday markdown parser: https://github.com/russross/blackfriday
+# ----------------------------------------------------------------------------------
 [blackfriday]
 plainIDAnchors = true
 hrefTargetBlank = true
 angledQuotes = false
 latexDashes = true
 
+
+# ----------------------------------------------------------------------------------
 # Image processing configuration.
+# ----------------------------------------------------------------------------------
 [imaging]
 resampleFilter = "CatmullRom"
 quality = 85
 anchor = "smart"
 
+
+# ----------------------------------------------------------------------------------
+# SERVICES
+# ----------------------------------------------------------------------------------
 [services]
 [services.googleAnalytics]
 # Comment out the next line to disable GA tracking. Also disables the feature described in [params.ui.feedback].
 id = "UA-00000000-0"
 
-# Language configuration
 
+# ----------------------------------------------------------------------------------
+# Language configuration
+# ----------------------------------------------------------------------------------
 [languages]
 [languages.en]
 title = "Derek C. Zoladz"
@@ -61,6 +87,10 @@ languageName ="English"
 # Weight used for sorting.
 weight = 1
 
+
+# ----------------------------------------------------------------------------------
+# MARKUP
+# ----------------------------------------------------------------------------------
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
@@ -71,12 +101,18 @@ weight = 1
       # Uncomment if you want your chosen highlight style used for code blocks without a specified language
       # guessSyntax = "true"
 
-# Everything below this are Site Params
 
+# ----------------------------------------------------------------------------------
+# OUTPUTS
+# ----------------------------------------------------------------------------------
 # Comment out if you don't want the "print entire section" link enabled.
 [outputs]
 section = ["HTML", "print"]
 
+
+# ----------------------------------------------------------------------------------
+# Parameters Site
+# ----------------------------------------------------------------------------------
 [params]
 copyright = "Derek Zoladz"
 location = "Columbus, OH"
@@ -117,19 +153,31 @@ github_project_repo = "https://github.com/google/docsy"
 # or specify a new value if you want to reference another branch in your GitHub links
 # github_branch= "main"
 
+
+# ----------------------------------------------------------------------------------
+# SITE SEARCH SETTINGS
+#
+# Use booleans to enable/disable search features
+# ----------------------------------------------------------------------------------
+# Algolia DocSearch
+algolia_docsearch = false
+
+# Lunr.js offline search
+offlineSearch = false
+
 # Google Custom Search Engine ID. Remove or comment out to disable search.
 #gcs_engine_id = "d72aa9b2712488cc3"
 
-# Enable Algolia DocSearch
-algolia_docsearch = false
 
-# Enable Lunr.js offline search
-offlineSearch = false
-
+# ----------------------------------------------------------------------------------
 # Enable syntax highlighting and copy buttons on code blocks with Prism
+# ----------------------------------------------------------------------------------
 prism_syntax_highlighting = false
 
+
+# ----------------------------------------------------------------------------------
 # User interface configuration
+# ----------------------------------------------------------------------------------
 [params.ui]
 # Enable to show the side bar menu in its compact state.
 sidebar_menu_compact = true
@@ -144,6 +192,10 @@ navbar_title = false
 # Set to true to disable the About link in the site footer
 footer_about_disable = false
 
+
+# ----------------------------------------------------------------------------------
+# REQUEST FEEDBACK FROM USERS
+# ----------------------------------------------------------------------------------
 # Adds a H2 section titled "Feedback" to the bottom of each doc. The responses are sent to Google Analytics as events.
 # This feature depends on [services.googleAnalytics] and will be disabled if "services.googleAnalytics.id" is not set.
 # If you want this feature, but occasionally need to remove the "Feedback" section from a single page,
@@ -154,12 +206,20 @@ enable = false
 yes = 'Glad to hear it! Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.'
 no = 'Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.'
 
+
+# ----------------------------------------------------------------------------------
+# DISPLAY READING TIME
+# ----------------------------------------------------------------------------------
 # Adds a reading time to the top of each doc.
 # If you want this feature, but occasionally need to remove the Reading time from a single page, 
 # add "hide_readingtime: true" to the page's front matter
 [params.ui.readingtime]
 enable = false
 
+
+# ----------------------------------------------------------------------------------
+# LINKS
+# ----------------------------------------------------------------------------------
 [params.links]
 # End user relevant links. These will show up on left side of footer and in the community page if you have one.
 [[params.links.user]]
@@ -185,8 +245,10 @@ enable = false
         desc = "More info on my website"
 
 
+# ----------------------------------------------------------------------------------
+# MENU
+# ----------------------------------------------------------------------------------
 [menu]
-
   [[menu.main]]
     identifier = ""
     name = "Home"
