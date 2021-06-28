@@ -12,7 +12,7 @@ As of Rancher v2.5, Rancher can be installed on any Kubernetes cluster.
 - RKE2
 - Amazon EKS
 
-### Installing Rancher via Helm3 
+#### Installing Rancher via Helm3 
 
 1. Add the Rancher Helm chart repo
 
@@ -20,7 +20,7 @@ As of Rancher v2.5, Rancher can be installed on any Kubernetes cluster.
 helm repo add rancher-latest https://releases.rancher.com/server-charts/latest
 ```
 
-### Create a Namespace for Rancher resources
+#### Create a Namespace for Rancher resources
 
 Rancher documentation states that this namespace should always be called `cattle-system`
 
@@ -28,17 +28,17 @@ Rancher documentation states that this namespace should always be called `cattle
 kubectl create namespace cattle-system
 ```
 
-### Install cert-manager
+#### Install cert-manager
 
 Rancher supports multiple SSL/TLS termination methods. As the laboratory cluster is on the local network and only accepting connections from the LAN, the following set of instructions will configure Rancher to generate its own certificates. Using Let's Encyprt and forwarding traffic from an external layer 7 load balancer are better options for production. 
 
-# Install the [CustomResourceDefinition](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/#customresourcedefinitions) separately
+## Install the [CustomResourceDefinition](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/#customresourcedefinitions) separately
 
 ```bash
 kubectl apply --validate=false -f https://github.com/jetstack/cert-manager/releases/download/v1.0.4/cert-manager.crds.yaml
 ```
 
-### Create the namespace for cert-manager
+#### Create the namespace for cert-manager
 
 ```bash
 kubectl create namespace cert-manager
@@ -71,7 +71,7 @@ helm install \
 kubectl get pods --namespace cert-manager
 ```
 
-### Install Rancher via Helm
+#### Install Rancher via Helm
 
 Set the hostname to the DNS name you will point to your load balancer.
 
@@ -82,7 +82,7 @@ helm install rancher rancher-latest/rancher \
   --set hostname=rancher.derekzoladz.com
 ```
 
-### Confirm deployment of Rancher server
+#### Confirm deployment of Rancher server
 
 ```bash
 kubectl -n cattle-system rollout status deploy/rancher
