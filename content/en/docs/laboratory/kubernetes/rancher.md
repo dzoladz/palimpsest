@@ -32,7 +32,8 @@ kubectl create namespace cattle-system
 
 Rancher supports multiple SSL/TLS termination methods. As the laboratory cluster is on the local network and only accepting connections from the LAN, the following set of instructions will configure Rancher to generate its own certificates. Using Let's Encyprt and forwarding traffic from an external layer 7 load balancer are better options for production. 
 
-## Install the [CustomResourceDefinition](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/#customresourcedefinitions) separately
+#### Install the CustomResourceDefinition separately
+More info on [CustomResourceDefinition](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/#customresourcedefinitions)
 
 ```bash
 kubectl apply --validate=false -f https://github.com/jetstack/cert-manager/releases/download/v1.0.4/cert-manager.crds.yaml

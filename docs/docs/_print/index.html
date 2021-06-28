@@ -668,7 +668,8 @@ This the multi-page printable view of this section.
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl create namespace cattle-system
 </code></pre></div><h4 id="install-cert-manager">Install cert-manager</h4>
 <p>Rancher supports multiple SSL/TLS termination methods. As the laboratory cluster is on the local network and only accepting connections from the LAN, the following set of instructions will configure Rancher to generate its own certificates. Using Let&rsquo;s Encyprt and forwarding traffic from an external layer 7 load balancer are better options for production.</p>
-<h2 id="install-the-customresourcedefinitionhttpskubernetesiodocsconceptsextend-kubernetesapi-extensioncustom-resourcescustomresourcedefinitions-separately">Install the <a href="https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/#customresourcedefinitions">CustomResourceDefinition</a> separately</h2>
+<h4 id="install-the-customresourcedefinition-separately">Install the CustomResourceDefinition separately</h4>
+<p>More info on <a href="https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/#customresourcedefinitions">CustomResourceDefinition</a></p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl apply --validate<span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#204a87">false</span> -f https://github.com/jetstack/cert-manager/releases/download/v1.0.4/cert-manager.crds.yaml
 </code></pre></div><h4 id="create-the-namespace-for-cert-manager">Create the namespace for cert-manager</h4>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl create namespace cert-manager
