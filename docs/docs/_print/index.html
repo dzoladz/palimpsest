@@ -658,19 +658,19 @@ This the multi-page printable view of this section.
 <li>RKE2</li>
 <li>Amazon EKS</li>
 </ul>
-<h3 id="installing-rancher-via-helm3">Installing Rancher via Helm3</h3>
+<h4 id="installing-rancher-via-helm3">Installing Rancher via Helm3</h4>
 <ol>
 <li>Add the Rancher Helm chart repo</li>
 </ol>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">helm repo add rancher-latest https://releases.rancher.com/server-charts/latest
-</code></pre></div><h3 id="create-a-namespace-for-rancher-resources">Create a Namespace for Rancher resources</h3>
+</code></pre></div><h4 id="create-a-namespace-for-rancher-resources">Create a Namespace for Rancher resources</h4>
 <p>Rancher documentation states that this namespace should always be called <code>cattle-system</code></p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl create namespace cattle-system
-</code></pre></div><h3 id="install-cert-manager">Install cert-manager</h3>
+</code></pre></div><h4 id="install-cert-manager">Install cert-manager</h4>
 <p>Rancher supports multiple SSL/TLS termination methods. As the laboratory cluster is on the local network and only accepting connections from the LAN, the following set of instructions will configure Rancher to generate its own certificates. Using Let&rsquo;s Encyprt and forwarding traffic from an external layer 7 load balancer are better options for production.</p>
-<h1 id="install-the-customresourcedefinitionhttpskubernetesiodocsconceptsextend-kubernetesapi-extensioncustom-resourcescustomresourcedefinitions-separately">Install the <a href="https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/#customresourcedefinitions">CustomResourceDefinition</a> separately</h1>
+<h2 id="install-the-customresourcedefinitionhttpskubernetesiodocsconceptsextend-kubernetesapi-extensioncustom-resourcescustomresourcedefinitions-separately">Install the <a href="https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/#customresourcedefinitions">CustomResourceDefinition</a> separately</h2>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl apply --validate<span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#204a87">false</span> -f https://github.com/jetstack/cert-manager/releases/download/v1.0.4/cert-manager.crds.yaml
-</code></pre></div><h3 id="create-the-namespace-for-cert-manager">Create the namespace for cert-manager</h3>
+</code></pre></div><h4 id="create-the-namespace-for-cert-manager">Create the namespace for cert-manager</h4>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl create namespace cert-manager
 </code></pre></div><h4 id="add-the-jetstack-helm-repository">Add the Jetstack Helm repository</h4>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">helm repo add jetstack https://charts.jetstack.io
@@ -683,13 +683,13 @@ This the multi-page printable view of this section.
 </span><span style="color:#4e9a06"></span>  --version v1.0.4
 </code></pre></div><h4 id="verify-deployment">Verify Deployment</h4>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl get pods --namespace cert-manager
-</code></pre></div><h3 id="install-rancher-via-helm">Install Rancher via Helm</h3>
+</code></pre></div><h4 id="install-rancher-via-helm">Install Rancher via Helm</h4>
 <p>Set the hostname to the DNS name you will point to your load balancer.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">helm install rancher rancher-latest/rancher <span style="color:#4e9a06">\
 </span><span style="color:#4e9a06"></span>  --namespace cattle-system <span style="color:#4e9a06">\
 </span><span style="color:#4e9a06"></span>  --ingress.tls.source<span style="color:#ce5c00;font-weight:bold">=</span>rancher <span style="color:#4e9a06">\
 </span><span style="color:#4e9a06"></span>  --set <span style="color:#000">hostname</span><span style="color:#ce5c00;font-weight:bold">=</span>rancher.derekzoladz.com
-</code></pre></div><h3 id="confirm-deployment-of-rancher-server">Confirm deployment of Rancher server</h3>
+</code></pre></div><h4 id="confirm-deployment-of-rancher-server">Confirm deployment of Rancher server</h4>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl -n cattle-system rollout status deploy/rancher
 </code></pre></div><h2 id="troubleshooting">Troubleshooting</h2>
 <p>Ensure the KUBECONFIG environment variable is set</p>
