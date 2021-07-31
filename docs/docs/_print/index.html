@@ -160,6 +160,14 @@ This the multi-page printable view of this section.
 
     
   
+    
+    
+	
+<li>1.5: <a href="#pg-0388cbc1a35f96efd53dd4200fee7f22">Helm</a></li>
+
+
+    
+  
 
     </ul>
     
@@ -539,7 +547,13 @@ This the multi-page printable view of this section.
 <h2 id="3-node-cluster-computing-hardware">3-Node Cluster Computing Hardware</h2>
 <h2 id="k3s">K3s</h2>
 <p>The lightweight, certified Kubernetes distribution <a href="https://k3s.io/">K3s</a> was selected. The K3s distro is designed from ARM64 architectures like the Raspberry Pi 4.</p>
-<h2 id="extended-learning">Extended Learning</h2>
+<h2 id="docker-compose-to-kubernetes">Docker Compose to Kubernetes</h2>
+<p><a href="https://kompose.io/">Kompose</a> is a command-line conversion tool. It takes a Docker Compose file and translates it into Kubernetes resources. There&rsquo;s also a <a href="https://github.com/JadCham/komposeui">GUI version</a> maintained on GitHub.</p>
+<p>Basic Conversion to Single File</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kompose convert -f docker-compose.yml -o kubernetes-output.yml
+</code></pre></div><p>Convert to Helm Chart</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kompose convert -c
+</code></pre></div><h2 id="extended-learning">Extended Learning</h2>
 <ul>
 <li><a href="https://collabnix.github.io/kubelabs/">An Ultimate Kubernetes Hands-on Labs</a></li>
 </ul>
@@ -810,6 +824,34 @@ ligotti-worker-two  192.168.1.12  <span style="color:#000;font-weight:bold">|</s
 <li>Check K3s agent status <code>service k3s-agent status</code></li>
 <li>Restart service, if needed <code>sudo service k3s-agent restart</code></li>
 </ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-0388cbc1a35f96efd53dd4200fee7f22">1.5 - Helm</h1>
+    <div class="lead">Kubernetes management platform</div>
+	<p><a href="https://helm.sh/">Helm</a> is a tool for managing Kubernetes applications. Helm Charts contain Kubernetes objects that define an application and expected state. Helm uses charts to make it easier to create, install, and manage Kubernetes applications.</p>
+<h2 id="commands">Commands</h2>
+<h2 id="issues">Issues</h2>
+<ol>
+<li>If attempting to install an application via Helm results in <code>Error: Kubernetes cluster unreachable</code>, make sure the KUBECONFIG environment variable is set properly:</li>
+</ol>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#204a87">export</span> <span style="color:#000">KUBECONFIG</span><span style="color:#ce5c00;font-weight:bold">=</span>/etc/rancher/k3s/k3s.yaml
+</code></pre></div><ol start="2">
+<li>An application gets stuck in a <code>CrashLoopBackOff</code> status and the Kubernetes logs show <code>exec user process caused &quot;exec format error&quot;</code></li>
+</ol>
+<p>The lab Kubernetes cluster is using Raspberry Pi 4s, which are 64-bit ARM architecture. The above is a common error when the container application is built for an x86 architecture. To resolve this issue, use a container targeted for 64-bit ARM.</p>
 
 </div>
 
