@@ -840,10 +840,30 @@ ligotti-worker-two  192.168.1.12  <span style="color:#000;font-weight:bold">|</s
 <div class="td-content" style="page-break-before: always">
     
 	<h1 id="pg-0388cbc1a35f96efd53dd4200fee7f22">1.5 - Helm</h1>
-    <div class="lead">Kubernetes management platform</div>
-	<p><a href="https://helm.sh/">Helm</a> is a tool for managing Kubernetes applications. Helm Charts contain Kubernetes objects that define an application and expected state. Helm uses charts to make it easier to create, install, and manage Kubernetes applications.</p>
+    <div class="lead">Kubernetes package manager</div>
+	<p><a href="https://helm.sh/">Helm</a> is a tool for managing Kubernetes applications.</p>
+<p>For Helm, there are a few important concepts:</p>
+<ul>
+<li>A <strong>Chart</strong> is a collection of files that describe a related set of Kubernetes resources that define an instance of a Kubernetes application.</li>
+<li>A <strong>Repo</strong> is a chart registry. Repositories can be added to Helm.</li>
+<li>A <strong>Config</strong> contains configuration information merged into a packaged chart to create a releasable object.</li>
+<li>A <strong>Release</strong> is a running instance of a chart using a specific configuration.</li>
+</ul>
 <h2 id="commands">Commands</h2>
-<h2 id="issues">Issues</h2>
+<p>A short list of common Helm commands</p>
+<h4 id="repos">Repos</h4>
+<p>Add, update, and search repos for installable charts</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">helm repo add bitnami https://charts.bitnami.com/bitnami
+helm repo update
+helm search repo apache
+</code></pre></div><p>A valid chart repository must have an index file. The index file contains information about each chart in the chart repository. The following command will generate an index file based on a given local directory that contains packaged charts.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">helm repo index
+</code></pre></div><h4 id="install-and-remove-charts">Install and Remove Charts</h4>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">helm install provide-a-name-here bitnami/apache
+helm uninstall provide-a-name-here bitnami/apache
+</code></pre></div><h4 id="create-new-chart-template">Create New Chart Template</h4>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Helm create name-of-chart-dir
+</code></pre></div><h2 id="issues">Issues</h2>
 <ol>
 <li>If attempting to install an application via Helm results in <code>Error: Kubernetes cluster unreachable</code>, make sure the KUBECONFIG environment variable is set properly:</li>
 </ol>

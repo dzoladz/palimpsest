@@ -18,21 +18,21 @@
 <link rel="icon" type="image/png" href="/palimpsest/favicons/android-192x192.png" sizes="192x192">
 
 <title>Helm | Derek C. Zoladz</title><meta property="og:title" content="Helm" />
-<meta property="og:description" content="Kubernetes management platform
+<meta property="og:description" content="Kubernetes package manager
 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/palimpsest/docs/laboratory/kubernetes/helm/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2021-07-31T17:05:53-04:00" /><meta property="og:site_name" content="Derek C. Zoladz" />
+<meta property="article:modified_time" content="2021-08-01T18:50:26-04:00" /><meta property="og:site_name" content="Derek C. Zoladz" />
 
 <meta itemprop="name" content="Helm">
-<meta itemprop="description" content="Kubernetes management platform
+<meta itemprop="description" content="Kubernetes package manager
 ">
-<meta itemprop="dateModified" content="2021-07-31T17:05:53-04:00" />
-<meta itemprop="wordCount" content="122">
+<meta itemprop="dateModified" content="2021-08-01T18:50:26-04:00" />
+<meta itemprop="wordCount" content="256">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Helm"/>
-<meta name="twitter:description" content="Kubernetes management platform
+<meta name="twitter:description" content="Kubernetes package manager
 "/>
 
 
@@ -592,11 +592,31 @@
             
 <div class="td-content">
 	<h1>Helm</h1>
-    <div class="lead">Kubernetes management platform</div>
+    <div class="lead">Kubernetes package manager</div>
 	       
-	<p><a href="https://helm.sh/">Helm</a> is a tool for managing Kubernetes applications. Helm Charts contain Kubernetes objects that define an application and expected state. Helm uses charts to make it easier to create, install, and manage Kubernetes applications.</p>
+	<p><a href="https://helm.sh/">Helm</a> is a tool for managing Kubernetes applications.</p>
+<p>For Helm, there are a few important concepts:</p>
+<ul>
+<li>A <strong>Chart</strong> is a collection of files that describe a related set of Kubernetes resources that define an instance of a Kubernetes application.</li>
+<li>A <strong>Repo</strong> is a chart registry. Repositories can be added to Helm.</li>
+<li>A <strong>Config</strong> contains configuration information merged into a packaged chart to create a releasable object.</li>
+<li>A <strong>Release</strong> is a running instance of a chart using a specific configuration.</li>
+</ul>
 <h2 id="commands">Commands</h2>
-<h2 id="issues">Issues</h2>
+<p>A short list of common Helm commands</p>
+<h4 id="repos">Repos</h4>
+<p>Add, update, and search repos for installable charts</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">helm repo add bitnami https://charts.bitnami.com/bitnami
+helm repo update
+helm search repo apache
+</code></pre></div><p>A valid chart repository must have an index file. The index file contains information about each chart in the chart repository. The following command will generate an index file based on a given local directory that contains packaged charts.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">helm repo index
+</code></pre></div><h4 id="install-and-remove-charts">Install and Remove Charts</h4>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">helm install provide-a-name-here bitnami/apache
+helm uninstall provide-a-name-here bitnami/apache
+</code></pre></div><h4 id="create-new-chart-template">Create New Chart Template</h4>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Helm create name-of-chart-dir
+</code></pre></div><h2 id="issues">Issues</h2>
 <ol>
 <li>If attempting to install an application via Helm results in <code>Error: Kubernetes cluster unreachable</code>, make sure the KUBECONFIG environment variable is set properly:</li>
 </ol>
@@ -608,7 +628,7 @@
 
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified July 31, 2021: <a  href="https://github.com/google/docsy-example/commit/4aa04bd418756248d7022f253233fb96bdec8cdf">ADD: initial Helm docs (4aa04bd)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified August 1, 2021: <a  href="https://github.com/google/docsy-example/commit/2df1a4ab59d699c520a463580bc708a0931efd59">UPDATE: helm documentation (2df1a4a)</a>
 </div>
 </div>
 
