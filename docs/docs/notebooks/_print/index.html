@@ -948,6 +948,14 @@ user:password
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&lt;BODY&gt;ERRNUM<span style="color:#ce5c00;font-weight:bold">=</span>2&lt;BR&gt;
 <span style="color:#000">ERRMSG</span><span style="color:#ce5c00;font-weight:bold">=</span>Record ID not unique&lt;BR&gt;
 &lt;/BODY&gt;
+</code></pre></div><h2 id="temp-access-iii-server-migrations">Temp Access, III Server Migrations</h2>
+<p>Migrating from local to III-hosted Sierra involves 6-8 hours of server downtime. If EZproxy relies on the Sierra Patron API for authentication, remote database access will be unavailable during the server migration. The following snippet will present <code>/login.htm</code> to the user, but will accept credentials and grant access to <em>all</em>. Use with extreme caution.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">::III
+Host https://sierra.catalog.org:54620
+IfRefused<span style="color:#000;font-weight:bold">;</span> Ignore
+IfInvalid<span style="color:#000;font-weight:bold">;</span> Ignore
+IfUnauthenticated<span style="color:#000;font-weight:bold">;</span> Stop
+/III
 </code></pre></div>
 </div>
 

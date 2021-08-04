@@ -23,13 +23,13 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/palimpsest/docs/notebooks/ezproxy/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2021-05-10T21:39:45-04:00" /><meta property="og:site_name" content="Derek C. Zoladz" />
+<meta property="article:modified_time" content="2021-08-04T11:32:39-04:00" /><meta property="og:site_name" content="Derek C. Zoladz" />
 
 <meta itemprop="name" content="EZproxy">
 <meta itemprop="description" content="Useful snippets for administering EZproxy
 ">
-<meta itemprop="dateModified" content="2021-05-10T21:39:45-04:00" />
-<meta itemprop="wordCount" content="565">
+<meta itemprop="dateModified" content="2021-08-04T11:32:39-04:00" />
+<meta itemprop="wordCount" content="634">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="EZproxy"/>
 <meta name="twitter:description" content="Useful snippets for administering EZproxy
@@ -558,6 +558,7 @@
     <li><a href="#strip-parameters-from-dois">Strip Parameters from DOIs</a></li>
     <li><a href="#group-based-access-to-loggedin-files">Group-based Access to /Loggedin Files</a></li>
     <li><a href="#issue-a-manual-call-to-the-sierra-patron-api">Issue a Manual Call to the Sierra Patron API</a></li>
+    <li><a href="#temp-access-iii-server-migrations">Temp Access, III Server Migrations</a></li>
   </ul>
 </nav>
 
@@ -676,10 +677,18 @@ user:password
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&lt;BODY&gt;ERRNUM<span style="color:#ce5c00;font-weight:bold">=</span>2&lt;BR&gt;
 <span style="color:#000">ERRMSG</span><span style="color:#ce5c00;font-weight:bold">=</span>Record ID not unique&lt;BR&gt;
 &lt;/BODY&gt;
+</code></pre></div><h2 id="temp-access-iii-server-migrations">Temp Access, III Server Migrations</h2>
+<p>Migrating from local to III-hosted Sierra involves 6-8 hours of server downtime. If EZproxy relies on the Sierra Patron API for authentication, remote database access will be unavailable during the server migration. The following snippet will present <code>/login.htm</code> to the user, but will accept credentials and grant access to <em>all</em>. Use with extreme caution.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">::III
+Host https://sierra.catalog.org:54620
+IfRefused<span style="color:#000;font-weight:bold">;</span> Ignore
+IfInvalid<span style="color:#000;font-weight:bold">;</span> Ignore
+IfUnauthenticated<span style="color:#000;font-weight:bold">;</span> Stop
+/III
 </code></pre></div>
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified May 10, 2021: <a  href="https://github.com/google/docsy-example/commit/c9fea35fae84bda984f09a82523f431afcf461bf">ADD: front-matter to notebook files (c9fea35)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified August 4, 2021: <a  href="https://github.com/google/docsy-example/commit/a0179888b35f05150ba53c24e7ddb8820804a99c">UPDATE: access during Sieraa server migrations (a017988)</a>
 </div>
 </div>
 
