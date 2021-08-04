@@ -109,3 +109,16 @@ If successful, the call will return patron data; otherwise, a failure message wi
 ERRMSG=Record ID not unique<BR>
 </BODY>
 ```
+
+## Temp Access, III Server Migrations
+
+Migrating from local to III-hosted Sierra involves 6-8 hours of server downtime. If EZproxy relies on the Sierra Patron API for authentication, remote database access will be unavailable during the server migration. The following snippet will present `/login.htm` to the user, but will accept credentials and grant access to _all_. Use with extreme caution.
+
+```bash
+::III
+Host https://sierra.catalog.org:54620
+IfRefused; Ignore
+IfInvalid; Ignore
+IfUnauthenticated; Stop
+/III
+```
