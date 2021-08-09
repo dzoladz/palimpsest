@@ -23,13 +23,13 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/palimpsest/docs/notebooks/ezproxy/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2021-08-04T11:32:39-04:00" /><meta property="og:site_name" content="Derek C. Zoladz" />
+<meta property="article:modified_time" content="2021-08-09T16:03:07-04:00" /><meta property="og:site_name" content="Derek C. Zoladz" />
 
 <meta itemprop="name" content="EZproxy">
 <meta itemprop="description" content="Useful snippets for administering EZproxy
 ">
-<meta itemprop="dateModified" content="2021-08-04T11:32:39-04:00" />
-<meta itemprop="wordCount" content="634">
+<meta itemprop="dateModified" content="2021-08-09T16:03:07-04:00" />
+<meta itemprop="wordCount" content="781">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="EZproxy"/>
 <meta name="twitter:description" content="Useful snippets for administering EZproxy
@@ -559,6 +559,7 @@
     <li><a href="#group-based-access-to-loggedin-files">Group-based Access to /Loggedin Files</a></li>
     <li><a href="#issue-a-manual-call-to-the-sierra-patron-api">Issue a Manual Call to the Sierra Patron API</a></li>
     <li><a href="#temp-access-iii-server-migrations">Temp Access, III Server Migrations</a></li>
+    <li><a href="#transparent-language--saml-based-sso">Transparent Language &amp; SAML-based SSO</a></li>
   </ul>
 </nav>
 
@@ -685,10 +686,38 @@ IfRefused<span style="color:#000;font-weight:bold">;</span> Ignore
 IfInvalid<span style="color:#000;font-weight:bold">;</span> Ignore
 IfUnauthenticated<span style="color:#000;font-weight:bold">;</span> Stop
 /III
+</code></pre></div><h2 id="transparent-language--saml-based-sso">Transparent Language &amp; SAML-based SSO</h2>
+<p>When accessing Ohio&rsquo;s statewide subscription to Transparent Language Online though an EZProxy instance that connects tp a SAML-based authentication server, the platform will not recognize the IP to allow people to sign up. This solution basically forces everyone to log into EZproxy, but with a RedirectSafe entry so that Transparent Language can look for your EZproxy Referer.</p>
+<p>In <code>config.txt</code>, you&rsquo;ll add the following stanza above any <code>ExcludeIP</code> directives.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text"># -------------------------------------------------------
+# **All users must authenticate through ezproxy**
+#
+T Transparent Language Redirect
+U -Refresh transparent-language https://library.transparent.com/ohio
+#
+T Transparent Language
+U https://library.transparent.com/ohio
+HJ library.transparent.com
+DJ transparent.com
+NeverProxy transparent.com
+NeverProxy library.transparent.com
+# -------------------------------------------------------
+
+</code></pre></div><p>The contents of the HTML file placed in the <code>docs/limited/transparent_langauges.htm</code> file are as follows:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">head</span><span style="color:#000;font-weight:bold">&gt;</span>
+  <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">meta</span> <span style="color:#c4a000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;referrer&#34;</span> <span style="color:#c4a000">content</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;always&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+  <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">noscript</span><span style="color:#000;font-weight:bold">&gt;</span>
+    <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">META</span> <span style="color:#c4a000">http-equiv</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;refresh&#34;</span> <span style="color:#c4a000">content</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;0;URL=https://library.transparent.com/ohio&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+  <span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">noscript</span><span style="color:#000;font-weight:bold">&gt;</span>
+  <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">title</span><span style="color:#000;font-weight:bold">&gt;</span>Redirecting to Transparent Languages<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">title</span><span style="color:#000;font-weight:bold">&gt;</span>
+<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">head</span><span style="color:#000;font-weight:bold">&gt;</span>
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#204a87">window</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">opener</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#000">location</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">replace</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;https://library.transparent.com/ohio&#34;</span><span style="color:#000;font-weight:bold">)&lt;/</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold">&gt;</span>
+</code></pre></div><p>The SPU for Transparent Languages becomes:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">https://login.{EZproxy Hostname}/limited/transparent_languages.htm
 </code></pre></div>
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified August 4, 2021: <a  href="https://github.com/google/docsy-example/commit/a0179888b35f05150ba53c24e7ddb8820804a99c">UPDATE: access during Sieraa server migrations (a017988)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified August 9, 2021: <a  href="https://github.com/google/docsy-example/commit/b5b2141f2f112d5274b920660aee148982932d6a">ADD: note about Transparent Languages (b5b2141)</a>
 </div>
 </div>
 

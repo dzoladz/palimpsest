@@ -1474,6 +1474,34 @@ IfRefused<span style="color:#000;font-weight:bold">;</span> Ignore
 IfInvalid<span style="color:#000;font-weight:bold">;</span> Ignore
 IfUnauthenticated<span style="color:#000;font-weight:bold">;</span> Stop
 /III
+</code></pre></div><h2 id="transparent-language--saml-based-sso">Transparent Language &amp; SAML-based SSO</h2>
+<p>When accessing Ohio&rsquo;s statewide subscription to Transparent Language Online though an EZProxy instance that connects tp a SAML-based authentication server, the platform will not recognize the IP to allow people to sign up. This solution basically forces everyone to log into EZproxy, but with a RedirectSafe entry so that Transparent Language can look for your EZproxy Referer.</p>
+<p>In <code>config.txt</code>, you&rsquo;ll add the following stanza above any <code>ExcludeIP</code> directives.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text"># -------------------------------------------------------
+# **All users must authenticate through ezproxy**
+#
+T Transparent Language Redirect
+U -Refresh transparent-language https://library.transparent.com/ohio
+#
+T Transparent Language
+U https://library.transparent.com/ohio
+HJ library.transparent.com
+DJ transparent.com
+NeverProxy transparent.com
+NeverProxy library.transparent.com
+# -------------------------------------------------------
+
+</code></pre></div><p>The contents of the HTML file placed in the <code>docs/limited/transparent_langauges.htm</code> file are as follows:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">head</span><span style="color:#000;font-weight:bold">&gt;</span>
+  <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">meta</span> <span style="color:#c4a000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;referrer&#34;</span> <span style="color:#c4a000">content</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;always&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+  <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">noscript</span><span style="color:#000;font-weight:bold">&gt;</span>
+    <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">META</span> <span style="color:#c4a000">http-equiv</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;refresh&#34;</span> <span style="color:#c4a000">content</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;0;URL=https://library.transparent.com/ohio&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+  <span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">noscript</span><span style="color:#000;font-weight:bold">&gt;</span>
+  <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">title</span><span style="color:#000;font-weight:bold">&gt;</span>Redirecting to Transparent Languages<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">title</span><span style="color:#000;font-weight:bold">&gt;</span>
+<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">head</span><span style="color:#000;font-weight:bold">&gt;</span>
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#204a87">window</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">opener</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#000">location</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">replace</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;https://library.transparent.com/ohio&#34;</span><span style="color:#000;font-weight:bold">)&lt;/</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold">&gt;</span>
+</code></pre></div><p>The SPU for Transparent Languages becomes:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">https://login.{EZproxy Hostname}/limited/transparent_languages.htm
 </code></pre></div>
 </div>
 
