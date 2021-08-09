@@ -122,3 +122,43 @@ IfInvalid; Ignore
 IfUnauthenticated; Stop
 /III
 ```
+
+## Transparent Language & SAML-based SSO
+When accessing Ohio's statewide subscription to Transparent Language Online though an EZProxy instance that connects tp a SAML-based authentication server, the platform will not recognize the IP to allow people to sign up. This solution basically forces everyone to log into EZproxy, but with a RedirectSafe entry so that Transparent Language can look for your EZproxy Referer.
+
+In `config.txt`, you'll add the following stanza above any `ExcludeIP` directives.
+
+```text
+# -------------------------------------------------------
+# **All users must authenticate through ezproxy**
+#
+T Transparent Language Redirect
+U -Refresh transparent-language https://library.transparent.com/ohio
+#
+T Transparent Language
+U https://library.transparent.com/ohio
+HJ library.transparent.com
+DJ transparent.com
+NeverProxy transparent.com
+NeverProxy library.transparent.com
+# -------------------------------------------------------
+
+```
+
+The contents of the HTML file placed in the `docs/limited/transparent_langauges.htm` file are as follows:
+
+```html
+<head>
+  <meta name="referrer" content="always">
+  <noscript>
+    <META http-equiv="refresh" content="0;URL=https://library.transparent.com/ohio">
+  </noscript>
+  <title>Redirecting to Transparent Languages</title>
+</head>
+<script>window.opener = null; location.replace("https://library.transparent.com/ohio")</script>
+```
+
+The SPU for Transparent Languages becomes:
+```html
+https://login.{EZproxy Hostname}/limited/transparent_languages.htm
+```
