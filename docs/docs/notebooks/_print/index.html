@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.82.0" /><link rel="canonical" type="text/html" href="/palimpsest/docs/notebooks/">
+<meta name="generator" content="Hugo 0.88.1" /><link rel="canonical" type="text/html" href="/palimpsest/docs/notebooks/">
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
 
@@ -35,8 +35,8 @@
 
 
 
-<link rel="preload" href="/palimpsest/scss/main.min.2e82df9c6c5761c9c49bbdf1e65619db467a7e439eeba45b37db308b5a2add25.css" as="style">
-<link href="/palimpsest/scss/main.min.2e82df9c6c5761c9c49bbdf1e65619db467a7e439eeba45b37db308b5a2add25.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/palimpsest/scss/main.min.c7864c5e11ce29b0d7fb95d2fbbc92f0cd7d92caacfebfa74a46b09df7d22072.css" as="style">
+<link href="/palimpsest/scss/main.min.c7864c5e11ce29b0d7fb95d2fbbc92f0cd7d92caacfebfa74a46b09df7d22072.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -526,67 +526,67 @@ This the multi-page printable view of this section.
     <div class="lead">Setting up Chroot SFTP for a user without SSH</div>
 	<p><strong>Scenario</strong>: Callimachus works at Miskatonic University. Callimachus is working on a project that requires the placement of data files onto a remote server owned by Permissible Data Corp. (PDC). PDC will be processing the files with an automated script and returning them to Callimachus.</p>
 <p>You&rsquo;ll need some users that will only be able to perform chrooted SFTP. You&rsquo;ll probably want to place them into a group for simplfied administration.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic">#create SFTP only group</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic">#create SFTP only group</span>
 groupadd sftponly
 </code></pre></div><p>Since we&rsquo;ll be using this SFTP user group to allow some of our libraries to upload files for automated processing, we&rsquo;ll call the SFTP directory <code>/incoming</code>, to identify the functional role of the directory in the automated processing chain.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># create user miskatonic, assign to STFP group, and disable SSH access </span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># create user miskatonic, assign to STFP group, and disable SSH access </span>
 useradd -g sftponly -d /incoming -s /sbin/nologin miskatonic 
 </code></pre></div><p>Set up the password for user miskatonic</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">passwd miskatonic
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">passwd miskatonic
 </code></pre></div><p>Confirm that you&rsquo;ve set up this user properly</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">grep miskatonic /etc/passwd
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">grep miskatonic /etc/passwd
 <span style="color:#8f5902;font-style:italic"># miskatonic:x:500:500::/incoming:/sbin/nologin</span>
 </code></pre></div><h3 id="modify-ssh-configuration">Modify SSH Configuration</h3>
 <p>Setting up the chroot jail environment will require the directory path be created to act as the SFTP user&rsquo;s home directory, a number of modifications to the SSH configuration, and some permissions adjustments.</p>
 <p>Let&rsquo;s start with some SSH configuration changes. You&rsquo;ll also need to enable the internal-sftp server. To do so, you&rsquo;ll need to modify the configuration for SSH.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">nano /etc/ssh/sshd_config
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">nano /etc/ssh/sshd_config
 </code></pre></div><p>Comment out the default SFTP server and add the internal SFTP to the SSH daemon config file.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic">#Subsystem	sftp	/usr/libexec/openssh/sftp-server</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic">#Subsystem	sftp	/usr/libexec/openssh/sftp-server</span>
 Subsystem	sftp	internal-sftp
 </code></pre></div><p>You&rsquo;ll want to place any users that are assigned to group sftponly into the chrooted jail. You might also want to enable passwordless SFTP access with SSH keys. To make this happen, add a matchpoint to the SSH configuration file and then define the directives for the group.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Match Group sftponly
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Match Group sftponly
 		ChrootDirectory /sftp/%u <span style="color:#8f5902;font-style:italic">#%u indicates the user</span>
 		AuthorizedKeysFile /sftp/%u/.ssh/authorized_keys <span style="color:#8f5902;font-style:italic"># SFTP-only user&#39;s public key</span>
 		ForceCommand internal-sftp
 </code></pre></div><p>You&rsquo;ll also want to ensure that key-based logins are enabled in the SSH configuration. Find the following lines in <code>/etc/ssh/sshd_config</code> and make sure they are present and uncomments.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Pubkey Authentication yes
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Pubkey Authentication yes
 RSAAuthentication yes
 </code></pre></div><h3 id="create-supporting-directory-structure">Create Supporting Directory Structure</h3>
 <p>Create the substitute <code>/home</code> directory for your SFTP-only users.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir /sftp
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir /sftp
 </code></pre></div><p>Establish the SFTP-only user directory in the new path. This will become the root <code>/</code> for the SFTP-only users.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir /sftp/miskatonic
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir /sftp/miskatonic
 </code></pre></div><p>Since we want our SFTP-only users to see the <code>/incoming</code> directoy when they <code>cd</code>, we&rsquo;ll need to create it. This will be the location that they place any uploaded files to be processed by the automated script.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir /sftp/miskatonic/incoming
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir /sftp/miskatonic/incoming
 </code></pre></div><p>Set up the proper permission on the newly created directory for the SFTP-only user</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">chown miskatonic:sftponly /sftp/miskatonic/incoming
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">chown miskatonic:sftponly /sftp/miskatonic/incoming
 
 <span style="color:#8f5902;font-style:italic"># root should continue to own /sftp/miskatonic and /sftp</span>
 </code></pre></div><p>Set up the <code>/.ssh</code> to hold the public keys that will be granted access to an SFTP-only user&rsquo;s pseudo-home directory.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#204a87">cd</span> /sftp/miskatonic/
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#204a87">cd</span> /sftp/miskatonic/
 mkdir .ssh
 <span style="color:#204a87">cd</span> /sftp/miskatonic/.ssh
 nano authorized_keys <span style="color:#8f5902;font-style:italic"># add the public keys to file and save</span>
 </code></pre></div><p>Set proper permissions for key-based SSH logins</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">chown -R miskatonic:miskatonic /sftp/miskatonic/.ssh
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">chown -R miskatonic:miskatonic /sftp/miskatonic/.ssh
 chmod <span style="color:#0000cf;font-weight:bold">700</span> /sftp/miskatonic/.ssh
 chmod <span style="color:#0000cf;font-weight:bold">600</span> /sftp/miskatonic/.ssh/authorized_keys
 </code></pre></div><p>Restart SSH to pull in the changes</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">service sshd restart
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">service sshd restart
 </code></pre></div><h3 id="test-the-configuration">Test the configuration</h3>
 <p>These are steps that need to be taken on the client. You&rsquo;ll need to generate a key-pair for the key-based SSH authentication. Most likely, you&rsquo;ll want to place the sftp-only key into your user&rsquo;s <code>/.ssh/</code> directory.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#204a87">cd</span> /home/callimachus/.ssh
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#204a87">cd</span> /home/callimachus/.ssh
 ssh-keygen -t rsa -b <span style="color:#0000cf;font-weight:bold">4096</span> <span style="color:#8f5902;font-style:italic"># Increase bits to 4096 (brute force hardening)</span>
 
 <span style="color:#8f5902;font-style:italic"># You can change the name of the keypair to identify its role or function. </span>
 <span style="color:#8f5902;font-style:italic"># Keep an eye for &#39;Your public key has been saved in /home/callimachus/.ssh/FILENAME.pub&#39;</span>
 </code></pre></div><p>You&rsquo;ll need to copy FILENAME.pub to the remote server&rsquo;s /sftp/miskatonic/.ssh/authorized_keys file.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
 </code></pre></div><p>Test the connection to the SFTP-only directory from your client.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># if using key-based SSH login</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># if using key-based SSH login</span>
 
 sftp -i /path/to/private-key.pem miskatonic@IPADDRESS 
-</code></pre></div><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># If not using key-based SSH login:</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># If not using key-based SSH login:</span>
 
 sftp miskatonic@IPADDRESS
 <span style="color:#8f5902;font-style:italic"># miskatonic@IPADDRESS password:</span>
@@ -649,7 +649,7 @@ sftp&gt; <span style="color:#204a87">pwd</span>
 </tbody>
 </table>
 <h2 id="common-commands-w-cron">Common Commands w/ Cron</h2>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">crontab -l  	<span style="color:#8f5902;font-style:italic"># List current Linux user&#39;s crontab entries</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">crontab -l  	<span style="color:#8f5902;font-style:italic"># List current Linux user&#39;s crontab entries</span>
 
 crontab -u &lt;username&gt; -l <span style="color:#8f5902;font-style:italic"># List other Linux user&#39;s crontan entries</span>
 
@@ -658,17 +658,17 @@ crontab -e 		<span style="color:#8f5902;font-style:italic"># Edit crontab entrie
 crontab /path/to/cronjobs.txt <span style="color:#8f5902;font-style:italic"># Load cron jobs from file</span>
 </code></pre></div><h2 id="examples-of-crontab-entries">Examples of Crontab Entries</h2>
 <h5 id="execute-job-every-ten-minutes">Execute job every ten minutes</h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">*/10 * * * * /path/to/command.sh
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">*/10 * * * * /path/to/command.sh
 </code></pre></div><h5 id="run-job-every-hour-between-8am---5pm-monday---friday">Run job every hour, between 8am - 5pm, Monday - Friday</h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#0000cf;font-weight:bold">00</span> 08-17 * * 1-5 /path/to/command.sh
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#0000cf;font-weight:bold">00</span> 08-17 * * 1-5 /path/to/command.sh
 </code></pre></div><h4 id="run-job-twice-a-day-at-noon-and-6pm">Run job twice a day, at noon and 6pm</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#0000cf;font-weight:bold">00</span> 12,18 * * * /path/to/command.sh
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#0000cf;font-weight:bold">00</span> 12,18 * * * /path/to/command.sh
 </code></pre></div><h5 id="run-job-at-430am-on-saturday-send-stderr-to-stdout-to-null-device">Run job at 4:30am on Saturday, send stderr to stdout to null device</h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#0000cf;font-weight:bold">30</span> <span style="color:#0000cf;font-weight:bold">5</span> * * <span style="color:#0000cf;font-weight:bold">6</span> /home/s3backup/backup_ftpdata.sh &gt; /dev/null 2&gt;<span style="color:#000;font-weight:bold">&amp;</span><span style="color:#0000cf;font-weight:bold">1</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#0000cf;font-weight:bold">30</span> <span style="color:#0000cf;font-weight:bold">5</span> * * <span style="color:#0000cf;font-weight:bold">6</span> /home/s3backup/backup_ftpdata.sh &gt; /dev/null 2&gt;<span style="color:#000;font-weight:bold">&amp;</span><span style="color:#0000cf;font-weight:bold">1</span>
 </code></pre></div><h5 id="conditional-execute-job-only-on-1st-tuesday-of-the-month">Conditional: Execute job only on 1st Tuesday of the month</h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#0000cf;font-weight:bold">0</span> <span style="color:#0000cf;font-weight:bold">3</span> 1-7 * *  <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#ce5c00;font-weight:bold">[</span> <span style="color:#4e9a06">`</span>date +<span style="color:#4e9a06">\%</span>a<span style="color:#4e9a06">`</span> <span style="color:#ce5c00;font-weight:bold">=</span> Tue <span style="color:#ce5c00;font-weight:bold">]</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#204a87;font-weight:bold">then</span> /path/to/ami-genie.sh<span style="color:#000;font-weight:bold">;</span> <span style="color:#204a87;font-weight:bold">fi</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#0000cf;font-weight:bold">0</span> <span style="color:#0000cf;font-weight:bold">3</span> 1-7 * *  <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#ce5c00;font-weight:bold">[</span> <span style="color:#4e9a06">`</span>date +<span style="color:#4e9a06">\%</span>a<span style="color:#4e9a06">`</span> <span style="color:#ce5c00;font-weight:bold">=</span> Tue <span style="color:#ce5c00;font-weight:bold">]</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#204a87;font-weight:bold">then</span> /path/to/ami-genie.sh<span style="color:#000;font-weight:bold">;</span> <span style="color:#204a87;font-weight:bold">fi</span>
 </code></pre></div><h5 id="at-1130-on-sunday-download-the-ezproxy-rejectip-blacklist-from-github-and-write-the-file-to-usrlocalezmanageincludesglobal_reject_iptxt-send-an-email-with-the-download-details">At 11:30 on Sunday, download the EZproxy RejectIP Blacklist from GitHub and write the file to <code>/usr/local/ezmanage/includes/global_reject_ip.txt</code>. Send an email with the download details.</h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#0000cf;font-weight:bold">30</span> <span style="color:#0000cf;font-weight:bold">11</span> * * <span style="color:#0000cf;font-weight:bold">0</span> root /usr/bin/wget --output-document global_reject_ip.txt https://raw.githubusercontent.com/prbutler/EZProxy_IP_Blacklist/master/EZProxy_IP_Blacklist_RejectIP.txt -O /usr/local/ezmanage/includes/global_reject_ip.txt 2&gt;<span style="color:#000;font-weight:bold">&amp;</span><span style="color:#0000cf;font-weight:bold">1</span> <span style="color:#000;font-weight:bold">|</span> mail -s <span style="color:#4e9a06">&#34;EZproxy: Refresh RejectIP File&#34;</span> -a <span style="color:#4e9a06">&#34;From: someuser \&lt;someuser@epv1.example.org\&gt;&#34;</span> anotheruser@example.org
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#0000cf;font-weight:bold">30</span> <span style="color:#0000cf;font-weight:bold">11</span> * * <span style="color:#0000cf;font-weight:bold">0</span> root /usr/bin/wget --output-document global_reject_ip.txt https://raw.githubusercontent.com/prbutler/EZProxy_IP_Blacklist/master/EZProxy_IP_Blacklist_RejectIP.txt -O /usr/local/ezmanage/includes/global_reject_ip.txt 2&gt;<span style="color:#000;font-weight:bold">&amp;</span><span style="color:#0000cf;font-weight:bold">1</span> <span style="color:#000;font-weight:bold">|</span> mail -s <span style="color:#4e9a06">&#34;EZproxy: Refresh RejectIP File&#34;</span> -a <span style="color:#4e9a06">&#34;From: someuser \&lt;someuser@epv1.example.org\&gt;&#34;</span> anotheruser@example.org
 </code></pre></div>
 </div>
 
@@ -703,7 +703,7 @@ crontab /path/to/cronjobs.txt <span style="color:#8f5902;font-style:italic"># Lo
 <li><a href="https://docs.docker.com/compose/">Docker Compose</a></li>
 </ul>
 <h4 id="reference-docker-commands">Reference: Docker Commands</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker info
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker info
 docker inspect
 docker <span style="color:#204a87">exec</span> -it
 docker run -d
@@ -726,21 +726,21 @@ centos:centos6 # pull centos 6 base image</p>
 </blockquote>
 <h2 id="lifecycle-management">Lifecycle Management</h2>
 <h4 id="run-in-detached-mode-daemon-mode-background">Run in detached mode (daemon mode), background</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker run -d --name<span style="color:#ce5c00;font-weight:bold">=</span>nginx nginx:latest
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker run -d --name<span style="color:#ce5c00;font-weight:bold">=</span>nginx nginx:latest
 </code></pre></div><h4 id="restart-container">Restart Container</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker restart nginx
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker restart nginx
 </code></pre></div><h4 id="execute-a-command-in-a-container-without-affecting-the-running-process">Execute a command in a container without affecting the running process</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic">#  Interactive, attach with a shell.</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic">#  Interactive, attach with a shell.</span>
 docker <span style="color:#204a87">exec</span> -it nginx /bin/bash
 </code></pre></div><h4 id="list-processes">List processes</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker ps <span style="color:#8f5902;font-style:italic"># Running Processes</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker ps <span style="color:#8f5902;font-style:italic"># Running Processes</span>
 docker ps -a <span style="color:#8f5902;font-style:italic"># Running and Stopped Processes</span>
 </code></pre></div><h4 id="remove-images-when-no-containers-are-based-upon-it">remove images, when no containers are based upon it</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker rmi centos:centos6
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker rmi centos:centos6
 </code></pre></div><p>docker image prune # remove all currently unused imaged
 docker image prune -a # clear everything</p>
 <h4 id="remove-containers">Remove containers</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker rm nginx:old
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker rm nginx:old
 docker system prune <span style="color:#8f5902;font-style:italic"># remove all stopped containers, images, unused networks</span>
 </code></pre></div><h4 id="stop-all-containers-remove-all-stopped-containers-using-bash-command-substitution">Stop all containers. Remove all stopped containers, using bash command substitution</h4>
 <p>docker container stop $(docker container ls -aq) # stop all containers
@@ -748,9 +748,9 @@ docker container rm $(docker container ls -aq) # remove all stopped containers
 docker rmi -f $(docker images -aq)</p>
 <h2 id="docker-inspect">Docker Inspect</h2>
 <h4 id="get-info-about-container">get info about container</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker inspect
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker inspect
 </code></pre></div><h4 id="get-ip-address-of-container">get ip address of container</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker inspect nginx:latest <span style="color:#000;font-weight:bold">|</span> grep IPAddr
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker inspect nginx:latest <span style="color:#000;font-weight:bold">|</span> grep IPAddr
 </code></pre></div><h2 id="ports-and-volumes">Ports and Volumes</h2>
 <h4 id="volumes">volumes</h4>
 <p>docker volume ls
@@ -761,13 +761,13 @@ docker volume rm
 <code>expose</code> -&gt; reveal ports to the docker environment
 <code>ports</code> -&gt; expose ports to docker and to the host system (i.e. publish the ports)</p>
 <h4 id="bind-ports">Bind ports</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># docker run -d -p HOSTPORT:CONTAINERPORT</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># docker run -d -p HOSTPORT:CONTAINERPORT</span>
 docker run -d -p 8080:80 --name<span style="color:#ce5c00;font-weight:bold">=</span>WebServer nginx:latest
 </code></pre></div><h4 id="create-a-mount-point-in-a-container">Create a mount point in a container</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># docker run -d -p 8080:80 --name=webserver -v HOSTVOLPATH:CONTAINERVOLPATH nginx:latest</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># docker run -d -p 8080:80 --name=webserver -v HOSTVOLPATH:CONTAINERVOLPATH nginx:latest</span>
 docker run -d -p 8080:80 --name<span style="color:#ce5c00;font-weight:bold">=</span>webserver -v /home/user/www:/usr/share/nginx/html nginx:latest
 </code></pre></div><h2 id="building-using-a-dockerfile">BUILDING, using a Dockerfile</h2>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># Execute in directory with dockerfile, or define path</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># Execute in directory with dockerfile, or define path</span>
 docker build -t dzoladz/ubuntu .
 </code></pre></div><h4 id="dockerfile">Dockerfile</h4>
 <ul>
@@ -780,7 +780,7 @@ CMD * applies to the container instantiated on the base image<br>
 EXPOSE * expose container ports to host system</p>
 </blockquote>
 <h4 id="build-a-container-using-a-dockerfile-and-tag-it">Build a container using a Dockerfile and tag it</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker build -t keycloak-proxy .
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker build -t keycloak-proxy .
 
 docker run -d -p 80:80 -p 443:443 --name<span style="color:#ce5c00;font-weight:bold">=</span>keycloak-proxy keycloak-proxy:latest
 
@@ -788,40 +788,40 @@ docker run -d -p 80:80 -p 443:443 --name<span style="color:#ce5c00;font-weight:b
 docker <span style="color:#204a87">exec</span> &lt;container name&gt; nginx -s reload
 </code></pre></div><h2 id="applications">Applications</h2>
 <h4 id="metabase">Metabase</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># NOTE: this will run Metabase without any persistent storage for the application.</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># NOTE: this will run Metabase without any persistent storage for the application.</span>
 docker run -d -p 3000:3000 --name metabase metabase/metabase
 </code></pre></div><h4 id="owncloud">ownCloud</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker run -d -p 8080:80 --name owncloud --mount <span style="color:#000">source</span><span style="color:#ce5c00;font-weight:bold">=</span>/Users/Derek/docker/owncloud,target<span style="color:#ce5c00;font-weight:bold">=</span>/var/www/html owncloud:8.1
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker run -d -p 8080:80 --name owncloud --mount <span style="color:#000">source</span><span style="color:#ce5c00;font-weight:bold">=</span>/Users/Derek/docker/owncloud,target<span style="color:#ce5c00;font-weight:bold">=</span>/var/www/html owncloud:8.1
 </code></pre></div><h1 id="keyclock-docker-for-testing">Keyclock, Docker for Testing</h1>
 <p>Notes on the installation of Keycloak using official <a href="https://hub.docker.com/r/jboss/keycloak/">jboss/keycloak</a> Docker image.</p>
 <h2 id="install-git-and-docker">Install Git and Docker</h2>
 <p>Add the GPG key for the official Docker repo</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -fsSL https://download.docker.com/linux/ubuntu/gpg <span style="color:#000;font-weight:bold">|</span> sudo apt-key add -
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -fsSL https://download.docker.com/linux/ubuntu/gpg <span style="color:#000;font-weight:bold">|</span> sudo apt-key add -
 </code></pre></div><p>Add the Docker repository to APT sources</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">add-apt-repository <span style="color:#4e9a06">&#34;deb [arch=amd64] https://download.docker.com/linux/ubuntu </span><span style="color:#204a87;font-weight:bold">$(</span>lsb_release -cs<span style="color:#204a87;font-weight:bold">)</span><span style="color:#4e9a06"> stable&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">add-apt-repository <span style="color:#4e9a06">&#34;deb [arch=amd64] https://download.docker.com/linux/ubuntu </span><span style="color:#204a87;font-weight:bold">$(</span>lsb_release -cs<span style="color:#204a87;font-weight:bold">)</span><span style="color:#4e9a06"> stable&#34;</span>
 </code></pre></div><p>Update package database</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">apt-get update
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">apt-get update
 </code></pre></div><p>Install from the Docker repo, not the Ubuntu 16.04 distribution package.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">apt-cache policy docker-ce
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">apt-cache policy docker-ce
 </code></pre></div><p>Install Docker Community Edition and Git</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">apt-get install -y docker-ce git
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">apt-get install -y docker-ce git
 </code></pre></div><h2 id="add-keycloak-user">Add Keycloak User</h2>
 <blockquote>
 <p>Run docker as a non-root user</p>
 </blockquote>
 <p>Create the Keycloak user</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">adduser keycloak
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">adduser keycloak
 </code></pre></div><p>Add keycloak user to the docker group. No sudo for docker commands</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">usermod -aG docker keycloak
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">usermod -aG docker keycloak
 </code></pre></div><h2 id="launch-keycloak-w-postgres">Launch Keycloak w/ Postgres</h2>
 <p>Create the Keycloak network</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker network create keycloak-network
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker network create keycloak-network
 </code></pre></div><p>Deploy a PostGRES container for the Keycloak app</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker run -d --name keycloak-db --net keycloak-network -e <span style="color:#000">POSTGRES_DB</span><span style="color:#ce5c00;font-weight:bold">=</span>keycloak -e <span style="color:#000">POSTGRES_USER</span><span style="color:#ce5c00;font-weight:bold">=</span>keycloak -e <span style="color:#000">POSTGRES_PASSWORD</span><span style="color:#ce5c00;font-weight:bold">=</span>password postgres
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker run -d --name keycloak-db --net keycloak-network -e <span style="color:#000">POSTGRES_DB</span><span style="color:#ce5c00;font-weight:bold">=</span>keycloak -e <span style="color:#000">POSTGRES_USER</span><span style="color:#ce5c00;font-weight:bold">=</span>keycloak -e <span style="color:#000">POSTGRES_PASSWORD</span><span style="color:#ce5c00;font-weight:bold">=</span>password postgres
 </code></pre></div><p>Deploy the Keycloak container</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker run -d --name keycloak-app --net keycloak-network -p 8443:8443 -e <span style="color:#000">DB_ADDR</span><span style="color:#ce5c00;font-weight:bold">=</span>keycloak-db -e <span style="color:#000">KEYCLOAK_USER</span><span style="color:#ce5c00;font-weight:bold">=</span>admin -e <span style="color:#000">KEYCLOAK_PASSWORD</span><span style="color:#ce5c00;font-weight:bold">=</span>password jboss/keycloak
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker run -d --name keycloak-app --net keycloak-network -p 8443:8443 -e <span style="color:#000">DB_ADDR</span><span style="color:#ce5c00;font-weight:bold">=</span>keycloak-db -e <span style="color:#000">KEYCLOAK_USER</span><span style="color:#ce5c00;font-weight:bold">=</span>admin -e <span style="color:#000">KEYCLOAK_PASSWORD</span><span style="color:#ce5c00;font-weight:bold">=</span>password jboss/keycloak
 </code></pre></div><p>Start Keycloak with Proxy Forwarding for use with Nginx</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker run -d --name keycloak-app --net keycloak-network -p 8443:8443 -e <span style="color:#000">DB_ADDR</span><span style="color:#ce5c00;font-weight:bold">=</span>keycloak-db -e <span style="color:#000">KEYCLOAK_USER</span><span style="color:#ce5c00;font-weight:bold">=</span>admin -e <span style="color:#000">KEYCLOAK_PASSWORD</span><span style="color:#ce5c00;font-weight:bold">=</span>password -e <span style="color:#000">PROXY_ADDRESS_FORWARDING</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#204a87">true</span> jboss/keycloak
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker run -d --name keycloak-app --net keycloak-network -p 8443:8443 -e <span style="color:#000">DB_ADDR</span><span style="color:#ce5c00;font-weight:bold">=</span>keycloak-db -e <span style="color:#000">KEYCLOAK_USER</span><span style="color:#ce5c00;font-weight:bold">=</span>admin -e <span style="color:#000">KEYCLOAK_PASSWORD</span><span style="color:#ce5c00;font-weight:bold">=</span>password -e <span style="color:#000">PROXY_ADDRESS_FORWARDING</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#204a87">true</span> jboss/keycloak
 </code></pre></div>
 </div>
 
@@ -848,20 +848,20 @@ docker run -d -p 3000:3000 --name metabase metabase/metabase
 </ul>
 <p>You&rsquo;ll need to know a few things like:</p>
 <h5 id="what-block-devices-are-available">What block devices are available?</h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">lsblk
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">lsblk
 </code></pre></div><h5 id="what-filesystem-am-i-using-on-a-partition">What filesystem am I using on a partition?</h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">file -s /dev/sda1
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">file -s /dev/sda1
 lsblk -f
 blkid
 </code></pre></div><h5 id="what-is-the-current-capacity-of-storage-in-the-filesystem">What is the current capacity of storage in the filesystem?</h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">df -h
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">df -h
 </code></pre></div><h5 id="grow-the-first-partition-to-the-size-of-the-volume">Grow the first partition to the size of the volume</h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">growpart /dev/sda <span style="color:#0000cf;font-weight:bold">1</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">growpart /dev/sda <span style="color:#0000cf;font-weight:bold">1</span>
 </code></pre></div><h5 id="resize-the-filesystem-to-the-size-of-the-partition">Resize the filesystem to the size of the partition</h5>
 <p><em>command specific to filesystem used, this for ext</em></p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">resize2fs /dev/sda1
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">resize2fs /dev/sda1
 </code></pre></div><h5 id="list-disk-usage--s-summarize-of-a-user">List disk usage -s summarize of a user</h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">du -hs /home/marcload
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">du -hs /home/marcload
 </code></pre></div>
 </div>
 
@@ -883,39 +883,39 @@ blkid
 <h2 id="reject-connections-that-originate-from-ips-outside-of-ohio-region">Reject connections that originate from IPs outside of Ohio region.</h2>
 <p>Region codes should be specified using the two-character <a href="https://geolite.maxmind.com/download/geoip/misc/region_codes.csv">ISO 3166-2 subcountry code for the US</a>.</p>
 <p>GeoLite data must also be configured on EZproxy (see the <a href="https://help.oclc.org/Library_Management/EZproxy/Configure_resources/Location">Location</a> section of the EZproxy manual).</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">::Common
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">::Common
 Set <span style="color:#000">access</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;deny&#34;</span><span style="color:#000;font-weight:bold">;</span>
 If Region<span style="color:#ce5c00;font-weight:bold">()</span> eq <span style="color:#4e9a06">&#34;OH&#34;</span><span style="color:#000;font-weight:bold">;</span> Set <span style="color:#000">access</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;allow&#34;</span>
 If access eq <span style="color:#4e9a06">&#34;deny&#34;</span><span style="color:#000;font-weight:bold">;</span> Deny irefused.htm
 /Common
 </code></pre></div><p>Regex for use in the main authentication block. Deny all access, unless the location contains OH, IA, OR MI in the string.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Set <span style="color:#000">access</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;deny&#34;</span><span style="color:#000;font-weight:bold">;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Set <span style="color:#000">access</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;deny&#34;</span><span style="color:#000;font-weight:bold">;</span>
 If Region<span style="color:#ce5c00;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">=</span>~ <span style="color:#4e9a06">&#34;/.*(OH|IA|MI).*/&#34;</span><span style="color:#000;font-weight:bold">;</span> Set <span style="color:#000">access</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;allow&#34;</span>
 If access eq <span style="color:#4e9a06">&#34;deny&#34;</span><span style="color:#000;font-weight:bold">;</span> Deny irefused.htm
 </code></pre></div><p>The above should be placed before any <code>IfRefused; Deny irefused.htm</code> or <code>IfExpired; Deny iexpired.htm</code> directives in the main authentication block.</p>
 <p>It&rsquo;s also possible to restrict authentication to US-based IPs, using the <code>IfCountry</code> function. <code>IfCountry</code> used the two-letter <a href="https://dev.maxmind.com/geoip/legacy/codes/iso3166/">ISO 3166 Country Codes</a>.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Set <span style="color:#000">access</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;deny&#34;</span><span style="color:#000;font-weight:bold">;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Set <span style="color:#000">access</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;deny&#34;</span><span style="color:#000;font-weight:bold">;</span>
 IfCountry US<span style="color:#000;font-weight:bold">;</span> Set <span style="color:#000">access</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;allow&#34;</span>
 If access eq <span style="color:#4e9a06">&#34;deny&#34;</span><span style="color:#000;font-weight:bold">;</span> Deny irefused.htm
 </code></pre></div><p><strong>NOTE</strong>: The above snippet of code needs to be placed <strong>within</strong> the authentication block to be actively restriction authentication attempts that originate from a non-US country code.</p>
 <h2 id="supply-resource-credentials-within-an-iframe">Supply Resource Credentials within an iFrame</h2>
 <p>There are times when you might need to Find/Replace username and password values within an <code>&lt;iframe&gt;</code> element The example below is a working draft of two auto-triggered functions to input credentials into the proper form fields.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Find &lt;/iframe&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Find &lt;/iframe&gt;
 Replace &lt;/iframe&gt;&lt;script&gt;<span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">function</span><span style="color:#ce5c00;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">{</span> setTimeout<span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">function</span><span style="color:#ce5c00;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">{</span>window.frames<span style="color:#ce5c00;font-weight:bold">[</span>0<span style="color:#ce5c00;font-weight:bold">]</span>.document.getElementById<span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#39;username&#39;</span><span style="color:#ce5c00;font-weight:bold">)</span>.value <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;USERNAME&#34;</span><span style="color:#000;font-weight:bold">;</span><span style="color:#ce5c00;font-weight:bold">}</span>, 1000<span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#ce5c00;font-weight:bold">})()</span><span style="color:#000;font-weight:bold">;</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">function</span><span style="color:#ce5c00;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">{</span> setTimeout<span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">function</span><span style="color:#ce5c00;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">{</span>window.frames<span style="color:#ce5c00;font-weight:bold">[</span>0<span style="color:#ce5c00;font-weight:bold">]</span>.document.getElementById<span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#39;password&#39;</span><span style="color:#ce5c00;font-weight:bold">)</span>.value <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;PASSWORD&#34;</span><span style="color:#000;font-weight:bold">;</span><span style="color:#ce5c00;font-weight:bold">}</span>, 1000<span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#ce5c00;font-weight:bold">})()</span><span style="color:#000;font-weight:bold">;</span>&lt;/script&gt;
 </code></pre></div><h2 id="regex-validation-of-saml-attributes-in-the-auth-namespace">Regex Validation of SAML Attributes in the Auth: Namespace</h2>
 <p>SAML authorization check, within <code>shibuser.txt</code>, against the <code>userid</code> attribute released to EZproxy</p>
 <blockquote>
 <p>Authorize <code>userid</code>, if it begins with  1, 3, or 5. Otherwise, record <code>userid</code> and deny with <code>itype.htm</code></p>
 </blockquote>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">If !<span style="color:#ce5c00;font-weight:bold">(</span>auth:userid <span style="color:#ce5c00;font-weight:bold">=</span>~ <span style="color:#4e9a06">&#34;/^(1|3|5).+</span>$<span style="color:#4e9a06">/&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span> Audit -expr auth:userid<span style="color:#000;font-weight:bold">;</span> Deny itype.htm<span style="color:#000;font-weight:bold">;</span> Stop
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">If !<span style="color:#ce5c00;font-weight:bold">(</span>auth:userid <span style="color:#ce5c00;font-weight:bold">=</span>~ <span style="color:#4e9a06">&#34;/^(1|3|5).+</span>$<span style="color:#4e9a06">/&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span> Audit -expr auth:userid<span style="color:#000;font-weight:bold">;</span> Deny itype.htm<span style="color:#000;font-weight:bold">;</span> Stop
 </code></pre></div><h2 id="auto-trigger-attribute-replacement-via-ezproxy-findreplace">Auto-trigger attribute replacement via EZproxy Find/Replace</h2>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">function</span><span style="color:#ce5c00;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">function</span><span style="color:#ce5c00;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">{</span>
         var <span style="color:#000">url</span> <span style="color:#ce5c00;font-weight:bold">=</span> document.getElementById<span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#39;ctl00_BodyContent_ucShare_txtTitleURL&#39;</span><span style="color:#ce5c00;font-weight:bold">)</span>.value<span style="color:#000;font-weight:bold">;</span>
         var <span style="color:#000">fixed_url</span> <span style="color:#ce5c00;font-weight:bold">=</span> url.replace<span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#39;fod.infobase.com&#39;</span>, <span style="color:#4e9a06">&#39;fod-infobase-com&#39;</span><span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
         document.getElementById<span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#39;ctl00_BodyContent_ucShare_txtTitleURL&#39;</span><span style="color:#ce5c00;font-weight:bold">)</span>.setAttribute<span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#39;value&#39;</span>, fixed_url<span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
 <span style="color:#ce5c00;font-weight:bold">})()</span><span style="color:#000;font-weight:bold">;</span>
 </code></pre></div><h2 id="cron-jobs-for-monitoring-activity">Cron Jobs for Monitoring Activity</h2>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#0000cf;font-weight:bold">10</span> <span style="color:#0000cf;font-weight:bold">0</span> * * * find /usr/local -name messages.txt <span style="color:#000;font-weight:bold">|</span> xargs grep -E <span style="color:#4e9a06">&#34;Unrecognized|DANGER|hosts\s36[0-9][0-9]&#34;</span> <span style="color:#000;font-weight:bold">|</span> mail -E -s <span style="color:#4e9a06">&#34;EZproxy Warning Messages&#34;</span> -a <span style="color:#4e9a06">&#34;From: root \&lt;root@{hostname}\&gt;&#34;</span> recipient@derekzoladz.com
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#0000cf;font-weight:bold">10</span> <span style="color:#0000cf;font-weight:bold">0</span> * * * find /usr/local -name messages.txt <span style="color:#000;font-weight:bold">|</span> xargs grep -E <span style="color:#4e9a06">&#34;Unrecognized|DANGER|hosts\s36[0-9][0-9]&#34;</span> <span style="color:#000;font-weight:bold">|</span> mail -E -s <span style="color:#4e9a06">&#34;EZproxy Warning Messages&#34;</span> -a <span style="color:#4e9a06">&#34;From: root \&lt;root@{hostname}\&gt;&#34;</span> recipient@derekzoladz.com
 
 <span style="color:#0000cf;font-weight:bold">20</span> <span style="color:#0000cf;font-weight:bold">0</span> * * * find /usr/local/ezproxy/audit/<span style="color:#204a87;font-weight:bold">$(</span>date --date<span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;yesterday&#39;</span> <span style="color:#4e9a06">&#34;+\%Y\%m\%d&#34;</span><span style="color:#204a87;font-weight:bold">)</span>.txt -type f <span style="color:#000;font-weight:bold">|</span> xargs grep -E <span style="color:#4e9a06">&#34;exceeded&#34;</span> <span style="color:#000;font-weight:bold">|</span> mail -E -s <span style="color:#4e9a06">&#34;EZproxy Exceeding Usage Limit&#34;</span> -a <span style="color:#4e9a06">&#34;From: root \&lt;root@{hostname}\&gt;&#34;</span> recipient@derekzoladz.com
 
@@ -929,28 +929,28 @@ Replace &lt;/iframe&gt;&lt;script&gt;<span style="color:#ce5c00;font-weight:bold
 <blockquote>
 <p>{host}?locatt=label:secondary_bloomsburyCollections</p>
 </blockquote>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">SPUEditVar <span style="color:#000">proxy_login</span><span style="color:#ce5c00;font-weight:bold">=</span>login?url<span style="color:#ce5c00;font-weight:bold">=</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">SPUEditVar <span style="color:#000">proxy_login</span><span style="color:#ce5c00;font-weight:bold">=</span>login?url<span style="color:#ce5c00;font-weight:bold">=</span>
 SPUEdit @^<span style="color:#ce5c00;font-weight:bold">(</span>https:<span style="color:#4e9a06">\/\/</span>doi.org<span style="color:#4e9a06">\/</span><span style="color:#ce5c00;font-weight:bold">)(</span>10.<span style="color:#ce5c00;font-weight:bold">[</span>0-9<span style="color:#ce5c00;font-weight:bold">]</span>*<span style="color:#4e9a06">\/</span><span style="color:#ce5c00;font-weight:bold">)([</span>0-9<span style="color:#ce5c00;font-weight:bold">]</span>*<span style="color:#ce5c00;font-weight:bold">)(</span><span style="color:#4e9a06">\?</span><span style="color:#000">locatt</span><span style="color:#ce5c00;font-weight:bold">=</span>label.*<span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000">$@</span><span style="color:#4e9a06">${</span><span style="color:#000">proxy_login</span><span style="color:#4e9a06">}</span><span style="color:#000">$1$2$3</span>@ir
 </code></pre></div><h2 id="group-based-access-to-loggedin-files">Group-based Access to /Loggedin Files</h2>
 <ol>
 <li>In <code>user.txt</code>, create the authenticated group</li>
 </ol>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">::group<span style="color:#ce5c00;font-weight:bold">=</span>SecretFiles+Admin.Groups
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">::group<span style="color:#ce5c00;font-weight:bold">=</span>SecretFiles+Admin.Groups
 user:password
 </code></pre></div><ol start="2">
 <li>Establish a <code>../loggedin/</code> directory for the named Group from <code>user.txt</code></li>
 </ol>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./docs/loggedin/SecretFiles
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">./docs/loggedin/SecretFiles
 </code></pre></div><h2 id="issue-a-manual-call-to-the-sierra-patron-api">Issue a Manual Call to the Sierra Patron API</h2>
 <p>Given a Sierra Patron Record containing <code>P BARCODE[pb]=fakeuser1234</code></p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl --interface eth0:48 https://<span style="color:#ce5c00;font-weight:bold">{</span>sierra-server-domain<span style="color:#ce5c00;font-weight:bold">}</span>:54620/PATRONAPI/fakeuser1234/dump
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl --interface eth0:48 https://<span style="color:#ce5c00;font-weight:bold">{</span>sierra-server-domain<span style="color:#ce5c00;font-weight:bold">}</span>:54620/PATRONAPI/fakeuser1234/dump
 </code></pre></div><p>If successful, the call will return patron data; otherwise, a failure message will be returned with additional information to diagnose the issue. For example:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&lt;BODY&gt;ERRNUM<span style="color:#ce5c00;font-weight:bold">=</span>2&lt;BR&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&lt;BODY&gt;ERRNUM<span style="color:#ce5c00;font-weight:bold">=</span>2&lt;BR&gt;
 <span style="color:#000">ERRMSG</span><span style="color:#ce5c00;font-weight:bold">=</span>Record ID not unique&lt;BR&gt;
 &lt;/BODY&gt;
 </code></pre></div><h2 id="temp-access-iii-server-migrations">Temp Access, III Server Migrations</h2>
 <p>Migrating from local to III-hosted Sierra involves 6-8 hours of server downtime. If EZproxy relies on the Sierra Patron API for authentication, remote database access will be unavailable during the server migration. The following snippet will present <code>/login.htm</code> to the user, but will accept credentials and grant access to <em>all</em>. Use with extreme caution.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">::III
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">::III
 Host https://sierra.catalog.org:54620
 IfRefused<span style="color:#000;font-weight:bold">;</span> Ignore
 IfInvalid<span style="color:#000;font-weight:bold">;</span> Ignore
@@ -959,7 +959,7 @@ IfUnauthenticated<span style="color:#000;font-weight:bold">;</span> Stop
 </code></pre></div><h2 id="transparent-language--saml-based-sso">Transparent Language &amp; SAML-based SSO</h2>
 <p>When accessing Ohio&rsquo;s statewide subscription to Transparent Language Online though an EZProxy instance that connects tp a SAML-based authentication server, the platform will not recognize the IP to allow people to sign up. This solution basically forces everyone to log into EZproxy, but with a RedirectSafe entry so that Transparent Language can look for your EZproxy Referer.</p>
 <p>In <code>config.txt</code>, you&rsquo;ll add the following stanza above any <code>ExcludeIP</code> directives.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text"># -------------------------------------------------------
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text"># -------------------------------------------------------
 # **All users must authenticate through ezproxy**
 #
 T Transparent Language Redirect
@@ -974,7 +974,7 @@ NeverProxy library.transparent.com
 # -------------------------------------------------------
 
 </code></pre></div><p>The contents of the HTML file placed in the <code>docs/limited/transparent_langauges.htm</code> file are as follows:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">head</span><span style="color:#000;font-weight:bold">&gt;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">head</span><span style="color:#000;font-weight:bold">&gt;</span>
   <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">meta</span> <span style="color:#c4a000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;referrer&#34;</span> <span style="color:#c4a000">content</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;always&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
   <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">noscript</span><span style="color:#000;font-weight:bold">&gt;</span>
     <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">META</span> <span style="color:#c4a000">http-equiv</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;refresh&#34;</span> <span style="color:#c4a000">content</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;0;URL=https://library.transparent.com/ohio&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
@@ -983,7 +983,7 @@ NeverProxy library.transparent.com
 <span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">head</span><span style="color:#000;font-weight:bold">&gt;</span>
 <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#204a87">window</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">opener</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#000">location</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">replace</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;https://library.transparent.com/ohio&#34;</span><span style="color:#000;font-weight:bold">)&lt;/</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold">&gt;</span>
 </code></pre></div><p>The SPU for Transparent Languages becomes:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">https://login.{EZproxy Hostname}/limited/transparent_languages.htm
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">https://login.{EZproxy Hostname}/limited/transparent_languages.htm
 </code></pre></div>
 </div>
 
@@ -1026,7 +1026,7 @@ NeverProxy library.transparent.com
 	<h1 id="pg-4342c99a6ae391fcf2ac9f3495a2121d">10 - Git</h1>
     <div class="lead">Version control tool</div>
 	<h1 id="configuration">Configuration</h1>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config
 git config --global user.name <span style="color:#4e9a06">&#34;derekz&#34;</span>
 git config --global user.email derekz@derekzoladz.com
 
@@ -1036,7 +1036,7 @@ git config credential.helper cache
 <span style="color:#8f5902;font-style:italic"># Store my creds in a plain-text .git-credentials file</span>
 git config --global credential.helper store
 </code></pre></div><h1 id="clone">Clone</h1>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># Clone a Repository and history</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># Clone a Repository and history</span>
 git clone https://github.com/dzoladz/dzoladz.git
 
 <span style="color:#8f5902;font-style:italic"># Clone &amp; Rename to &#39;website&#39;</span>
@@ -1046,11 +1046,11 @@ git clone https://github.com/dzoladz/dzoladz.git website
 git clone -b collab/berick/ansible-installer-ubuntu-16.04  git://git.evergreen-ils.org/working/random.git
 </code></pre></div><h1 id="basics">Basics</h1>
 <h4 id="initialize-git-repository">Initialize Git Repository</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir repo_name
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir repo_name
 <span style="color:#204a87">cd</span> repo_name
 git init
 </code></pre></div><h4 id="remotes">Remotes</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># Add initial remote named &#39;origin&#39;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># Add initial remote named &#39;origin&#39;</span>
 git remote add origin https://github.com/dzoladz/dzoladz.git
 
 <span style="color:#8f5902;font-style:italic"># Rename remote &#39;origin&#39; to &#39;upstream&#39;</span>
@@ -1062,7 +1062,7 @@ git remote -v
 <span style="color:#8f5902;font-style:italic"># Remote remote named &#39;upstream&#39;</span>
 git remote rm upstream
 </code></pre></div><h4 id="files">Files</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># List new and modified files, branch, etc...</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># List new and modified files, branch, etc...</span>
 git status
 
 <span style="color:#8f5902;font-style:italic"># Track file.txt</span>
@@ -1095,7 +1095,7 @@ git push &lt;remote_name&gt; &lt;branch_name&gt;
 <span style="color:#8f5902;font-style:italic"># Incorporate changes from remote repository</span>
 git pull
 </code></pre></div><h4 id="branches">Branches</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># List all branches in the local repository</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># List all branches in the local repository</span>
 git branch
 
 <span style="color:#8f5902;font-style:italic"># Show all local and remote branches</span>
@@ -1120,13 +1120,13 @@ git push origin master <span style="color:#8f5902;font-style:italic"># push to r
 git pull origin master
 git stash pop</p>
 <h4 id="search-repo">Search Repo</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># Case-insensitive search for files containing `commit`</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># Case-insensitive search for files containing `commit`</span>
 git grep -i <span style="color:#4e9a06">&#39;commit&#39;</span>
 
 <span style="color:#8f5902;font-style:italic"># List files in repo using file globbing</span>
 git ls-files *.py
 </code></pre></div><h4 id="history">History</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># List commit history of current branch</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># List commit history of current branch</span>
 git log
 
 <span style="color:#8f5902;font-style:italic"># Show commit d2b557da6450c3dc77766b86d6d7b832af6d3d6a</span>
@@ -1135,7 +1135,7 @@ git show d2b557da6450c3dc77766b86d6d7b832af6d3d6a
 <span style="color:#8f5902;font-style:italic"># Show commits by specific author</span>
 git log --author<span style="color:#ce5c00;font-weight:bold">=</span>dzoladz
 </code></pre></div><h1 id="just-for-fun">Just for Fun</h1>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># Who has the most commits in this repo</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># Who has the most commits in this repo</span>
 git shortlog -s -n
 </code></pre></div>
 </div>
@@ -1157,27 +1157,27 @@ git shortlog -s -n
 	<ol>
 <li>Get <code>gpg</code> command</li>
 </ol>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install gnupg
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install gnupg
 </code></pre></div><ol start="2">
 <li>Generate GPG key</li>
 </ol>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gpg --full-generate-key
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gpg --full-generate-key
 </code></pre></div><ol start="3">
 <li>List GPG keys for <code>derek@derekzoladz.com</code></li>
 </ol>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gpg --list-secret-keys --keyid-format LONG derek@derekzoladz.com
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gpg --list-secret-keys --keyid-format LONG derek@derekzoladz.com
 </code></pre></div><ol start="4">
 <li>Copy the GPG key ID that starts with <code>sec</code>. In the following example,
 <code>488652B776349D07</code>:</li>
 </ol>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sec   rsa4096/488652B776349D07 2019-12-14 <span style="color:#ce5c00;font-weight:bold">[</span>SC<span style="color:#ce5c00;font-weight:bold">]</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sec   rsa4096/488652B776349D07 2019-12-14 <span style="color:#ce5c00;font-weight:bold">[</span>SC<span style="color:#ce5c00;font-weight:bold">]</span>
       8AAF3B17369BFB6A36171FFA76349D07488652B7
 uid                 <span style="color:#ce5c00;font-weight:bold">[</span>ultimate<span style="color:#ce5c00;font-weight:bold">]</span> Derek Zoladz <span style="color:#ce5c00;font-weight:bold">(</span>None<span style="color:#ce5c00;font-weight:bold">)</span> &lt;derek@derekzoladz.com&gt;
 ssb   rsa4096/8A3A7957EECFC9AA 2019-12-14 <span style="color:#ce5c00;font-weight:bold">[</span>E<span style="color:#ce5c00;font-weight:bold">]</span>
 </code></pre></div><ol start="5">
 <li>Export the public key of that ID</li>
 </ol>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gpg --armor --export 488652B776349D07
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gpg --armor --export 488652B776349D07
 </code></pre></div><ol start="6">
 <li>
 <p>Copy the public GPG key and it to both GitLab and GitHub accounts</p>
@@ -1186,19 +1186,19 @@ ssb   rsa4096/8A3A7957EECFC9AA 2019-12-14 <span style="color:#ce5c00;font-weight
 <p>Tell Git to use your GPG key to sign commits</p>
 </li>
 </ol>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --global user.signingkey 488652B776349D07
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --global user.signingkey 488652B776349D07
 </code></pre></div><ol start="8">
 <li>Tell Git to sign your commits automatically, to avoid using the <code>-S</code> flag with every
 commit</li>
 </ol>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --global commit.gpgsign <span style="color:#204a87">true</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --global commit.gpgsign <span style="color:#204a87">true</span>
 </code></pre></div><ol start="9">
 <li>Export GPG key</li>
 </ol>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># temporary</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># temporary</span>
 <span style="color:#204a87">export</span> <span style="color:#000">GPG_TTY</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#204a87;font-weight:bold">$(</span>tty<span style="color:#204a87;font-weight:bold">)</span>
 </code></pre></div><p>-or-</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># add to .bashrc or .zshrc to load at each session</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># add to .bashrc or .zshrc to load at each session</span>
 <span style="color:#000">GPG_TTY</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#204a87;font-weight:bold">$(</span>tty<span style="color:#204a87;font-weight:bold">)</span>
 <span style="color:#204a87">export</span> GPG_TTY
 </code></pre></div>
@@ -1243,7 +1243,7 @@ commit</li>
 	<ol>
 <li>Get it!</li>
 </ol>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/usr/bin/ruby -e <span style="color:#4e9a06">&#34;</span><span style="color:#204a87;font-weight:bold">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install<span style="color:#204a87;font-weight:bold">)</span><span style="color:#4e9a06">&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/usr/bin/ruby -e <span style="color:#4e9a06">&#34;</span><span style="color:#204a87;font-weight:bold">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install<span style="color:#204a87;font-weight:bold">)</span><span style="color:#4e9a06">&#34;</span>
 </code></pre></div><h2 id="command-cheat-sheet">COMMAND CHEAT SHEET</h2>
 <h4 id="globals">Globals</h4>
 <ul>
@@ -1290,7 +1290,7 @@ commit</li>
 <ol start="2">
 <li>Add the commit to the shell script below and execute.</li>
 </ol>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic">#!/usr/local/bin/bash
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic">#!/usr/local/bin/bash
 </span><span style="color:#8f5902;font-style:italic"></span>
 <span style="color:#000">FORMULA</span><span style="color:#ce5c00;font-weight:bold">=</span>hugo
 <span style="color:#000">COMMIT</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#8f5902;font-style:italic">############</span>
@@ -1319,7 +1319,7 @@ brew unlink <span style="color:#4e9a06">${</span><span style="color:#000">FORMUL
 <ul>
 <li>Article Search</li>
 </ul>
-<pre><code>&lt;form action=&quot;javascript:submitArticleDatabasesSearch();&quot;&gt;
+<pre tabindex="0"><code>&lt;form action=&quot;javascript:submitArticleDatabasesSearch();&quot;&gt;
 	&lt;label for=&quot;searchbox&quot;&gt;Search for:&lt;/label&gt;
 	&lt;input name=&quot;article_searchbox&quot; type=&quot;text&quot; placeholder=&quot;Enter Keywords&quot;&gt;
 	&lt;span class=&quot;search-in&quot;&gt;
@@ -1360,7 +1360,7 @@ function submitArticleDatabasesSearch() {
 </code></pre><ul>
 <li>OneSearch</li>
 </ul>
-<pre><code>&lt;form action=&quot;javascript:submitOneSearch()&quot;&gt;
+<pre tabindex="0"><code>&lt;form action=&quot;javascript:submitOneSearch()&quot;&gt;
 
 	&lt;select id=&quot;search-field&quot; name=&quot;search_prefix&quot;&gt;
 		&lt;option selected=&quot;selected&quot; value=&quot;&quot;&gt;Keyword&lt;/option&gt;
@@ -1472,7 +1472,7 @@ function submitArticleDatabasesSearch() {
 <ol>
 <li>Run LVM Scan to determine available disks - <code>lvmdiskscan</code></li>
 </ol>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">root@hostname:/# lvmdiskscan
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">root@hostname:/# lvmdiskscan
   /dev/VolGroup1/LogicalVol1 [       3.72 GiB]
   /dev/sda1                  [     285.00 MiB]
   /dev/VolGroup1/LogicalVol2 [       3.72 GiB]
@@ -1489,23 +1489,23 @@ function submitArticleDatabasesSearch() {
 </code></pre></div><ol start="2">
 <li>Establish another Physical Volume (PV) for the newly installed SCSI disk /dev/sbd - <code>pvcreate</code></li>
 </ol>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">root@hostname:/# pvcreate /dev/sdb
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">root@hostname:/# pvcreate /dev/sdb
   Physical volume &#34;/dev/sdb&#34; successfully created.
 </code></pre></div><ol start="3">
 <li>List available Volume Groups (VG) - <code>vgs</code></li>
 </ol>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">root@hostname:/# vgs
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">root@hostname:/# vgs
   VG        #PV #LV #SN Attr   VSize  VFree
   VolGroup1   1   6   0 wz--n- 79.71g &lt;8.95g
 </code></pre></div><ol start="4">
 <li>Add new PV to current VG (VolGroup1) - <code>vgextend</code></li>
 </ol>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">root@hostname:/# vgextend VolGroup1 /dev/sdb
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">root@hostname:/# vgextend VolGroup1 /dev/sdb
   Volume group &#34;VolGroup1&#34; successfully extended
 </code></pre></div><ol start="5">
 <li>Find the Logical Volume to extend - <code>lsblk</code></li>
 </ol>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">root@hostname:/# lsblk
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">root@hostname:/# lsblk
 NAME                      MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
 fd0                         2:0    1    4K  0 disk
 sda                         8:0    0   80G  0 disk
@@ -1524,14 +1524,14 @@ sr0                        11:0    1 1024M  0 rom
 </code></pre></div><ol start="6">
 <li>Extend the logical volume by 30GB - <code>lvextend</code></li>
 </ol>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">root@hostname:/# lvextend -L+30G /dev/VolGroup1/LogicalVol4
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">root@hostname:/# lvextend -L+30G /dev/VolGroup1/LogicalVol4
   Size of logical volume VolGroup1/LogicalVol4 changed from 16.76 GiB (4291 extents) to 46.76 GiB (11971 extents).
   Logical volume VolGroup1/LogicalVol4 successfully resized.
 </code></pre></div><p>It&rsquo;s also possible to <em><strong>extend the logical volume to an exact size</strong></em>, using <code>lvextend -L50G /dev/VolGroup1/LogicalVol4</code> would expand the LV to 50GB</p>
 <ol start="7">
 <li>Extend the file system on <code>/dev/VolGroup1/LogicalVol4</code> to include the new storage capacity - <code>resize2fs</code></li>
 </ol>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">
 root@hostname:/# resize2fs /dev/VolGroup1/LogicalVol4
 resize2fs 1.44.1 (24-Mar-2018)
 Filesystem at /dev/VolGroup1/LogicalVol4 is mounted on /var; on-line resizing required
@@ -1554,7 +1554,8 @@ The filesystem on /dev/VolGroup1/LogicalVol4 is now 12258304 (4k) blocks long.
     
 	<h1 id="pg-66b757734131fa5bcd4bc6aebee1d53f">16 - Mailman</h1>
     <div class="lead">A few commonly used mailman commands to make my life more enjoyable. Find binaries in <code>/usr/lib/mailman/bin</code></div>
-	<ol>
+	<h2 id="mailman-operator-binaries">Mailman Operator Binaries</h2>
+<ol>
 <li>
 <p>Remove an email address from all lists on the server
 <code>remove_members --fromall --nouserack username@domain.edu</code></p>
@@ -1580,7 +1581,17 @@ The filesystem on /dev/VolGroup1/LogicalVol4 is now 12258304 (4k) blocks long.
 <code>find_member username@domain.edu</code></p>
 </li>
 </ol>
-
+<h2 id="migration-tasks">Migration Tasks</h2>
+<p>Mailman provides a few scripts to assist with migration tasks. Check out those scripts to see if something is already available for a specific task before using the one-liners below.</p>
+<ol>
+<li>Move List Archives to Another Server</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">scp -r /path/to/list_archive user@mailman.example.org:/var/lib/mailman/archives/private/list_archive
+</code></pre></div><ol start="2">
+<li>Fix the Hostname in <code>*.html</code> Archive Files</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">find . -type f -name <span style="color:#4e9a06">&#34;*.html&#34;</span> -print0 <span style="color:#000;font-weight:bold">|</span> xargs -0 sed -e <span style="color:#4e9a06">&#39;s/list.ohionet.org/lists.ohionet.org/g&#39;</span>
+</code></pre></div>
 </div>
 
 
@@ -1601,9 +1612,9 @@ The filesystem on /dev/VolGroup1/LogicalVol4 is now 12258304 (4k) blocks long.
 <p><a href="https://mmonit.com/wiki/Monit/ConfigurationExamples">configuration examples</a></p>
 <h2 id="setup-notes">Setup Notes</h2>
 <p>You&rsquo;ll need to ensure that the standard mailutils are installed on the server.</p>
-<pre><code>apt-get install postfix mailutils
+<pre tabindex="0"><code>apt-get install postfix mailutils
 </code></pre><p>Afterwards, modify the <code>/etc/monit/monitrc</code> file by uncommenting the following lines to enable emailed notifications</p>
-<pre><code>set mailserver localhost  #Use localhost for email delivery.
+<pre tabindex="0"><code>set mailserver localhost  #Use localhost for email delivery.
 
 set mail-format {
       from: monit@$HOST
@@ -1617,39 +1628,39 @@ set mail-format {
 
 set alert derekz@example.org #Alert recipient
 </code></pre><p>If you want to store notifications for dispatch, you&rsquo;ll need to enable the notifications queue.</p>
-<pre><code>set eventqueue
+<pre tabindex="0"><code>set eventqueue
 	basedir /var/lib/monit/events # notifications store
 	slots 100                     # limit the queue size
 </code></pre><p>I don&rsquo;t need to be informed when the instance state has changed or reloaded, so I silence those alerts by uncommenting this <code>instance</code> filter</p>
-<pre><code>## Do not alert when Monit starts, stops or performs a user initiated action.
+<pre tabindex="0"><code>## Do not alert when Monit starts, stops or performs a user initiated action.
  set alert derekz@example.org not on {instance}
 </code></pre><p>Make sure to comment out any include file directories at the end of <code>/etc/monit/monitrc</code>. If a path is in the configuration file, but the file does not exist, monit will fail to start.</p>
 <h2 id="commands">Commands</h2>
 <h5 id="monit-daemon">Monit Daemon</h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">monit
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">monit
 monit reload
 monit status
 monit quit
 </code></pre></div><h5 id="test-configuration">Test Configuration</h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">monit -t
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">monit -t
 </code></pre></div><h5 id="controlling-monitors">Controlling Monitors</h5>
-<pre><code>monit unmonitor all
+<pre tabindex="0"><code>monit unmonitor all
 monit monitor all
 </code></pre><h2 id="alerts">Alerts</h2>
 <h5 id="alert-if-new-marc-files-are-added-or-removed-from-a-directory">Alert if new MARC files are added or removed from a directory</h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">check directory marcfiles with path /home/admin/marc/
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">check directory marcfiles with path /home/admin/marc/
       <span style="color:#204a87;font-weight:bold">if</span> changed timestamp <span style="color:#204a87;font-weight:bold">then</span> alert
 </code></pre></div><h5 id="alert-if-registered-users-file-has-not-been-updated-in-the-past-24-hours">Alert if registered users file has not been updated in the past 24 hours</h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">check directory registeredusers with path /home/admin/users
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">check directory registeredusers with path /home/admin/users
       <span style="color:#204a87;font-weight:bold">if</span> timestamp &gt; <span style="color:#0000cf;font-weight:bold">24</span> hour <span style="color:#204a87;font-weight:bold">then</span> alert
 </code></pre></div><h5 id="call-home-every-500-cycles">Call home every 500 cycles</h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">check file testalert with path /.nonexistent
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">check file testalert with path /.nonexistent
     alert derek@example.com with reminder on <span style="color:#0000cf;font-weight:bold">500</span> cycles
 </code></pre></div><h5 id="alert-on-low-disk-space">Alert on low disk space</h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">check filesystem rootfs with path /
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">check filesystem rootfs with path /
     <span style="color:#204a87;font-weight:bold">if</span> space usage &gt; 90% <span style="color:#204a87;font-weight:bold">then</span> alert
 </code></pre></div><h5 id="monitor-system-load">Monitor System Load</h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">check system example.com
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">check system example.com
     <span style="color:#204a87;font-weight:bold">if</span> loadavg <span style="color:#ce5c00;font-weight:bold">(</span>1min<span style="color:#ce5c00;font-weight:bold">)</span> &gt; <span style="color:#0000cf;font-weight:bold">4</span> <span style="color:#204a87;font-weight:bold">then</span> alert
     <span style="color:#204a87;font-weight:bold">if</span> loadavg <span style="color:#ce5c00;font-weight:bold">(</span>5min<span style="color:#ce5c00;font-weight:bold">)</span> &gt; <span style="color:#0000cf;font-weight:bold">2</span> <span style="color:#204a87;font-weight:bold">then</span> alert
     <span style="color:#204a87;font-weight:bold">if</span> memory usage &gt; 75% <span style="color:#204a87;font-weight:bold">then</span> alert
@@ -1658,7 +1669,7 @@ monit monitor all
     <span style="color:#204a87;font-weight:bold">if</span> cpu usage <span style="color:#ce5c00;font-weight:bold">(</span>system<span style="color:#ce5c00;font-weight:bold">)</span> &gt; 30% <span style="color:#204a87;font-weight:bold">for</span> <span style="color:#0000cf;font-weight:bold">2</span> cycles <span style="color:#204a87;font-weight:bold">then</span> alert
     <span style="color:#204a87;font-weight:bold">if</span> cpu usage <span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#204a87">wait</span><span style="color:#ce5c00;font-weight:bold">)</span> &gt; 20% <span style="color:#204a87;font-weight:bold">for</span> <span style="color:#0000cf;font-weight:bold">2</span> cycles <span style="color:#204a87;font-weight:bold">then</span> alert
 </code></pre></div><h5 id="double-check-the-automated-lets-encrypt-ssl-renewal-process">Double check the automated Let&rsquo;s Encrypt SSL renewal process</h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">check host mmonit.com with address mmonit.com
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">check host mmonit.com with address mmonit.com
       <span style="color:#204a87;font-weight:bold">if</span> failed
          port <span style="color:#0000cf;font-weight:bold">443</span>
          with protocol https
@@ -1666,14 +1677,14 @@ monit monitor all
          use ssl options <span style="color:#ce5c00;font-weight:bold">{</span>verify: enable<span style="color:#ce5c00;font-weight:bold">}</span>
       <span style="color:#204a87;font-weight:bold">then</span> alert
 </code></pre></div><h5 id="restart-ezproxy-if-service-halts">Restart EZproxy, if service halts</h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">check process ezproxy with pidfile /var/run/ezproxy.pid
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">check process ezproxy with pidfile /var/run/ezproxy.pid
       restart <span style="color:#000">program</span>  <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;/usr/local/ezproxy/ezproxy restart&#34;</span>
       <span style="color:#204a87;font-weight:bold">if</span> failed port <span style="color:#0000cf;font-weight:bold">80</span> protocol http <span style="color:#204a87;font-weight:bold">for</span> <span style="color:#0000cf;font-weight:bold">2</span> cycles <span style="color:#204a87;font-weight:bold">then</span> restart
 </code></pre></div><h5 id="alert-on-apache-timeouts">Alert on Apache Timeouts</h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">check file apache-error with path /var/log/apache2/error.log
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">check file apache-error with path /var/log/apache2/error.log
     <span style="color:#204a87;font-weight:bold">if</span> match <span style="color:#4e9a06">&#34;^timed out&#34;</span> <span style="color:#204a87;font-weight:bold">then</span> alert
 </code></pre></div><h5 id="process-patrons-when-a-new-file-is-uploaded">Process patrons when a new file is uploaded</h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">check directory patrons with path /home/admin/patrons/
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">check directory patrons with path /home/admin/patrons/
       <span style="color:#204a87;font-weight:bold">if</span> changed timestamp <span style="color:#204a87;font-weight:bold">then</span> <span style="color:#204a87">exec</span> <span style="color:#4e9a06">&#34;/home/admin/scripts/process-patrons.py&#34;</span>
 </code></pre></div>
 </div>
@@ -1703,24 +1714,24 @@ monit monitor all
 
 <h2 id="service">Service</h2>
 <p>Daemon is <code>nsrexecd</code></p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">service networker stop
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">service networker stop
 service networker start
 </code></pre></div><h2 id="logging">Logging</h2>
 <p>Logging for previous versions of Networker configured logs to <code>/nsr/logs/daemon.raw</code></p>
 <h4 id="enter-administrative-shell-of-networker">Enter Administrative Shell of Networker</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">nsradmin -p nsrexec
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">nsradmin -p nsrexec
 </code></pre></div><h4 id="render-log-from-raw">Render <code>.log</code> from <code>.raw</code></h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#204a87">cd</span> /nsr/logs/
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#204a87">cd</span> /nsr/logs/
 nsr_render_log -mepathy daemon.raw &gt; daemon.log
 </code></pre></div><h4 id="view-most-recent-25-entries-in-log">View most recent 25 entries in log</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tail -n <span style="color:#0000cf;font-weight:bold">25</span> daemon.log
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tail -n <span style="color:#0000cf;font-weight:bold">25</span> daemon.log
 </code></pre></div><h4 id="view-logging-configuration">View logging configuration</h4>
 <p>From <code>nsradmin</code> shell:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">print type: NSR log
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">print type: NSR log
 </code></pre></div><h4 id="update-runtime-loggging-location">Update Runtime Loggging Location</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">update runtime rendered log:/nsr/logs/daemon.log
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">update runtime rendered log:/nsr/logs/daemon.log
 </code></pre></div><h4 id="configure-master-server-at-nsrresservers">Configure master server at <code>/nsr/res/servers</code></h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#204a87">echo</span> <span style="color:#4e9a06">&#34;[backup server domain]&#34;</span> &gt;&gt; /nsr/res/servers
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#204a87">echo</span> <span style="color:#4e9a06">&#34;[backup server domain]&#34;</span> &gt;&gt; /nsr/res/servers
 </code></pre></div><h2 id="connection-issue">Connection Issue</h2>
 <p>Render <code>daemon.raw</code> and check latest entries.</p>
 <h4 id="refresh-networker">Refresh Networker</h4>
@@ -1738,7 +1749,7 @@ nsr_render_log -mepathy daemon.raw &gt; daemon.log
 </ol>
 <h4 id="reset-peer-information">Reset Peer Information</h4>
 <p>From <code>nsradmin</code> shell</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">print type: nsr peer information
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">print type: nsr peer information
 delete
 </code></pre></div><h2 id="external-links">External Links</h2>
 <p><a href="www.ipnom.com/legato-NetWorker-Commands">Legato Commands</a></p>
@@ -1763,7 +1774,7 @@ delete
 	<h2 id="google-cloud">Google Cloud</h2>
 <p>Installing the SDK <a href="https://cloud.google.com/sdk/docs/">https://cloud.google.com/sdk/docs/</a></p>
 <h4 id="a-few-commands-for-migrating-a-dns-zone">A Few Commands for Migrating a DNS zone</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gcloud auth login --project managed-dns-migration
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gcloud auth login --project managed-dns-migration
 
 gcloud dns managed-zones create myzone --dns-name<span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;myzone.org&#34;</span> --description<span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;Zone for all the things&#34;</span> --visibility<span style="color:#ce5c00;font-weight:bold">=</span>public
 
@@ -1773,7 +1784,7 @@ gcloud dns managed-zones describe myzone
 </code></pre></div><h2 id="dns">DNS</h2>
 <p>General DNS commands</p>
 <h4 id="dig">dig</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># Query Cloudflare primary DNS to reply with the name servers for the cool-cat.org domain</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># Query Cloudflare primary DNS to reply with the name servers for the cool-cat.org domain</span>
 dig +short NS cool-cat.org 1.1.1.1
 
 <span style="color:#8f5902;font-style:italic"># Ask for the name servers every 2 seconds. Useful for monitoring propagation</span>
@@ -1807,7 +1818,7 @@ watch dig +short NS cool-cat.org 1.1.1.1
 <h4 id="package-manager">Package Manager</h4>
 <p>dpkg - can install .deb directly
 apt - works with software repos</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># Example - Search for a linux-image and install it.</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># Example - Search for a linux-image and install it.</span>
 apt search linux-image <span style="color:#000;font-weight:bold">|</span> grep linux-image-4.18.0-22-generic
 apt install linux-image-4.18.0-22-generic
 update-grub
@@ -1838,7 +1849,7 @@ reboot
 	<ol>
 <li>Get it</li>
 </ol>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -L https://install.perlbrew.pl <span style="color:#000;font-weight:bold">|</span> bash
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -L https://install.perlbrew.pl <span style="color:#000;font-weight:bold">|</span> bash
 </code></pre></div><ol start="2">
 <li>Add <code>perlbrew</code> to your PATH</li>
 </ol>
@@ -1879,28 +1890,29 @@ reboot
     
 	<h1 id="pg-93a572212945aac4962b87f6a08892b2">22 - Postfix</h1>
     <div class="lead">Working with postfix mail transfer agent (MTA)</div>
-	<h1 id="blacklist--whitelist-with-postfix">Blacklist &amp; Whitelist with Postfix</h1>
+	<p><img src="../img/postfix-integrations.png" alt="Postfix Diagram"></p>
+<h1 id="blacklist--whitelist-with-postfix">Blacklist &amp; Whitelist with Postfix</h1>
 <h3 id="1-create-a-file-of-ips-to-blacklist---postfix-referencehttpwwwpostfixorgcidr_table5html">1. Create a file of IPs to blacklist - <a href="http://www.postfix.org/cidr_table.5.html">Postfix Reference</a></h3>
 <p>Create a <code>reject.cidr</code> file in <code>/etc/postfix</code>. To it, add one or more problematic IPs or ranges from your logwatch reports, mail logs, email headers, etc.:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">192.168.1.1		OK
-192.168.0.0/16		REJECT
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">192.168.1.1     OK
+192.168.0.0/16	REJECT
 2001:db8::1		OK
-2001:db8::/32		REJECT
+2001:db8::/32	REJECT
 </code></pre></div><p><strong>FROM THE DOCS</strong> - <em>Rule order matters! Place specific whitelist entries before general blacklist entries.</em></p>
 <h3 id="2-hash-the-rejectcidr-file---postfix-referencehttpwwwpostfixorgpostmap1html">2. Hash the <code>reject.cidr</code> file - <a href="http://www.postfix.org/postmap.1.html">Postfix Reference</a></h3>
 <p>The <code>reject.cidr</code> file must be converted to a database that Postfix can read. This must be done every time <code>reject.cidr</code> is updated.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">postmap /etc/postfix/reject.cidr
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">postmap /etc/postfix/reject.cidr
 </code></pre></div><h3 id="3-update-etcpostfixmaincf---postfix-referencehttpwwwpostfixorgaccess5html">3. Update <code>/etc/postfix/main.cf</code> - <a href="http://www.postfix.org/access.5.html">Postfix Reference</a></h3>
 <p>Postfix needs to be made aware of the new IP blacklist. To alert Postfix of the blacklist, you&rsquo;ll need to add the following to <code>main.cf</code>. - <a href="http://www.postfix.org/postconf.5.html#smtpd_client_restrictions">Postfix Reference</a></p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#000">smtpd_recipient_restrictions</span> <span style="color:#ce5c00;font-weight:bold">=</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#000">smtpd_recipient_restrictions</span> <span style="color:#ce5c00;font-weight:bold">=</span>
    check_client_access cidr:/etc/postfix/reject.cidr
 </code></pre></div><p><strong>FROM THE DOCS</strong> - Placing a block list at the beginning of the <code>smtpd_recipient_restrictions</code> parameter ensures that the IP blocks are obeyed above all other processing, but just as importantly, prevents more-expensive operations, such as virus scanning and spam scoring, from running when the outcome is predetermined.</p>
 <h3 id="4-reload-the-postfix-configuration">4. Reload the Postfix configuration</h3>
 <p>Execute the following command</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/etc/init.d/postfix reload
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/etc/init.d/postfix reload
 </code></pre></div><h3 id="5-check-the-postfix-log">5. Check the Postfix log</h3>
 <p>Check <code>mail.log</code> to confirm that there weren’t any errors reading the new configuration. The following command should be sufficient in most cases.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tail -n <span style="color:#0000cf;font-weight:bold">20</span> /var/log/mail.log
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tail -n <span style="color:#0000cf;font-weight:bold">20</span> /var/log/mail.log
 </code></pre></div><h2 id="taking-it-further">Taking it Further</h2>
 <p>There are two parameters we can set in postfix, which acts differently.</p>
 <ul>
@@ -1928,30 +1940,30 @@ reboot
 <ol>
 <li>Install PostgreSQL, preferably a pinned version</li>
 </ol>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install postgresql@10
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install postgresql@10
 </code></pre></div><ol start="2">
 <li>If you don&rsquo;t have one, get the <code>psql</code> client.</li>
 </ol>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install libpq
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install libpq
 </code></pre></div><blockquote>
 <p><code>libpq</code> won&rsquo;t install itself in the <code>/usr/local/bin</code> directory like other Homebrew applications. To make that happen, you need to run:</p>
 </blockquote>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew link --force libpq
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew link --force libpq
 </code></pre></div><ol start="3">
 <li>Start Postgres services</li>
 </ol>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew services start postgresql
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew services start postgresql
 </code></pre></div><blockquote>
 <p>Check <code>brew info postgresql</code></p>
 </blockquote>
 <ol start="4">
 <li>Create a database, and&hellip;</li>
 </ol>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">createdb <span style="color:#4e9a06">`</span>first<span style="color:#4e9a06">`</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">createdb <span style="color:#4e9a06">`</span>first<span style="color:#4e9a06">`</span>
 </code></pre></div><blockquote>
 <p>Fix role &ldquo;postgres&rdquo; does not exist error</p>
 </blockquote>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">createuser -s postgres
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">createuser -s postgres
 </code></pre></div><h2 id="initial-reading">Initial Reading</h2>
 <p><a href="http://postgresguide.com/">PostgreSQL Guide</a></p>
 <h2 id="psql">PSQL</h2>
@@ -2171,7 +2183,7 @@ Page: Collection-level classes</p>
 <p>In CONTENTdm, <strong>if the URL does not change</strong>, then the end user action is most likely happening simultaneously with an <code>:update</code> event.</p>
 <h4 id="list-of-lifecycle-eventshttpshelpoclcorgmetadata_servicescontentdmadvanced_website_customizationjavascript_customizationslist_of_javascript_lifecycle_events"><a href="https://help.oclc.org/Metadata_Services/CONTENTdm/Advanced_website_customization/JavaScript_customizations/List_of_JavaScript_lifecycle_events">List of Lifecycle Events</a></h4>
 <p>The CONTENTdm application provides a CustomEvent() object within the lifecycle of the application and page render</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">document.addEventListener<span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#39;cdm-home-page:enter&#39;</span>, <span style="color:#204a87;font-weight:bold">function</span><span style="color:#ce5c00;font-weight:bold">(</span>e<span style="color:#ce5c00;font-weight:bold">){</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">document.addEventListener<span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#39;cdm-home-page:enter&#39;</span>, <span style="color:#204a87;font-weight:bold">function</span><span style="color:#ce5c00;font-weight:bold">(</span>e<span style="color:#ce5c00;font-weight:bold">){</span>
     // e is instance of CustomEvent
     // ...
 <span style="color:#ce5c00;font-weight:bold">})</span><span style="color:#000;font-weight:bold">;</span>
@@ -2195,7 +2207,7 @@ Page: Collection-level classes</p>
 	<h1 id="pg-8a51d7972e5f4f1e0f8eecb27948bd81">26 - Samba</h1>
     <div class="lead">Basic setup using samba on a Raspberry Pi 4 for time machine backups</div>
 	<h3 id="step-1">STEP 1</h3>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic">## --------------------------</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic">## --------------------------</span>
 <span style="color:#8f5902;font-style:italic">## Set up Storage Block Disk</span>
 <span style="color:#8f5902;font-style:italic">## --------------------------</span>
 
@@ -2220,7 +2232,7 @@ mount -a
 <span style="color:#8f5902;font-style:italic"># reboot</span>
 reboot
 </code></pre></div><h3 id="step-2">STEP 2</h3>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic">## -------------------------</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic">## -------------------------</span>
 <span style="color:#8f5902;font-style:italic">## Install Samba</span>
 <span style="color:#8f5902;font-style:italic">## -------------------------</span>
 
@@ -2230,7 +2242,7 @@ apt-get install samba
 <p>Update Samba Configuration to listen only to local network
 <code>/etc/samba/smb.conf</code>. The following are snippets, not a complete samba
 configuration file.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ce5c00;font-weight:bold">[</span>global<span style="color:#ce5c00;font-weight:bold">]</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ce5c00;font-weight:bold">[</span>global<span style="color:#ce5c00;font-weight:bold">]</span>
 <span style="color:#8f5902;font-style:italic">#### macOS definitions #####</span>
 min <span style="color:#000">protocol</span> <span style="color:#ce5c00;font-weight:bold">=</span> SMB2
 <span style="color:#000">spotlight</span> <span style="color:#ce5c00;font-weight:bold">=</span> yes
@@ -2252,7 +2264,7 @@ fruit:delete_empty_adfiles <span style="color:#ce5c00;font-weight:bold">=</span>
     force directory <span style="color:#000">mode</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">2770</span>
     valid <span style="color:#000">users</span> <span style="color:#ce5c00;font-weight:bold">=</span> derek
 </code></pre></div><h3 id="step-4">STEP 4</h3>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># Test Config after Changes</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># Test Config after Changes</span>
 testparm
 
 <span style="color:#8f5902;font-style:italic"># Restart services</span>
@@ -2270,7 +2282,7 @@ chmod <span style="color:#0000cf;font-weight:bold">2770</span> /samba/users/dere
 smbpasswd -a derek
 smbpasswd -e derek
 </code></pre></div><h3 id="step-5">STEP 5</h3>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic">## ------------------------</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic">## ------------------------</span>
 <span style="color:#8f5902;font-style:italic">## Connect from macOS</span>
 <span style="color:#8f5902;font-style:italic">## ------------------------</span>
 
@@ -2297,21 +2309,21 @@ smb://backup.derekzoladz.com/derek
 	<h2 id="sed-stream-editor">sed (stream editor)</h2>
 <p><strong>To perform an operation, use <code>sed -i</code>; otherwise, <code>sed</code> performs a dry-run.</strong></p>
 <p>You got 60+ logrotate configuration files in <code>/etc/logrotate.d</code> and you need to add the <code>delaycompress</code> directive, after the <code>compress</code> directive, to each of the files. The name of each configuration file that needs to be updated begins with <code>ezproxy_</code>. No problem!</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sed <span style="color:#4e9a06">&#39;/compress/a\    delaycompress&#39;</span> ezproxy_*
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sed <span style="color:#4e9a06">&#39;/compress/a\    delaycompress&#39;</span> ezproxy_*
 </code></pre></div><p>You&rsquo;ve got 60+ Let&rsquo;s Encrypt certificate <code>.conf</code> files that you need to increase
 the delay for propogation of the DNS TXT file challenge. In the example below,
 if a line in the configuration file contains <code>dns_google_propagation_seconds</code>,
 find the value <code>60</code> and replace it with the value <code>90</code>.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sed <span style="color:#4e9a06">&#39;/dns_google_propagation_seconds/s/60/90/&#39;</span> *.conf
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sed <span style="color:#4e9a06">&#39;/dns_google_propagation_seconds/s/60/90/&#39;</span> *.conf
 </code></pre></div><p>You need to add a temporary set of limited administrative credentials to all of
 your <code>user.txt</code> files and you want to the new code after either <code>::limit=2</code> or
 <code>::Limit=2</code>.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">find . -iname user.txt -exec sed <span style="color:#4e9a06">&#39;/::[lL]imit=2/a ::group=+Admin.StatusUpdate+Admin.Restart \
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">find . -iname user.txt -exec sed <span style="color:#4e9a06">&#39;/::[lL]imit=2/a ::group=+Admin.StatusUpdate+Admin.Restart \
 </span><span style="color:#4e9a06">username:password \
 </span><span style="color:#4e9a06">::group=-Admin.StatusUpdate-Admin.Restart&#39;</span> <span style="color:#ce5c00;font-weight:bold">{}</span> <span style="color:#4e9a06">\;</span><span style="color:#000;font-weight:bold">|</span> less
 </code></pre></div><p>Or, when a vendor transitions to HTTPS and you need to update 60+ EZproxy stanzas to specifically allow a new protocol.</p>
 <h4 id="here-are-a-few-one-liners">Here are a few one-liners:</h4>
-<pre><code># Print All Matching Lines
+<pre tabindex="0"><code># Print All Matching Lines
 sed -n '/^IncludeFile.*/p' config.txt
 
 # Print the First Occurrence of Matching Line
@@ -2321,9 +2333,9 @@ sed -n '/^IncludeFile.*/ {p;q}' config.txt
 tac config.txt | sed -n '/^IncludeFile.*/ {p;q}'
 </code></pre><h2 id="awk-columnar-data-processor">awk (columnar data processor)</h2>
 <p>Read through a directory of log files, find entries for a specific user, sort the results, print only the &ldquo;interesting&rdquo; data points</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">grep -rni <span style="color:#4e9a06">&#34;username&#34;</span> <span style="color:#000;font-weight:bold">|</span> sort <span style="color:#000;font-weight:bold">|</span> awk <span style="color:#4e9a06">&#39;BEGIN {OFS=&#34;\t&#34;}; {split($1,date,&#34;:&#34;); print date[3], $2, $3, $4}&#39;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">grep -rni <span style="color:#4e9a06">&#34;username&#34;</span> <span style="color:#000;font-weight:bold">|</span> sort <span style="color:#000;font-weight:bold">|</span> awk <span style="color:#4e9a06">&#39;BEGIN {OFS=&#34;\t&#34;}; {split($1,date,&#34;:&#34;); print date[3], $2, $3, $4}&#39;</span>
 </code></pre></div><p>You can also find IPs that hit the proxy server most frequently</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">awk <span style="color:#4e9a06">&#39;{ print $4}&#39;</span> <span style="color:#000">$PATH_TO_LOGFILE</span> <span style="color:#000;font-weight:bold">|</span> sort <span style="color:#000;font-weight:bold">|</span> uniq -c <span style="color:#000;font-weight:bold">|</span> sort -nr <span style="color:#000;font-weight:bold">|</span> head -n <span style="color:#0000cf;font-weight:bold">20</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">awk <span style="color:#4e9a06">&#39;{ print $4}&#39;</span> <span style="color:#000">$PATH_TO_LOGFILE</span> <span style="color:#000;font-weight:bold">|</span> sort <span style="color:#000;font-weight:bold">|</span> uniq -c <span style="color:#000;font-weight:bold">|</span> sort -nr <span style="color:#000;font-weight:bold">|</span> head -n <span style="color:#0000cf;font-weight:bold">20</span>
 </code></pre></div>
 </div>
 
@@ -2348,9 +2360,9 @@ tac config.txt | sed -n '/^IncludeFile.*/ {p;q}'
 <li><a href="https://github.com/berick/pysip2">pysip2-client</a></li>
 </ul>
 <h5 id="connect">Connect</h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">telnet cool-cat.org <span style="color:#0000cf;font-weight:bold">6001</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">telnet cool-cat.org <span style="color:#0000cf;font-weight:bold">6001</span>
 </code></pre></div><h5 id="format-to-pass-credentials">Format to pass credentials</h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">9300CN&lt;username&gt;<span style="color:#000;font-weight:bold">|</span>CO&lt;password&gt;<span style="color:#000;font-weight:bold">|</span>CP&lt;institutionid&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">9300CN&lt;username&gt;<span style="color:#000;font-weight:bold">|</span>CO&lt;password&gt;<span style="color:#000;font-weight:bold">|</span>CP&lt;institutionid&gt;
 9300CNdz1<span style="color:#000;font-weight:bold">|</span>CO&lt;password&gt;<span style="color:#000;font-weight:bold">|</span>CPCOOL
 </code></pre></div><p><em>connection responses</em></p>
 <ul>
@@ -2358,7 +2370,7 @@ tac config.txt | sed -n '/^IncludeFile.*/ {p;q}'
 <li>940 # failed</li>
 </ul>
 <h5 id="patron-information-request">Patron information request</h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#0000cf;font-weight:bold">6300320170218</span>          <span style="color:#0000cf;font-weight:bold">201700</span>    AO&lt;institutionid&gt;<span style="color:#000;font-weight:bold">|</span>AA&lt;patronbarcode&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#0000cf;font-weight:bold">6300320170218</span>          <span style="color:#0000cf;font-weight:bold">201700</span>    AO&lt;institutionid&gt;<span style="color:#000;font-weight:bold">|</span>AA&lt;patronbarcode&gt;
 </code></pre></div>
 </div>
 
@@ -2384,7 +2396,7 @@ tac config.txt | sed -n '/^IncludeFile.*/ {p;q}'
 <p>Generate Keys</p>
 </li>
 </ul>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh-keygen -t rsa -b <span style="color:#0000cf;font-weight:bold">4096</span> -f &lt;name of keypair&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh-keygen -t rsa -b <span style="color:#0000cf;font-weight:bold">4096</span> -f &lt;name of keypair&gt;
 </code></pre></div><ul>
 <li>Using an ssh config file</li>
 </ul>
@@ -2438,7 +2450,7 @@ tac config.txt | sed -n '/^IncludeFile.*/ {p;q}'
 </tbody>
 </table>
 <p>Generate the necessary files</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># generate the private RSA key</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># generate the private RSA key</span>
 openssl genrsa -out some-domain-private.key <span style="color:#0000cf;font-weight:bold">2048</span>
 
 <span style="color:#8f5902;font-style:italic"># Generating the CSR</span>
@@ -2447,13 +2459,13 @@ openssl req -new -key /path/to/some-domain-private.key -out /path/to/some-domain
 <span style="color:#8f5902;font-style:italic"># Generate .p12 bundle, PKCS #12</span>
 openssl pkcs12 -export -out some-domain.p12 -inkey some-domain-privatekey.pem -in some-domain-cert.pem -certfile some-domain-intermediatecert.pem
 </code></pre></div><p>PEM encoded certificates are not human readable.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">openssl x509 -in some-domain.pem -text -noout
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">openssl x509 -in some-domain.pem -text -noout
 openssl x509 -in some-domain.cer -text -noout
 openssl x509 -in some-domain.crt -text -noout
 </code></pre></div><p>Viewing .der certificates</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">openssl x509 -in some-domain.der -inform der -text -noout
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">openssl x509 -in some-domain.der -inform der -text -noout
 </code></pre></div><p>Check if a private key matches a certificate. If the results of the following commands match, the private key is a match to the certificate.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">openssl x509 -noout -modulus -in some-domain.crt <span style="color:#000;font-weight:bold">|</span> openssl md5 
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">openssl x509 -noout -modulus -in some-domain.crt <span style="color:#000;font-weight:bold">|</span> openssl md5 
 openssl rsa -noout -modulus -in some-domain.key <span style="color:#000;font-weight:bold">|</span> openssl md5
 </code></pre></div><h4 id="general">General</h4>
 <ul>
@@ -2461,7 +2473,7 @@ openssl rsa -noout -modulus -in some-domain.key <span style="color:#000;font-wei
 <li>Watch Available Entropy: <code>watch -n .1 cat /proc/sys/kernel/random/entropy_avail</code></li>
 </ul>
 <p>Supporting low entropy states with the HAVEGE algorithm</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># Ubuntu, install haveged package</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># Ubuntu, install haveged package</span>
 apt-get install haveged
 
 <span style="color:#8f5902;font-style:italic"># Tuning - /etc/default/haveged</span>
@@ -2477,7 +2489,7 @@ apt-get install rng-tools
 <span style="color:#8f5902;font-style:italic"># Run FIPS-140 tests</span>
 cat /dev/random <span style="color:#000;font-weight:bold">|</span> rngtest -c <span style="color:#0000cf;font-weight:bold">1000</span>
 </code></pre></div><p>Ask the <code>urandom</code> device to spit out 1k of gooey randomness</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">head -c 1k /dev/urandom <span style="color:#000;font-weight:bold">|</span> tr -dc <span style="color:#4e9a06">&#39;a-zA-Z0-9!@#$%^&amp;&#39;</span> <span style="color:#000;font-weight:bold">|</span> fold -w <span style="color:#0000cf;font-weight:bold">100</span> <span style="color:#ce5c00;font-weight:bold">&amp;&amp;</span> <span style="color:#204a87">printf</span>  <span style="color:#4e9a06">&#34;\n&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">head -c 1k /dev/urandom <span style="color:#000;font-weight:bold">|</span> tr -dc <span style="color:#4e9a06">&#39;a-zA-Z0-9!@#$%^&amp;&#39;</span> <span style="color:#000;font-weight:bold">|</span> fold -w <span style="color:#0000cf;font-weight:bold">100</span> <span style="color:#ce5c00;font-weight:bold">&amp;&amp;</span> <span style="color:#204a87">printf</span>  <span style="color:#4e9a06">&#34;\n&#34;</span>
 </code></pre></div>
 </div>
 
@@ -2496,32 +2508,32 @@ cat /dev/random <span style="color:#000;font-weight:bold">|</span> rngtest -c <s
 	<h1 id="pg-e64f462522bc621294722a4446c22a9f">31 - SysAdmin Tasks</h1>
     <div class="lead">A collection commands for tasks that I&rsquo;ve needed to perform multiple times.</div>
 	<h2 id="convert-putty-ssh2-public-key-to-openssh">Convert PuTTY SSH2 Public Key to OpenSSH</h2>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh-keygen -if ssh2publickey.pub &gt;&gt; opensshpublickey.pub
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh-keygen -if ssh2publickey.pub &gt;&gt; opensshpublickey.pub
 </code></pre></div><h2 id="identify-responding-server">Identify Responding Server</h2>
-<pre><code>curl -s -I sts.psychiatrist.com|sed -n 's/^S[erv]*: //p'
+<pre tabindex="0"><code>curl -s -I sts.psychiatrist.com|sed -n 's/^S[erv]*: //p'
 </code></pre><h2 id="byte-order-mark-bom">Byte Order Mark (BOM)</h2>
 <p>When EZproxy configuration files are edited in Microsoft NotePad, EZproxy will complain - upon restart - about the single byte character <code>ï»¿</code> that begins the <code>config.txt</code> file. EZproxy expects UTF-8 encoding that does not start with a non-ASCII byte, like a BOM.</p>
 <p>Using vim, does current file have a BOM?</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">:set bomb?
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">:set bomb?
 </code></pre></div><p>Remove BOM and write file back to disk:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">:set nobomb
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">:set nobomb
 </code></pre></div><h2 id="print-the-number-of-lines-in-a-file">Print the Number of Lines in a File</h2>
 <p>Because I can never remember the command I need</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">wc -l &lt;file&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">wc -l &lt;file&gt;
 </code></pre></div><h2 id="delete-old-kernels-classic-version">Delete Old Kernels, Classic Version</h2>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">uname -r <span style="color:#8f5902;font-style:italic"># the kernel in use</span>
-</code></pre></div><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">dpkg -l <span style="color:#000;font-weight:bold">|</span> grep linux-image <span style="color:#000;font-weight:bold">|</span> awk <span style="color:#4e9a06">&#39;{print$2}&#39;</span>
-</code></pre></div><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">apt remove --purge linux-image-3.1.0-131-generic
-</code></pre></div><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">update-grub
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">uname -r <span style="color:#8f5902;font-style:italic"># the kernel in use</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">dpkg -l <span style="color:#000;font-weight:bold">|</span> grep linux-image <span style="color:#000;font-weight:bold">|</span> awk <span style="color:#4e9a06">&#39;{print$2}&#39;</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">apt remove --purge linux-image-3.1.0-131-generic
+</code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">update-grub
 </code></pre></div><h2 id="convert-mov---mp4-with-ffmpeg">Convert .mov -&gt; .mp4 With FFMPEG</h2>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ffmpeg -i Untitled.mov -vcodec h264 -acodec mp2 Untitled.mp4
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ffmpeg -i Untitled.mov -vcodec h264 -acodec mp2 Untitled.mp4
 </code></pre></div><h2 id="convert-pdf---jpg-with-imagemagick">Convert .pdf -&gt; .jpg with ImageMagick</h2>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># %d will iterate using 1 digit, %3d 3 digits</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># %d will iterate using 1 digit, %3d 3 digits</span>
 convert -density <span style="color:#0000cf;font-weight:bold">150</span> art.pdf -quality <span style="color:#0000cf;font-weight:bold">90</span> %d.jpg
 </code></pre></div><h2 id="find-the-size-of-a-directory">Find the Size of a Directory</h2>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">du -hs /path/to/directory
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">du -hs /path/to/directory
 </code></pre></div><h2 id="locate-all-files-with-a-specific-name-in-the-entire-directory-and-search-through-those-files-for-a-line-of-text-using-regex-sort">Locate all files with a specific name in the entire directory and search through those files for a line of text using regex, sort</h2>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">find . -iname config.txt -exec grep <span style="color:#4e9a06">&#34;^[A-Za-z ]*\.ohionet\.org&#34;</span> <span style="color:#ce5c00;font-weight:bold">{}</span> <span style="color:#4e9a06">\;</span> -print <span style="color:#000;font-weight:bold">|</span> grep Name <span style="color:#000;font-weight:bold">|</span> sort
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">find . -iname config.txt -exec grep <span style="color:#4e9a06">&#34;^[A-Za-z ]*\.ohionet\.org&#34;</span> <span style="color:#ce5c00;font-weight:bold">{}</span> <span style="color:#4e9a06">\;</span> -print <span style="color:#000;font-weight:bold">|</span> grep Name <span style="color:#000;font-weight:bold">|</span> sort
 </code></pre></div><h2 id="imagemagick-convert-to-progressive-jpeg">Imagemagick, Convert to Progressive JPEG</h2>
 <h4 id="entire-directory">entire directory</h4>
 <p><code>mogrify -interlace plane *.jpg</code></p>
@@ -2530,7 +2542,7 @@ convert -density <span style="color:#0000cf;font-weight:bold">150</span> art.pdf
 <h4 id="progressive-jpeg-will-state-interlace-jpeg">Progressive JPEG will state, Interlace: JPEG</h4>
 <p><code>identify -verbose file.jpg</code></p>
 <h2 id="globbing">Globbing</h2>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># Minutes flag</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># Minutes flag</span>
 -mmin +360
 
 <span style="color:#8f5902;font-style:italic"># Days flag</span>
@@ -2546,32 +2558,32 @@ find /sftp/<span style="color:#ce5c00;font-weight:bold">[</span>^pl<span style="
 find /sftp/<span style="color:#ce5c00;font-weight:bold">[</span><span style="color:#4e9a06">\(</span>antioch<span style="color:#4e9a06">\|</span>findlay<span style="color:#4e9a06">\|</span>franciscan<span style="color:#4e9a06">\|</span>wilmington<span style="color:#4e9a06">\)</span><span style="color:#ce5c00;font-weight:bold">]</span>*/incoming/ -type f -mmin +1800  -print0 <span style="color:#000;font-weight:bold">|</span> xargs -r0 rm --
 </code></pre></div><h2 id="tuning-with-sysctl">Tuning with Sysctl</h2>
 <p>File Location on Ubuntu</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">nano -w /etc/sysctl.conf
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">nano -w /etc/sysctl.conf
 </code></pre></div><p>Count instances of SYN received</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">netstat -ant<span style="color:#000;font-weight:bold">|</span>grep SYN_RECV<span style="color:#000;font-weight:bold">|</span>wc -l
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">netstat -ant<span style="color:#000;font-weight:bold">|</span>grep SYN_RECV<span style="color:#000;font-weight:bold">|</span>wc -l
 </code></pre></div><p>Check States</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">netstat -nta <span style="color:#000;font-weight:bold">|</span> egrep <span style="color:#4e9a06">&#34;State|443&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">netstat -nta <span style="color:#000;font-weight:bold">|</span> egrep <span style="color:#4e9a06">&#34;State|443&#34;</span>
 netstat -nta <span style="color:#000;font-weight:bold">|</span> egrep <span style="color:#4e9a06">&#34;State|80&#34;</span>
 </code></pre></div><p>Check Current Value for Parameter</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sysctl -n net.ipv4.tcp_syncookies
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sysctl -n net.ipv4.tcp_syncookies
 sysctl -n net.ipv4.tcp_max_syn_backlog
 sysctl -n net.ipv4.tcp_synack_retries
 sysctl -n net.core.somaxconn
 </code></pre></div><p>Reload configuration</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sysctl -p
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sysctl -p
 </code></pre></div><h2 id="batch-updating-files-on-the-server">Batch Updating Files on the Server</h2>
 <h4 id="find-files-owned-by-a-user">Find files owned by a user</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic">#find {path} -user {username}</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic">#find {path} -user {username}</span>
 find /usr/local -user derek
 </code></pre></div><h4 id="find-files-assigned-to-a-group">Find files assigned to a group</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">find <span style="color:#ce5c00;font-weight:bold">{</span>path<span style="color:#ce5c00;font-weight:bold">}</span> -group <span style="color:#ce5c00;font-weight:bold">{</span>username<span style="color:#ce5c00;font-weight:bold">}</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">find <span style="color:#ce5c00;font-weight:bold">{</span>path<span style="color:#ce5c00;font-weight:bold">}</span> -group <span style="color:#ce5c00;font-weight:bold">{</span>username<span style="color:#ce5c00;font-weight:bold">}</span>
 find /usr/local -group derek
 </code></pre></div><h4 id="change-ownership-or-group">Change Ownership or Group</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic">#chown --from=olduser newuser * -R</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic">#chown --from=olduser newuser * -R</span>
 chown --from<span style="color:#ce5c00;font-weight:bold">=</span>david derek * -R
 chown --from<span style="color:#ce5c00;font-weight:bold">=</span>:1053 :derek * -R
 </code></pre></div><h4 id="show-me-the-redirects">Show Me the Redirects!</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">wget http://libguides.heidelberg.edu/asc 2&gt;<span style="color:#000;font-weight:bold">&amp;</span><span style="color:#0000cf;font-weight:bold">1</span> <span style="color:#000;font-weight:bold">|</span> grep Location:
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">wget http://libguides.heidelberg.edu/asc 2&gt;<span style="color:#000;font-weight:bold">&amp;</span><span style="color:#0000cf;font-weight:bold">1</span> <span style="color:#000;font-weight:bold">|</span> grep Location:
 </code></pre></div>
 </div>
 
@@ -2590,11 +2602,11 @@ chown --from<span style="color:#ce5c00;font-weight:bold">=</span>:1053 :derek * 
 	<h1 id="pg-330296a33da2967fa7e490b7318daf81">32 - Yaz</h1>
     <div class="lead">Client to interface with z39.50 servers</div>
 	<p>Install Homebrew</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/usr/bin/ruby -e <span style="color:#4e9a06">&#34;</span><span style="color:#204a87;font-weight:bold">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install<span style="color:#204a87;font-weight:bold">)</span><span style="color:#4e9a06">&#34;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/usr/bin/ruby -e <span style="color:#4e9a06">&#34;</span><span style="color:#204a87;font-weight:bold">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install<span style="color:#204a87;font-weight:bold">)</span><span style="color:#4e9a06">&#34;</span>
 </code></pre></div><p>Install Yaz</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install yaz
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install yaz
 </code></pre></div><p>Read the <a href="http://www.indexdata.com/yaz/doc/">YAZ Docs</a>, <a href="http://irspy.indexdata.com/">find a z39.50 target</a>, review <a href="https://www.loc.gov/z3950/agency/defns/bib1.html">bib-1 attribute set</a>, and give it a whirl.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># start Yaz connection to Library of Congress z39.50</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># start Yaz connection to Library of Congress z39.50</span>
 <span style="color:#8f5902;font-style:italic"># z39.50 server is running on port 7090, via voyager</span>
 yaz-client z3950.loc.gov:7090/voyager
 
@@ -2634,7 +2646,7 @@ close
 
 </code></pre></div><h3 id="innovative-interfaces-sierra">Innovative Interfaces, Sierra</h3>
 <p>The standard z39.50 port is <em>210</em></p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># Yaz connection to State Library of Ohio z39.50</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># Yaz connection to State Library of Ohio z39.50</span>
 yaz-client catalog.library.ohio.gov:210/innopac
 
 <span style="color:#8f5902;font-style:italic"># Open connection for search</span>
@@ -2654,7 +2666,7 @@ format opac
 &gt; callNumber: RA790 .M613 <span style="color:#0000cf;font-weight:bold">2018</span>
 &gt; publicNote: AVAILABLE
 </code></pre></div><h3 id="evergreen-ils">Evergreen ILS</h3>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># Yaz Connection</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># Yaz Connection</span>
 yaz-client galion.cool-cat.org:210
 
 <span style="color:#8f5902;font-style:italic"># Open Galion database</span>

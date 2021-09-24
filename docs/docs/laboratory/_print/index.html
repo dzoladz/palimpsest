@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.82.0" /><link rel="canonical" type="text/html" href="/palimpsest/docs/laboratory/">
+<meta name="generator" content="Hugo 0.88.1" /><link rel="canonical" type="text/html" href="/palimpsest/docs/laboratory/">
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
 
@@ -35,8 +35,8 @@
 
 
 
-<link rel="preload" href="/palimpsest/scss/main.min.2e82df9c6c5761c9c49bbdf1e65619db467a7e439eeba45b37db308b5a2add25.css" as="style">
-<link href="/palimpsest/scss/main.min.2e82df9c6c5761c9c49bbdf1e65619db467a7e439eeba45b37db308b5a2add25.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/palimpsest/scss/main.min.c7864c5e11ce29b0d7fb95d2fbbc92f0cd7d92caacfebfa74a46b09df7d22072.css" as="style">
+<link href="/palimpsest/scss/main.min.c7864c5e11ce29b0d7fb95d2fbbc92f0cd7d92caacfebfa74a46b09df7d22072.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -206,9 +206,9 @@ This the multi-page printable view of this section.
 <h2 id="docker-compose-to-kubernetes">Docker Compose to Kubernetes</h2>
 <p><a href="https://kompose.io/">Kompose</a> is a command-line conversion tool. It takes a Docker Compose file and translates it into Kubernetes resources. There&rsquo;s also a <a href="https://github.com/JadCham/komposeui">GUI version</a> maintained on GitHub.</p>
 <p>Basic Conversion to Single File</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kompose convert -f docker-compose.yml -o kubernetes-output.yml
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kompose convert -f docker-compose.yml -o kubernetes-output.yml
 </code></pre></div><p>Convert to Helm Chart</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kompose convert -c
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kompose convert -c
 </code></pre></div><h2 id="extended-learning">Extended Learning</h2>
 <ul>
 <li><a href="https://collabnix.github.io/kubelabs/">An Ultimate Kubernetes Hands-on Labs</a></li>
@@ -332,41 +332,41 @@ This the multi-page printable view of this section.
 <ol>
 <li>Add the Rancher Helm chart repo</li>
 </ol>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">helm repo add rancher-latest https://releases.rancher.com/server-charts/latest
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">helm repo add rancher-latest https://releases.rancher.com/server-charts/latest
 </code></pre></div><h4 id="create-a-namespace-for-rancher-resources">Create a Namespace for Rancher resources</h4>
 <p>Rancher documentation states that this namespace should always be called <code>cattle-system</code></p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl create namespace cattle-system
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl create namespace cattle-system
 </code></pre></div><h4 id="install-cert-manager">Install cert-manager</h4>
 <p>Rancher supports multiple SSL/TLS termination methods. As the laboratory cluster is on the local network and only accepting connections from the LAN, the following set of instructions will configure Rancher to generate its own certificates. Using Let&rsquo;s Encyprt and forwarding traffic from an external layer 7 load balancer are better options for production.</p>
 <h4 id="install-the-customresourcedefinition-separately">Install the CustomResourceDefinition separately</h4>
 <p>More info on <a href="https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/#customresourcedefinitions">CustomResourceDefinition</a></p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl apply --validate<span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#204a87">false</span> -f https://github.com/jetstack/cert-manager/releases/download/v1.0.4/cert-manager.crds.yaml
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl apply --validate<span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#204a87">false</span> -f https://github.com/jetstack/cert-manager/releases/download/v1.0.4/cert-manager.crds.yaml
 </code></pre></div><h4 id="create-the-namespace-for-cert-manager">Create the namespace for cert-manager</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl create namespace cert-manager
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl create namespace cert-manager
 </code></pre></div><h4 id="add-the-jetstack-helm-repository">Add the Jetstack Helm repository</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">helm repo add jetstack https://charts.jetstack.io
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">helm repo add jetstack https://charts.jetstack.io
 </code></pre></div><h4 id="update-your-local-helm-chart-repository-cache">Update your local Helm chart repository cache</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">helm repo update
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">helm repo update
 </code></pre></div><h4 id="install-the-cert-manager-helm-chart">Install the cert-manager Helm chart</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">helm install <span style="color:#4e9a06">\
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">helm install <span style="color:#4e9a06">\
 </span><span style="color:#4e9a06"></span>  cert-manager jetstack/cert-manager <span style="color:#4e9a06">\
 </span><span style="color:#4e9a06"></span>  --namespace cert-manager <span style="color:#4e9a06">\
 </span><span style="color:#4e9a06"></span>  --version v1.0.4
 </code></pre></div><h4 id="verify-deployment">Verify Deployment</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl get pods --namespace cert-manager
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl get pods --namespace cert-manager
 </code></pre></div><h4 id="install-rancher-via-helm">Install Rancher via Helm</h4>
 <p>Set the hostname to the DNS name you will point to your load balancer.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">helm install rancher rancher-latest/rancher <span style="color:#4e9a06">\
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">helm install rancher rancher-latest/rancher <span style="color:#4e9a06">\
 </span><span style="color:#4e9a06"></span>  --namespace cattle-system <span style="color:#4e9a06">\
 </span><span style="color:#4e9a06"></span>  --ingress.tls.source<span style="color:#ce5c00;font-weight:bold">=</span>rancher <span style="color:#4e9a06">\
 </span><span style="color:#4e9a06"></span>  --set <span style="color:#000">hostname</span><span style="color:#ce5c00;font-weight:bold">=</span>rancher.derekzoladz.com
 </code></pre></div><h4 id="confirm-deployment-of-rancher-server">Confirm deployment of Rancher server</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl -n cattle-system rollout status deploy/rancher
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl -n cattle-system rollout status deploy/rancher
 </code></pre></div><h2 id="troubleshooting">Troubleshooting</h2>
 <p>Ensure the KUBECONFIG environment variable is set</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#204a87">export</span> <span style="color:#000">KUBECONFIG</span><span style="color:#ce5c00;font-weight:bold">=</span>/etc/rancher/k3s/k3s.yaml
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#204a87">export</span> <span style="color:#000">KUBECONFIG</span><span style="color:#ce5c00;font-weight:bold">=</span>/etc/rancher/k3s/k3s.yaml
 </code></pre></div><p>If Helm can&rsquo;t reach the k3s cluster</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl config view --raw &gt;~/.kube/config
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl config view --raw &gt;~/.kube/config
 </code></pre></div>
 </div>
 
@@ -385,7 +385,7 @@ This the multi-page printable view of this section.
 	<h1 id="pg-22343580056d27515aa2241b541fb0dc">4 - Raspberry Pi Cluster</h1>
     <div class="lead">Raspberry Pi 4, Model B Cluster - Distributed Computing</div>
 	<p><strong>Ligotti</strong> - this 3 node pi cluster - is named after the philosophical horror writer <a href="https://en.wikipedia.org/wiki/Thomas_Ligotti">Thomas Ligotti</a></p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ligotti             192.168.1.10  <span style="color:#000;font-weight:bold">|</span> Controller, Master 
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ligotti             192.168.1.10  <span style="color:#000;font-weight:bold">|</span> Controller, Master 
 ligotti-worker-one  192.168.1.11  <span style="color:#000;font-weight:bold">|</span> Worker One
 ligotti-worker-two  192.168.1.12  <span style="color:#000;font-weight:bold">|</span> Worker Two
 </code></pre></div><h2 id="hardware">Hardware</h2>
@@ -450,7 +450,7 @@ ligotti-worker-two  192.168.1.12  <span style="color:#000;font-weight:bold">|</s
 </ul>
 <h4 id="static-ip-via-netplan">Static IP via Netplan</h4>
 <p>Edit <code>/etc/netplan/50-cloud-init.yaml</code></p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">network:
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">network:
     ethernets:
         enp0s3:
             dhcp4: <span style="color:#204a87">false</span>
@@ -509,21 +509,21 @@ ligotti-worker-two  192.168.1.12  <span style="color:#000;font-weight:bold">|</s
 <p>A short list of common Helm commands</p>
 <h4 id="repos">Repos</h4>
 <p>Add, update, and search repos for installable charts</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">helm repo add bitnami https://charts.bitnami.com/bitnami
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">helm repo add bitnami https://charts.bitnami.com/bitnami
 helm repo update
 helm search repo apache
 </code></pre></div><p>A valid chart repository must have an index file. The index file contains information about each chart in the chart repository. The following command will generate an index file based on a given local directory that contains packaged charts.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">helm repo index
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">helm repo index
 </code></pre></div><h4 id="install-and-remove-charts">Install and Remove Charts</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">helm install provide-a-name-here bitnami/apache
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">helm install provide-a-name-here bitnami/apache
 helm uninstall provide-a-name-here bitnami/apache
 </code></pre></div><h4 id="create-new-chart-template">Create New Chart Template</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Helm create name-of-chart-dir
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Helm create name-of-chart-dir
 </code></pre></div><h2 id="issues">Issues</h2>
 <ol>
 <li>If attempting to install an application via Helm results in <code>Error: Kubernetes cluster unreachable</code>, make sure the KUBECONFIG environment variable is set properly:</li>
 </ol>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#204a87">export</span> <span style="color:#000">KUBECONFIG</span><span style="color:#ce5c00;font-weight:bold">=</span>/etc/rancher/k3s/k3s.yaml
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#204a87">export</span> <span style="color:#000">KUBECONFIG</span><span style="color:#ce5c00;font-weight:bold">=</span>/etc/rancher/k3s/k3s.yaml
 </code></pre></div><ol start="2">
 <li>An application gets stuck in a <code>CrashLoopBackOff</code> status and the Kubernetes logs show <code>exec user process caused &quot;exec format error&quot;</code></li>
 </ol>
