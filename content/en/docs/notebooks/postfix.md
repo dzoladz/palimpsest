@@ -4,6 +4,8 @@ description: >
     Working with postfix mail transfer agent (MTA)
 ---
 
+![Postfix Diagram](../img/postfix-integrations.png)
+
 # Blacklist & Whitelist with Postfix
 
 ### 1. Create a file of IPs to blacklist - [Postfix Reference](http://www.postfix.org/cidr_table.5.html)
@@ -11,10 +13,10 @@ description: >
 Create a `reject.cidr` file in `/etc/postfix`. To it, add one or more problematic IPs or ranges from your logwatch reports, mail logs, email headers, etc.:
 
 ```bash
-192.168.1.1		OK
-192.168.0.0/16		REJECT
+192.168.1.1     OK
+192.168.0.0/16	REJECT
 2001:db8::1		OK
-2001:db8::/32		REJECT
+2001:db8::/32	REJECT
 ```
 __FROM THE DOCS__ - _Rule order matters! Place specific whitelist entries before general blacklist entries._  
 
