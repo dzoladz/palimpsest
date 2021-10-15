@@ -63,6 +63,14 @@ If !(auth:userid =~ "/^(1|3|5).+$/"); Audit -expr auth:userid; Deny itype.htm; S
 })();
 ```
 
+## OhioLINK EJC - Proxy Rave URLs through EZproxy
+This is an example Find/Replace directive which adds jQuery to the OhioLINK Electronic Journal Center's UI to rewrite article permalinks by prepending a proxy prefix to any RAVE URLs on the item details interface.
+
+```bash
+Find </body>
+Replace <script type="text/javascript">$(document).ready(function() {if (window.location.href.indexOf("bw.opal-libraries.org") > -1) {$('a[href*="rave.ohiolink.edu"]').each(function() {var href=$(this).prop('href');var prefix='https://login.bw.opal-libraries.org/login?url=';var result=prefix+href;$(this).attr("href", result);$(this).text(result);console.log(result);});}});</script></body>
+```
+
 ## Cron Jobs for Monitoring Activity
 ```bash
 10 0 * * * find /usr/local -name messages.txt | xargs grep -E "Unrecognized|DANGER|hosts\s36[0-9][0-9]" | mail -E -s "EZproxy Warning Messages" -a "From: root \<root@{hostname}\>" recipient@derekzoladz.com
