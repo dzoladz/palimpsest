@@ -76,12 +76,20 @@ If !(auth:userid =~ "/^(1|3|5).+$/"); Audit -expr auth:userid; Deny itype.htm; S
 00 8 * * 1-5 find /usr/local/ezproxy/cookies -cmin +720 -type f | mail -E -s "EZproxy Sessions Over 12 Hours" -a "From: root \<root@{hostname}\>" recipient@derekzoladz.com
 ```
 
-## Strip Parameters from DOIs
+## DOI System - Strip Parameters from DOIs
 Although valid extensions of the Document Object Model, passing parameters in the doi can cause resolution issues within EZproxy sessions.
 > {host}?locatt=label:secondary_bloomsburyCollections
 ```bash
 SPUEditVar proxy_login=login?url=
 SPUEdit @^(https:\/\/doi.org\/)(10.[0-9]*\/)([0-9]*)(\?locatt=label.*)$@${proxy_login}$1$2$3@ir
+```
+
+## DOI System - Force Legacy Mode
+Force DOI system resolution to the platform of the primary depositor using `mode:legacy`
+```bash
+SPUEditVar proxy_login=login?url=
+SPUEditVar legacy_mode=?locatt=mode:legacy
+SPUEdit @^(https:\/\/doi.org\/)(10.[0-9]*\/)([0-9]*)(\?locatt=label.*)$@${proxy_login}$1$2$3${legacy_mode}@ir
 ```
 
 ## Group-based Access to /Loggedin Files
