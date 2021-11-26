@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.88.1" /><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+<meta name="generator" content="Hugo 0.82.0" /><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
 
 <link rel="shortcut icon" href="/palimpsest/favicons/favicon.ico" >
@@ -39,8 +39,8 @@
 
 
 
-<link rel="preload" href="/palimpsest/scss/main.min.c7864c5e11ce29b0d7fb95d2fbbc92f0cd7d92caacfebfa74a46b09df7d22072.css" as="style">
-<link href="/palimpsest/scss/main.min.c7864c5e11ce29b0d7fb95d2fbbc92f0cd7d92caacfebfa74a46b09df7d22072.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/palimpsest/scss/main.min.322ddd194718d6c85652a31925191c1b18408d135ef279c1711df0d2c228444b.css" as="style">
+<link href="/palimpsest/scss/main.min.322ddd194718d6c85652a31925191c1b18408d135ef279c1711df0d2c228444b.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -116,6 +116,47 @@
   <ul>
     <li class="collapse show" id="palimpsestdocs">
       
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/palimpsest/docs/devops/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">DevOps</a>
+  </li>
+  <ul>
+    <li class="collapse " id="palimpsestdocsdevops">
+      
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-palimpsestdocsdevopscodingcoding" href="/palimpsest/docs/devops/coding/coding/">Coding</a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-palimpsestdocsdevopsreferencces" href="/palimpsest/docs/devops/referencces/">References</a>
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
       
       
       
@@ -606,21 +647,21 @@
 <p>A short list of common Helm commands</p>
 <h4 id="repos">Repos</h4>
 <p>Add, update, and search repos for installable charts</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">helm repo add bitnami https://charts.bitnami.com/bitnami
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">helm repo add bitnami https://charts.bitnami.com/bitnami
 helm repo update
 helm search repo apache
 </code></pre></div><p>A valid chart repository must have an index file. The index file contains information about each chart in the chart repository. The following command will generate an index file based on a given local directory that contains packaged charts.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">helm repo index
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">helm repo index
 </code></pre></div><h4 id="install-and-remove-charts">Install and Remove Charts</h4>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">helm install provide-a-name-here bitnami/apache
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">helm install provide-a-name-here bitnami/apache
 helm uninstall provide-a-name-here bitnami/apache
 </code></pre></div><h4 id="create-new-chart-template">Create New Chart Template</h4>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Helm create name-of-chart-dir
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Helm create name-of-chart-dir
 </code></pre></div><h2 id="issues">Issues</h2>
 <ol>
 <li>If attempting to install an application via Helm results in <code>Error: Kubernetes cluster unreachable</code>, make sure the KUBECONFIG environment variable is set properly:</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#204a87">export</span> <span style="color:#000">KUBECONFIG</span><span style="color:#ce5c00;font-weight:bold">=</span>/etc/rancher/k3s/k3s.yaml
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#204a87">export</span> <span style="color:#000">KUBECONFIG</span><span style="color:#ce5c00;font-weight:bold">=</span>/etc/rancher/k3s/k3s.yaml
 </code></pre></div><ol start="2">
 <li>An application gets stuck in a <code>CrashLoopBackOff</code> status and the Kubernetes logs show <code>exec user process caused &quot;exec format error&quot;</code></li>
 </ol>

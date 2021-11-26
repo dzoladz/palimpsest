@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.88.1" /><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+<meta name="generator" content="Hugo 0.82.0" /><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
 
 <link rel="shortcut icon" href="/palimpsest/favicons/favicon.ico" >
@@ -39,8 +39,8 @@
 
 
 
-<link rel="preload" href="/palimpsest/scss/main.min.c7864c5e11ce29b0d7fb95d2fbbc92f0cd7d92caacfebfa74a46b09df7d22072.css" as="style">
-<link href="/palimpsest/scss/main.min.c7864c5e11ce29b0d7fb95d2fbbc92f0cd7d92caacfebfa74a46b09df7d22072.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/palimpsest/scss/main.min.322ddd194718d6c85652a31925191c1b18408d135ef279c1711df0d2c228444b.css" as="style">
+<link href="/palimpsest/scss/main.min.322ddd194718d6c85652a31925191c1b18408d135ef279c1711df0d2c228444b.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -116,6 +116,47 @@
   <ul>
     <li class="collapse show" id="palimpsestdocs">
       
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/palimpsest/docs/devops/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">DevOps</a>
+  </li>
+  <ul>
+    <li class="collapse " id="palimpsestdocsdevops">
+      
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-palimpsestdocsdevopscodingcoding" href="/palimpsest/docs/devops/coding/coding/">Coding</a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-palimpsestdocsdevopsreferencces" href="/palimpsest/docs/devops/referencces/">References</a>
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
       
       
       
@@ -652,7 +693,7 @@
 <li><a href="https://docs.docker.com/compose/">Docker Compose</a></li>
 </ul>
 <h4 id="reference-docker-commands">Reference: Docker Commands</h4>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker info
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker info
 docker inspect
 docker <span style="color:#204a87">exec</span> -it
 docker run -d
@@ -675,21 +716,21 @@ centos:centos6 # pull centos 6 base image</p>
 </blockquote>
 <h2 id="lifecycle-management">Lifecycle Management</h2>
 <h4 id="run-in-detached-mode-daemon-mode-background">Run in detached mode (daemon mode), background</h4>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker run -d --name<span style="color:#ce5c00;font-weight:bold">=</span>nginx nginx:latest
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker run -d --name<span style="color:#ce5c00;font-weight:bold">=</span>nginx nginx:latest
 </code></pre></div><h4 id="restart-container">Restart Container</h4>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker restart nginx
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker restart nginx
 </code></pre></div><h4 id="execute-a-command-in-a-container-without-affecting-the-running-process">Execute a command in a container without affecting the running process</h4>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic">#  Interactive, attach with a shell.</span>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic">#  Interactive, attach with a shell.</span>
 docker <span style="color:#204a87">exec</span> -it nginx /bin/bash
 </code></pre></div><h4 id="list-processes">List processes</h4>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker ps <span style="color:#8f5902;font-style:italic"># Running Processes</span>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker ps <span style="color:#8f5902;font-style:italic"># Running Processes</span>
 docker ps -a <span style="color:#8f5902;font-style:italic"># Running and Stopped Processes</span>
 </code></pre></div><h4 id="remove-images-when-no-containers-are-based-upon-it">remove images, when no containers are based upon it</h4>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker rmi centos:centos6
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker rmi centos:centos6
 </code></pre></div><p>docker image prune # remove all currently unused imaged
 docker image prune -a # clear everything</p>
 <h4 id="remove-containers">Remove containers</h4>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker rm nginx:old
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker rm nginx:old
 docker system prune <span style="color:#8f5902;font-style:italic"># remove all stopped containers, images, unused networks</span>
 </code></pre></div><h4 id="stop-all-containers-remove-all-stopped-containers-using-bash-command-substitution">Stop all containers. Remove all stopped containers, using bash command substitution</h4>
 <p>docker container stop $(docker container ls -aq) # stop all containers
@@ -697,9 +738,9 @@ docker container rm $(docker container ls -aq) # remove all stopped containers
 docker rmi -f $(docker images -aq)</p>
 <h2 id="docker-inspect">Docker Inspect</h2>
 <h4 id="get-info-about-container">get info about container</h4>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker inspect
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker inspect
 </code></pre></div><h4 id="get-ip-address-of-container">get ip address of container</h4>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker inspect nginx:latest <span style="color:#000;font-weight:bold">|</span> grep IPAddr
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker inspect nginx:latest <span style="color:#000;font-weight:bold">|</span> grep IPAddr
 </code></pre></div><h2 id="ports-and-volumes">Ports and Volumes</h2>
 <h4 id="volumes">volumes</h4>
 <p>docker volume ls
@@ -710,13 +751,13 @@ docker volume rm
 <code>expose</code> -&gt; reveal ports to the docker environment
 <code>ports</code> -&gt; expose ports to docker and to the host system (i.e. publish the ports)</p>
 <h4 id="bind-ports">Bind ports</h4>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># docker run -d -p HOSTPORT:CONTAINERPORT</span>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># docker run -d -p HOSTPORT:CONTAINERPORT</span>
 docker run -d -p 8080:80 --name<span style="color:#ce5c00;font-weight:bold">=</span>WebServer nginx:latest
 </code></pre></div><h4 id="create-a-mount-point-in-a-container">Create a mount point in a container</h4>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># docker run -d -p 8080:80 --name=webserver -v HOSTVOLPATH:CONTAINERVOLPATH nginx:latest</span>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># docker run -d -p 8080:80 --name=webserver -v HOSTVOLPATH:CONTAINERVOLPATH nginx:latest</span>
 docker run -d -p 8080:80 --name<span style="color:#ce5c00;font-weight:bold">=</span>webserver -v /home/user/www:/usr/share/nginx/html nginx:latest
 </code></pre></div><h2 id="building-using-a-dockerfile">BUILDING, using a Dockerfile</h2>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># Execute in directory with dockerfile, or define path</span>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># Execute in directory with dockerfile, or define path</span>
 docker build -t dzoladz/ubuntu .
 </code></pre></div><h4 id="dockerfile">Dockerfile</h4>
 <ul>
@@ -729,7 +770,7 @@ CMD * applies to the container instantiated on the base image<br>
 EXPOSE * expose container ports to host system</p>
 </blockquote>
 <h4 id="build-a-container-using-a-dockerfile-and-tag-it">Build a container using a Dockerfile and tag it</h4>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker build -t keycloak-proxy .
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker build -t keycloak-proxy .
 
 docker run -d -p 80:80 -p 443:443 --name<span style="color:#ce5c00;font-weight:bold">=</span>keycloak-proxy keycloak-proxy:latest
 
@@ -737,40 +778,40 @@ docker run -d -p 80:80 -p 443:443 --name<span style="color:#ce5c00;font-weight:b
 docker <span style="color:#204a87">exec</span> &lt;container name&gt; nginx -s reload
 </code></pre></div><h2 id="applications">Applications</h2>
 <h4 id="metabase">Metabase</h4>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># NOTE: this will run Metabase without any persistent storage for the application.</span>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># NOTE: this will run Metabase without any persistent storage for the application.</span>
 docker run -d -p 3000:3000 --name metabase metabase/metabase
 </code></pre></div><h4 id="owncloud">ownCloud</h4>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker run -d -p 8080:80 --name owncloud --mount <span style="color:#000">source</span><span style="color:#ce5c00;font-weight:bold">=</span>/Users/Derek/docker/owncloud,target<span style="color:#ce5c00;font-weight:bold">=</span>/var/www/html owncloud:8.1
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker run -d -p 8080:80 --name owncloud --mount <span style="color:#000">source</span><span style="color:#ce5c00;font-weight:bold">=</span>/Users/Derek/docker/owncloud,target<span style="color:#ce5c00;font-weight:bold">=</span>/var/www/html owncloud:8.1
 </code></pre></div><h1 id="keyclock-docker-for-testing">Keyclock, Docker for Testing</h1>
 <p>Notes on the installation of Keycloak using official <a href="https://hub.docker.com/r/jboss/keycloak/">jboss/keycloak</a> Docker image.</p>
 <h2 id="install-git-and-docker">Install Git and Docker</h2>
 <p>Add the GPG key for the official Docker repo</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -fsSL https://download.docker.com/linux/ubuntu/gpg <span style="color:#000;font-weight:bold">|</span> sudo apt-key add -
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -fsSL https://download.docker.com/linux/ubuntu/gpg <span style="color:#000;font-weight:bold">|</span> sudo apt-key add -
 </code></pre></div><p>Add the Docker repository to APT sources</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">add-apt-repository <span style="color:#4e9a06">&#34;deb [arch=amd64] https://download.docker.com/linux/ubuntu </span><span style="color:#204a87;font-weight:bold">$(</span>lsb_release -cs<span style="color:#204a87;font-weight:bold">)</span><span style="color:#4e9a06"> stable&#34;</span>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">add-apt-repository <span style="color:#4e9a06">&#34;deb [arch=amd64] https://download.docker.com/linux/ubuntu </span><span style="color:#204a87;font-weight:bold">$(</span>lsb_release -cs<span style="color:#204a87;font-weight:bold">)</span><span style="color:#4e9a06"> stable&#34;</span>
 </code></pre></div><p>Update package database</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">apt-get update
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">apt-get update
 </code></pre></div><p>Install from the Docker repo, not the Ubuntu 16.04 distribution package.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">apt-cache policy docker-ce
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">apt-cache policy docker-ce
 </code></pre></div><p>Install Docker Community Edition and Git</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">apt-get install -y docker-ce git
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">apt-get install -y docker-ce git
 </code></pre></div><h2 id="add-keycloak-user">Add Keycloak User</h2>
 <blockquote>
 <p>Run docker as a non-root user</p>
 </blockquote>
 <p>Create the Keycloak user</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">adduser keycloak
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">adduser keycloak
 </code></pre></div><p>Add keycloak user to the docker group. No sudo for docker commands</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">usermod -aG docker keycloak
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">usermod -aG docker keycloak
 </code></pre></div><h2 id="launch-keycloak-w-postgres">Launch Keycloak w/ Postgres</h2>
 <p>Create the Keycloak network</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker network create keycloak-network
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker network create keycloak-network
 </code></pre></div><p>Deploy a PostGRES container for the Keycloak app</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker run -d --name keycloak-db --net keycloak-network -e <span style="color:#000">POSTGRES_DB</span><span style="color:#ce5c00;font-weight:bold">=</span>keycloak -e <span style="color:#000">POSTGRES_USER</span><span style="color:#ce5c00;font-weight:bold">=</span>keycloak -e <span style="color:#000">POSTGRES_PASSWORD</span><span style="color:#ce5c00;font-weight:bold">=</span>password postgres
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker run -d --name keycloak-db --net keycloak-network -e <span style="color:#000">POSTGRES_DB</span><span style="color:#ce5c00;font-weight:bold">=</span>keycloak -e <span style="color:#000">POSTGRES_USER</span><span style="color:#ce5c00;font-weight:bold">=</span>keycloak -e <span style="color:#000">POSTGRES_PASSWORD</span><span style="color:#ce5c00;font-weight:bold">=</span>password postgres
 </code></pre></div><p>Deploy the Keycloak container</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker run -d --name keycloak-app --net keycloak-network -p 8443:8443 -e <span style="color:#000">DB_ADDR</span><span style="color:#ce5c00;font-weight:bold">=</span>keycloak-db -e <span style="color:#000">KEYCLOAK_USER</span><span style="color:#ce5c00;font-weight:bold">=</span>admin -e <span style="color:#000">KEYCLOAK_PASSWORD</span><span style="color:#ce5c00;font-weight:bold">=</span>password jboss/keycloak
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker run -d --name keycloak-app --net keycloak-network -p 8443:8443 -e <span style="color:#000">DB_ADDR</span><span style="color:#ce5c00;font-weight:bold">=</span>keycloak-db -e <span style="color:#000">KEYCLOAK_USER</span><span style="color:#ce5c00;font-weight:bold">=</span>admin -e <span style="color:#000">KEYCLOAK_PASSWORD</span><span style="color:#ce5c00;font-weight:bold">=</span>password jboss/keycloak
 </code></pre></div><p>Start Keycloak with Proxy Forwarding for use with Nginx</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker run -d --name keycloak-app --net keycloak-network -p 8443:8443 -e <span style="color:#000">DB_ADDR</span><span style="color:#ce5c00;font-weight:bold">=</span>keycloak-db -e <span style="color:#000">KEYCLOAK_USER</span><span style="color:#ce5c00;font-weight:bold">=</span>admin -e <span style="color:#000">KEYCLOAK_PASSWORD</span><span style="color:#ce5c00;font-weight:bold">=</span>password -e <span style="color:#000">PROXY_ADDRESS_FORWARDING</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#204a87">true</span> jboss/keycloak
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker run -d --name keycloak-app --net keycloak-network -p 8443:8443 -e <span style="color:#000">DB_ADDR</span><span style="color:#ce5c00;font-weight:bold">=</span>keycloak-db -e <span style="color:#000">KEYCLOAK_USER</span><span style="color:#ce5c00;font-weight:bold">=</span>admin -e <span style="color:#000">KEYCLOAK_PASSWORD</span><span style="color:#ce5c00;font-weight:bold">=</span>password -e <span style="color:#000">PROXY_ADDRESS_FORWARDING</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#204a87">true</span> jboss/keycloak
 </code></pre></div>
 	
 	

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.88.1" /><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+<meta name="generator" content="Hugo 0.82.0" /><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
 
 <link rel="shortcut icon" href="/palimpsest/favicons/favicon.ico" >
@@ -39,8 +39,8 @@
 
 
 
-<link rel="preload" href="/palimpsest/scss/main.min.c7864c5e11ce29b0d7fb95d2fbbc92f0cd7d92caacfebfa74a46b09df7d22072.css" as="style">
-<link href="/palimpsest/scss/main.min.c7864c5e11ce29b0d7fb95d2fbbc92f0cd7d92caacfebfa74a46b09df7d22072.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/palimpsest/scss/main.min.322ddd194718d6c85652a31925191c1b18408d135ef279c1711df0d2c228444b.css" as="style">
+<link href="/palimpsest/scss/main.min.322ddd194718d6c85652a31925191c1b18408d135ef279c1711df0d2c228444b.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -116,6 +116,47 @@
   <ul>
     <li class="collapse show" id="palimpsestdocs">
       
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/palimpsest/docs/devops/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">DevOps</a>
+  </li>
+  <ul>
+    <li class="collapse " id="palimpsestdocsdevops">
+      
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-palimpsestdocsdevopscodingcoding" href="/palimpsest/docs/devops/coding/coding/">Coding</a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-palimpsestdocsdevopsreferencces" href="/palimpsest/docs/devops/referencces/">References</a>
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
       
       
       
@@ -612,7 +653,7 @@
 	<h2 id="google-cloud">Google Cloud</h2>
 <p>Installing the SDK <a href="https://cloud.google.com/sdk/docs/">https://cloud.google.com/sdk/docs/</a></p>
 <h4 id="a-few-commands-for-migrating-a-dns-zone">A Few Commands for Migrating a DNS zone</h4>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gcloud auth login --project managed-dns-migration
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gcloud auth login --project managed-dns-migration
 
 gcloud dns managed-zones create myzone --dns-name<span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;myzone.org&#34;</span> --description<span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;Zone for all the things&#34;</span> --visibility<span style="color:#ce5c00;font-weight:bold">=</span>public
 
@@ -622,7 +663,7 @@ gcloud dns managed-zones describe myzone
 </code></pre></div><h2 id="dns">DNS</h2>
 <p>General DNS commands</p>
 <h4 id="dig">dig</h4>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># Query Cloudflare primary DNS to reply with the name servers for the cool-cat.org domain</span>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># Query Cloudflare primary DNS to reply with the name servers for the cool-cat.org domain</span>
 dig +short NS cool-cat.org 1.1.1.1
 
 <span style="color:#8f5902;font-style:italic"># Ask for the name servers every 2 seconds. Useful for monitoring propagation</span>

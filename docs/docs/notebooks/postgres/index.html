@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.88.1" /><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+<meta name="generator" content="Hugo 0.82.0" /><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
 
 <link rel="shortcut icon" href="/palimpsest/favicons/favicon.ico" >
@@ -39,8 +39,8 @@
 
 
 
-<link rel="preload" href="/palimpsest/scss/main.min.c7864c5e11ce29b0d7fb95d2fbbc92f0cd7d92caacfebfa74a46b09df7d22072.css" as="style">
-<link href="/palimpsest/scss/main.min.c7864c5e11ce29b0d7fb95d2fbbc92f0cd7d92caacfebfa74a46b09df7d22072.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/palimpsest/scss/main.min.322ddd194718d6c85652a31925191c1b18408d135ef279c1711df0d2c228444b.css" as="style">
+<link href="/palimpsest/scss/main.min.322ddd194718d6c85652a31925191c1b18408d135ef279c1711df0d2c228444b.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -116,6 +116,47 @@
   <ul>
     <li class="collapse show" id="palimpsestdocs">
       
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/palimpsest/docs/devops/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">DevOps</a>
+  </li>
+  <ul>
+    <li class="collapse " id="palimpsestdocsdevops">
+      
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-palimpsestdocsdevopscodingcoding" href="/palimpsest/docs/devops/coding/coding/">Coding</a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-palimpsestdocsdevopsreferencces" href="/palimpsest/docs/devops/referencces/">References</a>
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
       
       
       
@@ -617,30 +658,30 @@
 <ol>
 <li>Install PostgreSQL, preferably a pinned version</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install postgresql@10
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install postgresql@10
 </code></pre></div><ol start="2">
 <li>If you don&rsquo;t have one, get the <code>psql</code> client.</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install libpq
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install libpq
 </code></pre></div><blockquote>
 <p><code>libpq</code> won&rsquo;t install itself in the <code>/usr/local/bin</code> directory like other Homebrew applications. To make that happen, you need to run:</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew link --force libpq
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew link --force libpq
 </code></pre></div><ol start="3">
 <li>Start Postgres services</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew services start postgresql
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew services start postgresql
 </code></pre></div><blockquote>
 <p>Check <code>brew info postgresql</code></p>
 </blockquote>
 <ol start="4">
 <li>Create a database, and&hellip;</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">createdb <span style="color:#4e9a06">`</span>first<span style="color:#4e9a06">`</span>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">createdb <span style="color:#4e9a06">`</span>first<span style="color:#4e9a06">`</span>
 </code></pre></div><blockquote>
 <p>Fix role &ldquo;postgres&rdquo; does not exist error</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">createuser -s postgres
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">createuser -s postgres
 </code></pre></div><h2 id="initial-reading">Initial Reading</h2>
 <p><a href="http://postgresguide.com/">PostgreSQL Guide</a></p>
 <h2 id="psql">PSQL</h2>

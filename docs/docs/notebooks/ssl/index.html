@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.88.1" /><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+<meta name="generator" content="Hugo 0.82.0" /><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
 
 <link rel="shortcut icon" href="/palimpsest/favicons/favicon.ico" >
@@ -39,8 +39,8 @@
 
 
 
-<link rel="preload" href="/palimpsest/scss/main.min.c7864c5e11ce29b0d7fb95d2fbbc92f0cd7d92caacfebfa74a46b09df7d22072.css" as="style">
-<link href="/palimpsest/scss/main.min.c7864c5e11ce29b0d7fb95d2fbbc92f0cd7d92caacfebfa74a46b09df7d22072.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/palimpsest/scss/main.min.322ddd194718d6c85652a31925191c1b18408d135ef279c1711df0d2c228444b.css" as="style">
+<link href="/palimpsest/scss/main.min.322ddd194718d6c85652a31925191c1b18408d135ef279c1711df0d2c228444b.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -116,6 +116,47 @@
   <ul>
     <li class="collapse show" id="palimpsestdocs">
       
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/palimpsest/docs/devops/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">DevOps</a>
+  </li>
+  <ul>
+    <li class="collapse " id="palimpsestdocsdevops">
+      
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-palimpsestdocsdevopscodingcoding" href="/palimpsest/docs/devops/coding/coding/">Coding</a>
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-palimpsestdocsdevopsreferencces" href="/palimpsest/docs/devops/referencces/">References</a>
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
       
       
       
@@ -627,7 +668,7 @@
 </tbody>
 </table>
 <p>Generate the necessary files</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># generate the private RSA key</span>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># generate the private RSA key</span>
 openssl genrsa -out some-domain-private.key <span style="color:#0000cf;font-weight:bold">2048</span>
 
 <span style="color:#8f5902;font-style:italic"># Generating the CSR</span>
@@ -636,13 +677,13 @@ openssl req -new -key /path/to/some-domain-private.key -out /path/to/some-domain
 <span style="color:#8f5902;font-style:italic"># Generate .p12 bundle, PKCS #12</span>
 openssl pkcs12 -export -out some-domain.p12 -inkey some-domain-privatekey.pem -in some-domain-cert.pem -certfile some-domain-intermediatecert.pem
 </code></pre></div><p>PEM encoded certificates are not human readable.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">openssl x509 -in some-domain.pem -text -noout
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">openssl x509 -in some-domain.pem -text -noout
 openssl x509 -in some-domain.cer -text -noout
 openssl x509 -in some-domain.crt -text -noout
 </code></pre></div><p>Viewing .der certificates</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">openssl x509 -in some-domain.der -inform der -text -noout
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">openssl x509 -in some-domain.der -inform der -text -noout
 </code></pre></div><p>Check if a private key matches a certificate. If the results of the following commands match, the private key is a match to the certificate.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">openssl x509 -noout -modulus -in some-domain.crt <span style="color:#000;font-weight:bold">|</span> openssl md5 
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">openssl x509 -noout -modulus -in some-domain.crt <span style="color:#000;font-weight:bold">|</span> openssl md5 
 openssl rsa -noout -modulus -in some-domain.key <span style="color:#000;font-weight:bold">|</span> openssl md5
 </code></pre></div><h4 id="general">General</h4>
 <ul>
@@ -650,7 +691,7 @@ openssl rsa -noout -modulus -in some-domain.key <span style="color:#000;font-wei
 <li>Watch Available Entropy: <code>watch -n .1 cat /proc/sys/kernel/random/entropy_avail</code></li>
 </ul>
 <p>Supporting low entropy states with the HAVEGE algorithm</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># Ubuntu, install haveged package</span>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># Ubuntu, install haveged package</span>
 apt-get install haveged
 
 <span style="color:#8f5902;font-style:italic"># Tuning - /etc/default/haveged</span>
@@ -666,7 +707,7 @@ apt-get install rng-tools
 <span style="color:#8f5902;font-style:italic"># Run FIPS-140 tests</span>
 cat /dev/random <span style="color:#000;font-weight:bold">|</span> rngtest -c <span style="color:#0000cf;font-weight:bold">1000</span>
 </code></pre></div><p>Ask the <code>urandom</code> device to spit out 1k of gooey randomness</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">head -c 1k /dev/urandom <span style="color:#000;font-weight:bold">|</span> tr -dc <span style="color:#4e9a06">&#39;a-zA-Z0-9!@#$%^&amp;&#39;</span> <span style="color:#000;font-weight:bold">|</span> fold -w <span style="color:#0000cf;font-weight:bold">100</span> <span style="color:#ce5c00;font-weight:bold">&amp;&amp;</span> <span style="color:#204a87">printf</span>  <span style="color:#4e9a06">&#34;\n&#34;</span>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">head -c 1k /dev/urandom <span style="color:#000;font-weight:bold">|</span> tr -dc <span style="color:#4e9a06">&#39;a-zA-Z0-9!@#$%^&amp;&#39;</span> <span style="color:#000;font-weight:bold">|</span> fold -w <span style="color:#0000cf;font-weight:bold">100</span> <span style="color:#ce5c00;font-weight:bold">&amp;&amp;</span> <span style="color:#204a87">printf</span>  <span style="color:#4e9a06">&#34;\n&#34;</span>
 </code></pre></div>
 	
 	

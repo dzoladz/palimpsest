@@ -2,14 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>/palimpsest/docs/devops/</loc>
+    <lastmod>2021-11-26T14:45:59-05:00</lastmod>
+  </url><url>
     <loc>/palimpsest/docs/laboratory/</loc>
-    <lastmod>2021-05-20T06:52:50-04:00</lastmod>
+    <lastmod>2021-11-26T14:45:59-05:00</lastmod>
   </url><url>
     <loc>/palimpsest/docs/notebooks/</loc>
-    <lastmod>2021-05-20T06:52:50-04:00</lastmod>
+    <lastmod>2021-11-26T14:45:59-05:00</lastmod>
   </url><url>
     <loc>/palimpsest/docs/accessibility/</loc>
     <lastmod>2021-05-20T06:52:50-04:00</lastmod>
+  </url><url>
+    <loc>/palimpsest/docs/devops/coding/coding/</loc>
+    <lastmod>2021-11-26T14:45:59-05:00</lastmod>
   </url><url>
     <loc>/palimpsest/docs/laboratory/kubernetes/kubernetes/</loc>
     <lastmod>2021-07-31T17:21:54-04:00</lastmod>
@@ -25,6 +31,9 @@
   </url><url>
     <loc>/palimpsest/docs/accessibility/references/</loc>
     <lastmod>2021-05-16T09:52:02-04:00</lastmod>
+  </url><url>
+    <loc>/palimpsest/docs/devops/referencces/</loc>
+    <lastmod>2021-11-26T14:45:59-05:00</lastmod>
   </url><url>
     <loc>/palimpsest/docs/laboratory/kubernetes/helm/</loc>
     <lastmod>2021-08-01T18:50:26-04:00</lastmod>
@@ -57,7 +66,7 @@
     <lastmod>2021-05-10T21:39:45-04:00</lastmod>
   </url><url>
     <loc>/palimpsest/docs/notebooks/ezproxy/</loc>
-    <lastmod>2021-08-09T16:03:07-04:00</lastmod>
+    <lastmod>2021-10-15T15:03:00-04:00</lastmod>
   </url><url>
     <loc>/palimpsest/docs/notebooks/fail2ban/</loc>
     <lastmod>2021-05-10T21:39:45-04:00</lastmod>
