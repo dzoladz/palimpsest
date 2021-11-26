@@ -3,7 +3,7 @@ title: "Laboratory"
 linkTitle: "Laboratory"
 weight: 1
 description: >
-  Laboratory
+  Home laboratory for experimental and reproducible research
 hide_feedback: true
 ---
 
