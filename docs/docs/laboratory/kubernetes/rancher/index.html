@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.82.0" /><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+<meta name="generator" content="Hugo 0.88.1" /><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
 
 <link rel="shortcut icon" href="/palimpsest/favicons/favicon.ico" >
@@ -39,8 +39,8 @@
 
 
 
-<link rel="preload" href="/palimpsest/scss/main.min.322ddd194718d6c85652a31925191c1b18408d135ef279c1711df0d2c228444b.css" as="style">
-<link href="/palimpsest/scss/main.min.322ddd194718d6c85652a31925191c1b18408d135ef279c1711df0d2c228444b.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/palimpsest/scss/main.min.d025e7f93eb7a713039676faaf01ccf911a0435790c00ed7c3e93d0345d088e1.css" as="style">
+<link href="/palimpsest/scss/main.min.d025e7f93eb7a713039676faaf01ccf911a0435790c00ed7c3e93d0345d088e1.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -646,41 +646,41 @@
 <ol>
 <li>Add the Rancher Helm chart repo</li>
 </ol>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">helm repo add rancher-latest https://releases.rancher.com/server-charts/latest
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">helm repo add rancher-latest https://releases.rancher.com/server-charts/latest
 </code></pre></div><h4 id="create-a-namespace-for-rancher-resources">Create a Namespace for Rancher resources</h4>
 <p>Rancher documentation states that this namespace should always be called <code>cattle-system</code></p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl create namespace cattle-system
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl create namespace cattle-system
 </code></pre></div><h4 id="install-cert-manager">Install cert-manager</h4>
 <p>Rancher supports multiple SSL/TLS termination methods. As the laboratory cluster is on the local network and only accepting connections from the LAN, the following set of instructions will configure Rancher to generate its own certificates. Using Let&rsquo;s Encyprt and forwarding traffic from an external layer 7 load balancer are better options for production.</p>
 <h4 id="install-the-customresourcedefinition-separately">Install the CustomResourceDefinition separately</h4>
 <p>More info on <a href="https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/#customresourcedefinitions">CustomResourceDefinition</a></p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl apply --validate<span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#204a87">false</span> -f https://github.com/jetstack/cert-manager/releases/download/v1.0.4/cert-manager.crds.yaml
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl apply --validate<span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#204a87">false</span> -f https://github.com/jetstack/cert-manager/releases/download/v1.0.4/cert-manager.crds.yaml
 </code></pre></div><h4 id="create-the-namespace-for-cert-manager">Create the namespace for cert-manager</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl create namespace cert-manager
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl create namespace cert-manager
 </code></pre></div><h4 id="add-the-jetstack-helm-repository">Add the Jetstack Helm repository</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">helm repo add jetstack https://charts.jetstack.io
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">helm repo add jetstack https://charts.jetstack.io
 </code></pre></div><h4 id="update-your-local-helm-chart-repository-cache">Update your local Helm chart repository cache</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">helm repo update
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">helm repo update
 </code></pre></div><h4 id="install-the-cert-manager-helm-chart">Install the cert-manager Helm chart</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">helm install <span style="color:#4e9a06">\
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">helm install <span style="color:#4e9a06">\
 </span><span style="color:#4e9a06"></span>  cert-manager jetstack/cert-manager <span style="color:#4e9a06">\
 </span><span style="color:#4e9a06"></span>  --namespace cert-manager <span style="color:#4e9a06">\
 </span><span style="color:#4e9a06"></span>  --version v1.0.4
 </code></pre></div><h4 id="verify-deployment">Verify Deployment</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl get pods --namespace cert-manager
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl get pods --namespace cert-manager
 </code></pre></div><h4 id="install-rancher-via-helm">Install Rancher via Helm</h4>
 <p>Set the hostname to the DNS name you will point to your load balancer.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">helm install rancher rancher-latest/rancher <span style="color:#4e9a06">\
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">helm install rancher rancher-latest/rancher <span style="color:#4e9a06">\
 </span><span style="color:#4e9a06"></span>  --namespace cattle-system <span style="color:#4e9a06">\
 </span><span style="color:#4e9a06"></span>  --ingress.tls.source<span style="color:#ce5c00;font-weight:bold">=</span>rancher <span style="color:#4e9a06">\
 </span><span style="color:#4e9a06"></span>  --set <span style="color:#000">hostname</span><span style="color:#ce5c00;font-weight:bold">=</span>rancher.derekzoladz.com
 </code></pre></div><h4 id="confirm-deployment-of-rancher-server">Confirm deployment of Rancher server</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl -n cattle-system rollout status deploy/rancher
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl -n cattle-system rollout status deploy/rancher
 </code></pre></div><h2 id="troubleshooting">Troubleshooting</h2>
 <p>Ensure the KUBECONFIG environment variable is set</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#204a87">export</span> <span style="color:#000">KUBECONFIG</span><span style="color:#ce5c00;font-weight:bold">=</span>/etc/rancher/k3s/k3s.yaml
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#204a87">export</span> <span style="color:#000">KUBECONFIG</span><span style="color:#ce5c00;font-weight:bold">=</span>/etc/rancher/k3s/k3s.yaml
 </code></pre></div><p>If Helm can&rsquo;t reach the k3s cluster</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl config view --raw &gt;~/.kube/config
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl config view --raw &gt;~/.kube/config
 </code></pre></div>
 	
 	
@@ -743,7 +743,7 @@
         
       </div>
       <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
-        <small class="text-white">&copy; 2021 Derek Zoladz. Theme by <a href="https://www.docsy.dev/docs/">Docsy</a>.<br/>
+        <small class="text-white">&copy; 2022 Derek Zoladz. Theme by <a href="https://www.docsy.dev/docs/">Docsy</a>.<br/>
           Made with ❤️ in Columbus, OH</small>
         
 	

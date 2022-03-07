@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.82.0" /><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+<meta name="generator" content="Hugo 0.88.1" /><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
 
 <link rel="shortcut icon" href="/palimpsest/favicons/favicon.ico" >
@@ -39,8 +39,8 @@
 
 
 
-<link rel="preload" href="/palimpsest/scss/main.min.322ddd194718d6c85652a31925191c1b18408d135ef279c1711df0d2c228444b.css" as="style">
-<link href="/palimpsest/scss/main.min.322ddd194718d6c85652a31925191c1b18408d135ef279c1711df0d2c228444b.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/palimpsest/scss/main.min.d025e7f93eb7a713039676faaf01ccf911a0435790c00ed7c3e93d0345d088e1.css" as="style">
+<link href="/palimpsest/scss/main.min.d025e7f93eb7a713039676faaf01ccf911a0435790c00ed7c3e93d0345d088e1.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -663,24 +663,24 @@
 
 <h2 id="service">Service</h2>
 <p>Daemon is <code>nsrexecd</code></p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">service networker stop
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">service networker stop
 service networker start
 </code></pre></div><h2 id="logging">Logging</h2>
 <p>Logging for previous versions of Networker configured logs to <code>/nsr/logs/daemon.raw</code></p>
 <h4 id="enter-administrative-shell-of-networker">Enter Administrative Shell of Networker</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">nsradmin -p nsrexec
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">nsradmin -p nsrexec
 </code></pre></div><h4 id="render-log-from-raw">Render <code>.log</code> from <code>.raw</code></h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#204a87">cd</span> /nsr/logs/
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#204a87">cd</span> /nsr/logs/
 nsr_render_log -mepathy daemon.raw &gt; daemon.log
 </code></pre></div><h4 id="view-most-recent-25-entries-in-log">View most recent 25 entries in log</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tail -n <span style="color:#0000cf;font-weight:bold">25</span> daemon.log
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tail -n <span style="color:#0000cf;font-weight:bold">25</span> daemon.log
 </code></pre></div><h4 id="view-logging-configuration">View logging configuration</h4>
 <p>From <code>nsradmin</code> shell:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">print type: NSR log
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">print type: NSR log
 </code></pre></div><h4 id="update-runtime-loggging-location">Update Runtime Loggging Location</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">update runtime rendered log:/nsr/logs/daemon.log
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">update runtime rendered log:/nsr/logs/daemon.log
 </code></pre></div><h4 id="configure-master-server-at-nsrresservers">Configure master server at <code>/nsr/res/servers</code></h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#204a87">echo</span> <span style="color:#4e9a06">&#34;[backup server domain]&#34;</span> &gt;&gt; /nsr/res/servers
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#204a87">echo</span> <span style="color:#4e9a06">&#34;[backup server domain]&#34;</span> &gt;&gt; /nsr/res/servers
 </code></pre></div><h2 id="connection-issue">Connection Issue</h2>
 <p>Render <code>daemon.raw</code> and check latest entries.</p>
 <h4 id="refresh-networker">Refresh Networker</h4>
@@ -698,7 +698,7 @@ nsr_render_log -mepathy daemon.raw &gt; daemon.log
 </ol>
 <h4 id="reset-peer-information">Reset Peer Information</h4>
 <p>From <code>nsradmin</code> shell</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">print type: nsr peer information
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">print type: nsr peer information
 delete
 </code></pre></div><h2 id="external-links">External Links</h2>
 <p><a href="www.ipnom.com/legato-NetWorker-Commands">Legato Commands</a></p>
@@ -765,7 +765,7 @@ delete
         
       </div>
       <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
-        <small class="text-white">&copy; 2021 Derek Zoladz. Theme by <a href="https://www.docsy.dev/docs/">Docsy</a>.<br/>
+        <small class="text-white">&copy; 2022 Derek Zoladz. Theme by <a href="https://www.docsy.dev/docs/">Docsy</a>.<br/>
           Made with ❤️ in Columbus, OH</small>
         
 	

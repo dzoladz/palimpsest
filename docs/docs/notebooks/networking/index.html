@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.82.0" /><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+<meta name="generator" content="Hugo 0.88.1" /><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
 
 <link rel="shortcut icon" href="/palimpsest/favicons/favicon.ico" >
@@ -39,8 +39,8 @@
 
 
 
-<link rel="preload" href="/palimpsest/scss/main.min.322ddd194718d6c85652a31925191c1b18408d135ef279c1711df0d2c228444b.css" as="style">
-<link href="/palimpsest/scss/main.min.322ddd194718d6c85652a31925191c1b18408d135ef279c1711df0d2c228444b.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/palimpsest/scss/main.min.d025e7f93eb7a713039676faaf01ccf911a0435790c00ed7c3e93d0345d088e1.css" as="style">
+<link href="/palimpsest/scss/main.min.d025e7f93eb7a713039676faaf01ccf911a0435790c00ed7c3e93d0345d088e1.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -653,7 +653,7 @@
 	<h2 id="google-cloud">Google Cloud</h2>
 <p>Installing the SDK <a href="https://cloud.google.com/sdk/docs/">https://cloud.google.com/sdk/docs/</a></p>
 <h4 id="a-few-commands-for-migrating-a-dns-zone">A Few Commands for Migrating a DNS zone</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gcloud auth login --project managed-dns-migration
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gcloud auth login --project managed-dns-migration
 
 gcloud dns managed-zones create myzone --dns-name<span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;myzone.org&#34;</span> --description<span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;Zone for all the things&#34;</span> --visibility<span style="color:#ce5c00;font-weight:bold">=</span>public
 
@@ -663,7 +663,7 @@ gcloud dns managed-zones describe myzone
 </code></pre></div><h2 id="dns">DNS</h2>
 <p>General DNS commands</p>
 <h4 id="dig">dig</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># Query Cloudflare primary DNS to reply with the name servers for the cool-cat.org domain</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># Query Cloudflare primary DNS to reply with the name servers for the cool-cat.org domain</span>
 dig +short NS cool-cat.org 1.1.1.1
 
 <span style="color:#8f5902;font-style:italic"># Ask for the name servers every 2 seconds. Useful for monitoring propagation</span>
@@ -730,7 +730,7 @@ watch dig +short NS cool-cat.org 1.1.1.1
         
       </div>
       <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
-        <small class="text-white">&copy; 2021 Derek Zoladz. Theme by <a href="https://www.docsy.dev/docs/">Docsy</a>.<br/>
+        <small class="text-white">&copy; 2022 Derek Zoladz. Theme by <a href="https://www.docsy.dev/docs/">Docsy</a>.<br/>
           Made with ❤️ in Columbus, OH</small>
         
 	

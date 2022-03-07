@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.82.0" /><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+<meta name="generator" content="Hugo 0.88.1" /><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
 
 <link rel="shortcut icon" href="/palimpsest/favicons/favicon.ico" >
@@ -39,8 +39,8 @@
 
 
 
-<link rel="preload" href="/palimpsest/scss/main.min.322ddd194718d6c85652a31925191c1b18408d135ef279c1711df0d2c228444b.css" as="style">
-<link href="/palimpsest/scss/main.min.322ddd194718d6c85652a31925191c1b18408d135ef279c1711df0d2c228444b.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/palimpsest/scss/main.min.d025e7f93eb7a713039676faaf01ccf911a0435790c00ed7c3e93d0345d088e1.css" as="style">
+<link href="/palimpsest/scss/main.min.d025e7f93eb7a713039676faaf01ccf911a0435790c00ed7c3e93d0345d088e1.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -650,7 +650,7 @@
     <div class="lead">Basic setup using samba on a Raspberry Pi 4 for time machine backups</div>
 	       
 	<h3 id="step-1">STEP 1</h3>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic">## --------------------------</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic">## --------------------------</span>
 <span style="color:#8f5902;font-style:italic">## Set up Storage Block Disk</span>
 <span style="color:#8f5902;font-style:italic">## --------------------------</span>
 
@@ -675,7 +675,7 @@ mount -a
 <span style="color:#8f5902;font-style:italic"># reboot</span>
 reboot
 </code></pre></div><h3 id="step-2">STEP 2</h3>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic">## -------------------------</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic">## -------------------------</span>
 <span style="color:#8f5902;font-style:italic">## Install Samba</span>
 <span style="color:#8f5902;font-style:italic">## -------------------------</span>
 
@@ -685,7 +685,7 @@ apt-get install samba
 <p>Update Samba Configuration to listen only to local network
 <code>/etc/samba/smb.conf</code>. The following are snippets, not a complete samba
 configuration file.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ce5c00;font-weight:bold">[</span>global<span style="color:#ce5c00;font-weight:bold">]</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ce5c00;font-weight:bold">[</span>global<span style="color:#ce5c00;font-weight:bold">]</span>
 <span style="color:#8f5902;font-style:italic">#### macOS definitions #####</span>
 min <span style="color:#000">protocol</span> <span style="color:#ce5c00;font-weight:bold">=</span> SMB2
 <span style="color:#000">spotlight</span> <span style="color:#ce5c00;font-weight:bold">=</span> yes
@@ -707,7 +707,7 @@ fruit:delete_empty_adfiles <span style="color:#ce5c00;font-weight:bold">=</span>
     force directory <span style="color:#000">mode</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">2770</span>
     valid <span style="color:#000">users</span> <span style="color:#ce5c00;font-weight:bold">=</span> derek
 </code></pre></div><h3 id="step-4">STEP 4</h3>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># Test Config after Changes</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># Test Config after Changes</span>
 testparm
 
 <span style="color:#8f5902;font-style:italic"># Restart services</span>
@@ -725,7 +725,7 @@ chmod <span style="color:#0000cf;font-weight:bold">2770</span> /samba/users/dere
 smbpasswd -a derek
 smbpasswd -e derek
 </code></pre></div><h3 id="step-5">STEP 5</h3>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic">## ------------------------</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic">## ------------------------</span>
 <span style="color:#8f5902;font-style:italic">## Connect from macOS</span>
 <span style="color:#8f5902;font-style:italic">## ------------------------</span>
 
@@ -794,7 +794,7 @@ smb://backup.derekzoladz.com/derek
         
       </div>
       <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
-        <small class="text-white">&copy; 2021 Derek Zoladz. Theme by <a href="https://www.docsy.dev/docs/">Docsy</a>.<br/>
+        <small class="text-white">&copy; 2022 Derek Zoladz. Theme by <a href="https://www.docsy.dev/docs/">Docsy</a>.<br/>
           Made with ❤️ in Columbus, OH</small>
         
 	

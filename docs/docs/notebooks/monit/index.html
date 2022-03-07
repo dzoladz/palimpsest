@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.82.0" /><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+<meta name="generator" content="Hugo 0.88.1" /><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
 
 <link rel="shortcut icon" href="/palimpsest/favicons/favicon.ico" >
@@ -39,8 +39,8 @@
 
 
 
-<link rel="preload" href="/palimpsest/scss/main.min.322ddd194718d6c85652a31925191c1b18408d135ef279c1711df0d2c228444b.css" as="style">
-<link href="/palimpsest/scss/main.min.322ddd194718d6c85652a31925191c1b18408d135ef279c1711df0d2c228444b.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/palimpsest/scss/main.min.d025e7f93eb7a713039676faaf01ccf911a0435790c00ed7c3e93d0345d088e1.css" as="style">
+<link href="/palimpsest/scss/main.min.d025e7f93eb7a713039676faaf01ccf911a0435790c00ed7c3e93d0345d088e1.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -655,9 +655,9 @@
 <p><a href="https://mmonit.com/wiki/Monit/ConfigurationExamples">configuration examples</a></p>
 <h2 id="setup-notes">Setup Notes</h2>
 <p>You&rsquo;ll need to ensure that the standard mailutils are installed on the server.</p>
-<pre><code>apt-get install postfix mailutils
+<pre tabindex="0"><code>apt-get install postfix mailutils
 </code></pre><p>Afterwards, modify the <code>/etc/monit/monitrc</code> file by uncommenting the following lines to enable emailed notifications</p>
-<pre><code>set mailserver localhost  #Use localhost for email delivery.
+<pre tabindex="0"><code>set mailserver localhost  #Use localhost for email delivery.
 
 set mail-format {
       from: monit@$HOST
@@ -671,39 +671,39 @@ set mail-format {
 
 set alert derekz@example.org #Alert recipient
 </code></pre><p>If you want to store notifications for dispatch, you&rsquo;ll need to enable the notifications queue.</p>
-<pre><code>set eventqueue
+<pre tabindex="0"><code>set eventqueue
 	basedir /var/lib/monit/events # notifications store
 	slots 100                     # limit the queue size
 </code></pre><p>I don&rsquo;t need to be informed when the instance state has changed or reloaded, so I silence those alerts by uncommenting this <code>instance</code> filter</p>
-<pre><code>## Do not alert when Monit starts, stops or performs a user initiated action.
+<pre tabindex="0"><code>## Do not alert when Monit starts, stops or performs a user initiated action.
  set alert derekz@example.org not on {instance}
 </code></pre><p>Make sure to comment out any include file directories at the end of <code>/etc/monit/monitrc</code>. If a path is in the configuration file, but the file does not exist, monit will fail to start.</p>
 <h2 id="commands">Commands</h2>
 <h5 id="monit-daemon">Monit Daemon</h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">monit
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">monit
 monit reload
 monit status
 monit quit
 </code></pre></div><h5 id="test-configuration">Test Configuration</h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">monit -t
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">monit -t
 </code></pre></div><h5 id="controlling-monitors">Controlling Monitors</h5>
-<pre><code>monit unmonitor all
+<pre tabindex="0"><code>monit unmonitor all
 monit monitor all
 </code></pre><h2 id="alerts">Alerts</h2>
 <h5 id="alert-if-new-marc-files-are-added-or-removed-from-a-directory">Alert if new MARC files are added or removed from a directory</h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">check directory marcfiles with path /home/admin/marc/
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">check directory marcfiles with path /home/admin/marc/
       <span style="color:#204a87;font-weight:bold">if</span> changed timestamp <span style="color:#204a87;font-weight:bold">then</span> alert
 </code></pre></div><h5 id="alert-if-registered-users-file-has-not-been-updated-in-the-past-24-hours">Alert if registered users file has not been updated in the past 24 hours</h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">check directory registeredusers with path /home/admin/users
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">check directory registeredusers with path /home/admin/users
       <span style="color:#204a87;font-weight:bold">if</span> timestamp &gt; <span style="color:#0000cf;font-weight:bold">24</span> hour <span style="color:#204a87;font-weight:bold">then</span> alert
 </code></pre></div><h5 id="call-home-every-500-cycles">Call home every 500 cycles</h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">check file testalert with path /.nonexistent
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">check file testalert with path /.nonexistent
     alert derek@example.com with reminder on <span style="color:#0000cf;font-weight:bold">500</span> cycles
 </code></pre></div><h5 id="alert-on-low-disk-space">Alert on low disk space</h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">check filesystem rootfs with path /
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">check filesystem rootfs with path /
     <span style="color:#204a87;font-weight:bold">if</span> space usage &gt; 90% <span style="color:#204a87;font-weight:bold">then</span> alert
 </code></pre></div><h5 id="monitor-system-load">Monitor System Load</h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">check system example.com
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">check system example.com
     <span style="color:#204a87;font-weight:bold">if</span> loadavg <span style="color:#ce5c00;font-weight:bold">(</span>1min<span style="color:#ce5c00;font-weight:bold">)</span> &gt; <span style="color:#0000cf;font-weight:bold">4</span> <span style="color:#204a87;font-weight:bold">then</span> alert
     <span style="color:#204a87;font-weight:bold">if</span> loadavg <span style="color:#ce5c00;font-weight:bold">(</span>5min<span style="color:#ce5c00;font-weight:bold">)</span> &gt; <span style="color:#0000cf;font-weight:bold">2</span> <span style="color:#204a87;font-weight:bold">then</span> alert
     <span style="color:#204a87;font-weight:bold">if</span> memory usage &gt; 75% <span style="color:#204a87;font-weight:bold">then</span> alert
@@ -712,7 +712,7 @@ monit monitor all
     <span style="color:#204a87;font-weight:bold">if</span> cpu usage <span style="color:#ce5c00;font-weight:bold">(</span>system<span style="color:#ce5c00;font-weight:bold">)</span> &gt; 30% <span style="color:#204a87;font-weight:bold">for</span> <span style="color:#0000cf;font-weight:bold">2</span> cycles <span style="color:#204a87;font-weight:bold">then</span> alert
     <span style="color:#204a87;font-weight:bold">if</span> cpu usage <span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#204a87">wait</span><span style="color:#ce5c00;font-weight:bold">)</span> &gt; 20% <span style="color:#204a87;font-weight:bold">for</span> <span style="color:#0000cf;font-weight:bold">2</span> cycles <span style="color:#204a87;font-weight:bold">then</span> alert
 </code></pre></div><h5 id="double-check-the-automated-lets-encrypt-ssl-renewal-process">Double check the automated Let&rsquo;s Encrypt SSL renewal process</h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">check host mmonit.com with address mmonit.com
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">check host mmonit.com with address mmonit.com
       <span style="color:#204a87;font-weight:bold">if</span> failed
          port <span style="color:#0000cf;font-weight:bold">443</span>
          with protocol https
@@ -720,14 +720,14 @@ monit monitor all
          use ssl options <span style="color:#ce5c00;font-weight:bold">{</span>verify: enable<span style="color:#ce5c00;font-weight:bold">}</span>
       <span style="color:#204a87;font-weight:bold">then</span> alert
 </code></pre></div><h5 id="restart-ezproxy-if-service-halts">Restart EZproxy, if service halts</h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">check process ezproxy with pidfile /var/run/ezproxy.pid
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">check process ezproxy with pidfile /var/run/ezproxy.pid
       restart <span style="color:#000">program</span>  <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;/usr/local/ezproxy/ezproxy restart&#34;</span>
       <span style="color:#204a87;font-weight:bold">if</span> failed port <span style="color:#0000cf;font-weight:bold">80</span> protocol http <span style="color:#204a87;font-weight:bold">for</span> <span style="color:#0000cf;font-weight:bold">2</span> cycles <span style="color:#204a87;font-weight:bold">then</span> restart
 </code></pre></div><h5 id="alert-on-apache-timeouts">Alert on Apache Timeouts</h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">check file apache-error with path /var/log/apache2/error.log
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">check file apache-error with path /var/log/apache2/error.log
     <span style="color:#204a87;font-weight:bold">if</span> match <span style="color:#4e9a06">&#34;^timed out&#34;</span> <span style="color:#204a87;font-weight:bold">then</span> alert
 </code></pre></div><h5 id="process-patrons-when-a-new-file-is-uploaded">Process patrons when a new file is uploaded</h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">check directory patrons with path /home/admin/patrons/
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">check directory patrons with path /home/admin/patrons/
       <span style="color:#204a87;font-weight:bold">if</span> changed timestamp <span style="color:#204a87;font-weight:bold">then</span> <span style="color:#204a87">exec</span> <span style="color:#4e9a06">&#34;/home/admin/scripts/process-patrons.py&#34;</span>
 </code></pre></div>
 	
@@ -791,7 +791,7 @@ monit monitor all
         
       </div>
       <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
-        <small class="text-white">&copy; 2021 Derek Zoladz. Theme by <a href="https://www.docsy.dev/docs/">Docsy</a>.<br/>
+        <small class="text-white">&copy; 2022 Derek Zoladz. Theme by <a href="https://www.docsy.dev/docs/">Docsy</a>.<br/>
           Made with ❤️ in Columbus, OH</small>
         
 	

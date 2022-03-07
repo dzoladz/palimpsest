@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.82.0" /><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+<meta name="generator" content="Hugo 0.88.1" /><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
 
 <link rel="shortcut icon" href="/palimpsest/favicons/favicon.ico" >
@@ -39,8 +39,8 @@
 
 
 
-<link rel="preload" href="/palimpsest/scss/main.min.322ddd194718d6c85652a31925191c1b18408d135ef279c1711df0d2c228444b.css" as="style">
-<link href="/palimpsest/scss/main.min.322ddd194718d6c85652a31925191c1b18408d135ef279c1711df0d2c228444b.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/palimpsest/scss/main.min.d025e7f93eb7a713039676faaf01ccf911a0435790c00ed7c3e93d0345d088e1.css" as="style">
+<link href="/palimpsest/scss/main.min.d025e7f93eb7a713039676faaf01ccf911a0435790c00ed7c3e93d0345d088e1.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -636,7 +636,7 @@
     <div class="lead">Version control tool</div>
 	       
 	<h1 id="configuration">Configuration</h1>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config
 git config --global user.name <span style="color:#4e9a06">&#34;derekz&#34;</span>
 git config --global user.email derekz@derekzoladz.com
 
@@ -646,7 +646,7 @@ git config credential.helper cache
 <span style="color:#8f5902;font-style:italic"># Store my creds in a plain-text .git-credentials file</span>
 git config --global credential.helper store
 </code></pre></div><h1 id="clone">Clone</h1>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># Clone a Repository and history</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># Clone a Repository and history</span>
 git clone https://github.com/dzoladz/dzoladz.git
 
 <span style="color:#8f5902;font-style:italic"># Clone &amp; Rename to &#39;website&#39;</span>
@@ -656,11 +656,11 @@ git clone https://github.com/dzoladz/dzoladz.git website
 git clone -b collab/berick/ansible-installer-ubuntu-16.04  git://git.evergreen-ils.org/working/random.git
 </code></pre></div><h1 id="basics">Basics</h1>
 <h4 id="initialize-git-repository">Initialize Git Repository</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir repo_name
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir repo_name
 <span style="color:#204a87">cd</span> repo_name
 git init
 </code></pre></div><h4 id="remotes">Remotes</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># Add initial remote named &#39;origin&#39;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># Add initial remote named &#39;origin&#39;</span>
 git remote add origin https://github.com/dzoladz/dzoladz.git
 
 <span style="color:#8f5902;font-style:italic"># Rename remote &#39;origin&#39; to &#39;upstream&#39;</span>
@@ -672,7 +672,7 @@ git remote -v
 <span style="color:#8f5902;font-style:italic"># Remote remote named &#39;upstream&#39;</span>
 git remote rm upstream
 </code></pre></div><h4 id="files">Files</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># List new and modified files, branch, etc...</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># List new and modified files, branch, etc...</span>
 git status
 
 <span style="color:#8f5902;font-style:italic"># Track file.txt</span>
@@ -705,7 +705,7 @@ git push &lt;remote_name&gt; &lt;branch_name&gt;
 <span style="color:#8f5902;font-style:italic"># Incorporate changes from remote repository</span>
 git pull
 </code></pre></div><h4 id="branches">Branches</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># List all branches in the local repository</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># List all branches in the local repository</span>
 git branch
 
 <span style="color:#8f5902;font-style:italic"># Show all local and remote branches</span>
@@ -730,13 +730,13 @@ git push origin master <span style="color:#8f5902;font-style:italic"># push to r
 git pull origin master
 git stash pop</p>
 <h4 id="search-repo">Search Repo</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># Case-insensitive search for files containing `commit`</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># Case-insensitive search for files containing `commit`</span>
 git grep -i <span style="color:#4e9a06">&#39;commit&#39;</span>
 
 <span style="color:#8f5902;font-style:italic"># List files in repo using file globbing</span>
 git ls-files *.py
 </code></pre></div><h4 id="history">History</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># List commit history of current branch</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># List commit history of current branch</span>
 git log
 
 <span style="color:#8f5902;font-style:italic"># Show commit d2b557da6450c3dc77766b86d6d7b832af6d3d6a</span>
@@ -745,7 +745,7 @@ git show d2b557da6450c3dc77766b86d6d7b832af6d3d6a
 <span style="color:#8f5902;font-style:italic"># Show commits by specific author</span>
 git log --author<span style="color:#ce5c00;font-weight:bold">=</span>dzoladz
 </code></pre></div><h1 id="just-for-fun">Just for Fun</h1>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># Who has the most commits in this repo</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#8f5902;font-style:italic"># Who has the most commits in this repo</span>
 git shortlog -s -n
 </code></pre></div>
 	
@@ -809,7 +809,7 @@ git shortlog -s -n
         
       </div>
       <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
-        <small class="text-white">&copy; 2021 Derek Zoladz. Theme by <a href="https://www.docsy.dev/docs/">Docsy</a>.<br/>
+        <small class="text-white">&copy; 2022 Derek Zoladz. Theme by <a href="https://www.docsy.dev/docs/">Docsy</a>.<br/>
           Made with ❤️ in Columbus, OH</small>
         
 	

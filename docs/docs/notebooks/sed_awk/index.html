@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.82.0" /><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+<meta name="generator" content="Hugo 0.88.1" /><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
 
 <link rel="shortcut icon" href="/palimpsest/favicons/favicon.ico" >
@@ -39,8 +39,8 @@
 
 
 
-<link rel="preload" href="/palimpsest/scss/main.min.322ddd194718d6c85652a31925191c1b18408d135ef279c1711df0d2c228444b.css" as="style">
-<link href="/palimpsest/scss/main.min.322ddd194718d6c85652a31925191c1b18408d135ef279c1711df0d2c228444b.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/palimpsest/scss/main.min.d025e7f93eb7a713039676faaf01ccf911a0435790c00ed7c3e93d0345d088e1.css" as="style">
+<link href="/palimpsest/scss/main.min.d025e7f93eb7a713039676faaf01ccf911a0435790c00ed7c3e93d0345d088e1.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -649,21 +649,21 @@
 	<h2 id="sed-stream-editor">sed (stream editor)</h2>
 <p><strong>To perform an operation, use <code>sed -i</code>; otherwise, <code>sed</code> performs a dry-run.</strong></p>
 <p>You got 60+ logrotate configuration files in <code>/etc/logrotate.d</code> and you need to add the <code>delaycompress</code> directive, after the <code>compress</code> directive, to each of the files. The name of each configuration file that needs to be updated begins with <code>ezproxy_</code>. No problem!</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sed <span style="color:#4e9a06">&#39;/compress/a\    delaycompress&#39;</span> ezproxy_*
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sed <span style="color:#4e9a06">&#39;/compress/a\    delaycompress&#39;</span> ezproxy_*
 </code></pre></div><p>You&rsquo;ve got 60+ Let&rsquo;s Encrypt certificate <code>.conf</code> files that you need to increase
 the delay for propogation of the DNS TXT file challenge. In the example below,
 if a line in the configuration file contains <code>dns_google_propagation_seconds</code>,
 find the value <code>60</code> and replace it with the value <code>90</code>.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sed <span style="color:#4e9a06">&#39;/dns_google_propagation_seconds/s/60/90/&#39;</span> *.conf
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sed <span style="color:#4e9a06">&#39;/dns_google_propagation_seconds/s/60/90/&#39;</span> *.conf
 </code></pre></div><p>You need to add a temporary set of limited administrative credentials to all of
 your <code>user.txt</code> files and you want to the new code after either <code>::limit=2</code> or
 <code>::Limit=2</code>.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">find . -iname user.txt -exec sed <span style="color:#4e9a06">&#39;/::[lL]imit=2/a ::group=+Admin.StatusUpdate+Admin.Restart \
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">find . -iname user.txt -exec sed <span style="color:#4e9a06">&#39;/::[lL]imit=2/a ::group=+Admin.StatusUpdate+Admin.Restart \
 </span><span style="color:#4e9a06">username:password \
 </span><span style="color:#4e9a06">::group=-Admin.StatusUpdate-Admin.Restart&#39;</span> <span style="color:#ce5c00;font-weight:bold">{}</span> <span style="color:#4e9a06">\;</span><span style="color:#000;font-weight:bold">|</span> less
 </code></pre></div><p>Or, when a vendor transitions to HTTPS and you need to update 60+ EZproxy stanzas to specifically allow a new protocol.</p>
 <h4 id="here-are-a-few-one-liners">Here are a few one-liners:</h4>
-<pre><code># Print All Matching Lines
+<pre tabindex="0"><code># Print All Matching Lines
 sed -n '/^IncludeFile.*/p' config.txt
 
 # Print the First Occurrence of Matching Line
@@ -673,9 +673,9 @@ sed -n '/^IncludeFile.*/ {p;q}' config.txt
 tac config.txt | sed -n '/^IncludeFile.*/ {p;q}'
 </code></pre><h2 id="awk-columnar-data-processor">awk (columnar data processor)</h2>
 <p>Read through a directory of log files, find entries for a specific user, sort the results, print only the &ldquo;interesting&rdquo; data points</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">grep -rni <span style="color:#4e9a06">&#34;username&#34;</span> <span style="color:#000;font-weight:bold">|</span> sort <span style="color:#000;font-weight:bold">|</span> awk <span style="color:#4e9a06">&#39;BEGIN {OFS=&#34;\t&#34;}; {split($1,date,&#34;:&#34;); print date[3], $2, $3, $4}&#39;</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">grep -rni <span style="color:#4e9a06">&#34;username&#34;</span> <span style="color:#000;font-weight:bold">|</span> sort <span style="color:#000;font-weight:bold">|</span> awk <span style="color:#4e9a06">&#39;BEGIN {OFS=&#34;\t&#34;}; {split($1,date,&#34;:&#34;); print date[3], $2, $3, $4}&#39;</span>
 </code></pre></div><p>You can also find IPs that hit the proxy server most frequently</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">awk <span style="color:#4e9a06">&#39;{ print $4}&#39;</span> <span style="color:#000">$PATH_TO_LOGFILE</span> <span style="color:#000;font-weight:bold">|</span> sort <span style="color:#000;font-weight:bold">|</span> uniq -c <span style="color:#000;font-weight:bold">|</span> sort -nr <span style="color:#000;font-weight:bold">|</span> head -n <span style="color:#0000cf;font-weight:bold">20</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">awk <span style="color:#4e9a06">&#39;{ print $4}&#39;</span> <span style="color:#000">$PATH_TO_LOGFILE</span> <span style="color:#000;font-weight:bold">|</span> sort <span style="color:#000;font-weight:bold">|</span> uniq -c <span style="color:#000;font-weight:bold">|</span> sort -nr <span style="color:#000;font-weight:bold">|</span> head -n <span style="color:#0000cf;font-weight:bold">20</span>
 </code></pre></div>
 	
 	
@@ -738,7 +738,7 @@ tac config.txt | sed -n '/^IncludeFile.*/ {p;q}'
         
       </div>
       <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
-        <small class="text-white">&copy; 2021 Derek Zoladz. Theme by <a href="https://www.docsy.dev/docs/">Docsy</a>.<br/>
+        <small class="text-white">&copy; 2022 Derek Zoladz. Theme by <a href="https://www.docsy.dev/docs/">Docsy</a>.<br/>
           Made with ❤️ in Columbus, OH</small>
         
 	
