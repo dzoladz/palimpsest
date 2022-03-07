@@ -42,6 +42,11 @@ Viewing .der certificates
 openssl x509 -in some-domain.der -inform der -text -noout
 ```
 
+Viewing .csr information
+```bash
+openssl req -text -noout -verify -in filename.csr
+```
+
 Check if a private key matches a certificate. If the results of the following commands match, the private key is a match to the certificate.
 
 ```bash
