@@ -23,13 +23,13 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/palimpsest/docs/notebooks/ezproxy/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2021-10-15T15:03:00-04:00" /><meta property="og:site_name" content="Derek C. Zoladz" />
+<meta property="article:modified_time" content="2022-05-19T10:14:34-04:00" /><meta property="og:site_name" content="Derek C. Zoladz" />
 
 <meta itemprop="name" content="EZproxy">
 <meta itemprop="description" content="Useful snippets for administering EZproxy
 ">
-<meta itemprop="dateModified" content="2021-10-15T15:03:00-04:00" />
-<meta itemprop="wordCount" content="866">
+<meta itemprop="dateModified" content="2022-05-19T10:14:34-04:00" />
+<meta itemprop="wordCount" content="910">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="EZproxy"/>
 <meta name="twitter:description" content="Useful snippets for administering EZproxy
@@ -594,6 +594,7 @@
     <li><a href="#reject-connections-that-originate-from-ips-outside-of-ohio-region">Reject connections that originate from IPs outside of Ohio region.</a></li>
     <li><a href="#supply-resource-credentials-within-an-iframe">Supply Resource Credentials within an iFrame</a></li>
     <li><a href="#regex-validation-of-saml-attributes-in-the-auth-namespace">Regex Validation of SAML Attributes in the Auth: Namespace</a></li>
+    <li><a href="#grab-username-when-ezproxy-login-with-email-address">Grab Username, When EZproxy Login with Email Address</a></li>
     <li><a href="#auto-trigger-attribute-replacement-via-ezproxy-findreplace">Auto-trigger attribute replacement via EZproxy Find/Replace</a></li>
     <li><a href="#ohiolink-ejc---proxy-rave-urls-through-ezproxy">OhioLINK EJC - Proxy Rave URLs through EZproxy</a></li>
     <li><a href="#cron-jobs-for-monitoring-activity">Cron Jobs for Monitoring Activity</a></li>
@@ -681,6 +682,14 @@ Replace &lt;/iframe&gt;&lt;script&gt;<span style="color:#ce5c00;font-weight:bold
 <p>Authorize <code>userid</code>, if it begins with  1, 3, or 5. Otherwise, record <code>userid</code> and deny with <code>itype.htm</code></p>
 </blockquote>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">If !<span style="color:#ce5c00;font-weight:bold">(</span>auth:userid <span style="color:#ce5c00;font-weight:bold">=</span>~ <span style="color:#4e9a06">&#34;/^(1|3|5).+</span>$<span style="color:#4e9a06">/&#34;</span><span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span> Audit -expr auth:userid<span style="color:#000;font-weight:bold">;</span> Deny itype.htm<span style="color:#000;font-weight:bold">;</span> Stop
+</code></pre></div><h2 id="grab-username-when-ezproxy-login-with-email-address">Grab Username, When EZproxy Login with Email Address</h2>
+<p>This function uses an onclick event hook, i.e. <code>&lt;input onclick=&quot;processUsername()&quot; type=&quot;submit&quot; value=&quot;Sign in&quot;&gt;</code></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#204a87;font-weight:bold">function</span> processUsername<span style="color:#ce5c00;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+  var <span style="color:#000">email</span> <span style="color:#ce5c00;font-weight:bold">=</span> document.getElementsByName<span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#39;user&#39;</span><span style="color:#ce5c00;font-weight:bold">)[</span>0<span style="color:#ce5c00;font-weight:bold">]</span>.value<span style="color:#000;font-weight:bold">;</span>
+  var <span style="color:#000">username</span> <span style="color:#ce5c00;font-weight:bold">=</span> email.split<span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#39;@&#39;</span><span style="color:#ce5c00;font-weight:bold">)[</span>0<span style="color:#ce5c00;font-weight:bold">]</span><span style="color:#000;font-weight:bold">;</span>
+	document.getElementsByName<span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#39;user&#39;</span><span style="color:#ce5c00;font-weight:bold">)[</span>0<span style="color:#ce5c00;font-weight:bold">]</span>.value <span style="color:#ce5c00;font-weight:bold">=</span> username<span style="color:#000;font-weight:bold">;</span>
+	console.log<span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#39;the username value submitted is: &#39;</span> + document.getElementsByName<span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#39;user&#39;</span><span style="color:#ce5c00;font-weight:bold">)[</span>0<span style="color:#ce5c00;font-weight:bold">]</span>.value<span style="color:#ce5c00;font-weight:bold">)</span><span style="color:#000;font-weight:bold">;</span>
+<span style="color:#ce5c00;font-weight:bold">}</span>
 </code></pre></div><h2 id="auto-trigger-attribute-replacement-via-ezproxy-findreplace">Auto-trigger attribute replacement via EZproxy Find/Replace</h2>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">function</span><span style="color:#ce5c00;font-weight:bold">()</span> <span style="color:#ce5c00;font-weight:bold">{</span>
         var <span style="color:#000">url</span> <span style="color:#ce5c00;font-weight:bold">=</span> document.getElementById<span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#39;ctl00_BodyContent_ucShare_txtTitleURL&#39;</span><span style="color:#ce5c00;font-weight:bold">)</span>.value<span style="color:#000;font-weight:bold">;</span>
@@ -769,7 +778,7 @@ NeverProxy library.transparent.com
 </code></pre></div>
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Last modified October 15, 2021: <a  href="https://github.com/google/docsy-example/commit/ca8f4ed0eb10652af4c86f8d9ff5a49ae20e3d6c">ADD: apply proxy prefix to RAVE URLs in OhioLINK&#39;s EJC (ca8f4ed)</a>
+	<div class="text-muted mt-5 pt-3 border-top">Last modified May 19, 2022: <a  href="https://github.com/google/docsy-example/commit/caf255f459f859d90cdc7d9957b69f84c1bc9530">ADD: JS function to grab username from email address login attempt to EZproxy (caf255f)</a>
 </div>
 </div>
 
