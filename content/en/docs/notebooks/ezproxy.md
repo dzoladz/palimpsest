@@ -54,6 +54,17 @@ SAML authorization check, within `shibuser.txt`, against the `userid` attribute 
 If !(auth:userid =~ "/^(1|3|5).+$/"); Audit -expr auth:userid; Deny itype.htm; Stop
 ```
 
+## Grab Username, When EZproxy Login with Email Address
+This function uses an onclick event hook, i.e. `<input onclick="processUsername()" type="submit" value="Sign in">`
+```bash
+function processUsername() {
+  var email = document.getElementsByName('user')[0].value;
+  var username = email.split('@')[0];
+	document.getElementsByName('user')[0].value = username;
+	console.log('the username value submitted is: ' + document.getElementsByName('user')[0].value);
+}
+```
+
 ## Auto-trigger attribute replacement via EZproxy Find/Replace 
 ```bash
 (function() {
