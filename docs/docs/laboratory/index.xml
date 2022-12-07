@@ -1,0 +1,343 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Palimpsest – Laboratory</title>
+    <link>/docs/laboratory/</link>
+    <description>Recent content in Laboratory on Palimpsest</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="/docs/laboratory/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Kubernetes</title>
+      <link>/docs/laboratory/kubernetes/kubernetes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/laboratory/kubernetes/kubernetes/</guid>
+      <description>
+        
+        
+        &lt;p&gt;This is the future location for all of my application hosting experiments at OhioNET that are unusable by the organization. The idea is to build an environment for continued independent learning in technological areas that are focused on developing custom library-adjacent research applications, but are well beyond the capacities of my day job.&lt;/p&gt;
+&lt;h2 id=&#34;3-node-cluster-computing-hardware&#34;&gt;3-Node Cluster Computing Hardware&lt;/h2&gt;
+&lt;h2 id=&#34;k3s&#34;&gt;K3s&lt;/h2&gt;
+&lt;p&gt;The lightweight, certified Kubernetes distribution &lt;a href=&#34;https://k3s.io/&#34;&gt;K3s&lt;/a&gt; was selected. The K3s distro is designed from ARM64 architectures like the Raspberry Pi 4.&lt;/p&gt;
+&lt;h2 id=&#34;docker-compose-to-kubernetes&#34;&gt;Docker Compose to Kubernetes&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://kompose.io/&#34;&gt;Kompose&lt;/a&gt; is a command-line conversion tool. It takes a Docker Compose file and translates it into Kubernetes resources. There&amp;rsquo;s also a &lt;a href=&#34;https://github.com/JadCham/komposeui&#34;&gt;GUI version&lt;/a&gt; maintained on GitHub.&lt;/p&gt;
+&lt;p&gt;Basic Conversion to Single File&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;kompose convert -f docker-compose.yml -o kubernetes-output.yml
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Convert to Helm Chart&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;kompose convert -c
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;extended-learning&#34;&gt;Extended Learning&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://collabnix.github.io/kubelabs/&#34;&gt;An Ultimate Kubernetes Hands-on Labs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Network Description</title>
+      <link>/docs/laboratory/network/networking-gear/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/laboratory/network/networking-gear/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;equipment&#34;&gt;Equipment&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Device&lt;/th&gt;
+&lt;th&gt;Manufacturer&lt;/th&gt;
+&lt;th&gt;Model&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Cable Modem, Spectrum&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Router/Firewall&lt;/td&gt;
+&lt;td&gt;Ubiquiti&lt;/td&gt;
+&lt;td&gt;UniFi Security Gateway&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;UniFi Network Manager&lt;/td&gt;
+&lt;td&gt;Ubiquiti&lt;/td&gt;
+&lt;td&gt;UniFi Cloud Key Gen2 Plus&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Switch, S8a&lt;/td&gt;
+&lt;td&gt;Ubiquiti&lt;/td&gt;
+&lt;td&gt;8-Port Managed with 802.3af PoE&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Access Point&lt;/td&gt;
+&lt;td&gt;Ubiquiti&lt;/td&gt;
+&lt;td&gt;24V 802.3 af/A - AP AC LR&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Backup Disk&lt;/td&gt;
+&lt;td&gt;NexStar&lt;/td&gt;
+&lt;td&gt;3.5 SATA 6 Gbps&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Switch, S5a&lt;/td&gt;
+&lt;td&gt;TPLink&lt;/td&gt;
+&lt;td&gt;5-Port Unmanaged&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Switch, S5b&lt;/td&gt;
+&lt;td&gt;TPLink&lt;/td&gt;
+&lt;td&gt;5-Port Unmanaged&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;PiHole&lt;/td&gt;
+&lt;td&gt;Raspberry Pi Foundation&lt;/td&gt;
+&lt;td&gt;Pi 3, Model B, 1 GB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Samba Server&lt;/td&gt;
+&lt;td&gt;Raspberry Pi Foundation&lt;/td&gt;
+&lt;td&gt;Pi 4, Model B, 2 GB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Koha ILS&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ligotti, Pi Cluster&lt;/td&gt;
+&lt;td&gt;Raspberry Pi Foundation&lt;/td&gt;
+&lt;td&gt;Pi 4, Model B, 4 GB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;network-diagram&#34;&gt;Network Diagram&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../img/lab_network.png&#34; alt=&#34;Lab Network Diagram&#34;&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Rancher</title>
+      <link>/docs/laboratory/kubernetes/rancher/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/laboratory/kubernetes/rancher/</guid>
+      <description>
+        
+        
+        &lt;p&gt;As of Rancher v2.5, Rancher can be installed on any Kubernetes cluster.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;RKE&lt;/li&gt;
+&lt;li&gt;K3s &lt;strong&gt;on Raspberry Pi 4 cluster&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;RKE2&lt;/li&gt;
+&lt;li&gt;Amazon EKS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;installing-rancher-via-helm3&#34;&gt;Installing Rancher via Helm3&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;Add the Rancher Helm chart repo&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;helm repo add rancher-latest https://releases.rancher.com/server-charts/latest
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;create-a-namespace-for-rancher-resources&#34;&gt;Create a Namespace for Rancher resources&lt;/h4&gt;
+&lt;p&gt;Rancher documentation states that this namespace should always be called &lt;code&gt;cattle-system&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;kubectl create namespace cattle-system
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;install-cert-manager&#34;&gt;Install cert-manager&lt;/h4&gt;
+&lt;p&gt;Rancher supports multiple SSL/TLS termination methods. As the laboratory cluster is on the local network and only accepting connections from the LAN, the following set of instructions will configure Rancher to generate its own certificates. Using Let&amp;rsquo;s Encyprt and forwarding traffic from an external layer 7 load balancer are better options for production.&lt;/p&gt;
+&lt;h4 id=&#34;install-the-customresourcedefinition-separately&#34;&gt;Install the CustomResourceDefinition separately&lt;/h4&gt;
+&lt;p&gt;More info on &lt;a href=&#34;https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/#customresourcedefinitions&#34;&gt;CustomResourceDefinition&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;kubectl apply --validate&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;false&lt;/span&gt; -f https://github.com/jetstack/cert-manager/releases/download/v1.0.4/cert-manager.crds.yaml
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;create-the-namespace-for-cert-manager&#34;&gt;Create the namespace for cert-manager&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;kubectl create namespace cert-manager
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;add-the-jetstack-helm-repository&#34;&gt;Add the Jetstack Helm repository&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;helm repo add jetstack https://charts.jetstack.io
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;update-your-local-helm-chart-repository-cache&#34;&gt;Update your local Helm chart repository cache&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;helm repo update
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;install-the-cert-manager-helm-chart&#34;&gt;Install the cert-manager Helm chart&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;helm install &lt;span style=&#34;color:#4e9a06&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&lt;/span&gt;  cert-manager jetstack/cert-manager &lt;span style=&#34;color:#4e9a06&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&lt;/span&gt;  --namespace cert-manager &lt;span style=&#34;color:#4e9a06&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&lt;/span&gt;  --version v1.0.4
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;verify-deployment&#34;&gt;Verify Deployment&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;kubectl get pods --namespace cert-manager
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;install-rancher-via-helm&#34;&gt;Install Rancher via Helm&lt;/h4&gt;
+&lt;p&gt;Set the hostname to the DNS name you will point to your load balancer.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;helm install rancher rancher-latest/rancher &lt;span style=&#34;color:#4e9a06&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&lt;/span&gt;  --namespace cattle-system &lt;span style=&#34;color:#4e9a06&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&lt;/span&gt;  --ingress.tls.source&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;rancher &lt;span style=&#34;color:#4e9a06&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&lt;/span&gt;  --set &lt;span style=&#34;color:#000&#34;&gt;hostname&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;rancher.derekzoladz.com
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;confirm-deployment-of-rancher-server&#34;&gt;Confirm deployment of Rancher server&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;kubectl -n cattle-system rollout status deploy/rancher
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;troubleshooting&#34;&gt;Troubleshooting&lt;/h2&gt;
+&lt;p&gt;Ensure the KUBECONFIG environment variable is set&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;KUBECONFIG&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;/etc/rancher/k3s/k3s.yaml
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If Helm can&amp;rsquo;t reach the k3s cluster&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;kubectl config view --raw &amp;gt;~/.kube/config
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Raspberry Pi Cluster</title>
+      <link>/docs/laboratory/kubernetes/cluster/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/laboratory/kubernetes/cluster/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;strong&gt;Ligotti&lt;/strong&gt; - this 3 node pi cluster - is named after the philosophical horror writer &lt;a href=&#34;https://en.wikipedia.org/wiki/Thomas_Ligotti&#34;&gt;Thomas Ligotti&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ligotti             192.168.1.10  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;|&lt;/span&gt; Controller, Master 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ligotti-worker-one  192.168.1.11  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;|&lt;/span&gt; Worker One
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ligotti-worker-two  192.168.1.12  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;|&lt;/span&gt; Worker Two
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;hardware&#34;&gt;Hardware&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Quantity&lt;/th&gt;
+&lt;th&gt;Device&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;Raspberry Pi 4, Model B, 4 GB RAM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;64 GB, Samsung Evo, microSDXC UHS-I Card, Class 10, 1 FHD&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;TP-Link, TL-SG105, 5-Port Gigabit Switch&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;Micro Connectors Acrylic Stackable Raspberry Pi Case with Fan, Power&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;1&amp;rsquo; CAT6 Ethernet Cables&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;os&#34;&gt;OS&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Ubuntu Server 20.04.2 LTS 64-bit - &lt;a href=&#34;https://ubuntu.com/download/raspberry-pi&#34;&gt;https://ubuntu.com/download/raspberry-pi&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Flash OS images to SD cards - &lt;a href=&#34;https://github.com/balena-io/etcher&#34;&gt;Etcher&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;kubernetes&#34;&gt;Kubernetes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/&#34;&gt;Kubernetes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/k3s-io/k3s&#34;&gt;K3s&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+&lt;h4 id=&#34;connect-and-update&#34;&gt;Connect and Update&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Connect &lt;code&gt;ssh ubuntu@raspberry-pi-address&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Update &lt;code&gt;sudo apt update &amp;amp;&amp;amp; sudo apt upgrade&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;set-hostname&#34;&gt;Set Hostname&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Set hostname &lt;code&gt;hostnamectl set-hostname &amp;quot;ligotti&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;enable-c-groups&#34;&gt;Enable c-groups&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Enabled c-groups &lt;code&gt;sudo sed -i &#39;1s/^/cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory /&#39; /boot/firmware/cmdline.txt&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;add-user&#34;&gt;Add User&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Add a user &lt;code&gt;adduser derekz&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Enable passwordless sudo, &lt;code&gt;visudo&lt;/code&gt; and add &lt;code&gt;derekz ALL=(ALL) NOPASSWD:ALL&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;static-ip-via-netplan&#34;&gt;Static IP via Netplan&lt;/h4&gt;
+&lt;p&gt;Edit &lt;code&gt;/etc/netplan/50-cloud-init.yaml&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;network:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    ethernets:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        enp0s3:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            dhcp4: &lt;span style=&#34;color:#204a87&#34;&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            addresses: &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;192.168.1.10/24&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            gateway4: 192.168.1.1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            nameservers:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;              addresses: &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;[&lt;/span&gt;192.168.1.51,8.8.8.8&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Apply changes &lt;code&gt;sudo netplan apply&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;reconnect&#34;&gt;Reconnect&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Confirm IP &lt;code&gt;ip a&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;reboot&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;login-as-newly-created-user-and-create-master-node&#34;&gt;Login as newly-created user and create Master node&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;ssh derekz@192.168.1.10&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;curl -sfL https://get.k3s.io | sh -&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sudo k3s kubectl get node&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;grab-the-k3s-token&#34;&gt;Grab the K3s token&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sudo cat /var/lib/rancher/k3s/server/node-token&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;set-up-worker-nodes&#34;&gt;Set up worker nodes&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;curl -sfL https://get.k3s.io | K3S_URL=https://master_node_IP:6443 K3S_TOKEN=token_from_K3s sh -&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Check K3s agent status &lt;code&gt;service k3s-agent status&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Restart service, if needed &lt;code&gt;sudo service k3s-agent restart&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Helm</title>
+      <link>/docs/laboratory/kubernetes/helm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/laboratory/kubernetes/helm/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;a href=&#34;https://helm.sh/&#34;&gt;Helm&lt;/a&gt; is a tool for managing Kubernetes applications.&lt;/p&gt;
+&lt;p&gt;For Helm, there are a few important concepts:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A &lt;strong&gt;Chart&lt;/strong&gt; is a collection of files that describe a related set of Kubernetes resources that define an instance of a Kubernetes application.&lt;/li&gt;
+&lt;li&gt;A &lt;strong&gt;Repo&lt;/strong&gt; is a chart registry. Repositories can be added to Helm.&lt;/li&gt;
+&lt;li&gt;A &lt;strong&gt;Config&lt;/strong&gt; contains configuration information merged into a packaged chart to create a releasable object.&lt;/li&gt;
+&lt;li&gt;A &lt;strong&gt;Release&lt;/strong&gt; is a running instance of a chart using a specific configuration.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;commands&#34;&gt;Commands&lt;/h2&gt;
+&lt;p&gt;A short list of common Helm commands&lt;/p&gt;
+&lt;h4 id=&#34;repos&#34;&gt;Repos&lt;/h4&gt;
+&lt;p&gt;Add, update, and search repos for installable charts&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;helm repo add bitnami https://charts.bitnami.com/bitnami
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;helm repo update
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;helm search repo apache
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;A valid chart repository must have an index file. The index file contains information about each chart in the chart repository. The following command will generate an index file based on a given local directory that contains packaged charts.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;helm repo index
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;install-and-remove-charts&#34;&gt;Install and Remove Charts&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;helm install provide-a-name-here bitnami/apache
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;helm uninstall provide-a-name-here bitnami/apache
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;create-new-chart-template&#34;&gt;Create New Chart Template&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Helm create name-of-chart-dir
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;issues&#34;&gt;Issues&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;If attempting to install an application via Helm results in &lt;code&gt;Error: Kubernetes cluster unreachable&lt;/code&gt;, make sure the KUBECONFIG environment variable is set properly:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;KUBECONFIG&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;/etc/rancher/k3s/k3s.yaml
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;An application gets stuck in a &lt;code&gt;CrashLoopBackOff&lt;/code&gt; status and the Kubernetes logs show &lt;code&gt;exec user process caused &amp;quot;exec format error&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The lab Kubernetes cluster is using Raspberry Pi 4s, which are 64-bit ARM architecture. The above is a common error when the container application is built for an x86 architecture. To resolve this issue, use a container targeted for 64-bit ARM.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

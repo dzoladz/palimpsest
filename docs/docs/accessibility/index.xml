@@ -1,0 +1,58 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Palimpsest – Accessibility</title>
+    <link>/docs/accessibility/</link>
+    <description>Recent content in Accessibility on Palimpsest</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="/docs/accessibility/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: References</title>
+      <link>/docs/accessibility/references/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/accessibility/references/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;corporate-design-systems--accessibility-patterns&#34;&gt;Corporate, Design Systems &amp;amp; Accessibility Patterns&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/carbon-design-system/carbon&#34;&gt;IBM, Carbon Design System&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://material.io/&#34;&gt;Google, Material Design&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.apple.com/design/human-interface-guidelines/&#34;&gt;Apple, Human Interface Guidelines&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://canonical-web-and-design.github.io/practices/&#34;&gt;Canonical, Web &amp;amp; Design Practices&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/voxmedia/accessibility&#34;&gt;VoxMedia, Accessibility Guidelines&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.microsoft.com/design/inclusive/&#34;&gt;Microsoft, Inclusive Design&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;cultural-heritage-institution-design-systems--accessibility-patterns&#34;&gt;Cultural Heritage Institution, Design Systems &amp;amp; Accessibility Patterns&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/te-papa/te-papa-design-language-system&#34;&gt;Te Papa, Design System Language&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;government-standards-body&#34;&gt;Government, Standards Body&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/bbc/bbc-a11y&#34;&gt;BBC, Accessibility Guidelines&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/w3c/wcag&#34;&gt;Web Content Accessibility Guidelines&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/18F/accessibility&#34;&gt;18F, Accessibility&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;document-accessibility&#34;&gt;Document Accessibility&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://idpf.github.io/epub-guides/&#34;&gt;IDPF, EPUB3 Guidelines&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;accessibility-testing-tools&#34;&gt;Accessibility Testing Tools&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Tanaguru/Contrast-Finder&#34;&gt;Tanaguru, Contrast Finder&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/CoreyGinnivan/whocanuse&#34;&gt;Who Can Use?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>
