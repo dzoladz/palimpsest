@@ -1,4 +1,5 @@
 baseURL = "/"
+title = "Goldydocs"
 
 # ----------------------------------------------------------------------------------
 # Language settings - See LANGUAGE below
@@ -72,11 +73,27 @@ id = "UA-00000000-0"
 
 [languages]
 [languages.en]
-title = "Palimpsest"
+title = "Derek C. Zoladz"
 description = "Palimpsest"
 languageName ="English"
 # Weight used for sorting.
 weight = 1
+
+[languages.no]
+title = "Derek C. Zoladz"
+description = "Palimpsest"
+languageName ="Norsk"
+contentDir = "content/no"
+time_format_default = "02.01.2006"
+time_format_blog = "02.01.2006"
+
+[languages.fa]
+title = "Derek C. Zoladz"
+description = "Palimpsest"
+languageName ="فارسی"
+contentDir = "content/fa"
+time_format_default = "2006.01.02"
+time_format_blog = "2006.01.02"
 
 # ----------------------------------------------------------------------------------
 # MARKUP
@@ -130,9 +147,9 @@ version = "0.0"
 url_latest_version = "https://dzoladz.github.io/palimpsest/"
 
 # Repository configuration (URLs for in-page links to opening issues and suggesting changes)
-github_repo = "https://github.com/dzoladz/palimpsest/"
+github_repo = "https://github.com/google/docsy-example"
 # An optional link to a related project repo. For example, the sibling repository where your product code lives.
-github_project_repo = "https://github.com/dzoladz/palimpsest/"
+github_project_repo = "https://github.com/google/docsy"
 
 # Specify a value here if your content directory is not in your repo's root directory
 # github_subdir = ""
