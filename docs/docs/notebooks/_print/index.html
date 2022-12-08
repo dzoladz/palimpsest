@@ -2420,18 +2420,13 @@ tac config.txt | sed -n &#39;/^IncludeFile.*/ {p;q}&#39;
     
 	<h1 id="pg-4afcd525437783c4871fc01163c00b1d">30 - SSH</h1>
     <div class="lead">SSH quick start</div>
-	<ul>
-<li>
-<p>What is ssh?</p>
-</li>
-<li>
-<p>Generate Keys</p>
-</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-keygen -t rsa -b <span style="color:#0000cf;font-weight:bold">4096</span> -f &lt;name of keypair&gt;
-</span></span></code></pre></div><ul>
-<li>Using an ssh config file</li>
-</ul>
+	<ol>
+<li>Generate Keys <a href="https://ed25519.cr.yp.to/software.html">ed25519</a></li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-keygen -t ed25519
+</span></span></code></pre></div><ol start="2">
+<li>Use an SSH config file: <code>~/.ssh/config</code></li>
+</ol>
 
 </div>
 

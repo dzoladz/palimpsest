@@ -4,12 +4,10 @@ description: >
     SSH quick start
 ---
 
-* What is ssh?
-
-* Generate Keys
+1. Generate Keys [ed25519](https://ed25519.cr.yp.to/software.html)
 
 ```bash
-ssh-keygen -t rsa -b 4096 -f <name of keypair>
+ssh-keygen -t ed25519
 ```
 
-* Using an ssh config file
+2. Use an SSH config file: `~/.ssh/config`

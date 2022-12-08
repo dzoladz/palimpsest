@@ -33,7 +33,7 @@
 <meta itemprop="description" content="SSH quick start
 ">
 <meta itemprop="dateModified" content="2021-05-10T21:39:45-04:00" />
-<meta itemprop="wordCount" content="19">
+<meta itemprop="wordCount" content="12">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="SSH"/>
 <meta name="twitter:description" content="SSH quick start
@@ -279,18 +279,13 @@ if (!doNotTrack) {
 
 		
 	</header>    
-	<ul>
-<li>
-<p>What is ssh?</p>
-</li>
-<li>
-<p>Generate Keys</p>
-</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-keygen -t rsa -b <span style="color:#0000cf;font-weight:bold">4096</span> -f &lt;name of keypair&gt;
-</span></span></code></pre></div><ul>
-<li>Using an ssh config file</li>
-</ul>
+	<ol>
+<li>Generate Keys <a href="https://ed25519.cr.yp.to/software.html">ed25519</a></li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-keygen -t ed25519
+</span></span></code></pre></div><ol start="2">
+<li>Use an SSH config file: <code>~/.ssh/config</code></li>
+</ol>
 
 	
 	
