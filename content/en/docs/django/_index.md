@@ -1,27 +1,17 @@
 ---
-title: "Laboratory"
-linkTitle: "Laboratory"
+title: "Django"
+linkTitle: "Django"
 weight: 1
 description: >
-  Home laboratory for experimental and reproducible research
+  Let's build some web-based applications
 hide_feedback: true
 ---
 
-This is the future location for all of my application hosting experiments at OhioNET that are unusable by the organization. The idea is to build an environment for continued independent learning in technological areas that are focused on developing custom library-adjacent research applications, but are well beyond the capacities of my day job.
+## Geospatial
 
-### Cluster Computing - Hardware
-[Raspberry Pi 4, Model B 4GB](https://theselfhostingblog.com/posts/setting-up-a-kubernetes-cluster-using-raspberry-pis-k3s-and-portainer/#)
+- [GeoDjango](https://docs.djangoproject.com/en/4.1/ref/contrib/gis/)
+- [Django Leaflet](https://django-leaflet.readthedocs.io/)
 
-### K3s & Rancher
-[K3s](https://k3s.io/)
-[Racnher](https://rancher.com/products/k3s/)
-[Helm](https://helm.sh/)
+## Reporting Engines and Charting Functions
 
-### Network
-- [ ] diagram
-- [ ] hardware
-
-### Esmeralda Components
-[Traefik](https://traefik.io/traefik/)
-[Portainer](https://www.portainer.io/)
-
+- [Slick Reporting](https://django-slick-reporting.com/)
