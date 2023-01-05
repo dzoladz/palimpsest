@@ -204,7 +204,7 @@ enable = false
         desc = "Send me a message"
 [[params.links.user]]
 	name ="Twitter"
-	url = "https://example.org/derek_zoladz"
+	url = "https://twitter.com/derek_zoladz"
 	icon = "fab fa-twitter"
         desc = "Follow me on Twitter for random thoughts!"
 # Developer relevant links. These will show up on right side of footer and in the community page if you have one.
