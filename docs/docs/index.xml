@@ -1,11 +1,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Palimpsest – Docs</title>
-    <link>/palimpsest/docs/</link>
+    <link>/docs/</link>
     <description>Recent content in Docs on Palimpsest</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	  <atom:link href="/palimpsest/docs/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/docs/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -15,10 +15,10 @@
     
     <item>
       <title>Docs: Coding</title>
-      <link>/palimpsest/docs/devops/coding/coding/</link>
+      <link>/docs/devops/coding/coding/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/devops/coding/coding/</guid>
+      <guid>/docs/devops/coding/coding/</guid>
       <description>
         
         
@@ -33,10 +33,10 @@
     
     <item>
       <title>Docs: Kubernetes</title>
-      <link>/palimpsest/docs/laboratory/kubernetes/kubernetes/</link>
+      <link>/docs/laboratory/kubernetes/kubernetes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/laboratory/kubernetes/kubernetes/</guid>
+      <guid>/docs/laboratory/kubernetes/kubernetes/</guid>
       <description>
         
         
@@ -60,10 +60,10 @@
     
     <item>
       <title>Docs: Network Description</title>
-      <link>/palimpsest/docs/laboratory/network/networking-gear/</link>
+      <link>/docs/laboratory/network/networking-gear/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/laboratory/network/networking-gear/</guid>
+      <guid>/docs/laboratory/network/networking-gear/</guid>
       <description>
         
         
@@ -147,10 +147,10 @@
     
     <item>
       <title>Docs: Rancher</title>
-      <link>/palimpsest/docs/laboratory/kubernetes/rancher/</link>
+      <link>/docs/laboratory/kubernetes/rancher/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/laboratory/kubernetes/rancher/</guid>
+      <guid>/docs/laboratory/kubernetes/rancher/</guid>
       <description>
         
         
@@ -206,10 +206,10 @@
     
     <item>
       <title>Docs: Raspberry Pi Cluster</title>
-      <link>/palimpsest/docs/laboratory/kubernetes/cluster/</link>
+      <link>/docs/laboratory/kubernetes/cluster/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/laboratory/kubernetes/cluster/</guid>
+      <guid>/docs/laboratory/kubernetes/cluster/</guid>
       <description>
         
         
@@ -315,10 +315,10 @@
     
     <item>
       <title>Docs: References</title>
-      <link>/palimpsest/docs/accessibility/references/</link>
+      <link>/docs/accessibility/references/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/accessibility/references/</guid>
+      <guid>/docs/accessibility/references/</guid>
       <description>
         
         
@@ -356,10 +356,10 @@
     
     <item>
       <title>Docs: References</title>
-      <link>/palimpsest/docs/devops/references/</link>
+      <link>/docs/devops/references/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/devops/references/</guid>
+      <guid>/docs/devops/references/</guid>
       <description>
         
         
@@ -378,10 +378,10 @@ U.S. Department of Homeland Security&amp;rsquo;s Product Realization Guide, whic
     
     <item>
       <title>Docs: Helm</title>
-      <link>/palimpsest/docs/laboratory/kubernetes/helm/</link>
+      <link>/docs/laboratory/kubernetes/helm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/laboratory/kubernetes/helm/</guid>
+      <guid>/docs/laboratory/kubernetes/helm/</guid>
       <description>
         
         
@@ -422,10 +422,10 @@ U.S. Department of Homeland Security&amp;rsquo;s Product Realization Guide, whic
     
     <item>
       <title>Docs: </title>
-      <link>/palimpsest/docs/notebooks/github_topic_browse/</link>
+      <link>/docs/notebooks/github_topic_browse/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/github_topic_browse/</guid>
+      <guid>/docs/notebooks/github_topic_browse/</guid>
       <description>
         
         
@@ -446,10 +446,10 @@ U.S. Department of Homeland Security&amp;rsquo;s Product Realization Guide, whic
     
     <item>
       <title>Docs: Business Apps</title>
-      <link>/palimpsest/docs/notebooks/business_apps/</link>
+      <link>/docs/notebooks/business_apps/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/business_apps/</guid>
+      <guid>/docs/notebooks/business_apps/</guid>
       <description>
         
         
@@ -512,10 +512,10 @@ U.S. Department of Homeland Security&amp;rsquo;s Product Realization Guide, whic
     
     <item>
       <title>Docs: Cables</title>
-      <link>/palimpsest/docs/notebooks/cables/</link>
+      <link>/docs/notebooks/cables/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/cables/</guid>
+      <guid>/docs/notebooks/cables/</guid>
       <description>
         
         
@@ -528,10 +528,10 @@ U.S. Department of Homeland Security&amp;rsquo;s Product Realization Guide, whic
     
     <item>
       <title>Docs: Certbot</title>
-      <link>/palimpsest/docs/notebooks/certbot/</link>
+      <link>/docs/notebooks/certbot/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/certbot/</guid>
+      <guid>/docs/notebooks/certbot/</guid>
       <description>
         
         
@@ -550,10 +550,10 @@ U.S. Department of Homeland Security&amp;rsquo;s Product Realization Guide, whic
     
     <item>
       <title>Docs: Chroot SFTP Setup</title>
-      <link>/palimpsest/docs/notebooks/chroot-sftp-setup/</link>
+      <link>/docs/notebooks/chroot-sftp-setup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/chroot-sftp-setup/</guid>
+      <guid>/docs/notebooks/chroot-sftp-setup/</guid>
       <description>
         
         
@@ -631,10 +631,10 @@ U.S. Department of Homeland Security&amp;rsquo;s Product Realization Guide, whic
     
     <item>
       <title>Docs: Cron</title>
-      <link>/palimpsest/docs/notebooks/cron/</link>
+      <link>/docs/notebooks/cron/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/cron/</guid>
+      <guid>/docs/notebooks/cron/</guid>
       <description>
         
         
@@ -703,10 +703,10 @@ U.S. Department of Homeland Security&amp;rsquo;s Product Realization Guide, whic
     
     <item>
       <title>Docs: Docker</title>
-      <link>/palimpsest/docs/notebooks/docker/</link>
+      <link>/docs/notebooks/docker/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/docker/</guid>
+      <guid>/docs/notebooks/docker/</guid>
       <description>
         
         
@@ -852,10 +852,10 @@ EXPOSE * expose container ports to host system&lt;/p&gt;
     
     <item>
       <title>Docs: Email</title>
-      <link>/palimpsest/docs/notebooks/email/</link>
+      <link>/docs/notebooks/email/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/email/</guid>
+      <guid>/docs/notebooks/email/</guid>
       <description>
         
         
@@ -869,10 +869,10 @@ EXPOSE * expose container ports to host system&lt;/p&gt;
     
     <item>
       <title>Docs: Expanding Volumes</title>
-      <link>/palimpsest/docs/notebooks/expand_volumes/</link>
+      <link>/docs/notebooks/expand_volumes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/expand_volumes/</guid>
+      <guid>/docs/notebooks/expand_volumes/</guid>
       <description>
         
         
@@ -905,10 +905,10 @@ EXPOSE * expose container ports to host system&lt;/p&gt;
     
     <item>
       <title>Docs: EZproxy</title>
-      <link>/palimpsest/docs/notebooks/ezproxy/</link>
+      <link>/docs/notebooks/ezproxy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/ezproxy/</guid>
+      <guid>/docs/notebooks/ezproxy/</guid>
       <description>
         
         
@@ -1039,10 +1039,10 @@ EXPOSE * expose container ports to host system&lt;/p&gt;
     
     <item>
       <title>Docs: fail2ban</title>
-      <link>/palimpsest/docs/notebooks/fail2ban/</link>
+      <link>/docs/notebooks/fail2ban/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/fail2ban/</guid>
+      <guid>/docs/notebooks/fail2ban/</guid>
       <description>
         
         
@@ -1059,10 +1059,10 @@ EXPOSE * expose container ports to host system&lt;/p&gt;
     
     <item>
       <title>Docs: Git</title>
-      <link>/palimpsest/docs/notebooks/git/</link>
+      <link>/docs/notebooks/git/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/git/</guid>
+      <guid>/docs/notebooks/git/</guid>
       <description>
         
         
@@ -1167,6 +1167,9 @@ git stash pop&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# List files in repo using file globbing&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git ls-files *.py
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;history&#34;&gt;History&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;Viewing git logs&lt;/li&gt;
+&lt;/ol&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# List commit history of current branch&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git log
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
@@ -1175,6 +1178,22 @@ git stash pop&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Show commits by specific author&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git log --author&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;dzoladz
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Display commit history in a specific format&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git log --pretty&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;oneline
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git log --pretty&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;short
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git log --pretty&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;format:&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;%h%x09%an%x09%s&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Amending commit authors&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# &amp;lt;commit-hash&amp;gt; must be hash before the commit to edit&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git rebase -i --rebase-merges &amp;lt;commit-hash&amp;gt; --committer-date-is-author-date
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# If you need from the beginning of time, use --root&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git rebase -i --rebase-merges --root --committer-date-is-author-date
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Flag commits for edit, and amend the author&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git commit --amend --author &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;derek &amp;lt;derek@oplin.ohio.gov&amp;gt;&amp;#34;&lt;/span&gt; --no-edit &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git rebase --continue
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;just-for-fun&#34;&gt;Just for Fun&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Who has the most commits in this repo&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git shortlog -s -n
@@ -1184,10 +1203,10 @@ git stash pop&lt;/p&gt;
     
     <item>
       <title>Docs: GPG</title>
-      <link>/palimpsest/docs/notebooks/gpg/</link>
+      <link>/docs/notebooks/gpg/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/gpg/</guid>
+      <guid>/docs/notebooks/gpg/</guid>
       <description>
         
         
@@ -1244,10 +1263,10 @@ commit&lt;/li&gt;
     
     <item>
       <title>Docs: Graphing Tool</title>
-      <link>/palimpsest/docs/notebooks/graphing/</link>
+      <link>/docs/notebooks/graphing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/graphing/</guid>
+      <guid>/docs/notebooks/graphing/</guid>
       <description>
         
         
@@ -1262,10 +1281,10 @@ commit&lt;/li&gt;
     
     <item>
       <title>Docs: Homebrew</title>
-      <link>/palimpsest/docs/notebooks/homebrew/</link>
+      <link>/docs/notebooks/homebrew/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/homebrew/</guid>
+      <guid>/docs/notebooks/homebrew/</guid>
       <description>
         
         
@@ -1333,10 +1352,10 @@ commit&lt;/li&gt;
     
     <item>
       <title>Docs: JS Forms</title>
-      <link>/palimpsest/docs/notebooks/js_forms/</link>
+      <link>/docs/notebooks/js_forms/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/js_forms/</guid>
+      <guid>/docs/notebooks/js_forms/</guid>
       <description>
         
         
@@ -1445,10 +1464,10 @@ function submitArticleDatabasesSearch() {
     
     <item>
       <title>Docs: LVM</title>
-      <link>/palimpsest/docs/notebooks/lvm/</link>
+      <link>/docs/notebooks/lvm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/lvm/</guid>
+      <guid>/docs/notebooks/lvm/</guid>
       <description>
         
         
@@ -1564,10 +1583,10 @@ function submitArticleDatabasesSearch() {
     
     <item>
       <title>Docs: Mailman</title>
-      <link>/palimpsest/docs/notebooks/mailman/</link>
+      <link>/docs/notebooks/mailman/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/mailman/</guid>
+      <guid>/docs/notebooks/mailman/</guid>
       <description>
         
         
@@ -1613,11 +1632,48 @@ function submitArticleDatabasesSearch() {
     </item>
     
     <item>
-      <title>Docs: Monit</title>
-      <link>/palimpsest/docs/notebooks/monit/</link>
+      <title>Docs: MariaDB</title>
+      <link>/docs/notebooks/databases/mariadb/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/monit/</guid>
+      <guid>/docs/notebooks/databases/mariadb/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;connect-as-a-user&#34;&gt;Connect as a user&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mysql -u root -p
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mysql -u derek -p
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;create-a-new-user&#34;&gt;Create a new user&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;CREATE USER &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;derek&amp;#39;&lt;/span&gt;@&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;%&amp;#39;&lt;/span&gt; IDENTIFIED BY &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;SOMEPASSWORDSTRING&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;grant-all-privileges-to-the-new-user&#34;&gt;Grant all privileges to the new user&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;GRANT ALL PRIVILEGES ON *.* TO &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;derek&amp;#39;&lt;/span&gt;@&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;%&amp;#39;&lt;/span&gt; WITH GRANT OPTION&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;FLUSH PRIVILEGES&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;EXIT&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;alter-a-current-user&#34;&gt;Alter a current user&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ALTER USER &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;derek&amp;#39;&lt;/span&gt;@&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;localhost&amp;#39;&lt;/span&gt; IDENTIFIED BY &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;SOMEPASSWORDSTRING&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;FLUSH PRIVILEGES&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;EXIT&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;show-grants-for-a-user&#34;&gt;Show grants for a user&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;SHOW GRANTS FOR &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;derek&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;backup--restore&#34;&gt;Backup &amp;amp; Restore&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Dump structure and data&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mysqldump -u root -p database &amp;gt; /path/to/database.sql
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# If you only want the database structure, no data&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mysqldump -u root -p database --no-data &amp;gt; /path/to/database.sql
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Restore a database from SQL backup&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mysql -u root -p database &amp;lt; /path/to/database.sql
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Monit</title>
+      <link>/docs/notebooks/monit/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/notebooks/monit/</guid>
       <description>
         
         
@@ -1705,10 +1761,10 @@ monit monitor all
     
     <item>
       <title>Docs: networker</title>
-      <link>/palimpsest/docs/notebooks/networker_commands/</link>
+      <link>/docs/notebooks/networker_commands/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/networker_commands/</guid>
+      <guid>/docs/notebooks/networker_commands/</guid>
       <description>
         
         
@@ -1769,10 +1825,10 @@ monit monitor all
     
     <item>
       <title>Docs: Networking</title>
-      <link>/palimpsest/docs/notebooks/networking/</link>
+      <link>/docs/notebooks/networking/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/networking/</guid>
+      <guid>/docs/notebooks/networking/</guid>
       <description>
         
         
@@ -1800,10 +1856,10 @@ monit monitor all
     
     <item>
       <title>Docs: Packages</title>
-      <link>/palimpsest/docs/notebooks/packages/</link>
+      <link>/docs/notebooks/packages/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/packages/</guid>
+      <guid>/docs/notebooks/packages/</guid>
       <description>
         
         
@@ -1836,10 +1892,10 @@ apt - works with software repos&lt;/p&gt;
     
     <item>
       <title>Docs: Perlbrew</title>
-      <link>/palimpsest/docs/notebooks/perlbrew/</link>
+      <link>/docs/notebooks/perlbrew/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/perlbrew/</guid>
+      <guid>/docs/notebooks/perlbrew/</guid>
       <description>
         
         
@@ -1876,10 +1932,10 @@ apt - works with software repos&lt;/p&gt;
     
     <item>
       <title>Docs: Postfix</title>
-      <link>/palimpsest/docs/notebooks/postfix/</link>
+      <link>/docs/notebooks/postfix/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/postfix/</guid>
+      <guid>/docs/notebooks/postfix/</guid>
       <description>
         
         
@@ -1918,10 +1974,10 @@ apt - works with software repos&lt;/p&gt;
     
     <item>
       <title>Docs: PostgreSQL</title>
-      <link>/palimpsest/docs/notebooks/postgres/</link>
+      <link>/docs/notebooks/databases/postgres/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/postgres/</guid>
+      <guid>/docs/notebooks/databases/postgres/</guid>
       <description>
         
         
@@ -2048,10 +2104,10 @@ apt - works with software repos&lt;/p&gt;
     
     <item>
       <title>Docs: Python4Lib</title>
-      <link>/palimpsest/docs/notebooks/python4lib/</link>
+      <link>/docs/notebooks/python4lib/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/python4lib/</guid>
+      <guid>/docs/notebooks/python4lib/</guid>
       <description>
         
         
@@ -2126,10 +2182,10 @@ apt - works with software repos&lt;/p&gt;
     
     <item>
       <title>Docs: React.js</title>
-      <link>/palimpsest/docs/notebooks/react/</link>
+      <link>/docs/notebooks/react/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/react/</guid>
+      <guid>/docs/notebooks/react/</guid>
       <description>
         
         
@@ -2176,10 +2232,10 @@ Page: Collection-level classes&lt;/p&gt;
     
     <item>
       <title>Docs: Samba</title>
-      <link>/palimpsest/docs/notebooks/samba/</link>
+      <link>/docs/notebooks/samba/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/samba/</guid>
+      <guid>/docs/notebooks/samba/</guid>
       <description>
         
         
@@ -2272,10 +2328,10 @@ configuration file.&lt;/p&gt;
     
     <item>
       <title>Docs: sed &amp; awk</title>
-      <link>/palimpsest/docs/notebooks/sed_awk/</link>
+      <link>/docs/notebooks/sed_awk/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/sed_awk/</guid>
+      <guid>/docs/notebooks/sed_awk/</guid>
       <description>
         
         
@@ -2315,10 +2371,10 @@ tac config.txt | sed -n &amp;#39;/^IncludeFile.*/ {p;q}&amp;#39;
     
     <item>
       <title>Docs: SIP2</title>
-      <link>/palimpsest/docs/notebooks/sip/</link>
+      <link>/docs/notebooks/sip/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/sip/</guid>
+      <guid>/docs/notebooks/sip/</guid>
       <description>
         
         
@@ -2346,10 +2402,10 @@ tac config.txt | sed -n &amp;#39;/^IncludeFile.*/ {p;q}&amp;#39;
     
     <item>
       <title>Docs: SSH</title>
-      <link>/palimpsest/docs/notebooks/ssh/</link>
+      <link>/docs/notebooks/ssh/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/ssh/</guid>
+      <guid>/docs/notebooks/ssh/</guid>
       <description>
         
         
@@ -2366,10 +2422,10 @@ tac config.txt | sed -n &amp;#39;/^IncludeFile.*/ {p;q}&amp;#39;
     
     <item>
       <title>Docs: SSL</title>
-      <link>/palimpsest/docs/notebooks/ssl/</link>
+      <link>/docs/notebooks/ssl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/ssl/</guid>
+      <guid>/docs/notebooks/ssl/</guid>
       <description>
         
         
@@ -2454,10 +2510,10 @@ tac config.txt | sed -n &amp;#39;/^IncludeFile.*/ {p;q}&amp;#39;
     
     <item>
       <title>Docs: SysAdmin Tasks</title>
-      <link>/palimpsest/docs/notebooks/sysadmin_tasks/</link>
+      <link>/docs/notebooks/sysadmin_tasks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/sysadmin_tasks/</guid>
+      <guid>/docs/notebooks/sysadmin_tasks/</guid>
       <description>
         
         
@@ -2544,10 +2600,10 @@ tac config.txt | sed -n &amp;#39;/^IncludeFile.*/ {p;q}&amp;#39;
     
     <item>
       <title>Docs: Yaz</title>
-      <link>/palimpsest/docs/notebooks/yaz/</link>
+      <link>/docs/notebooks/yaz/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/yaz/</guid>
+      <guid>/docs/notebooks/yaz/</guid>
       <description>
         
         

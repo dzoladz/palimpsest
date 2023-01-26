@@ -1,11 +1,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Palimpsest – Notebooks</title>
-    <link>/palimpsest/docs/notebooks/</link>
+    <link>/docs/notebooks/</link>
     <description>Recent content in Notebooks on Palimpsest</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	  <atom:link href="/palimpsest/docs/notebooks/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/docs/notebooks/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -14,11 +14,24 @@
     
     
     <item>
-      <title>Docs: </title>
-      <link>/palimpsest/docs/notebooks/github_topic_browse/</link>
+      <title>Docs: Databases</title>
+      <link>/docs/notebooks/databases/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/github_topic_browse/</guid>
+      <guid>/docs/notebooks/databases/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: </title>
+      <link>/docs/notebooks/github_topic_browse/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/notebooks/github_topic_browse/</guid>
       <description>
         
         
@@ -39,10 +52,10 @@
     
     <item>
       <title>Docs: Business Apps</title>
-      <link>/palimpsest/docs/notebooks/business_apps/</link>
+      <link>/docs/notebooks/business_apps/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/business_apps/</guid>
+      <guid>/docs/notebooks/business_apps/</guid>
       <description>
         
         
@@ -105,10 +118,10 @@
     
     <item>
       <title>Docs: Cables</title>
-      <link>/palimpsest/docs/notebooks/cables/</link>
+      <link>/docs/notebooks/cables/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/cables/</guid>
+      <guid>/docs/notebooks/cables/</guid>
       <description>
         
         
@@ -121,10 +134,10 @@
     
     <item>
       <title>Docs: Certbot</title>
-      <link>/palimpsest/docs/notebooks/certbot/</link>
+      <link>/docs/notebooks/certbot/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/certbot/</guid>
+      <guid>/docs/notebooks/certbot/</guid>
       <description>
         
         
@@ -143,10 +156,10 @@
     
     <item>
       <title>Docs: Chroot SFTP Setup</title>
-      <link>/palimpsest/docs/notebooks/chroot-sftp-setup/</link>
+      <link>/docs/notebooks/chroot-sftp-setup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/chroot-sftp-setup/</guid>
+      <guid>/docs/notebooks/chroot-sftp-setup/</guid>
       <description>
         
         
@@ -224,10 +237,10 @@
     
     <item>
       <title>Docs: Cron</title>
-      <link>/palimpsest/docs/notebooks/cron/</link>
+      <link>/docs/notebooks/cron/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/cron/</guid>
+      <guid>/docs/notebooks/cron/</guid>
       <description>
         
         
@@ -296,10 +309,10 @@
     
     <item>
       <title>Docs: Docker</title>
-      <link>/palimpsest/docs/notebooks/docker/</link>
+      <link>/docs/notebooks/docker/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/docker/</guid>
+      <guid>/docs/notebooks/docker/</guid>
       <description>
         
         
@@ -445,10 +458,10 @@ EXPOSE * expose container ports to host system&lt;/p&gt;
     
     <item>
       <title>Docs: Email</title>
-      <link>/palimpsest/docs/notebooks/email/</link>
+      <link>/docs/notebooks/email/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/email/</guid>
+      <guid>/docs/notebooks/email/</guid>
       <description>
         
         
@@ -462,10 +475,10 @@ EXPOSE * expose container ports to host system&lt;/p&gt;
     
     <item>
       <title>Docs: Expanding Volumes</title>
-      <link>/palimpsest/docs/notebooks/expand_volumes/</link>
+      <link>/docs/notebooks/expand_volumes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/expand_volumes/</guid>
+      <guid>/docs/notebooks/expand_volumes/</guid>
       <description>
         
         
@@ -498,10 +511,10 @@ EXPOSE * expose container ports to host system&lt;/p&gt;
     
     <item>
       <title>Docs: EZproxy</title>
-      <link>/palimpsest/docs/notebooks/ezproxy/</link>
+      <link>/docs/notebooks/ezproxy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/ezproxy/</guid>
+      <guid>/docs/notebooks/ezproxy/</guid>
       <description>
         
         
@@ -632,10 +645,10 @@ EXPOSE * expose container ports to host system&lt;/p&gt;
     
     <item>
       <title>Docs: fail2ban</title>
-      <link>/palimpsest/docs/notebooks/fail2ban/</link>
+      <link>/docs/notebooks/fail2ban/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/fail2ban/</guid>
+      <guid>/docs/notebooks/fail2ban/</guid>
       <description>
         
         
@@ -652,10 +665,10 @@ EXPOSE * expose container ports to host system&lt;/p&gt;
     
     <item>
       <title>Docs: Git</title>
-      <link>/palimpsest/docs/notebooks/git/</link>
+      <link>/docs/notebooks/git/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/git/</guid>
+      <guid>/docs/notebooks/git/</guid>
       <description>
         
         
@@ -760,6 +773,9 @@ git stash pop&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# List files in repo using file globbing&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git ls-files *.py
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;history&#34;&gt;History&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;Viewing git logs&lt;/li&gt;
+&lt;/ol&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# List commit history of current branch&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git log
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
@@ -768,6 +784,22 @@ git stash pop&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Show commits by specific author&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git log --author&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;dzoladz
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Display commit history in a specific format&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git log --pretty&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;oneline
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git log --pretty&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;short
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git log --pretty&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;format:&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;%h%x09%an%x09%s&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Amending commit authors&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# &amp;lt;commit-hash&amp;gt; must be hash before the commit to edit&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git rebase -i --rebase-merges &amp;lt;commit-hash&amp;gt; --committer-date-is-author-date
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# If you need from the beginning of time, use --root&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git rebase -i --rebase-merges --root --committer-date-is-author-date
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Flag commits for edit, and amend the author&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git commit --amend --author &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;derek &amp;lt;derek@oplin.ohio.gov&amp;gt;&amp;#34;&lt;/span&gt; --no-edit &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git rebase --continue
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;just-for-fun&#34;&gt;Just for Fun&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Who has the most commits in this repo&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git shortlog -s -n
@@ -777,10 +809,10 @@ git stash pop&lt;/p&gt;
     
     <item>
       <title>Docs: GPG</title>
-      <link>/palimpsest/docs/notebooks/gpg/</link>
+      <link>/docs/notebooks/gpg/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/gpg/</guid>
+      <guid>/docs/notebooks/gpg/</guid>
       <description>
         
         
@@ -837,10 +869,10 @@ commit&lt;/li&gt;
     
     <item>
       <title>Docs: Graphing Tool</title>
-      <link>/palimpsest/docs/notebooks/graphing/</link>
+      <link>/docs/notebooks/graphing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/graphing/</guid>
+      <guid>/docs/notebooks/graphing/</guid>
       <description>
         
         
@@ -855,10 +887,10 @@ commit&lt;/li&gt;
     
     <item>
       <title>Docs: Homebrew</title>
-      <link>/palimpsest/docs/notebooks/homebrew/</link>
+      <link>/docs/notebooks/homebrew/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/homebrew/</guid>
+      <guid>/docs/notebooks/homebrew/</guid>
       <description>
         
         
@@ -926,10 +958,10 @@ commit&lt;/li&gt;
     
     <item>
       <title>Docs: JS Forms</title>
-      <link>/palimpsest/docs/notebooks/js_forms/</link>
+      <link>/docs/notebooks/js_forms/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/js_forms/</guid>
+      <guid>/docs/notebooks/js_forms/</guid>
       <description>
         
         
@@ -1038,10 +1070,10 @@ function submitArticleDatabasesSearch() {
     
     <item>
       <title>Docs: LVM</title>
-      <link>/palimpsest/docs/notebooks/lvm/</link>
+      <link>/docs/notebooks/lvm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/lvm/</guid>
+      <guid>/docs/notebooks/lvm/</guid>
       <description>
         
         
@@ -1157,10 +1189,10 @@ function submitArticleDatabasesSearch() {
     
     <item>
       <title>Docs: Mailman</title>
-      <link>/palimpsest/docs/notebooks/mailman/</link>
+      <link>/docs/notebooks/mailman/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/mailman/</guid>
+      <guid>/docs/notebooks/mailman/</guid>
       <description>
         
         
@@ -1207,10 +1239,10 @@ function submitArticleDatabasesSearch() {
     
     <item>
       <title>Docs: Monit</title>
-      <link>/palimpsest/docs/notebooks/monit/</link>
+      <link>/docs/notebooks/monit/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/monit/</guid>
+      <guid>/docs/notebooks/monit/</guid>
       <description>
         
         
@@ -1298,10 +1330,10 @@ monit monitor all
     
     <item>
       <title>Docs: networker</title>
-      <link>/palimpsest/docs/notebooks/networker_commands/</link>
+      <link>/docs/notebooks/networker_commands/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/networker_commands/</guid>
+      <guid>/docs/notebooks/networker_commands/</guid>
       <description>
         
         
@@ -1362,10 +1394,10 @@ monit monitor all
     
     <item>
       <title>Docs: Networking</title>
-      <link>/palimpsest/docs/notebooks/networking/</link>
+      <link>/docs/notebooks/networking/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/networking/</guid>
+      <guid>/docs/notebooks/networking/</guid>
       <description>
         
         
@@ -1393,10 +1425,10 @@ monit monitor all
     
     <item>
       <title>Docs: Packages</title>
-      <link>/palimpsest/docs/notebooks/packages/</link>
+      <link>/docs/notebooks/packages/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/packages/</guid>
+      <guid>/docs/notebooks/packages/</guid>
       <description>
         
         
@@ -1429,10 +1461,10 @@ apt - works with software repos&lt;/p&gt;
     
     <item>
       <title>Docs: Perlbrew</title>
-      <link>/palimpsest/docs/notebooks/perlbrew/</link>
+      <link>/docs/notebooks/perlbrew/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/perlbrew/</guid>
+      <guid>/docs/notebooks/perlbrew/</guid>
       <description>
         
         
@@ -1469,10 +1501,10 @@ apt - works with software repos&lt;/p&gt;
     
     <item>
       <title>Docs: Postfix</title>
-      <link>/palimpsest/docs/notebooks/postfix/</link>
+      <link>/docs/notebooks/postfix/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/postfix/</guid>
+      <guid>/docs/notebooks/postfix/</guid>
       <description>
         
         
@@ -1510,141 +1542,11 @@ apt - works with software repos&lt;/p&gt;
     </item>
     
     <item>
-      <title>Docs: PostgreSQL</title>
-      <link>/palimpsest/docs/notebooks/postgres/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/palimpsest/docs/notebooks/postgres/</guid>
-      <description>
-        
-        
-        &lt;h2 id=&#34;first-steps&#34;&gt;First Steps&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;Install PostgreSQL, preferably a pinned version&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew install postgresql@10
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;If you don&amp;rsquo;t have one, get the &lt;code&gt;psql&lt;/code&gt; client.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew install libpq
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;libpq&lt;/code&gt; won&amp;rsquo;t install itself in the &lt;code&gt;/usr/local/bin&lt;/code&gt; directory like other Homebrew applications. To make that happen, you need to run:&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew link --force libpq
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;Start Postgres services&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew services start postgresql
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
-&lt;p&gt;Check &lt;code&gt;brew info postgresql&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ol start=&#34;4&#34;&gt;
-&lt;li&gt;Create a database, and&amp;hellip;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;createdb &lt;span style=&#34;color:#4e9a06&#34;&gt;`&lt;/span&gt;first&lt;span style=&#34;color:#4e9a06&#34;&gt;`&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
-&lt;p&gt;Fix role &amp;ldquo;postgres&amp;rdquo; does not exist error&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;createuser -s postgres
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;initial-reading&#34;&gt;Initial Reading&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;http://postgresguide.com/&#34;&gt;PostgreSQL Guide&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;psql&#34;&gt;PSQL&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Run psql client as user postgres - &lt;code&gt;psql -U postgres&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Connect to local postgres database as a specific user - `psql -h localhost -U &amp;lt;postgres_user&amp;gt; &lt;database&gt;``&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;quick-start&#34;&gt;Quick Start&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;\?&lt;/code&gt; - List all available commands&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;\q&lt;/code&gt; - Quit/Exit&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;\l&lt;/code&gt; - List databases&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;\c &amp;lt;database&amp;gt;&lt;/code&gt; - Connect to a database&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;up-and-running-informational&#34;&gt;Up and Running, Informational&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;\d&lt;/code&gt; - List tables&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;\d &amp;lt;table&amp;gt;&lt;/code&gt; - Show table definition, including triggers&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;\d+ &amp;lt;table&amp;gt;&lt;/code&gt; - Show additional info about a table&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;\dy&lt;/code&gt; - List events&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;\df&lt;/code&gt; - List functions&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;\di&lt;/code&gt; - List indexes&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;\dn&lt;/code&gt; - List schemas&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;\dv&lt;/code&gt; - List views&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;\e&lt;/code&gt; - Open default text editor in psql shell&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;\copy (SELECT * FROM __table_name__) TO &#39;file_path_and_name.csv&#39; WITH CSV&lt;/code&gt; - Export a table as CSV&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;settings&#34;&gt;Settings&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;\timing&lt;/code&gt; - Turn on query timing&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;\x&lt;/code&gt; - Pretty-format query results&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;backup-and-restore&#34;&gt;Backup and Restore&lt;/h2&gt;
-&lt;h4 id=&#34;backup-plain-text&#34;&gt;Backup, plain text&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;pg_dump &amp;lt;dbname&amp;gt; &amp;gt; db.sql&lt;/code&gt; - plain text&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;backup-for-persistence-and-storage&#34;&gt;Backup, for persistence and storage&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;pg_dump -Fc &amp;lt;dbname&amp;gt; &amp;gt; db.bak&lt;/code&gt; - compressed binary format&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;pg_dump -Ft &amp;lt;dbname&amp;gt; &amp;gt; db.tar&lt;/code&gt; - tarball format&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;restore&#34;&gt;Restore&lt;/h4&gt;
-&lt;p&gt;If the database already exists,&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;pg_restore -Fc db.bak&lt;/code&gt; - restore compressed binary format&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;pg_restore -Ft db.tar&lt;/code&gt; - restore tarball format&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;If creating the database new from a dump, you&amp;rsquo;ll need to add the &lt;code&gt;-C&lt;/code&gt; flag.&lt;/p&gt;
-&lt;h4 id=&#34;import-as-a-new-database&#34;&gt;Import, as a new database&lt;/h4&gt;
-&lt;p&gt;Create the database&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;createdb -T template0 &amp;lt;dbname&amp;gt;&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Import database from dump&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;pg_restore --clean --no-owner --verbose -d &amp;lt;dbname&amp;gt; db.bak&lt;/code&gt; -&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;database-commands-outside-of-psql&#34;&gt;Database Commands, outside of psql&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Create database &lt;code&gt;createdb &amp;lt;database_name&amp;gt;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Drop database &lt;code&gt;dropdb &amp;lt;database_name&amp;gt;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Restore database &lt;code&gt;pg_restore --no-owner --dbname &amp;lt;database&amp;gt; &amp;lt;database.dump&amp;gt;&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;database-commands-inside-of-psql-dont-forget-&#34;&gt;Database Commands, inside of PSQL (DON&amp;rsquo;T FORGET &lt;code&gt;;&lt;/code&gt;)&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Create database &lt;code&gt;CREATE DATABASE &amp;lt;database&amp;gt;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Remove database &lt;code&gt;DROP DATABASE &amp;lt;database&amp;gt;&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-      </description>
-    </item>
-    
-    <item>
       <title>Docs: Python4Lib</title>
-      <link>/palimpsest/docs/notebooks/python4lib/</link>
+      <link>/docs/notebooks/python4lib/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/python4lib/</guid>
+      <guid>/docs/notebooks/python4lib/</guid>
       <description>
         
         
@@ -1719,10 +1621,10 @@ apt - works with software repos&lt;/p&gt;
     
     <item>
       <title>Docs: React.js</title>
-      <link>/palimpsest/docs/notebooks/react/</link>
+      <link>/docs/notebooks/react/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/react/</guid>
+      <guid>/docs/notebooks/react/</guid>
       <description>
         
         
@@ -1769,10 +1671,10 @@ Page: Collection-level classes&lt;/p&gt;
     
     <item>
       <title>Docs: Samba</title>
-      <link>/palimpsest/docs/notebooks/samba/</link>
+      <link>/docs/notebooks/samba/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/samba/</guid>
+      <guid>/docs/notebooks/samba/</guid>
       <description>
         
         
@@ -1865,10 +1767,10 @@ configuration file.&lt;/p&gt;
     
     <item>
       <title>Docs: sed &amp; awk</title>
-      <link>/palimpsest/docs/notebooks/sed_awk/</link>
+      <link>/docs/notebooks/sed_awk/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/sed_awk/</guid>
+      <guid>/docs/notebooks/sed_awk/</guid>
       <description>
         
         
@@ -1908,10 +1810,10 @@ tac config.txt | sed -n &amp;#39;/^IncludeFile.*/ {p;q}&amp;#39;
     
     <item>
       <title>Docs: SIP2</title>
-      <link>/palimpsest/docs/notebooks/sip/</link>
+      <link>/docs/notebooks/sip/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/sip/</guid>
+      <guid>/docs/notebooks/sip/</guid>
       <description>
         
         
@@ -1939,10 +1841,10 @@ tac config.txt | sed -n &amp;#39;/^IncludeFile.*/ {p;q}&amp;#39;
     
     <item>
       <title>Docs: SSH</title>
-      <link>/palimpsest/docs/notebooks/ssh/</link>
+      <link>/docs/notebooks/ssh/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/ssh/</guid>
+      <guid>/docs/notebooks/ssh/</guid>
       <description>
         
         
@@ -1959,10 +1861,10 @@ tac config.txt | sed -n &amp;#39;/^IncludeFile.*/ {p;q}&amp;#39;
     
     <item>
       <title>Docs: SSL</title>
-      <link>/palimpsest/docs/notebooks/ssl/</link>
+      <link>/docs/notebooks/ssl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/ssl/</guid>
+      <guid>/docs/notebooks/ssl/</guid>
       <description>
         
         
@@ -2047,10 +1949,10 @@ tac config.txt | sed -n &amp;#39;/^IncludeFile.*/ {p;q}&amp;#39;
     
     <item>
       <title>Docs: SysAdmin Tasks</title>
-      <link>/palimpsest/docs/notebooks/sysadmin_tasks/</link>
+      <link>/docs/notebooks/sysadmin_tasks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/sysadmin_tasks/</guid>
+      <guid>/docs/notebooks/sysadmin_tasks/</guid>
       <description>
         
         
@@ -2137,10 +2039,10 @@ tac config.txt | sed -n &amp;#39;/^IncludeFile.*/ {p;q}&amp;#39;
     
     <item>
       <title>Docs: Yaz</title>
-      <link>/palimpsest/docs/notebooks/yaz/</link>
+      <link>/docs/notebooks/yaz/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/yaz/</guid>
+      <guid>/docs/notebooks/yaz/</guid>
       <description>
         
         
