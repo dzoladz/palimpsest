@@ -128,6 +128,9 @@ git ls-files *.py
 ```
 
 #### History
+
+1. Viewing git logs
+
 ```bash
 # List commit history of current branch
 git log
@@ -137,6 +140,24 @@ git show d2b557da6450c3dc77766b86d6d7b832af6d3d6a
 
 # Show commits by specific author
 git log --author=dzoladz
+
+# Display commit history in a specific format
+git log --pretty=oneline
+git log --pretty=short
+git log --pretty=format:"%h%x09%an%x09%s"
+```
+
+2. Amending commit authors
+
+```bash
+# <commit-hash> must be hash before the commit to edit
+git rebase -i --rebase-merges <commit-hash> --committer-date-is-author-date
+
+# If you need from the beginning of time, use --root
+git rebase -i --rebase-merges --root --committer-date-is-author-date
+
+# Flag commits for edit, and amend the author
+git commit --amend --author "derek <derek@oplin.ohio.gov>" --no-edit && git rebase --continue
 ```
 
 # Just for Fun
