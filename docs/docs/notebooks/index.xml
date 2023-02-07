@@ -51,6 +51,25 @@
     </item>
     
     <item>
+      <title>Docs: Ambiance</title>
+      <link>/palimpsest/docs/notebooks/ambiance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/palimpsest/docs/notebooks/ambiance/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://musicforprogramming.net/latest/&#34;&gt;musicForProgramming&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mynoise.net/&#34;&gt;myNoise&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://noises.online/&#34;&gt;noisesOnline&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Docs: Business Apps</title>
       <link>/palimpsest/docs/notebooks/business_apps/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1510,6 +1529,8 @@ apt - works with software repos&lt;/p&gt;
         
         &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.php.net/manual/en/&#34;&gt;PHP 8.2 Manual&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/vlucas/phpdotenv&#34;&gt;phpdotenv - environment variables&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://packagist.org/&#34;&gt;Packagist - PHP Package Repository&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>

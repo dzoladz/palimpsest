@@ -26,6 +26,7 @@
 &lt;li&gt;&lt;a href=&#34;https://clig.dev/&#34;&gt;Command Line Interface Guidelines&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.conventionalcommits.org/&#34;&gt;Conventional Commits, a specification for human and machine-readable commit messages&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/mtdvio/every-programmer-should-know&#34;&gt;Every Programmer Should Know 🤔&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://refactoring.guru/design-patterns&#34;&gt;Design Patterns&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>
@@ -440,6 +441,25 @@ U.S. Department of Homeland Security&amp;rsquo;s Product Realization Guide, whic
 &lt;a href=&#34;https://github.com/topics/oai-pmh&#34;&gt;https://github.com/topics/oai-pmh&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/topics/marcxml-record&#34;&gt;https://github.com/topics/marcxml-record&lt;/a&gt;
 &lt;a href=&#34;https://github.com/topics/marc&#34;&gt;https://github.com/topics/marc&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Ambiance</title>
+      <link>/palimpsest/docs/notebooks/ambiance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/palimpsest/docs/notebooks/ambiance/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://musicforprogramming.net/latest/&#34;&gt;musicForProgramming&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mynoise.net/&#34;&gt;myNoise&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://noises.online/&#34;&gt;noisesOnline&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
       </description>
     </item>
@@ -1941,6 +1961,8 @@ apt - works with software repos&lt;/p&gt;
         
         &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.php.net/manual/en/&#34;&gt;PHP 8.2 Manual&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/vlucas/phpdotenv&#34;&gt;phpdotenv - environment variables&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://packagist.org/&#34;&gt;Packagist - PHP Package Repository&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>
