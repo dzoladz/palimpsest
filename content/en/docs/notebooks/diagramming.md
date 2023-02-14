@@ -1,7 +1,7 @@
 ---
-title: "Graphing Tool"
+title: "Diagramming Tool"
 description: >
-    Exploring various graphic utilities
+    Exploring various diagramming utilities
 ---
 
 - [Graphviz Docs](https://www.graphviz.org/documentation/)
