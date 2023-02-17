@@ -5,5 +5,6 @@ description: >
 ---
 
 * [PHP 8.2 Manual](https://www.php.net/manual/en/)
-* [phpdotenv - environment variables](https://github.com/vlucas/phpdotenv)
 * [Packagist - PHP Package Repository](https://packagist.org/)
+* [PHP, the right way](https://phptherightway.com/)
+* [PHP, framework interop group](https://www.php-fig.org/psr/)
