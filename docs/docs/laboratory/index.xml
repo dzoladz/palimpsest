@@ -339,5 +339,74 @@
       </description>
     </item>
     
+    <item>
+      <title>Docs: </title>
+      <link>/palimpsest/docs/laboratory/network/networking/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/palimpsest/docs/laboratory/network/networking/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;ieee-lan-standards-from-1980-802&#34;&gt;IEEE LAN Standards from 1980 (&amp;lsquo;80&#39;2)&lt;/h2&gt;
+&lt;h2 id=&#34;international-telecommunications&#34;&gt;International Telecommunications&lt;/h2&gt;
+&lt;p&gt;H Series
+H.323 - VoIP&lt;/p&gt;
+&lt;p&gt;V Series
+V.9&lt;/p&gt;
+&lt;p&gt;X Series (security)
+x.509 - SSL&lt;/p&gt;
+&lt;h2 id=&#34;heading&#34;&gt;&lt;/h2&gt;
+&lt;p&gt;ISOC &lt;a href=&#34;https://www.internetsociety.org/&#34;&gt;https://www.internetsociety.org/&lt;/a&gt;
+IETF &lt;a href=&#34;https://www.ietf.org/&#34;&gt;https://www.ietf.org/&lt;/a&gt;
+IAB Internet Architecture Board &lt;a href=&#34;https://www.iab.org/&#34;&gt;https://www.iab.org/&lt;/a&gt;
+IESG &lt;a href=&#34;https://www.ietf.org/about/groups/iesg/&#34;&gt;https://www.ietf.org/about/groups/iesg/&lt;/a&gt;
+ICAN  internet assigned names and numbers ()
+IANA internet assigned nnumbers authority (port numbers, standard  numbers)&lt;/p&gt;
+&lt;h2 id=&#34;layer-2---lan--wan---network-access-protocls&#34;&gt;Layer 2 - LAN &amp;amp; WAN - Network access protocls&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Physical Addressing (MAC Address; hardware addressing)&lt;/li&gt;
+&lt;li&gt;Media Access Control&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Hardware - Ethernet Switch or Network Interface Card (MAC)
+Protocols
+Software -&lt;/p&gt;
+&lt;h2 id=&#34;layer-3--&#34;&gt;Layer 3 -&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Logical Addressing (IP Address; software addressing)&lt;/li&gt;
+&lt;li&gt;Routing&lt;/li&gt;
+&lt;li&gt;Prioritization&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Hardware - Router
+Software -
+Protocols- IP, ICMP, Routing&lt;/p&gt;
+&lt;h2 id=&#34;layer-4---transport&#34;&gt;Layer 4 - Transport&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Error handling&lt;/li&gt;
+&lt;li&gt;Chunk large data into segments&lt;/li&gt;
+&lt;li&gt;Port number of application&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Protocols: TCP, UDP&lt;/p&gt;
+&lt;h2 id=&#34;layer-5---session-not-used-very-often&#34;&gt;Layer 5 - Session; not used very often&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Session management (conversations)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Protocols: remote desktop&lt;/p&gt;
+&lt;h2 id=&#34;layer-6---presentation-not-used-very-often&#34;&gt;Layer 6 - Presentation; not used very often&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Format conversions (ASCII to another format)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;layer-7---application&#34;&gt;Layer 7 - Application&lt;/h2&gt;
+&lt;p&gt;Sits just below the OS. Supports user applications&lt;/p&gt;
+&lt;p&gt;Protocol - HTTP,&lt;/p&gt;
+&lt;h2 id=&#34;cabling&#34;&gt;Cabling&lt;/h2&gt;
+&lt;p&gt;UTP cabling: unshielded twisted pair
+Cat 6 - 10 Gbps up to 50 m (this is what we&amp;rsquo;re using in the SOCC)
+Numbering System - both ends of fixed horizontal&lt;/p&gt;
+
+      </description>
+    </item>
+    
   </channel>
 </rss>

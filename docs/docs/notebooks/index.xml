@@ -1529,8 +1529,9 @@ apt - works with software repos&lt;/p&gt;
         
         &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.php.net/manual/en/&#34;&gt;PHP 8.2 Manual&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/vlucas/phpdotenv&#34;&gt;phpdotenv - environment variables&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://packagist.org/&#34;&gt;Packagist - PHP Package Repository&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://phptherightway.com/&#34;&gt;PHP, the right way&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.php-fig.org/psr/&#34;&gt;PHP, framework interop group&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>
