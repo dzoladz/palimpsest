@@ -44,8 +44,6 @@
     <loc>/palimpsest/docs/laboratory/kubernetes/helm/</loc>
     <lastmod>2021-08-01T18:50:26-04:00</lastmod>
   </url><url>
-    <loc>/palimpsest/docs/laboratory/network/networking/</loc>
-  </url><url>
     <loc>/palimpsest/docs/notebooks/github_topic_browse/</loc>
     <lastmod>2021-05-10T21:39:45-04:00</lastmod>
   </url><url>
@@ -101,6 +99,9 @@
   </url><url>
     <loc>/palimpsest/docs/notebooks/homebrew/</loc>
     <lastmod>2021-05-10T21:39:45-04:00</lastmod>
+  </url><url>
+    <loc>/palimpsest/docs/notebooks/javascript/</loc>
+    <lastmod>2023-02-27T21:33:33-05:00</lastmod>
   </url><url>
     <loc>/palimpsest/docs/notebooks/js_forms/</loc>
     <lastmod>2021-05-10T21:39:45-04:00</lastmod>

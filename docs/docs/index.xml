@@ -423,75 +423,6 @@ U.S. Department of Homeland Security&amp;rsquo;s Product Realization Guide, whic
     
     <item>
       <title>Docs: </title>
-      <link>/palimpsest/docs/laboratory/network/networking/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/palimpsest/docs/laboratory/network/networking/</guid>
-      <description>
-        
-        
-        &lt;h2 id=&#34;ieee-lan-standards-from-1980-802&#34;&gt;IEEE LAN Standards from 1980 (&amp;lsquo;80&#39;2)&lt;/h2&gt;
-&lt;h2 id=&#34;international-telecommunications&#34;&gt;International Telecommunications&lt;/h2&gt;
-&lt;p&gt;H Series
-H.323 - VoIP&lt;/p&gt;
-&lt;p&gt;V Series
-V.9&lt;/p&gt;
-&lt;p&gt;X Series (security)
-x.509 - SSL&lt;/p&gt;
-&lt;h2 id=&#34;heading&#34;&gt;&lt;/h2&gt;
-&lt;p&gt;ISOC &lt;a href=&#34;https://www.internetsociety.org/&#34;&gt;https://www.internetsociety.org/&lt;/a&gt;
-IETF &lt;a href=&#34;https://www.ietf.org/&#34;&gt;https://www.ietf.org/&lt;/a&gt;
-IAB Internet Architecture Board &lt;a href=&#34;https://www.iab.org/&#34;&gt;https://www.iab.org/&lt;/a&gt;
-IESG &lt;a href=&#34;https://www.ietf.org/about/groups/iesg/&#34;&gt;https://www.ietf.org/about/groups/iesg/&lt;/a&gt;
-ICAN  internet assigned names and numbers ()
-IANA internet assigned nnumbers authority (port numbers, standard  numbers)&lt;/p&gt;
-&lt;h2 id=&#34;layer-2---lan--wan---network-access-protocls&#34;&gt;Layer 2 - LAN &amp;amp; WAN - Network access protocls&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Physical Addressing (MAC Address; hardware addressing)&lt;/li&gt;
-&lt;li&gt;Media Access Control&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Hardware - Ethernet Switch or Network Interface Card (MAC)
-Protocols
-Software -&lt;/p&gt;
-&lt;h2 id=&#34;layer-3--&#34;&gt;Layer 3 -&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Logical Addressing (IP Address; software addressing)&lt;/li&gt;
-&lt;li&gt;Routing&lt;/li&gt;
-&lt;li&gt;Prioritization&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Hardware - Router
-Software -
-Protocols- IP, ICMP, Routing&lt;/p&gt;
-&lt;h2 id=&#34;layer-4---transport&#34;&gt;Layer 4 - Transport&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Error handling&lt;/li&gt;
-&lt;li&gt;Chunk large data into segments&lt;/li&gt;
-&lt;li&gt;Port number of application&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Protocols: TCP, UDP&lt;/p&gt;
-&lt;h2 id=&#34;layer-5---session-not-used-very-often&#34;&gt;Layer 5 - Session; not used very often&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Session management (conversations)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Protocols: remote desktop&lt;/p&gt;
-&lt;h2 id=&#34;layer-6---presentation-not-used-very-often&#34;&gt;Layer 6 - Presentation; not used very often&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Format conversions (ASCII to another format)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;layer-7---application&#34;&gt;Layer 7 - Application&lt;/h2&gt;
-&lt;p&gt;Sits just below the OS. Supports user applications&lt;/p&gt;
-&lt;p&gt;Protocol - HTTP,&lt;/p&gt;
-&lt;h2 id=&#34;cabling&#34;&gt;Cabling&lt;/h2&gt;
-&lt;p&gt;UTP cabling: unshielded twisted pair
-Cat 6 - 10 Gbps up to 50 m (this is what we&amp;rsquo;re using in the SOCC)
-Numbering System - both ends of fixed horizontal&lt;/p&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Docs: </title>
       <link>/palimpsest/docs/notebooks/github_topic_browse/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -1436,6 +1367,30 @@ commit&lt;/li&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew unlink &lt;span style=&#34;color:#4e9a06&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;FORMULA&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;}&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;\
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&lt;/span&gt;brew install &lt;span style=&#34;color:#4e9a06&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;RAW_PATH&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;}&lt;/span&gt;/&lt;span style=&#34;color:#4e9a06&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;COMMIT&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;}&lt;/span&gt;/Formula/&lt;span style=&#34;color:#4e9a06&#34;&gt;${&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;FORMULA&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;}&lt;/span&gt;.rb
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: JavaScript</title>
+      <link>/palimpsest/docs/notebooks/javascript/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/palimpsest/docs/notebooks/javascript/</guid>
+      <description>
+        
+        
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://tc39.es/ecma262/&#34;&gt;ECMAScript 2023, Language Specification&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://caniuse.com/&#34;&gt;CanIUse&lt;/a&gt; browser support of front-end web technologies&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;general-tools&#34;&gt;General Tools&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://vuejs.org/&#34;&gt;Vue.js&lt;/a&gt; - framework for building web user interfaces&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://vitejs.dev/&#34;&gt;Vite&lt;/a&gt; - build tooling&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/vuejs/create-vue&#34;&gt;Create-Vue&lt;/a&gt; - the recommended way to start a Vite-powered Vue project&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://axios-http.com/&#34;&gt;Axios&lt;/a&gt; - promise-based HTTP client&lt;/li&gt;
+&lt;/ul&gt;
+
       </description>
     </item>
     
