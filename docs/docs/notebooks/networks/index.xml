@@ -1,11 +1,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Palimpsest – Networks</title>
-    <link>/docs/notebooks/networks/</link>
+    <link>/palimpsest/docs/notebooks/networks/</link>
     <description>Recent content in Networks on Palimpsest</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	  <atom:link href="/docs/notebooks/networks/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/palimpsest/docs/notebooks/networks/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -15,10 +15,10 @@
     
     <item>
       <title>Docs: Commands</title>
-      <link>/docs/notebooks/networks/commands/</link>
+      <link>/palimpsest/docs/notebooks/networks/commands/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/notebooks/networks/commands/</guid>
+      <guid>/palimpsest/docs/notebooks/networks/commands/</guid>
       <description>
         
         
@@ -46,10 +46,10 @@
     
     <item>
       <title>Docs: Networking</title>
-      <link>/docs/notebooks/networks/networking/</link>
+      <link>/palimpsest/docs/notebooks/networks/networking/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/notebooks/networks/networking/</guid>
+      <guid>/palimpsest/docs/notebooks/networks/networking/</guid>
       <description>
         
         

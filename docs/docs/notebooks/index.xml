@@ -1,11 +1,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Palimpsest – Notebooks</title>
-    <link>/docs/notebooks/</link>
+    <link>/palimpsest/docs/notebooks/</link>
     <description>Recent content in Notebooks on Palimpsest</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	  <atom:link href="/docs/notebooks/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/palimpsest/docs/notebooks/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -15,10 +15,10 @@
     
     <item>
       <title>Docs: Databases</title>
-      <link>/docs/notebooks/databases/</link>
+      <link>/palimpsest/docs/notebooks/databases/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/notebooks/databases/</guid>
+      <guid>/palimpsest/docs/notebooks/databases/</guid>
       <description>
         
         
@@ -28,10 +28,10 @@
     
     <item>
       <title>Docs: Networks</title>
-      <link>/docs/notebooks/networks/</link>
+      <link>/palimpsest/docs/notebooks/networks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/notebooks/networks/</guid>
+      <guid>/palimpsest/docs/notebooks/networks/</guid>
       <description>
         
         
@@ -41,10 +41,10 @@
     
     <item>
       <title>Docs: </title>
-      <link>/docs/notebooks/github_topic_browse/</link>
+      <link>/palimpsest/docs/notebooks/github_topic_browse/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/notebooks/github_topic_browse/</guid>
+      <guid>/palimpsest/docs/notebooks/github_topic_browse/</guid>
       <description>
         
         
@@ -65,10 +65,10 @@
     
     <item>
       <title>Docs: Ambiance</title>
-      <link>/docs/notebooks/ambiance/</link>
+      <link>/palimpsest/docs/notebooks/ambiance/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/notebooks/ambiance/</guid>
+      <guid>/palimpsest/docs/notebooks/ambiance/</guid>
       <description>
         
         
@@ -84,10 +84,10 @@
     
     <item>
       <title>Docs: Business Apps</title>
-      <link>/docs/notebooks/business_apps/</link>
+      <link>/palimpsest/docs/notebooks/business_apps/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/notebooks/business_apps/</guid>
+      <guid>/palimpsest/docs/notebooks/business_apps/</guid>
       <description>
         
         
@@ -150,10 +150,10 @@
     
     <item>
       <title>Docs: Cables</title>
-      <link>/docs/notebooks/cables/</link>
+      <link>/palimpsest/docs/notebooks/cables/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/notebooks/cables/</guid>
+      <guid>/palimpsest/docs/notebooks/cables/</guid>
       <description>
         
         
@@ -166,10 +166,10 @@
     
     <item>
       <title>Docs: Certbot</title>
-      <link>/docs/notebooks/certbot/</link>
+      <link>/palimpsest/docs/notebooks/certbot/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/notebooks/certbot/</guid>
+      <guid>/palimpsest/docs/notebooks/certbot/</guid>
       <description>
         
         
@@ -188,10 +188,10 @@
     
     <item>
       <title>Docs: Chroot SFTP Setup</title>
-      <link>/docs/notebooks/chroot-sftp-setup/</link>
+      <link>/palimpsest/docs/notebooks/chroot-sftp-setup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/notebooks/chroot-sftp-setup/</guid>
+      <guid>/palimpsest/docs/notebooks/chroot-sftp-setup/</guid>
       <description>
         
         
@@ -269,10 +269,10 @@
     
     <item>
       <title>Docs: Cron</title>
-      <link>/docs/notebooks/cron/</link>
+      <link>/palimpsest/docs/notebooks/cron/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/notebooks/cron/</guid>
+      <guid>/palimpsest/docs/notebooks/cron/</guid>
       <description>
         
         
@@ -341,10 +341,10 @@
     
     <item>
       <title>Docs: Diagramming Tool</title>
-      <link>/docs/notebooks/diagramming/</link>
+      <link>/palimpsest/docs/notebooks/diagramming/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/notebooks/diagramming/</guid>
+      <guid>/palimpsest/docs/notebooks/diagramming/</guid>
       <description>
         
         
@@ -359,10 +359,10 @@
     
     <item>
       <title>Docs: Docker</title>
-      <link>/docs/notebooks/docker/</link>
+      <link>/palimpsest/docs/notebooks/docker/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/notebooks/docker/</guid>
+      <guid>/palimpsest/docs/notebooks/docker/</guid>
       <description>
         
         
@@ -508,10 +508,10 @@ EXPOSE * expose container ports to host system&lt;/p&gt;
     
     <item>
       <title>Docs: Email</title>
-      <link>/docs/notebooks/email/</link>
+      <link>/palimpsest/docs/notebooks/email/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/notebooks/email/</guid>
+      <guid>/palimpsest/docs/notebooks/email/</guid>
       <description>
         
         
@@ -525,10 +525,10 @@ EXPOSE * expose container ports to host system&lt;/p&gt;
     
     <item>
       <title>Docs: Expanding Volumes</title>
-      <link>/docs/notebooks/expand_volumes/</link>
+      <link>/palimpsest/docs/notebooks/expand_volumes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/notebooks/expand_volumes/</guid>
+      <guid>/palimpsest/docs/notebooks/expand_volumes/</guid>
       <description>
         
         
@@ -561,10 +561,10 @@ EXPOSE * expose container ports to host system&lt;/p&gt;
     
     <item>
       <title>Docs: EZproxy</title>
-      <link>/docs/notebooks/ezproxy/</link>
+      <link>/palimpsest/docs/notebooks/ezproxy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/notebooks/ezproxy/</guid>
+      <guid>/palimpsest/docs/notebooks/ezproxy/</guid>
       <description>
         
         
@@ -695,10 +695,10 @@ EXPOSE * expose container ports to host system&lt;/p&gt;
     
     <item>
       <title>Docs: fail2ban</title>
-      <link>/docs/notebooks/fail2ban/</link>
+      <link>/palimpsest/docs/notebooks/fail2ban/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/notebooks/fail2ban/</guid>
+      <guid>/palimpsest/docs/notebooks/fail2ban/</guid>
       <description>
         
         
@@ -715,10 +715,10 @@ EXPOSE * expose container ports to host system&lt;/p&gt;
     
     <item>
       <title>Docs: Git</title>
-      <link>/docs/notebooks/git/</link>
+      <link>/palimpsest/docs/notebooks/git/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/notebooks/git/</guid>
+      <guid>/palimpsest/docs/notebooks/git/</guid>
       <description>
         
         
@@ -859,10 +859,10 @@ git stash pop&lt;/p&gt;
     
     <item>
       <title>Docs: GPG</title>
-      <link>/docs/notebooks/gpg/</link>
+      <link>/palimpsest/docs/notebooks/gpg/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/notebooks/gpg/</guid>
+      <guid>/palimpsest/docs/notebooks/gpg/</guid>
       <description>
         
         
@@ -919,10 +919,10 @@ commit&lt;/li&gt;
     
     <item>
       <title>Docs: Homebrew</title>
-      <link>/docs/notebooks/homebrew/</link>
+      <link>/palimpsest/docs/notebooks/homebrew/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/notebooks/homebrew/</guid>
+      <guid>/palimpsest/docs/notebooks/homebrew/</guid>
       <description>
         
         
@@ -990,10 +990,10 @@ commit&lt;/li&gt;
     
     <item>
       <title>Docs: JS Forms</title>
-      <link>/docs/notebooks/js_forms/</link>
+      <link>/palimpsest/docs/notebooks/js_forms/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/notebooks/js_forms/</guid>
+      <guid>/palimpsest/docs/notebooks/js_forms/</guid>
       <description>
         
         
@@ -1102,10 +1102,10 @@ function submitArticleDatabasesSearch() {
     
     <item>
       <title>Docs: LVM</title>
-      <link>/docs/notebooks/lvm/</link>
+      <link>/palimpsest/docs/notebooks/lvm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/notebooks/lvm/</guid>
+      <guid>/palimpsest/docs/notebooks/lvm/</guid>
       <description>
         
         
@@ -1221,10 +1221,10 @@ function submitArticleDatabasesSearch() {
     
     <item>
       <title>Docs: Mailman</title>
-      <link>/docs/notebooks/mailman/</link>
+      <link>/palimpsest/docs/notebooks/mailman/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/notebooks/mailman/</guid>
+      <guid>/palimpsest/docs/notebooks/mailman/</guid>
       <description>
         
         
@@ -1271,10 +1271,10 @@ function submitArticleDatabasesSearch() {
     
     <item>
       <title>Docs: Monit</title>
-      <link>/docs/notebooks/monit/</link>
+      <link>/palimpsest/docs/notebooks/monit/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/notebooks/monit/</guid>
+      <guid>/palimpsest/docs/notebooks/monit/</guid>
       <description>
         
         
@@ -1362,10 +1362,10 @@ monit monitor all
     
     <item>
       <title>Docs: networker</title>
-      <link>/docs/notebooks/networker_commands/</link>
+      <link>/palimpsest/docs/notebooks/networker_commands/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/notebooks/networker_commands/</guid>
+      <guid>/palimpsest/docs/notebooks/networker_commands/</guid>
       <description>
         
         
@@ -1426,10 +1426,10 @@ monit monitor all
     
     <item>
       <title>Docs: Packages</title>
-      <link>/docs/notebooks/packages/</link>
+      <link>/palimpsest/docs/notebooks/packages/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/notebooks/packages/</guid>
+      <guid>/palimpsest/docs/notebooks/packages/</guid>
       <description>
         
         
@@ -1462,10 +1462,10 @@ apt - works with software repos&lt;/p&gt;
     
     <item>
       <title>Docs: Perlbrew</title>
-      <link>/docs/notebooks/perlbrew/</link>
+      <link>/palimpsest/docs/notebooks/perlbrew/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/notebooks/perlbrew/</guid>
+      <guid>/palimpsest/docs/notebooks/perlbrew/</guid>
       <description>
         
         
@@ -1502,10 +1502,10 @@ apt - works with software repos&lt;/p&gt;
     
     <item>
       <title>Docs: PHP</title>
-      <link>/docs/notebooks/php/</link>
+      <link>/palimpsest/docs/notebooks/php/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/notebooks/php/</guid>
+      <guid>/palimpsest/docs/notebooks/php/</guid>
       <description>
         
         
@@ -1521,10 +1521,10 @@ apt - works with software repos&lt;/p&gt;
     
     <item>
       <title>Docs: Postfix</title>
-      <link>/docs/notebooks/postfix/</link>
+      <link>/palimpsest/docs/notebooks/postfix/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/notebooks/postfix/</guid>
+      <guid>/palimpsest/docs/notebooks/postfix/</guid>
       <description>
         
         
@@ -1563,10 +1563,10 @@ apt - works with software repos&lt;/p&gt;
     
     <item>
       <title>Docs: Python4Lib</title>
-      <link>/docs/notebooks/python4lib/</link>
+      <link>/palimpsest/docs/notebooks/python4lib/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/notebooks/python4lib/</guid>
+      <guid>/palimpsest/docs/notebooks/python4lib/</guid>
       <description>
         
         
@@ -1641,10 +1641,10 @@ apt - works with software repos&lt;/p&gt;
     
     <item>
       <title>Docs: React.js</title>
-      <link>/docs/notebooks/react/</link>
+      <link>/palimpsest/docs/notebooks/react/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/notebooks/react/</guid>
+      <guid>/palimpsest/docs/notebooks/react/</guid>
       <description>
         
         
@@ -1691,10 +1691,10 @@ Page: Collection-level classes&lt;/p&gt;
     
     <item>
       <title>Docs: Samba</title>
-      <link>/docs/notebooks/samba/</link>
+      <link>/palimpsest/docs/notebooks/samba/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/notebooks/samba/</guid>
+      <guid>/palimpsest/docs/notebooks/samba/</guid>
       <description>
         
         
@@ -1787,10 +1787,10 @@ configuration file.&lt;/p&gt;
     
     <item>
       <title>Docs: sed &amp; awk</title>
-      <link>/docs/notebooks/sed_awk/</link>
+      <link>/palimpsest/docs/notebooks/sed_awk/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/notebooks/sed_awk/</guid>
+      <guid>/palimpsest/docs/notebooks/sed_awk/</guid>
       <description>
         
         
@@ -1830,10 +1830,10 @@ tac config.txt | sed -n &amp;#39;/^IncludeFile.*/ {p;q}&amp;#39;
     
     <item>
       <title>Docs: SIP2</title>
-      <link>/docs/notebooks/sip/</link>
+      <link>/palimpsest/docs/notebooks/sip/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/notebooks/sip/</guid>
+      <guid>/palimpsest/docs/notebooks/sip/</guid>
       <description>
         
         
@@ -1861,10 +1861,10 @@ tac config.txt | sed -n &amp;#39;/^IncludeFile.*/ {p;q}&amp;#39;
     
     <item>
       <title>Docs: SSH</title>
-      <link>/docs/notebooks/ssh/</link>
+      <link>/palimpsest/docs/notebooks/ssh/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/notebooks/ssh/</guid>
+      <guid>/palimpsest/docs/notebooks/ssh/</guid>
       <description>
         
         
@@ -1881,10 +1881,10 @@ tac config.txt | sed -n &amp;#39;/^IncludeFile.*/ {p;q}&amp;#39;
     
     <item>
       <title>Docs: SSL</title>
-      <link>/docs/notebooks/ssl/</link>
+      <link>/palimpsest/docs/notebooks/ssl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/notebooks/ssl/</guid>
+      <guid>/palimpsest/docs/notebooks/ssl/</guid>
       <description>
         
         
@@ -1969,10 +1969,10 @@ tac config.txt | sed -n &amp;#39;/^IncludeFile.*/ {p;q}&amp;#39;
     
     <item>
       <title>Docs: SysAdmin Tasks</title>
-      <link>/docs/notebooks/sysadmin_tasks/</link>
+      <link>/palimpsest/docs/notebooks/sysadmin_tasks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/notebooks/sysadmin_tasks/</guid>
+      <guid>/palimpsest/docs/notebooks/sysadmin_tasks/</guid>
       <description>
         
         
@@ -2059,10 +2059,10 @@ tac config.txt | sed -n &amp;#39;/^IncludeFile.*/ {p;q}&amp;#39;
     
     <item>
       <title>Docs: Yaz</title>
-      <link>/docs/notebooks/yaz/</link>
+      <link>/palimpsest/docs/notebooks/yaz/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/notebooks/yaz/</guid>
+      <guid>/palimpsest/docs/notebooks/yaz/</guid>
       <description>
         
         
