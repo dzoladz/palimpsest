@@ -1,11 +1,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Palimpsest – Databases</title>
-    <link>/palimpsest/docs/notebooks/databases/</link>
+    <link>/docs/notebooks/databases/</link>
     <description>Recent content in Databases on Palimpsest</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	  <atom:link href="/palimpsest/docs/notebooks/databases/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/docs/notebooks/databases/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -15,10 +15,10 @@
     
     <item>
       <title>Docs: MariaDB</title>
-      <link>/palimpsest/docs/notebooks/databases/mariadb/</link>
+      <link>/docs/notebooks/databases/mariadb/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/databases/mariadb/</guid>
+      <guid>/docs/notebooks/databases/mariadb/</guid>
       <description>
         
         
@@ -52,10 +52,10 @@
     
     <item>
       <title>Docs: PostgreSQL</title>
-      <link>/palimpsest/docs/notebooks/databases/postgres/</link>
+      <link>/docs/notebooks/databases/postgres/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/databases/postgres/</guid>
+      <guid>/docs/notebooks/databases/postgres/</guid>
       <description>
         
         

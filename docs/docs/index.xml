@@ -1,11 +1,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Palimpsest – Docs</title>
-    <link>/palimpsest/docs/</link>
+    <link>/docs/</link>
     <description>Recent content in Docs on Palimpsest</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	  <atom:link href="/palimpsest/docs/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/docs/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -15,10 +15,10 @@
     
     <item>
       <title>Docs: Coding</title>
-      <link>/palimpsest/docs/devops/coding/coding/</link>
+      <link>/docs/devops/coding/coding/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/devops/coding/coding/</guid>
+      <guid>/docs/devops/coding/coding/</guid>
       <description>
         
         
@@ -34,10 +34,10 @@
     
     <item>
       <title>Docs: Kubernetes</title>
-      <link>/palimpsest/docs/laboratory/kubernetes/kubernetes/</link>
+      <link>/docs/laboratory/kubernetes/kubernetes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/laboratory/kubernetes/kubernetes/</guid>
+      <guid>/docs/laboratory/kubernetes/kubernetes/</guid>
       <description>
         
         
@@ -61,10 +61,10 @@
     
     <item>
       <title>Docs: Network Description</title>
-      <link>/palimpsest/docs/laboratory/network/networking-gear/</link>
+      <link>/docs/laboratory/network/networking-gear/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/laboratory/network/networking-gear/</guid>
+      <guid>/docs/laboratory/network/networking-gear/</guid>
       <description>
         
         
@@ -148,10 +148,10 @@
     
     <item>
       <title>Docs: Rancher</title>
-      <link>/palimpsest/docs/laboratory/kubernetes/rancher/</link>
+      <link>/docs/laboratory/kubernetes/rancher/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/laboratory/kubernetes/rancher/</guid>
+      <guid>/docs/laboratory/kubernetes/rancher/</guid>
       <description>
         
         
@@ -207,10 +207,10 @@
     
     <item>
       <title>Docs: Raspberry Pi Cluster</title>
-      <link>/palimpsest/docs/laboratory/kubernetes/cluster/</link>
+      <link>/docs/laboratory/kubernetes/cluster/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/laboratory/kubernetes/cluster/</guid>
+      <guid>/docs/laboratory/kubernetes/cluster/</guid>
       <description>
         
         
@@ -316,10 +316,10 @@
     
     <item>
       <title>Docs: References</title>
-      <link>/palimpsest/docs/accessibility/references/</link>
+      <link>/docs/accessibility/references/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/accessibility/references/</guid>
+      <guid>/docs/accessibility/references/</guid>
       <description>
         
         
@@ -357,10 +357,10 @@
     
     <item>
       <title>Docs: References</title>
-      <link>/palimpsest/docs/devops/references/</link>
+      <link>/docs/devops/references/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/devops/references/</guid>
+      <guid>/docs/devops/references/</guid>
       <description>
         
         
@@ -379,10 +379,10 @@ U.S. Department of Homeland Security&amp;rsquo;s Product Realization Guide, whic
     
     <item>
       <title>Docs: Helm</title>
-      <link>/palimpsest/docs/laboratory/kubernetes/helm/</link>
+      <link>/docs/laboratory/kubernetes/helm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/laboratory/kubernetes/helm/</guid>
+      <guid>/docs/laboratory/kubernetes/helm/</guid>
       <description>
         
         
@@ -423,79 +423,10 @@ U.S. Department of Homeland Security&amp;rsquo;s Product Realization Guide, whic
     
     <item>
       <title>Docs: </title>
-      <link>/palimpsest/docs/laboratory/network/networking/</link>
+      <link>/docs/notebooks/github_topic_browse/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/laboratory/network/networking/</guid>
-      <description>
-        
-        
-        &lt;h2 id=&#34;ieee-lan-standards-from-1980-802&#34;&gt;IEEE LAN Standards from 1980 (&amp;lsquo;80&#39;2)&lt;/h2&gt;
-&lt;h2 id=&#34;international-telecommunications&#34;&gt;International Telecommunications&lt;/h2&gt;
-&lt;p&gt;H Series
-H.323 - VoIP&lt;/p&gt;
-&lt;p&gt;V Series
-V.9&lt;/p&gt;
-&lt;p&gt;X Series (security)
-x.509 - SSL&lt;/p&gt;
-&lt;h2 id=&#34;heading&#34;&gt;&lt;/h2&gt;
-&lt;p&gt;ISOC &lt;a href=&#34;https://www.internetsociety.org/&#34;&gt;https://www.internetsociety.org/&lt;/a&gt;
-IETF &lt;a href=&#34;https://www.ietf.org/&#34;&gt;https://www.ietf.org/&lt;/a&gt;
-IAB Internet Architecture Board &lt;a href=&#34;https://www.iab.org/&#34;&gt;https://www.iab.org/&lt;/a&gt;
-IESG &lt;a href=&#34;https://www.ietf.org/about/groups/iesg/&#34;&gt;https://www.ietf.org/about/groups/iesg/&lt;/a&gt;
-ICAN  internet assigned names and numbers ()
-IANA internet assigned nnumbers authority (port numbers, standard  numbers)&lt;/p&gt;
-&lt;h2 id=&#34;layer-2---lan--wan---network-access-protocls&#34;&gt;Layer 2 - LAN &amp;amp; WAN - Network access protocls&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Physical Addressing (MAC Address; hardware addressing)&lt;/li&gt;
-&lt;li&gt;Media Access Control&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Hardware - Ethernet Switch or Network Interface Card (MAC)
-Protocols
-Software -&lt;/p&gt;
-&lt;h2 id=&#34;layer-3--&#34;&gt;Layer 3 -&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Logical Addressing (IP Address; software addressing)&lt;/li&gt;
-&lt;li&gt;Routing&lt;/li&gt;
-&lt;li&gt;Prioritization&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Hardware - Router
-Software -
-Protocols- IP, ICMP, Routing&lt;/p&gt;
-&lt;h2 id=&#34;layer-4---transport&#34;&gt;Layer 4 - Transport&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Error handling&lt;/li&gt;
-&lt;li&gt;Chunk large data into segments&lt;/li&gt;
-&lt;li&gt;Port number of application&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Protocols: TCP, UDP&lt;/p&gt;
-&lt;h2 id=&#34;layer-5---session-not-used-very-often&#34;&gt;Layer 5 - Session; not used very often&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Session management (conversations)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Protocols: remote desktop&lt;/p&gt;
-&lt;h2 id=&#34;layer-6---presentation-not-used-very-often&#34;&gt;Layer 6 - Presentation; not used very often&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Format conversions (ASCII to another format)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;layer-7---application&#34;&gt;Layer 7 - Application&lt;/h2&gt;
-&lt;p&gt;Sits just below the OS. Supports user applications&lt;/p&gt;
-&lt;p&gt;Protocol - HTTP,&lt;/p&gt;
-&lt;h2 id=&#34;cabling&#34;&gt;Cabling&lt;/h2&gt;
-&lt;p&gt;UTP cabling: unshielded twisted pair
-Cat 6 - 10 Gbps up to 50 m (this is what we&amp;rsquo;re using in the SOCC)
-Numbering System - both ends of fixed horizontal&lt;/p&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Docs: </title>
-      <link>/palimpsest/docs/notebooks/github_topic_browse/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/palimpsest/docs/notebooks/github_topic_browse/</guid>
+      <guid>/docs/notebooks/github_topic_browse/</guid>
       <description>
         
         
@@ -516,10 +447,10 @@ Numbering System - both ends of fixed horizontal&lt;/p&gt;
     
     <item>
       <title>Docs: Ambiance</title>
-      <link>/palimpsest/docs/notebooks/ambiance/</link>
+      <link>/docs/notebooks/ambiance/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/ambiance/</guid>
+      <guid>/docs/notebooks/ambiance/</guid>
       <description>
         
         
@@ -535,10 +466,10 @@ Numbering System - both ends of fixed horizontal&lt;/p&gt;
     
     <item>
       <title>Docs: Business Apps</title>
-      <link>/palimpsest/docs/notebooks/business_apps/</link>
+      <link>/docs/notebooks/business_apps/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/business_apps/</guid>
+      <guid>/docs/notebooks/business_apps/</guid>
       <description>
         
         
@@ -601,10 +532,10 @@ Numbering System - both ends of fixed horizontal&lt;/p&gt;
     
     <item>
       <title>Docs: Cables</title>
-      <link>/palimpsest/docs/notebooks/cables/</link>
+      <link>/docs/notebooks/cables/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/cables/</guid>
+      <guid>/docs/notebooks/cables/</guid>
       <description>
         
         
@@ -617,10 +548,10 @@ Numbering System - both ends of fixed horizontal&lt;/p&gt;
     
     <item>
       <title>Docs: Certbot</title>
-      <link>/palimpsest/docs/notebooks/certbot/</link>
+      <link>/docs/notebooks/certbot/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/certbot/</guid>
+      <guid>/docs/notebooks/certbot/</guid>
       <description>
         
         
@@ -639,10 +570,10 @@ Numbering System - both ends of fixed horizontal&lt;/p&gt;
     
     <item>
       <title>Docs: Chroot SFTP Setup</title>
-      <link>/palimpsest/docs/notebooks/chroot-sftp-setup/</link>
+      <link>/docs/notebooks/chroot-sftp-setup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/chroot-sftp-setup/</guid>
+      <guid>/docs/notebooks/chroot-sftp-setup/</guid>
       <description>
         
         
@@ -719,11 +650,42 @@ Numbering System - both ends of fixed horizontal&lt;/p&gt;
     </item>
     
     <item>
-      <title>Docs: Cron</title>
-      <link>/palimpsest/docs/notebooks/cron/</link>
+      <title>Docs: Commands</title>
+      <link>/docs/notebooks/networks/commands/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/cron/</guid>
+      <guid>/docs/notebooks/networks/commands/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;google-cloud&#34;&gt;Google Cloud&lt;/h2&gt;
+&lt;p&gt;Installing the SDK &lt;a href=&#34;https://cloud.google.com/sdk/docs/&#34;&gt;https://cloud.google.com/sdk/docs/&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;a-few-commands-for-migrating-a-dns-zone&#34;&gt;A Few Commands for Migrating a DNS zone&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;gcloud auth login --project managed-dns-migration
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;gcloud dns managed-zones create myzone --dns-name&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;myzone.org&amp;#34;&lt;/span&gt; --description&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Zone for all the things&amp;#34;&lt;/span&gt; --visibility&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;public
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;gcloud dns record-sets import -z&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;myzone --zone-file-format /path/to/zonefile/myzone.org.zonefile.txt --delete-all-existing
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;gcloud dns managed-zones describe myzone
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;dns&#34;&gt;DNS&lt;/h2&gt;
+&lt;p&gt;General DNS commands&lt;/p&gt;
+&lt;h4 id=&#34;dig&#34;&gt;dig&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Query Cloudflare primary DNS to reply with the name servers for the cool-cat.org domain&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dig +short NS cool-cat.org 1.1.1.1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Ask for the name servers every 2 seconds. Useful for monitoring propagation&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;watch dig +short NS cool-cat.org 1.1.1.1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Cron</title>
+      <link>/docs/notebooks/cron/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/notebooks/cron/</guid>
       <description>
         
         
@@ -792,10 +754,10 @@ Numbering System - both ends of fixed horizontal&lt;/p&gt;
     
     <item>
       <title>Docs: Diagramming Tool</title>
-      <link>/palimpsest/docs/notebooks/diagramming/</link>
+      <link>/docs/notebooks/diagramming/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/diagramming/</guid>
+      <guid>/docs/notebooks/diagramming/</guid>
       <description>
         
         
@@ -810,10 +772,10 @@ Numbering System - both ends of fixed horizontal&lt;/p&gt;
     
     <item>
       <title>Docs: Docker</title>
-      <link>/palimpsest/docs/notebooks/docker/</link>
+      <link>/docs/notebooks/docker/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/docker/</guid>
+      <guid>/docs/notebooks/docker/</guid>
       <description>
         
         
@@ -959,10 +921,10 @@ EXPOSE * expose container ports to host system&lt;/p&gt;
     
     <item>
       <title>Docs: Email</title>
-      <link>/palimpsest/docs/notebooks/email/</link>
+      <link>/docs/notebooks/email/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/email/</guid>
+      <guid>/docs/notebooks/email/</guid>
       <description>
         
         
@@ -976,10 +938,10 @@ EXPOSE * expose container ports to host system&lt;/p&gt;
     
     <item>
       <title>Docs: Expanding Volumes</title>
-      <link>/palimpsest/docs/notebooks/expand_volumes/</link>
+      <link>/docs/notebooks/expand_volumes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/expand_volumes/</guid>
+      <guid>/docs/notebooks/expand_volumes/</guid>
       <description>
         
         
@@ -1012,10 +974,10 @@ EXPOSE * expose container ports to host system&lt;/p&gt;
     
     <item>
       <title>Docs: EZproxy</title>
-      <link>/palimpsest/docs/notebooks/ezproxy/</link>
+      <link>/docs/notebooks/ezproxy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/ezproxy/</guid>
+      <guid>/docs/notebooks/ezproxy/</guid>
       <description>
         
         
@@ -1146,10 +1108,10 @@ EXPOSE * expose container ports to host system&lt;/p&gt;
     
     <item>
       <title>Docs: fail2ban</title>
-      <link>/palimpsest/docs/notebooks/fail2ban/</link>
+      <link>/docs/notebooks/fail2ban/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/fail2ban/</guid>
+      <guid>/docs/notebooks/fail2ban/</guid>
       <description>
         
         
@@ -1166,10 +1128,10 @@ EXPOSE * expose container ports to host system&lt;/p&gt;
     
     <item>
       <title>Docs: Git</title>
-      <link>/palimpsest/docs/notebooks/git/</link>
+      <link>/docs/notebooks/git/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/git/</guid>
+      <guid>/docs/notebooks/git/</guid>
       <description>
         
         
@@ -1310,10 +1272,10 @@ git stash pop&lt;/p&gt;
     
     <item>
       <title>Docs: GPG</title>
-      <link>/palimpsest/docs/notebooks/gpg/</link>
+      <link>/docs/notebooks/gpg/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/gpg/</guid>
+      <guid>/docs/notebooks/gpg/</guid>
       <description>
         
         
@@ -1370,10 +1332,10 @@ commit&lt;/li&gt;
     
     <item>
       <title>Docs: Homebrew</title>
-      <link>/palimpsest/docs/notebooks/homebrew/</link>
+      <link>/docs/notebooks/homebrew/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/homebrew/</guid>
+      <guid>/docs/notebooks/homebrew/</guid>
       <description>
         
         
@@ -1441,10 +1403,10 @@ commit&lt;/li&gt;
     
     <item>
       <title>Docs: JS Forms</title>
-      <link>/palimpsest/docs/notebooks/js_forms/</link>
+      <link>/docs/notebooks/js_forms/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/js_forms/</guid>
+      <guid>/docs/notebooks/js_forms/</guid>
       <description>
         
         
@@ -1553,10 +1515,10 @@ function submitArticleDatabasesSearch() {
     
     <item>
       <title>Docs: LVM</title>
-      <link>/palimpsest/docs/notebooks/lvm/</link>
+      <link>/docs/notebooks/lvm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/lvm/</guid>
+      <guid>/docs/notebooks/lvm/</guid>
       <description>
         
         
@@ -1672,10 +1634,10 @@ function submitArticleDatabasesSearch() {
     
     <item>
       <title>Docs: Mailman</title>
-      <link>/palimpsest/docs/notebooks/mailman/</link>
+      <link>/docs/notebooks/mailman/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/mailman/</guid>
+      <guid>/docs/notebooks/mailman/</guid>
       <description>
         
         
@@ -1722,10 +1684,10 @@ function submitArticleDatabasesSearch() {
     
     <item>
       <title>Docs: MariaDB</title>
-      <link>/palimpsest/docs/notebooks/databases/mariadb/</link>
+      <link>/docs/notebooks/databases/mariadb/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/databases/mariadb/</guid>
+      <guid>/docs/notebooks/databases/mariadb/</guid>
       <description>
         
         
@@ -1759,10 +1721,10 @@ function submitArticleDatabasesSearch() {
     
     <item>
       <title>Docs: Monit</title>
-      <link>/palimpsest/docs/notebooks/monit/</link>
+      <link>/docs/notebooks/monit/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/monit/</guid>
+      <guid>/docs/notebooks/monit/</guid>
       <description>
         
         
@@ -1850,10 +1812,10 @@ monit monitor all
     
     <item>
       <title>Docs: networker</title>
-      <link>/palimpsest/docs/notebooks/networker_commands/</link>
+      <link>/docs/notebooks/networker_commands/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/networker_commands/</guid>
+      <guid>/docs/notebooks/networker_commands/</guid>
       <description>
         
         
@@ -1914,41 +1876,896 @@ monit monitor all
     
     <item>
       <title>Docs: Networking</title>
-      <link>/palimpsest/docs/notebooks/networking/</link>
+      <link>/docs/notebooks/networks/networking/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/networking/</guid>
+      <guid>/docs/notebooks/networks/networking/</guid>
       <description>
         
         
-        &lt;h2 id=&#34;google-cloud&#34;&gt;Google Cloud&lt;/h2&gt;
-&lt;p&gt;Installing the SDK &lt;a href=&#34;https://cloud.google.com/sdk/docs/&#34;&gt;https://cloud.google.com/sdk/docs/&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&#34;a-few-commands-for-migrating-a-dns-zone&#34;&gt;A Few Commands for Migrating a DNS zone&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;gcloud auth login --project managed-dns-migration
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;gcloud dns managed-zones create myzone --dns-name&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;myzone.org&amp;#34;&lt;/span&gt; --description&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Zone for all the things&amp;#34;&lt;/span&gt; --visibility&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;public
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;gcloud dns record-sets import -z&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;myzone --zone-file-format /path/to/zonefile/myzone.org.zonefile.txt --delete-all-existing
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;gcloud dns managed-zones describe myzone
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;dns&#34;&gt;DNS&lt;/h2&gt;
-&lt;p&gt;General DNS commands&lt;/p&gt;
-&lt;h4 id=&#34;dig&#34;&gt;dig&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Query Cloudflare primary DNS to reply with the name servers for the cool-cat.org domain&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dig +short NS cool-cat.org 1.1.1.1
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Ask for the name servers every 2 seconds. Useful for monitoring propagation&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;watch dig +short NS cool-cat.org 1.1.1.1
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+        &lt;h2 id=&#34;organizations&#34;&gt;Organizations&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Internet Society - &lt;a href=&#34;https://www.internetsociety.org/&#34;&gt;ISOC&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Internet Engineering Task Force - &lt;a href=&#34;https://www.ietf.org/&#34;&gt;IETF&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Internet Architecture Board, &lt;a href=&#34;https://www.iab.org/&#34;&gt;IAB&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Internet Engineering Steering Group - &lt;a href=&#34;https://www.ietf.org/about/groups/iesg/&#34;&gt;IESG&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Internet Corporation for Assigned Names and Numbers - &lt;a href=&#34;https://www.icann.org/&#34;&gt;ICANN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Internet Assigned Numbers Authority - &lt;a href=&#34;https://www.iana.org/&#34;&gt;IANA&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;standards&#34;&gt;Standards&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;IEEE LAN Standards &lt;a href=&#34;https://ieeexplore.ieee.org/browse/standards/get-program/page/series?id=68&#34;&gt;802.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;international-telecommunications-unions&#34;&gt;International Telecommunications Unions&lt;/h3&gt;
+&lt;p&gt;The &lt;a href=&#34;https://www.itu.int/&#34;&gt;ITU&lt;/a&gt; promotes and globally coordinates the use of the radio
+spectrum through standards and regulation.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;H Series (e.g., H.323 - VoIP)&lt;/li&gt;
+&lt;li&gt;V Series (e.g., V.9)&lt;/li&gt;
+&lt;li&gt;X Series (e.g., x.509 - SSL)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;united-states&#34;&gt;United States&lt;/h3&gt;
+&lt;p&gt;The National Telecommunication and Information Administration &lt;a href=&#34;https://www.ntia.doc.gov/&#34;&gt;NTIA&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://broadbandusa.ntia.doc.gov/&#34;&gt;Broadband USA&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ntia.gov/category/spectrum-management&#34;&gt;Spectrum Allocation &amp;amp; Management&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;../assets/2016_frequency_spectrum.pdf&#34;&gt;Spectrum Allocation Chart, 2016&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;ohio&#34;&gt;Ohio&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://broadband.ohio.gov/&#34;&gt;Broadband Ohio&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;osi-open-systems-interconnection-layers&#34;&gt;OSI (Open Systems Interconnection) Layers&lt;/h2&gt;
+&lt;p&gt;A conceptual model in which communications between a computing system are split into seven different abstraction layers&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/osi-reference-model.png&#34; alt=&#34;Diagram of the OSI Reference Model&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;layer-1---physical&#34;&gt;Layer 1 - Physical&lt;/h3&gt;
+&lt;p&gt;Most closely associated with the physical connection between devices. The physical layer provides an electrical and
+mechanical interface to the transmission medium (e.g. CAT5 cabling, SMF fiber).&lt;/p&gt;
+&lt;h3 id=&#34;layer-2---data-link&#34;&gt;Layer 2 - Data Link&lt;/h3&gt;
+&lt;p&gt;This layer is responsible for the &lt;strong&gt;Physical Address&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;network-interface-card--media-access-control&#34;&gt;Network Interface Card &amp;amp; Media Access Control&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Hardware address, MAC address is burned into the NIC&lt;/li&gt;
+&lt;li&gt;MAC Address (Media Access Control ; 48-bits binary (written in hexadecimal))
+&lt;ul&gt;
+&lt;li&gt;24-bits, first 3 hex numbers vendor identifier (OUI)
+&lt;ul&gt;
+&lt;li&gt;OUI: Organizationally-Unique Identifier&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://maclookup.app/&#34;&gt;https://maclookup.app/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;24-bits, serial number&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;operating-at-layer-2&#34;&gt;Operating at Layer 2&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Hardware&lt;/th&gt;
+&lt;th&gt;Protocols&lt;/th&gt;
+&lt;th&gt;Software&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Ethernet switch&lt;/td&gt;
+&lt;td&gt;Ethernet&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;NIC, Network Interface Card&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Unicast (one device)&lt;br&gt;
+Broadcast (all devices)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/ethernet-frame.png&#34; alt=&#34;Ethernet Frame Diagram&#34;&gt;
+Ethernet Type field, values?&lt;/p&gt;
+&lt;h4 id=&#34;performance-issues&#34;&gt;Performance Issues&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Broadcasts (interruptions)&lt;/li&gt;
+&lt;li&gt;Server Saturation ()&lt;/li&gt;
+&lt;li&gt;Bottleneck (slow connection between devices)&lt;/li&gt;
+&lt;li&gt;Router latency&lt;/li&gt;
+&lt;li&gt;Security filtering (firewall, packet inspection)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Switches use MAC Addresses&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;VLANs reduce broadcast domains&lt;/li&gt;
+&lt;li&gt;Switches analyze destination header of a frame and only route
+the packet out of the appropriate port, not &lt;em&gt;all&lt;/em&gt; ports like a hub&lt;/li&gt;
+&lt;li&gt;&amp;lsquo;Backbones&amp;rsquo; connect switches together&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/switch-backbones.png&#34; alt=&#34;hierarchric structural diagram of core, distribution, and access switches&#34;&gt;
+Core switches 10x faster than access switches&lt;/p&gt;
+&lt;p&gt;lowest port cost&lt;/p&gt;
+&lt;p&gt;Spanning Tree algorithm
+802.1 s&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;root switch selection (root switch, forwards all ports) BPDU frames&lt;/li&gt;
+&lt;li&gt;best path selection&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;converged&lt;/p&gt;
+&lt;p&gt;STP self-healing capability
+Port mirroring&lt;/p&gt;
+&lt;p&gt;VLAN&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;bandwidth conservation&lt;/li&gt;
+&lt;li&gt;security benefits (only aware of devices in their own VLAN)&lt;/li&gt;
+&lt;li&gt;separation of a switch to segregate broadcast domains&lt;/li&gt;
+&lt;li&gt;Static VLANs (port-by-port basis)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;ARP request?&lt;/p&gt;
+&lt;p&gt;802.1q &amp;ldquo;tag&amp;rdquo; a frame
+VLAN tag, inserted between the source | protocol type
+tags only seen between switches
+VLAN trunk port - switch to switch connection
+frames queued in a buffer to go out the trunk port
+QoS - for example to voice priority order&lt;/p&gt;
+&lt;p&gt;IEEE 802.1ax and the link aggregation protocol&lt;/p&gt;
+&lt;h3 id=&#34;layer-3---network-layer&#34;&gt;Layer 3 - Network Layer&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Logical Addressing (IP Address; software addressing)&lt;/li&gt;
+&lt;li&gt;Routing&lt;/li&gt;
+&lt;li&gt;Prioritization&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;operating-at-layer-3&#34;&gt;Operating at Layer 3&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Hardware&lt;/th&gt;
+&lt;th&gt;Protocols&lt;/th&gt;
+&lt;th&gt;Software&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Router&lt;/td&gt;
+&lt;td&gt;IP&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;ICMP&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Routing&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;layer-4---transport&#34;&gt;Layer 4 - Transport&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Error handling&lt;/li&gt;
+&lt;li&gt;Chunk large data into segments&lt;/li&gt;
+&lt;li&gt;Port number of application&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;operating-at-layer-4&#34;&gt;Operating at Layer 4&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Hardware&lt;/th&gt;
+&lt;th&gt;Protocols&lt;/th&gt;
+&lt;th&gt;Software&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;TCP&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;UDP&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;layer-5---session-not-used-very-often&#34;&gt;Layer 5 - Session; not used very often&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Session management (conversations)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;operating-at-layer-5&#34;&gt;Operating at Layer 5&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Hardware&lt;/th&gt;
+&lt;th&gt;Protocols&lt;/th&gt;
+&lt;th&gt;Software&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;RDP&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;layer-6---presentation-not-used-very-often&#34;&gt;Layer 6 - Presentation; not used very often&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Format conversions (ASCII to another format)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;layer-7---application&#34;&gt;Layer 7 - Application&lt;/h3&gt;
+&lt;p&gt;Sits just below the OS. Supports user applications&lt;/p&gt;
+&lt;h4 id=&#34;operating-at-layer-7&#34;&gt;Operating at Layer 7&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Hardware&lt;/th&gt;
+&lt;th&gt;Protocols&lt;/th&gt;
+&lt;th&gt;Software&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;HTTP&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;FTP&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;SMTP&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;cabling&#34;&gt;Cabling&lt;/h3&gt;
+&lt;p&gt;UTP cabling: unshielded twisted pair
+Cat 6 - 10 Gbps up to 50 m (this is what we&amp;rsquo;re using in the SOCC)
+Numbering System - both ends of fixed horizontal&lt;/p&gt;
+&lt;h3 id=&#34;ethernet-nomencalture&#34;&gt;Ethernet Nomencalture&lt;/h3&gt;
+&lt;p&gt;10Base-T&lt;/p&gt;
+&lt;p&gt;10 = Mbps
+Base =
+T = Type of cabling (in this case, UTP ; twisted pair)&lt;/p&gt;
+&lt;p&gt;100Base-TX (X = full duplex)&lt;/p&gt;
+&lt;p&gt;1000Base-SX (Gigabit Ethernet, S = short waveligth over fiber)&lt;/p&gt;
+&lt;p&gt;10GBase-SR (Cat 6a for datacenters)&lt;/p&gt;
+&lt;p&gt;40Base-SR4 (almost , fiber)&lt;/p&gt;
+&lt;p&gt;100Base-SR10 (fiber)&lt;/p&gt;
+&lt;h2 id=&#34;wifi&#34;&gt;Wifi&lt;/h2&gt;
+&lt;p&gt;radio waves, rather than wired devices
+light socket, refrigerator, and expanding wireless clients&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;IEEE 802.11 standard&lt;/li&gt;
+&lt;li&gt;wifi alliance (certify compliance with IEEE standards)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Access point = attena to read radio waves&lt;/p&gt;
+&lt;p&gt;(Access Point, as translator) 802.11 wireless side, 802 on LAN side&lt;/p&gt;
+&lt;p&gt;root/infrasture mode for AP&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;lightweight AP - uses a WLAN controller software&lt;/li&gt;
+&lt;li&gt;Enterprise networks&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;RF is physical layer of wireless
+SSID (Service Set Identifier) = differentiates WLANs&lt;/p&gt;
+&lt;p&gt;wifi - frequency bands
+2.4 Ghz or 5Ghz RF bands (unlicenses by FCC)
+2.4gHz (11 channels are 5 gHz apart, thus 3 non-overlapsing 1, 6, 11)&lt;/p&gt;
+&lt;p&gt;802.11a is 5Ghz band
+National infrasture bands
+(4 non-orverlapping channels per band)
+(range is less than 2.4 Ghz)
+(supports more clients in an area)&lt;/p&gt;
+&lt;p&gt;Transmission speeds&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;11 Mbps (b)&lt;/li&gt;
+&lt;li&gt;54 Mbps (a)&lt;/li&gt;
+&lt;li&gt;54 (g)&lt;/li&gt;
+&lt;li&gt;600 Mbps (n, 2009) 2.4 &amp;amp; 5Ghz == Mimo&lt;/li&gt;
+&lt;li&gt;6.7 Gbps (ah, 2011)&lt;/li&gt;
+&lt;li&gt;6.9 Gbps, 5Ghz only(ac, 2016)&lt;/li&gt;
+&lt;li&gt;10Gbps (ax, 2019)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Transmission width&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;20 Mhz&lt;/li&gt;
+&lt;li&gt;802.11n - double wide - 40 Mhz&lt;/li&gt;
+&lt;li&gt;802.11ac - MIMO 8 streams - 160 Mhz wide&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Wifi Discovery Tools&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Beacon Frame - sent from AP to advertise itself to wifi clients&lt;/li&gt;
+&lt;li&gt;Wireless Diagnostics on MacOS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;WLAN Security&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;? auth&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;WLAN Authentication&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Open /&lt;/li&gt;
+&lt;li&gt;802.11i (user auth) (Preshared-Key or 802.1x/ EAP, extensible authentication protocol)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;WLAN Encryption&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;WEP (wireless encryption), don&amp;rsquo;t use&lt;/li&gt;
+&lt;li&gt;AES-CCMP (advanced encryption standard), WPA2 certification&lt;/li&gt;
+&lt;li&gt;TKIP (temporal key ccc protocol), WPA certification&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;WLAN Performance&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;RF physical layer
+&lt;ul&gt;
+&lt;li&gt;(microwaves, cordless phones) - interference&lt;/li&gt;
+&lt;li&gt;Environment (walls brick, people)&lt;/li&gt;
+&lt;li&gt;distance from AP&lt;/li&gt;
+&lt;li&gt;number of clients&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;References
+&lt;a href=&#34;https://www.electronics-notes.com/articles/connectivity/wifi-ieee-802-11/standards.php&#34;&gt;https://www.electronics-notes.com/articles/connectivity/wifi-ieee-802-11/standards.php&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.digitalairwireless.com/articles/blog/what-is-a-wireless-bridge&#34;&gt;https://www.digitalairwireless.com/articles/blog/what-is-a-wireless-bridge&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.cablesandkits.com/learning-center/autonomous-vs-lightweight-access-points&#34;&gt;https://www.cablesandkits.com/learning-center/autonomous-vs-lightweight-access-points&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;ip-addressing-and-ipv4-subnetting&#34;&gt;IP Addressing and IPv4 Subnetting&lt;/h2&gt;
+&lt;p&gt;Logical Addressing (Layer 3)
+IP, Internet Protocol
+Addressing Methods - &lt;a href=&#34;https://en.wikipedia.org/wiki/Anycast&#34;&gt;https://en.wikipedia.org/wiki/Anycast&lt;/a&gt;
+IP is binary. (8 bits of binary in octets, 32 bits in total) - 0 - 255&lt;/p&gt;
+&lt;h3 id=&#34;dotted-decimal-notation&#34;&gt;Dotted Decimal Notation&lt;/h3&gt;
+&lt;p&gt;IPv4 uses 32 bits of binary in total. 8 bits of binary are grouped into octets,
+separated by a decimal. This format is known as dotted decimal notation. Adding up
+all bits in each octet equals 255; thus, the range of values for each octet is
+0 - 255.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/dotted-decimal-notation.png&#34; alt=&#34;diagram of dotted decimal notation illustrating the grouping structure and a basic calculation&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;classful-addresses&#34;&gt;&lt;em&gt;Classful&lt;/em&gt; Addresses&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/classful-addresses.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;C&lt;/p&gt;
+&lt;h4 id=&#34;reserved-ipv4-addresses&#34;&gt;Reserved IPv4 Addresses&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/reserved-ipv4-addresses.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Loop-back can be used to check if the IP stack is functioning
+Ping yourself! (16 million addresses)&lt;/p&gt;
+&lt;p&gt;Interface, all 0 bits (network name)
+Inferface, all 1 bits (broadcast address)&lt;/p&gt;
+&lt;p&gt;APIPA (automatic private IP address)  169.254.c.c&lt;/p&gt;
+&lt;h3 id=&#34;private-addresses-also-reserved&#34;&gt;Private Addresses (also reserved)&lt;/h3&gt;
+&lt;p&gt;Class A private (10.0.0.0)
+Class B private (172.16.0.0)
+Class B (192.168.0.0)&lt;/p&gt;
+&lt;h3 id=&#34;network-mask&#34;&gt;Network Mask&lt;/h3&gt;
+&lt;p&gt;&amp;lsquo;mask off&amp;rsquo; the network part of the address (using 11111111.x.x), reducing the number
+of bits available for host addresses&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Class&lt;/td&gt;
+&lt;td&gt;Binary Mask&lt;/td&gt;
+&lt;td&gt;Decimal Mask&lt;/td&gt;
+&lt;td&gt;Prefix&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;td&gt;11111111.00000000.00000000.00000000&lt;/td&gt;
+&lt;td&gt;255.0.0.0&lt;/td&gt;
+&lt;td&gt;/8&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;B&lt;/td&gt;
+&lt;td&gt;11111111.11111111.00000000.00000000&lt;/td&gt;
+&lt;td&gt;255.255.0.0&lt;/td&gt;
+&lt;td&gt;/16&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;C&lt;/td&gt;
+&lt;td&gt;11111111.11111111.11111111.00000000&lt;/td&gt;
+&lt;td&gt;255.255.255.0&lt;/td&gt;
+&lt;td&gt;/24&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Often converted to a decimal mask 255.0.0.0  or /8&lt;/p&gt;
+&lt;p&gt;the network mask differentiates the &amp;rsquo;network&amp;rsquo; bits of an IPv4 address, leaving the
+remaining bits to calculate hosts addresses.&lt;/p&gt;
+&lt;p&gt;Network Prefix
+Class A  /8
+Class B  /16
+Class C  /24&lt;/p&gt;
+&lt;p&gt;Can I use the switch (i.e. packet destination is in the same network)
+Do I need to use a router? (i.e. on another network)&lt;/p&gt;
+&lt;h4 id=&#34;binary-numbering&#34;&gt;Binary Numbering&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Bit Position&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Binary Power&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;2⁷&lt;/td&gt;
+&lt;td&gt;2⁶&lt;/td&gt;
+&lt;td&gt;2⁵&lt;/td&gt;
+&lt;td&gt;2⁴&lt;/td&gt;
+&lt;td&gt;2³&lt;/td&gt;
+&lt;td&gt;2²&lt;/td&gt;
+&lt;td&gt;2¹&lt;/td&gt;
+&lt;td&gt;2⁰&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Decimal Value&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;128&lt;/td&gt;
+&lt;td&gt;64&lt;/td&gt;
+&lt;td&gt;32&lt;/td&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;e.g., calculation&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;=&lt;/td&gt;
+&lt;td&gt;18&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;classless-addressing&#34;&gt;&lt;em&gt;Classless&lt;/em&gt; addressing&lt;/h3&gt;
+&lt;p&gt;CIDR (classless interdomain routing)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/classless-addressing-CIDR.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;ipv6&#34;&gt;IPv6&lt;/h2&gt;
+&lt;p&gt;128-bit address space
+Does not use Decimal Notation, Uses Hexadecimal addressing
+no subnet mask, uses prefix only&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/ipv6-addressing.png&#34; alt=&#34;representational depiction of the hexidecimal groupings of an ipv4 address&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;subnetting&#34;&gt;Subnetting&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/subnet-mask-rules.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;bit budget and binary tables
+subnetting table&lt;/p&gt;
+&lt;p&gt;4 key subnet addresses&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Key Address&lt;/th&gt;
+&lt;th&gt;Binary&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Subnet&lt;/td&gt;
+&lt;td&gt;00000000&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;First&lt;/td&gt;
+&lt;td&gt;00000001&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Last&lt;/td&gt;
+&lt;td&gt;11111110&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Broadcast&lt;/td&gt;
+&lt;td&gt;11111111&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;IP subnet calculator&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/calculating-subnets.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;network-planning&#34;&gt;Network Planning&lt;/h3&gt;
+&lt;p&gt;Implementing a network requires an understanding of the business units and the potential
+for growth of the network in each segment.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/planning-network-design.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;tcp-udp-maintenance-protocols&#34;&gt;TCP, UDP, Maintenance Protocols&lt;/h3&gt;
+&lt;p&gt;Layer 4
+Flow Control
+TCP / UDP&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/TCP-handshake.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Transmission Control Protocol
+User Datagram Protocol&lt;/p&gt;
+&lt;p&gt;Voice and Video (speed is import)
+FTP (speed not as important, )&lt;/p&gt;
+&lt;h3 id=&#34;connection-classes&#34;&gt;Connection Classes&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Connection-Oriented (reliability)&lt;/li&gt;
+&lt;li&gt;Connection-Less (speed) [no logical session]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;connectino&#34;&gt;Connectino&lt;/h3&gt;
+&lt;p&gt;Client - initiates connection
+Server - Accepts request&lt;/p&gt;
+&lt;p&gt;Connection - Transfer - Disconnect&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/message-packaging.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;port-numbering&#34;&gt;Port Numbering&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.rfc-editor.org/rfc/rfc6335.html&#34;&gt;RFC 6335&lt;/a&gt;, Procedures for the Management of the Service Name and Transport Protocol Port Number Registry&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml&#34;&gt;IANA, Service Name and Transport Protocol Port Number Registry&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;Port Ranges&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Well Known&lt;/td&gt;
+&lt;td&gt;0- 1023&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Registered&lt;/td&gt;
+&lt;td&gt;1024 - 49151&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Dynamic (Private)&lt;/td&gt;
+&lt;td&gt;49152 - 65535&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;service multiplexing (multiple applications)
+2 byte field - TCP Header&lt;/p&gt;
+&lt;h3 id=&#34;sockets&#34;&gt;Sockets&lt;/h3&gt;
+&lt;p&gt;Sockets are a combination of IP address and Port number.
+Sockets allow proper routing and communication of network packets&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/sockets.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;nat&#34;&gt;NAT&lt;/h3&gt;
+&lt;p&gt;Router&lt;/p&gt;
+&lt;p&gt;Router rewrites the TCP/UDP header to allow private IP addresses
+to travel to the public internet.&lt;/p&gt;
+&lt;p&gt;NATing allows multiple devices on the private network to use
+a single public IP address for communications. In the early
+days, each private device had to have a corresponding public IP
+address (which is expensive and overwhelming)&lt;/p&gt;
+&lt;p&gt;NAT Table&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/NAT.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;NAT uses Sockets for&lt;/p&gt;
+&lt;p&gt;NAT table is only updated when packets go out&lt;/p&gt;
+&lt;h2 id=&#34;support-and-management-protocols&#34;&gt;Support and Management Protocols&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;ARP -&amp;gt;  method of determining the MAC address associated with a particular IP address, hardware device identification
+&lt;ul&gt;
+&lt;li&gt;Address Resolutoin protocol&lt;/li&gt;
+&lt;li&gt;command line&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/ARP.png&#34; alt=&#34;diagram of an ARP message&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;IGMP
+&lt;ul&gt;
+&lt;li&gt;Internet Group Management Protocol&lt;/li&gt;
+&lt;li&gt;Frames sent to multicast address and the group receives it&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/IGMP.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SNMP
+&lt;ul&gt;
+&lt;li&gt;Simple Network Management Protocl&lt;/li&gt;
+&lt;li&gt;Agents - collect statistics about devices
+&lt;ul&gt;
+&lt;li&gt;utilization, throughput,&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;SNMP Management station/Console
+&lt;ul&gt;
+&lt;li&gt;HP Openview&lt;/li&gt;
+&lt;li&gt;IBM Travolly&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/SNMP.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;DNS
+&lt;ul&gt;
+&lt;li&gt;domain name system&lt;/li&gt;
+&lt;li&gt;NS.1 = authoritative DNS servers&lt;/li&gt;
+&lt;li&gt;DNS Namespace (IANA)
+&lt;ul&gt;
+&lt;li&gt;root&lt;/li&gt;
+&lt;li&gt;TLD e.g., .com&lt;/li&gt;
+&lt;li&gt;subdomain - globalknowlwdge.com&lt;/li&gt;
+&lt;li&gt;hostname - server1.globalknowledge.com&lt;/li&gt;
+&lt;li&gt;FQDN -&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/DNS.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;TFTP&lt;/li&gt;
+&lt;li&gt;DHCP - Dynamic Host Configuration Protocol&lt;/li&gt;
+&lt;li&gt;ICMP - Internet Control Message Protocol
+&lt;ul&gt;
+&lt;li&gt;Protocol Analyzer&lt;/li&gt;
+&lt;li&gt;Common Messages&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ping&lt;/code&gt; uses ICMP echo request, echo reply&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.iana.org/assignments/icmp-parameters/icmp-parameters.xhtml&#34;&gt;IANA, Internet Control Message Protocol (ICMP) Parameters&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/ICMP.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;FTP&lt;/li&gt;
+&lt;li&gt;Telnet
+&lt;ul&gt;
+&lt;li&gt;Terminal emulation&lt;/li&gt;
+&lt;li&gt;Configure router and switches&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Header Type codes (08 06, for ARP)&lt;/p&gt;
+&lt;h2 id=&#34;routing-and-wide-area-networks&#34;&gt;Routing and Wide Area Networks&lt;/h2&gt;
+&lt;p&gt;Layer 3 - network layer&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;one network to another&lt;/li&gt;
+&lt;li&gt;one subnet to another&lt;/li&gt;
+&lt;li&gt;one vlan to another&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Note:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;routers sit on the edge of a domain&lt;/li&gt;
+&lt;li&gt;layer 2 broadcasts are not forward by routers&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Referred to as &amp;rsquo;logical segmentation&amp;rsquo;
+&lt;img src=&#34;../assets/logical-segmentation.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Routing metrics - best pathway&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;bandwidth (higher bandwidth is better)&lt;/li&gt;
+&lt;li&gt;hop count&lt;/li&gt;
+&lt;li&gt;reliability&lt;/li&gt;
+&lt;li&gt;arbitrary cost/weights&lt;/li&gt;
+&lt;li&gt;delay&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;routing-protocols&#34;&gt;Routing Protocols&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;RIP
+&lt;ul&gt;
+&lt;li&gt;RIP - Distance-Vector protocol (uses hop count, or number of routets)&lt;/li&gt;
+&lt;li&gt;distance-vector&lt;/li&gt;
+&lt;li&gt;Maximum 15 hops&lt;/li&gt;
+&lt;li&gt;Not suitable for enterprose networks&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/rip-routing-protocol.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;OSPF (open shortest path first)
+&lt;ul&gt;
+&lt;li&gt;interior gateway routing protocol&lt;/li&gt;
+&lt;li&gt;Link-state routing protocol&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;EIGRP
+&lt;ul&gt;
+&lt;li&gt;Enhanced Interior Gateway Routing Protocol&lt;/li&gt;
+&lt;li&gt;Enterprise network ready&lt;/li&gt;
+&lt;li&gt;distance-vector &amp;amp; link-state&lt;/li&gt;
+&lt;li&gt;AD -&amp;gt; administrative distance []&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Border Gateway Protocol (BGP)
+&lt;ul&gt;
+&lt;li&gt;exterior routing protocol&lt;/li&gt;
+&lt;li&gt;connects between multiple autonoumous systems&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;configuring-routers&#34;&gt;Configuring Routers&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;IP addresses for each interface&lt;/li&gt;
+&lt;li&gt;Which routing protocol&lt;/li&gt;
+&lt;li&gt;security features&lt;/li&gt;
+&lt;li&gt;user/password&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;wan&#34;&gt;WAN&lt;/h3&gt;
+&lt;p&gt;Connecting LANs together. Point to point circuits. ELINE, ELAN&lt;/p&gt;
+&lt;p&gt;Packet-switching technology (carries packets)
+x.25
+frame relay
+ATM
+MPLS&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;customer edge router&lt;/li&gt;
+&lt;li&gt;label edge router&lt;/li&gt;
+&lt;li&gt;label switching router&lt;/li&gt;
+&lt;li&gt;label switched pathway&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/mpls.png&#34; alt=&#34;&#34;&gt;
+MPLS labels&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;label , need a diagram&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/carrier-ethernet.png&#34; alt=&#34;&#34;&gt;
+carrier ethernet &lt;a href=&#34;https://en.wikipedia.org/wiki/Carrier_Ethernet&#34;&gt;https://en.wikipedia.org/wiki/Carrier_Ethernet&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;ldquo;metro ethernet&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;dynamic bandwidth, pay-as-you-go&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;UNI - user network interface, customer demarkcation point
+evc - ethernet virtual connection
+ovc - operator virtual connection
+cen -
+enni - extended network network interface&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/eline.png&#34; alt=&#34;&#34;&gt;
+E-Line&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;point-to-point&lt;/li&gt;
+&lt;li&gt;hub and spoke&lt;/li&gt;
+&lt;li&gt;Ethernet Virtual Private Line or E-Line: a service connecting two customer Ethernet ports over a WAN.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;E-LAN&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;multi-point to multi-point&lt;/li&gt;
+&lt;li&gt;Ethernet Virtual Private LAN or E-LAN: a multipoint service connecting a set of customer endpoints, giving the appearance to the customer of a bridged Ethernet network connecting the sites.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;EVP-LAN&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Service multiplexing extension of the E-LAN service&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;EP-LAN&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Single UNI at every customer site&lt;/li&gt;
+&lt;li&gt;Provides transparent LAN services&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;[Internet WANs]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Residential (oversubscribed, no reliability)&lt;/li&gt;
+&lt;li&gt;Small Business ()&lt;/li&gt;
+&lt;li&gt;DIA - direct internet access - service-level agreement&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Circuit-switching (carries 0,1 bits)
+T1
+TDM - time division multiplexing
+SONET - synchronous optical networking&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;sts&lt;/li&gt;
+&lt;li&gt;oc - optical carrier&lt;/li&gt;
+&lt;li&gt;dual fiber ring for fault-tolerance&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;OC 768
+OC 1
+OC 192
+OC 3&lt;/p&gt;
+&lt;p&gt;Optical Transport networks
+&lt;img src=&#34;../assets/optical-transport-networks.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;IP traffic (packets)&lt;/li&gt;
+&lt;li&gt;g.709&lt;/li&gt;
+&lt;li&gt;OPU - optical payload unit&lt;/li&gt;
+&lt;li&gt;optical data unit&lt;/li&gt;
+&lt;li&gt;optical transport unit&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;web-protocols&#34;&gt;Web Protocols&lt;/h2&gt;
+&lt;p&gt;Email  (&lt;a href=&#34;mailto:user@domain.name&#34;&gt;user@domain.name&lt;/a&gt;)&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;user presses send on their email client&lt;/li&gt;
+&lt;li&gt;email is sent to their local email server&lt;/li&gt;
+&lt;li&gt;local mail server performs a DNS lookup to find the IP address of the receipiants mail server&lt;/li&gt;
+&lt;li&gt;local mail server forwards message to receipients mail server&lt;/li&gt;
+&lt;li&gt;receipiant mail server extracts the username and places the mail into a folder on the receipent mail server&lt;/li&gt;
+&lt;li&gt;receipant user grabs their messages from their mail server&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;smtp&#34;&gt;SMTP&lt;/h3&gt;
+&lt;p&gt;simple mail transfer protocol
+only service to send outbound email
+port 25&lt;/p&gt;
+&lt;h3 id=&#34;pop3--imap4&#34;&gt;POP3 &amp;amp; IMAP4&lt;/h3&gt;
+&lt;p&gt;used to retrieve email from a mail server to the client&lt;/p&gt;
+&lt;p&gt;POP3 - post-office protocol
+&amp;ldquo;moves&amp;rdquo; the mail from the server to the client
+once obtained, removed from server
+port 110&lt;/p&gt;
+&lt;p&gt;IMAP4 - internet message access protocol
+&amp;ldquo;copies&amp;rdquo; the mail from the server to the client
+port 143&lt;/p&gt;
+&lt;h3 id=&#34;instant-messaging&#34;&gt;Instant Messaging&lt;/h3&gt;
+&lt;h3 id=&#34;simple&#34;&gt;SIMPLE&lt;/h3&gt;
+&lt;p&gt;SIP for instant messaging and presnce leveraging extensions&lt;/p&gt;
+&lt;p&gt;RFC 3428
+IETF RFCs&lt;/p&gt;
+&lt;p&gt;XMPP
+Extensible Messaging and presense protocol
+RFC 3920&lt;/p&gt;
+&lt;h3 id=&#34;voip-voice-over-ip&#34;&gt;VoIP Voice over IP&lt;/h3&gt;
+&lt;p&gt;Voice is digitized into packets and transmitted across the internet
+PBX (private branch express)&lt;/p&gt;
+&lt;p&gt;SIP
+RTP&lt;/p&gt;
+&lt;h3 id=&#34;sip&#34;&gt;SIP&lt;/h3&gt;
+&lt;p&gt;Session initiation protocol&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;multimedia session&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;SIP sets up the connection
+RFC 3261 &lt;a href=&#34;https://www.ietf.org/rfc/rfc3261.txt&#34;&gt;https://www.ietf.org/rfc/rfc3261.txt&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Request/Response
+SIP proxy (sip server that tracks the IP of each phone)&lt;/p&gt;
+&lt;h3 id=&#34;rtp&#34;&gt;RTP&lt;/h3&gt;
+&lt;p&gt;Real-time transport protocol
+carries voice packets&lt;/p&gt;
+&lt;p&gt;150 ms or less to eliminate jitter&lt;/p&gt;
+&lt;p&gt;RTP restores the temporal order of each packet
+each packet contains about 20 ms of voice data&lt;/p&gt;
+&lt;h3 id=&#34;media-gateway&#34;&gt;Media Gateway&lt;/h3&gt;
+&lt;p&gt;Used to translate VoIP to the public telephone swithch system&lt;/p&gt;
+&lt;p&gt;H.323 &lt;a href=&#34;https://www.packetizer.com/standards/&#34;&gt;https://www.packetizer.com/standards/&lt;/a&gt;
+ITU protocol&lt;/p&gt;
+&lt;p&gt;MGCP
+Media gateway control protocol&lt;/p&gt;
+&lt;h3 id=&#34;unified-communications&#34;&gt;Unified Communications&lt;/h3&gt;
+&lt;p&gt;Multiple tech into a single platform&lt;/p&gt;
+&lt;h3 id=&#34;remote-desktop-protocls&#34;&gt;Remote desktop protocls&lt;/h3&gt;
+&lt;p&gt;RDP (Remote Desktop Protocl), windows
+ICA (Independent Computing Archtiecture), citrix
+RFB (Remote Frame Buffer)&lt;/p&gt;
+&lt;h3 id=&#34;ftp&#34;&gt;FTP&lt;/h3&gt;
+&lt;p&gt;File transfer protocol&lt;/p&gt;
+
       </description>
     </item>
     
     <item>
       <title>Docs: Packages</title>
-      <link>/palimpsest/docs/notebooks/packages/</link>
+      <link>/docs/notebooks/packages/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/packages/</guid>
+      <guid>/docs/notebooks/packages/</guid>
       <description>
         
         
@@ -1981,10 +2798,10 @@ apt - works with software repos&lt;/p&gt;
     
     <item>
       <title>Docs: Perlbrew</title>
-      <link>/palimpsest/docs/notebooks/perlbrew/</link>
+      <link>/docs/notebooks/perlbrew/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/perlbrew/</guid>
+      <guid>/docs/notebooks/perlbrew/</guid>
       <description>
         
         
@@ -2021,10 +2838,10 @@ apt - works with software repos&lt;/p&gt;
     
     <item>
       <title>Docs: PHP</title>
-      <link>/palimpsest/docs/notebooks/php/</link>
+      <link>/docs/notebooks/php/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/php/</guid>
+      <guid>/docs/notebooks/php/</guid>
       <description>
         
         
@@ -2040,10 +2857,10 @@ apt - works with software repos&lt;/p&gt;
     
     <item>
       <title>Docs: Postfix</title>
-      <link>/palimpsest/docs/notebooks/postfix/</link>
+      <link>/docs/notebooks/postfix/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/postfix/</guid>
+      <guid>/docs/notebooks/postfix/</guid>
       <description>
         
         
@@ -2082,10 +2899,10 @@ apt - works with software repos&lt;/p&gt;
     
     <item>
       <title>Docs: PostgreSQL</title>
-      <link>/palimpsest/docs/notebooks/databases/postgres/</link>
+      <link>/docs/notebooks/databases/postgres/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/databases/postgres/</guid>
+      <guid>/docs/notebooks/databases/postgres/</guid>
       <description>
         
         
@@ -2212,10 +3029,10 @@ apt - works with software repos&lt;/p&gt;
     
     <item>
       <title>Docs: Python4Lib</title>
-      <link>/palimpsest/docs/notebooks/python4lib/</link>
+      <link>/docs/notebooks/python4lib/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/python4lib/</guid>
+      <guid>/docs/notebooks/python4lib/</guid>
       <description>
         
         
@@ -2290,10 +3107,10 @@ apt - works with software repos&lt;/p&gt;
     
     <item>
       <title>Docs: React.js</title>
-      <link>/palimpsest/docs/notebooks/react/</link>
+      <link>/docs/notebooks/react/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/react/</guid>
+      <guid>/docs/notebooks/react/</guid>
       <description>
         
         
@@ -2340,10 +3157,10 @@ Page: Collection-level classes&lt;/p&gt;
     
     <item>
       <title>Docs: Samba</title>
-      <link>/palimpsest/docs/notebooks/samba/</link>
+      <link>/docs/notebooks/samba/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/samba/</guid>
+      <guid>/docs/notebooks/samba/</guid>
       <description>
         
         
@@ -2436,10 +3253,10 @@ configuration file.&lt;/p&gt;
     
     <item>
       <title>Docs: sed &amp; awk</title>
-      <link>/palimpsest/docs/notebooks/sed_awk/</link>
+      <link>/docs/notebooks/sed_awk/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/sed_awk/</guid>
+      <guid>/docs/notebooks/sed_awk/</guid>
       <description>
         
         
@@ -2479,10 +3296,10 @@ tac config.txt | sed -n &amp;#39;/^IncludeFile.*/ {p;q}&amp;#39;
     
     <item>
       <title>Docs: SIP2</title>
-      <link>/palimpsest/docs/notebooks/sip/</link>
+      <link>/docs/notebooks/sip/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/sip/</guid>
+      <guid>/docs/notebooks/sip/</guid>
       <description>
         
         
@@ -2510,10 +3327,10 @@ tac config.txt | sed -n &amp;#39;/^IncludeFile.*/ {p;q}&amp;#39;
     
     <item>
       <title>Docs: SSH</title>
-      <link>/palimpsest/docs/notebooks/ssh/</link>
+      <link>/docs/notebooks/ssh/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/ssh/</guid>
+      <guid>/docs/notebooks/ssh/</guid>
       <description>
         
         
@@ -2530,10 +3347,10 @@ tac config.txt | sed -n &amp;#39;/^IncludeFile.*/ {p;q}&amp;#39;
     
     <item>
       <title>Docs: SSL</title>
-      <link>/palimpsest/docs/notebooks/ssl/</link>
+      <link>/docs/notebooks/ssl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/ssl/</guid>
+      <guid>/docs/notebooks/ssl/</guid>
       <description>
         
         
@@ -2618,10 +3435,10 @@ tac config.txt | sed -n &amp;#39;/^IncludeFile.*/ {p;q}&amp;#39;
     
     <item>
       <title>Docs: SysAdmin Tasks</title>
-      <link>/palimpsest/docs/notebooks/sysadmin_tasks/</link>
+      <link>/docs/notebooks/sysadmin_tasks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/sysadmin_tasks/</guid>
+      <guid>/docs/notebooks/sysadmin_tasks/</guid>
       <description>
         
         
@@ -2708,10 +3525,10 @@ tac config.txt | sed -n &amp;#39;/^IncludeFile.*/ {p;q}&amp;#39;
     
     <item>
       <title>Docs: Yaz</title>
-      <link>/palimpsest/docs/notebooks/yaz/</link>
+      <link>/docs/notebooks/yaz/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/yaz/</guid>
+      <guid>/docs/notebooks/yaz/</guid>
       <description>
         
         

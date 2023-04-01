@@ -2,175 +2,179 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/palimpsest/docs/notebooks/databases/</loc>
+    <loc>/docs/notebooks/databases/</loc>
     <lastmod>2023-01-26T11:59:15-05:00</lastmod>
   </url><url>
-    <loc>/palimpsest/docs/devops/</loc>
+    <loc>/docs/devops/</loc>
     <lastmod>2021-11-26T14:45:59-05:00</lastmod>
   </url><url>
-    <loc>/palimpsest/docs/django/</loc>
+    <loc>/docs/django/</loc>
     <lastmod>2023-01-01T16:48:26-05:00</lastmod>
   </url><url>
-    <loc>/palimpsest/docs/laboratory/</loc>
+    <loc>/docs/laboratory/</loc>
     <lastmod>2021-11-26T14:45:59-05:00</lastmod>
   </url><url>
-    <loc>/palimpsest/docs/notebooks/</loc>
+    <loc>/docs/notebooks/networks/</loc>
+    <lastmod>2023-04-01T18:15:34-04:00</lastmod>
+  </url><url>
+    <loc>/docs/notebooks/</loc>
     <lastmod>2021-11-26T14:45:59-05:00</lastmod>
   </url><url>
-    <loc>/palimpsest/docs/accessibility/</loc>
+    <loc>/docs/accessibility/</loc>
     <lastmod>2021-05-20T06:52:50-04:00</lastmod>
   </url><url>
-    <loc>/palimpsest/docs/devops/coding/coding/</loc>
+    <loc>/docs/devops/coding/coding/</loc>
     <lastmod>2023-02-07T08:33:47-05:00</lastmod>
   </url><url>
-    <loc>/palimpsest/docs/laboratory/kubernetes/kubernetes/</loc>
+    <loc>/docs/laboratory/kubernetes/kubernetes/</loc>
     <lastmod>2021-07-31T17:21:54-04:00</lastmod>
   </url><url>
-    <loc>/palimpsest/docs/laboratory/network/networking-gear/</loc>
+    <loc>/docs/laboratory/network/networking-gear/</loc>
     <lastmod>2021-05-23T08:54:34-04:00</lastmod>
   </url><url>
-    <loc>/palimpsest/docs/laboratory/kubernetes/rancher/</loc>
+    <loc>/docs/laboratory/kubernetes/rancher/</loc>
     <lastmod>2021-06-27T21:16:42-04:00</lastmod>
   </url><url>
-    <loc>/palimpsest/docs/laboratory/kubernetes/cluster/</loc>
+    <loc>/docs/laboratory/kubernetes/cluster/</loc>
     <lastmod>2021-05-16T09:52:17-04:00</lastmod>
   </url><url>
-    <loc>/palimpsest/docs/accessibility/references/</loc>
+    <loc>/docs/accessibility/references/</loc>
     <lastmod>2021-05-16T09:52:02-04:00</lastmod>
   </url><url>
-    <loc>/palimpsest/docs/devops/references/</loc>
+    <loc>/docs/devops/references/</loc>
     <lastmod>2021-12-04T20:29:03-05:00</lastmod>
   </url><url>
-    <loc>/palimpsest/docs/laboratory/kubernetes/helm/</loc>
+    <loc>/docs/laboratory/kubernetes/helm/</loc>
     <lastmod>2021-08-01T18:50:26-04:00</lastmod>
   </url><url>
-    <loc>/palimpsest/docs/laboratory/network/networking/</loc>
-  </url><url>
-    <loc>/palimpsest/docs/notebooks/github_topic_browse/</loc>
+    <loc>/docs/notebooks/github_topic_browse/</loc>
     <lastmod>2021-05-10T21:39:45-04:00</lastmod>
   </url><url>
-    <loc>/palimpsest/docs/notebooks/ambiance/</loc>
+    <loc>/docs/notebooks/ambiance/</loc>
     <lastmod>2023-02-07T08:38:08-05:00</lastmod>
   </url><url>
-    <loc>/palimpsest/docs/notebooks/business_apps/</loc>
+    <loc>/docs/notebooks/business_apps/</loc>
     <lastmod>2021-05-10T21:39:45-04:00</lastmod>
   </url><url>
-    <loc>/palimpsest/docs/notebooks/cables/</loc>
+    <loc>/docs/notebooks/cables/</loc>
     <lastmod>2022-12-06T20:17:44-05:00</lastmod>
   </url><url>
-    <loc>/palimpsest/categories/</loc>
+    <loc>/categories/</loc>
   </url><url>
-    <loc>/palimpsest/docs/notebooks/certbot/</loc>
+    <loc>/docs/notebooks/certbot/</loc>
     <lastmod>2021-05-10T21:39:45-04:00</lastmod>
   </url><url>
-    <loc>/palimpsest/docs/notebooks/chroot-sftp-setup/</loc>
+    <loc>/docs/notebooks/chroot-sftp-setup/</loc>
     <lastmod>2021-05-10T21:39:45-04:00</lastmod>
   </url><url>
-    <loc>/palimpsest/tear-it-down/</loc>
+    <loc>/docs/notebooks/networks/commands/</loc>
+    <lastmod>2023-04-01T18:14:10-04:00</lastmod>
+  </url><url>
+    <loc>/tear-it-down/</loc>
     <lastmod>2021-05-09T17:51:15-04:00</lastmod>
   </url><url>
-    <loc>/palimpsest/docs/notebooks/cron/</loc>
+    <loc>/docs/notebooks/cron/</loc>
     <lastmod>2021-05-10T21:39:45-04:00</lastmod>
   </url><url>
-    <loc>/palimpsest/docs/notebooks/diagramming/</loc>
+    <loc>/docs/notebooks/diagramming/</loc>
     <lastmod>2023-02-13T21:27:59-05:00</lastmod>
   </url><url>
-    <loc>/palimpsest/docs/notebooks/docker/</loc>
+    <loc>/docs/notebooks/docker/</loc>
     <lastmod>2021-05-10T21:39:45-04:00</lastmod>
   </url><url>
-    <loc>/palimpsest/docs/</loc>
+    <loc>/docs/</loc>
     <lastmod>2021-05-09T17:51:15-04:00</lastmod>
   </url><url>
-    <loc>/palimpsest/docs/notebooks/email/</loc>
+    <loc>/docs/notebooks/email/</loc>
     <lastmod>2023-01-04T21:19:20-05:00</lastmod>
   </url><url>
-    <loc>/palimpsest/docs/notebooks/expand_volumes/</loc>
+    <loc>/docs/notebooks/expand_volumes/</loc>
     <lastmod>2021-05-10T21:39:45-04:00</lastmod>
   </url><url>
-    <loc>/palimpsest/docs/notebooks/ezproxy/</loc>
+    <loc>/docs/notebooks/ezproxy/</loc>
     <lastmod>2022-05-19T10:14:34-04:00</lastmod>
   </url><url>
-    <loc>/palimpsest/docs/notebooks/fail2ban/</loc>
+    <loc>/docs/notebooks/fail2ban/</loc>
     <lastmod>2021-05-10T21:39:45-04:00</lastmod>
   </url><url>
-    <loc>/palimpsest/docs/notebooks/git/</loc>
+    <loc>/docs/notebooks/git/</loc>
     <lastmod>2023-01-26T10:41:32-05:00</lastmod>
   </url><url>
-    <loc>/palimpsest/docs/notebooks/gpg/</loc>
+    <loc>/docs/notebooks/gpg/</loc>
     <lastmod>2021-05-10T21:39:45-04:00</lastmod>
   </url><url>
-    <loc>/palimpsest/docs/notebooks/homebrew/</loc>
+    <loc>/docs/notebooks/homebrew/</loc>
     <lastmod>2021-05-10T21:39:45-04:00</lastmod>
   </url><url>
-    <loc>/palimpsest/docs/notebooks/js_forms/</loc>
+    <loc>/docs/notebooks/js_forms/</loc>
     <lastmod>2021-05-10T21:39:45-04:00</lastmod>
   </url><url>
-    <loc>/palimpsest/docs/notebooks/lvm/</loc>
+    <loc>/docs/notebooks/lvm/</loc>
     <lastmod>2021-05-10T21:39:45-04:00</lastmod>
   </url><url>
-    <loc>/palimpsest/docs/notebooks/mailman/</loc>
+    <loc>/docs/notebooks/mailman/</loc>
     <lastmod>2021-09-24T14:43:24-04:00</lastmod>
   </url><url>
-    <loc>/palimpsest/docs/notebooks/databases/mariadb/</loc>
+    <loc>/docs/notebooks/databases/mariadb/</loc>
     <lastmod>2023-01-26T11:59:15-05:00</lastmod>
   </url><url>
-    <loc>/palimpsest/docs/notebooks/monit/</loc>
+    <loc>/docs/notebooks/monit/</loc>
     <lastmod>2021-05-10T21:39:45-04:00</lastmod>
   </url><url>
-    <loc>/palimpsest/docs/notebooks/networker_commands/</loc>
+    <loc>/docs/notebooks/networker_commands/</loc>
     <lastmod>2021-05-10T21:39:45-04:00</lastmod>
   </url><url>
-    <loc>/palimpsest/docs/notebooks/networking/</loc>
+    <loc>/docs/notebooks/networks/networking/</loc>
+    <lastmod>2023-04-01T18:15:19-04:00</lastmod>
+  </url><url>
+    <loc>/docs/notebooks/packages/</loc>
     <lastmod>2021-05-10T21:39:45-04:00</lastmod>
   </url><url>
-    <loc>/palimpsest/docs/notebooks/packages/</loc>
-    <lastmod>2021-05-10T21:39:45-04:00</lastmod>
-  </url><url>
-    <loc>/palimpsest/</loc>
+    <loc>/</loc>
     <lastmod>2021-05-09T18:17:44-04:00</lastmod>
   </url><url>
-    <loc>/palimpsest/docs/notebooks/perlbrew/</loc>
+    <loc>/docs/notebooks/perlbrew/</loc>
     <lastmod>2021-05-10T21:39:45-04:00</lastmod>
   </url><url>
-    <loc>/palimpsest/docs/notebooks/php/</loc>
+    <loc>/docs/notebooks/php/</loc>
     <lastmod>2023-02-17T11:39:25-05:00</lastmod>
   </url><url>
-    <loc>/palimpsest/docs/notebooks/postfix/</loc>
+    <loc>/docs/notebooks/postfix/</loc>
     <lastmod>2021-09-24T14:33:29-04:00</lastmod>
   </url><url>
-    <loc>/palimpsest/docs/notebooks/databases/postgres/</loc>
+    <loc>/docs/notebooks/databases/postgres/</loc>
     <lastmod>2023-01-26T11:59:15-05:00</lastmod>
   </url><url>
-    <loc>/palimpsest/docs/notebooks/python4lib/</loc>
+    <loc>/docs/notebooks/python4lib/</loc>
     <lastmod>2021-05-10T21:39:45-04:00</lastmod>
   </url><url>
-    <loc>/palimpsest/docs/notebooks/react/</loc>
+    <loc>/docs/notebooks/react/</loc>
     <lastmod>2021-05-10T21:39:45-04:00</lastmod>
   </url><url>
-    <loc>/palimpsest/docs/notebooks/samba/</loc>
+    <loc>/docs/notebooks/samba/</loc>
     <lastmod>2021-05-10T21:39:45-04:00</lastmod>
   </url><url>
-    <loc>/palimpsest/search/</loc>
+    <loc>/search/</loc>
     <lastmod>2018-09-04T11:36:40+02:00</lastmod>
   </url><url>
-    <loc>/palimpsest/docs/notebooks/sed_awk/</loc>
+    <loc>/docs/notebooks/sed_awk/</loc>
     <lastmod>2021-05-10T21:39:45-04:00</lastmod>
   </url><url>
-    <loc>/palimpsest/docs/notebooks/sip/</loc>
+    <loc>/docs/notebooks/sip/</loc>
     <lastmod>2021-05-10T21:39:45-04:00</lastmod>
   </url><url>
-    <loc>/palimpsest/docs/notebooks/ssh/</loc>
+    <loc>/docs/notebooks/ssh/</loc>
     <lastmod>2022-12-07T20:45:48-05:00</lastmod>
   </url><url>
-    <loc>/palimpsest/docs/notebooks/ssl/</loc>
+    <loc>/docs/notebooks/ssl/</loc>
     <lastmod>2022-03-07T14:45:23-05:00</lastmod>
   </url><url>
-    <loc>/palimpsest/docs/notebooks/sysadmin_tasks/</loc>
+    <loc>/docs/notebooks/sysadmin_tasks/</loc>
     <lastmod>2021-05-10T21:39:45-04:00</lastmod>
   </url><url>
-    <loc>/palimpsest/tags/</loc>
+    <loc>/tags/</loc>
   </url><url>
-    <loc>/palimpsest/docs/notebooks/yaz/</loc>
+    <loc>/docs/notebooks/yaz/</loc>
     <lastmod>2021-05-10T21:39:45-04:00</lastmod>
   </url>
 </urlset>

@@ -1,11 +1,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Palimpsest – Laboratory</title>
-    <link>/palimpsest/docs/laboratory/</link>
+    <link>/docs/laboratory/</link>
     <description>Recent content in Laboratory on Palimpsest</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	  <atom:link href="/palimpsest/docs/laboratory/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/docs/laboratory/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -15,10 +15,10 @@
     
     <item>
       <title>Docs: Kubernetes</title>
-      <link>/palimpsest/docs/laboratory/kubernetes/kubernetes/</link>
+      <link>/docs/laboratory/kubernetes/kubernetes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/laboratory/kubernetes/kubernetes/</guid>
+      <guid>/docs/laboratory/kubernetes/kubernetes/</guid>
       <description>
         
         
@@ -42,10 +42,10 @@
     
     <item>
       <title>Docs: Network Description</title>
-      <link>/palimpsest/docs/laboratory/network/networking-gear/</link>
+      <link>/docs/laboratory/network/networking-gear/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/laboratory/network/networking-gear/</guid>
+      <guid>/docs/laboratory/network/networking-gear/</guid>
       <description>
         
         
@@ -129,10 +129,10 @@
     
     <item>
       <title>Docs: Rancher</title>
-      <link>/palimpsest/docs/laboratory/kubernetes/rancher/</link>
+      <link>/docs/laboratory/kubernetes/rancher/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/laboratory/kubernetes/rancher/</guid>
+      <guid>/docs/laboratory/kubernetes/rancher/</guid>
       <description>
         
         
@@ -188,10 +188,10 @@
     
     <item>
       <title>Docs: Raspberry Pi Cluster</title>
-      <link>/palimpsest/docs/laboratory/kubernetes/cluster/</link>
+      <link>/docs/laboratory/kubernetes/cluster/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/laboratory/kubernetes/cluster/</guid>
+      <guid>/docs/laboratory/kubernetes/cluster/</guid>
       <description>
         
         
@@ -297,10 +297,10 @@
     
     <item>
       <title>Docs: Helm</title>
-      <link>/palimpsest/docs/laboratory/kubernetes/helm/</link>
+      <link>/docs/laboratory/kubernetes/helm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/laboratory/kubernetes/helm/</guid>
+      <guid>/docs/laboratory/kubernetes/helm/</guid>
       <description>
         
         
@@ -335,75 +335,6 @@
 &lt;li&gt;An application gets stuck in a &lt;code&gt;CrashLoopBackOff&lt;/code&gt; status and the Kubernetes logs show &lt;code&gt;exec user process caused &amp;quot;exec format error&amp;quot;&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;The lab Kubernetes cluster is using Raspberry Pi 4s, which are 64-bit ARM architecture. The above is a common error when the container application is built for an x86 architecture. To resolve this issue, use a container targeted for 64-bit ARM.&lt;/p&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Docs: </title>
-      <link>/palimpsest/docs/laboratory/network/networking/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/palimpsest/docs/laboratory/network/networking/</guid>
-      <description>
-        
-        
-        &lt;h2 id=&#34;ieee-lan-standards-from-1980-802&#34;&gt;IEEE LAN Standards from 1980 (&amp;lsquo;80&#39;2)&lt;/h2&gt;
-&lt;h2 id=&#34;international-telecommunications&#34;&gt;International Telecommunications&lt;/h2&gt;
-&lt;p&gt;H Series
-H.323 - VoIP&lt;/p&gt;
-&lt;p&gt;V Series
-V.9&lt;/p&gt;
-&lt;p&gt;X Series (security)
-x.509 - SSL&lt;/p&gt;
-&lt;h2 id=&#34;heading&#34;&gt;&lt;/h2&gt;
-&lt;p&gt;ISOC &lt;a href=&#34;https://www.internetsociety.org/&#34;&gt;https://www.internetsociety.org/&lt;/a&gt;
-IETF &lt;a href=&#34;https://www.ietf.org/&#34;&gt;https://www.ietf.org/&lt;/a&gt;
-IAB Internet Architecture Board &lt;a href=&#34;https://www.iab.org/&#34;&gt;https://www.iab.org/&lt;/a&gt;
-IESG &lt;a href=&#34;https://www.ietf.org/about/groups/iesg/&#34;&gt;https://www.ietf.org/about/groups/iesg/&lt;/a&gt;
-ICAN  internet assigned names and numbers ()
-IANA internet assigned nnumbers authority (port numbers, standard  numbers)&lt;/p&gt;
-&lt;h2 id=&#34;layer-2---lan--wan---network-access-protocls&#34;&gt;Layer 2 - LAN &amp;amp; WAN - Network access protocls&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Physical Addressing (MAC Address; hardware addressing)&lt;/li&gt;
-&lt;li&gt;Media Access Control&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Hardware - Ethernet Switch or Network Interface Card (MAC)
-Protocols
-Software -&lt;/p&gt;
-&lt;h2 id=&#34;layer-3--&#34;&gt;Layer 3 -&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Logical Addressing (IP Address; software addressing)&lt;/li&gt;
-&lt;li&gt;Routing&lt;/li&gt;
-&lt;li&gt;Prioritization&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Hardware - Router
-Software -
-Protocols- IP, ICMP, Routing&lt;/p&gt;
-&lt;h2 id=&#34;layer-4---transport&#34;&gt;Layer 4 - Transport&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Error handling&lt;/li&gt;
-&lt;li&gt;Chunk large data into segments&lt;/li&gt;
-&lt;li&gt;Port number of application&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Protocols: TCP, UDP&lt;/p&gt;
-&lt;h2 id=&#34;layer-5---session-not-used-very-often&#34;&gt;Layer 5 - Session; not used very often&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Session management (conversations)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Protocols: remote desktop&lt;/p&gt;
-&lt;h2 id=&#34;layer-6---presentation-not-used-very-often&#34;&gt;Layer 6 - Presentation; not used very often&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Format conversions (ASCII to another format)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;layer-7---application&#34;&gt;Layer 7 - Application&lt;/h2&gt;
-&lt;p&gt;Sits just below the OS. Supports user applications&lt;/p&gt;
-&lt;p&gt;Protocol - HTTP,&lt;/p&gt;
-&lt;h2 id=&#34;cabling&#34;&gt;Cabling&lt;/h2&gt;
-&lt;p&gt;UTP cabling: unshielded twisted pair
-Cat 6 - 10 Gbps up to 50 m (this is what we&amp;rsquo;re using in the SOCC)
-Numbering System - both ends of fixed horizontal&lt;/p&gt;
 
       </description>
     </item>
