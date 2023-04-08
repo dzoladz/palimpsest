@@ -27,12 +27,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/palimpsest/docs/notebooks/networks/networking/" /><meta property="article:section" content="docs" />
 
-<meta property="article:modified_time" content="2023-04-01T18:15:19-04:00" /><meta property="og:site_name" content="Palimpsest" />
+<meta property="article:modified_time" content="2023-04-08T11:51:03-04:00" /><meta property="og:site_name" content="Palimpsest" />
 <meta itemprop="name" content="Networking">
 <meta itemprop="description" content="Overview of IPv4 and IPv6 Networks
 ">
-<meta itemprop="dateModified" content="2023-04-01T18:15:19-04:00" />
-<meta itemprop="wordCount" content="2149">
+<meta itemprop="dateModified" content="2023-04-08T11:51:03-04:00" />
+<meta itemprop="wordCount" content="2410">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Networking"/>
 <meta name="twitter:description" content="Overview of IPv4 and IPv6 Networks
@@ -406,6 +406,13 @@ if (!doNotTrack) {
         <li><a href="#ftp">FTP</a></li>
       </ul>
     </li>
+    <li><a href="#malware">Malware</a></li>
+    <li><a href="#authentication">Authentication</a></li>
+    <li><a href="#credentials">credentials</a></li>
+    <li><a href="#firewall-edge-devices-perimeter">Firewall (edge devices, perimeter)</a></li>
+    <li><a href="#intrusion-detection-systems">Intrusion detection systems</a></li>
+    <li><a href="#improved-wireless-httpswwwwi-fiorg">Improved Wireless (<a href="https://www.wi-fi.org/">https://www.wi-fi.org/</a>)</a></li>
+    <li><a href="#software-defined-networks">Software Defined Networks</a></li>
   </ul>
 </nav>
       </div>
@@ -1353,11 +1360,70 @@ ICA (Independent Computing Archtiecture), citrix
 RFB (Remote Frame Buffer)</p>
 <h3 id="ftp">FTP</h3>
 <p>File transfer protocol</p>
+<h2 id="malware">Malware</h2>
+<ul>
+<li>RATs (remote access trojans)</li>
+<li>Keylogger (records keystrokes)</li>
+<li>trojans (appears to be beneficial, but cloaks )</li>
+<li>spyware (monitors user behavior)</li>
+</ul>
+<h2 id="authentication">Authentication</h2>
+<p>Verify the identity of a user</p>
+<ul>
+<li>RADIUS</li>
+<li>Kerberos (MIT, Microsoft Windows server)</li>
+<li>PAP</li>
+<li>CHAP</li>
+<li>TACACS</li>
+</ul>
+<h2 id="credentials">credentials</h2>
+<p>Proof of identity</p>
+<ul>
+<li>factors (or factiods)
+<ul>
+<li>something you know (maiden name)</li>
+<li>something you have (cards, token)</li>
+<li>something you are (retinal scan)</li>
+</ul>
+</li>
+</ul>
+<h2 id="firewall-edge-devices-perimeter">Firewall (edge devices, perimeter)</h2>
+<ul>
+<li>Packet filter (packet header examination, IP address)</li>
+<li>proxy server (intermediary)</li>
+<li>SMLI (stateful multi-layer inspection) - stateful inspection and deep packet inspection</li>
+<li>UTM (unified threat management | combines above)</li>
+<li>personal firewall (on the device connecting to a network)</li>
+</ul>
+<h2 id="intrusion-detection-systems">Intrusion detection systems</h2>
+<ul>
+<li>IDS (intrusion detection system) -&gt; monitor logs and report to security professionals</li>
+<li>IPS (intrusion prevention system) -&gt; can take action by updating firewall rules during an identified attack</li>
+</ul>
+<h2 id="improved-wireless-httpswwwwi-fiorg">Improved Wireless (<a href="https://www.wi-fi.org/">https://www.wi-fi.org/</a>)</h2>
+<ul>
+<li>WiGig, 60 GHz band, under 10m distance. Cable replacement technology</li>
+<li>HaLow, 802.11ah , 950mhz , low-power wireless connections for IoT</li>
+<li>BLE (bluetooth low energy), 2.4ghz band, only sends small packets to data</li>
+<li>5G, new antenna technologies, download speeds of up to 10 gbps</li>
+</ul>
+<h2 id="software-defined-networks">Software Defined Networks</h2>
+<p>Separates control plane from network/switching plane. Remote network devices can pull their configuration from a central
+control plane device, removing the need to configure each switch individually. This also allows for rapid response
+to changing network conditions by updating a single control place device.</p>
+<p><img src="../assets/software-defined-networks.png" alt="diagram of software device network application layers"></p>
+<ul>
+<li>Application layer (Northbound API), automation of the network for business applications</li>
+<li>Control place (SDN controller), changes to 1000s of device immediately</li>
+<li>Forwarding later (Southbound APIs | [OpenFlow](<a href="https://opennetworking.org/sdn-resources/customer-case-studies/openflow/">https://opennetworking.org/sdn-resources/customer-case-studies/openflow/</a>,
+remove administration of layer 3 packet forwarding tables)</li>
+</ul>
+<p><a href="https://opennetworking.org/">Open Networking Foundation</a></p>
 
 	
 	
 	<div class="text-muted mt-5 pt-3 border-top">
-  Last modified April 1, 2023: <a href="https://github.com/dzoladz/palimpsest//commit/1622f06cd541a1bc598ac98de45f598480b52ca6">ADD: initial networking file (1622f06)</a>
+  Last modified April 8, 2023: <a href="https://github.com/dzoladz/palimpsest//commit/c55dfe78a5053b9bcf274adaf59f00246ce032c3">UPDATE: security and SDN section (c55dfe7)</a>
 </div>
 
 </div>

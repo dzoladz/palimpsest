@@ -926,6 +926,65 @@ ICA (Independent Computing Archtiecture), citrix
 RFB (Remote Frame Buffer)&lt;/p&gt;
 &lt;h3 id=&#34;ftp&#34;&gt;FTP&lt;/h3&gt;
 &lt;p&gt;File transfer protocol&lt;/p&gt;
+&lt;h2 id=&#34;malware&#34;&gt;Malware&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;RATs (remote access trojans)&lt;/li&gt;
+&lt;li&gt;Keylogger (records keystrokes)&lt;/li&gt;
+&lt;li&gt;trojans (appears to be beneficial, but cloaks )&lt;/li&gt;
+&lt;li&gt;spyware (monitors user behavior)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;authentication&#34;&gt;Authentication&lt;/h2&gt;
+&lt;p&gt;Verify the identity of a user&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;RADIUS&lt;/li&gt;
+&lt;li&gt;Kerberos (MIT, Microsoft Windows server)&lt;/li&gt;
+&lt;li&gt;PAP&lt;/li&gt;
+&lt;li&gt;CHAP&lt;/li&gt;
+&lt;li&gt;TACACS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;credentials&#34;&gt;credentials&lt;/h2&gt;
+&lt;p&gt;Proof of identity&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;factors (or factiods)
+&lt;ul&gt;
+&lt;li&gt;something you know (maiden name)&lt;/li&gt;
+&lt;li&gt;something you have (cards, token)&lt;/li&gt;
+&lt;li&gt;something you are (retinal scan)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;firewall-edge-devices-perimeter&#34;&gt;Firewall (edge devices, perimeter)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Packet filter (packet header examination, IP address)&lt;/li&gt;
+&lt;li&gt;proxy server (intermediary)&lt;/li&gt;
+&lt;li&gt;SMLI (stateful multi-layer inspection) - stateful inspection and deep packet inspection&lt;/li&gt;
+&lt;li&gt;UTM (unified threat management | combines above)&lt;/li&gt;
+&lt;li&gt;personal firewall (on the device connecting to a network)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;intrusion-detection-systems&#34;&gt;Intrusion detection systems&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;IDS (intrusion detection system) -&amp;gt; monitor logs and report to security professionals&lt;/li&gt;
+&lt;li&gt;IPS (intrusion prevention system) -&amp;gt; can take action by updating firewall rules during an identified attack&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;improved-wireless-httpswwwwi-fiorg&#34;&gt;Improved Wireless (&lt;a href=&#34;https://www.wi-fi.org/&#34;&gt;https://www.wi-fi.org/&lt;/a&gt;)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;WiGig, 60 GHz band, under 10m distance. Cable replacement technology&lt;/li&gt;
+&lt;li&gt;HaLow, 802.11ah , 950mhz , low-power wireless connections for IoT&lt;/li&gt;
+&lt;li&gt;BLE (bluetooth low energy), 2.4ghz band, only sends small packets to data&lt;/li&gt;
+&lt;li&gt;5G, new antenna technologies, download speeds of up to 10 gbps&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;software-defined-networks&#34;&gt;Software Defined Networks&lt;/h2&gt;
+&lt;p&gt;Separates control plane from network/switching plane. Remote network devices can pull their configuration from a central
+control plane device, removing the need to configure each switch individually. This also allows for rapid response
+to changing network conditions by updating a single control place device.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/software-defined-networks.png&#34; alt=&#34;diagram of software device network application layers&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Application layer (Northbound API), automation of the network for business applications&lt;/li&gt;
+&lt;li&gt;Control place (SDN controller), changes to 1000s of device immediately&lt;/li&gt;
+&lt;li&gt;Forwarding later (Southbound APIs | [OpenFlow](&lt;a href=&#34;https://opennetworking.org/sdn-resources/customer-case-studies/openflow/&#34;&gt;https://opennetworking.org/sdn-resources/customer-case-studies/openflow/&lt;/a&gt;,
+remove administration of layer 3 packet forwarding tables)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://opennetworking.org/&#34;&gt;Open Networking Foundation&lt;/a&gt;&lt;/p&gt;
 
       </description>
     </item>
