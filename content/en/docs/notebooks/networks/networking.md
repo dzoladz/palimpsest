@@ -704,3 +704,57 @@ RFB (Remote Frame Buffer)
 ### FTP
 File transfer protocol
 
+## Malware
+- RATs (remote access trojans)
+- Keylogger (records keystrokes)
+- trojans (appears to be beneficial, but cloaks )
+- spyware (monitors user behavior)
+
+## Authentication
+Verify the identity of a user
+
+- RADIUS
+- Kerberos (MIT, Microsoft Windows server)
+- PAP
+- CHAP
+- TACACS
+
+## credentials
+Proof of identity
+
+- factors (or factiods)
+  - something you know (maiden name)
+  - something you have (cards, token)
+  - something you are (retinal scan)
+
+
+## Firewall (edge devices, perimeter)
+- Packet filter (packet header examination, IP address)
+- proxy server (intermediary)
+- SMLI (stateful multi-layer inspection) - stateful inspection and deep packet inspection
+- UTM (unified threat management | combines above)
+- personal firewall (on the device connecting to a network)
+
+## Intrusion detection systems
+- IDS (intrusion detection system) -> monitor logs and report to security professionals
+- IPS (intrusion prevention system) -> can take action by updating firewall rules during an identified attack
+
+## Improved Wireless (https://www.wi-fi.org/)
+- WiGig, 60 GHz band, under 10m distance. Cable replacement technology 
+- HaLow, 802.11ah , 950mhz , low-power wireless connections for IoT
+- BLE (bluetooth low energy), 2.4ghz band, only sends small packets to data
+- 5G, new antenna technologies, download speeds of up to 10 gbps
+
+## Software Defined Networks
+Separates control plane from network/switching plane. Remote network devices can pull their configuration from a central
+control plane device, removing the need to configure each switch individually. This also allows for rapid response 
+to changing network conditions by updating a single control place device.
+
+![diagram of software device network application layers](../assets/software-defined-networks.png)
+
+- Application layer (Northbound API), automation of the network for business applications
+- Control place (SDN controller), changes to 1000s of device immediately 
+- Forwarding later (Southbound APIs | [OpenFlow](https://opennetworking.org/sdn-resources/customer-case-studies/openflow/, 
+remove administration of layer 3 packet forwarding tables)
+
+[Open Networking Foundation](https://opennetworking.org/)
