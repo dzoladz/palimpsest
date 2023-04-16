@@ -27,6 +27,19 @@
     </item>
     
     <item>
+      <title>Docs: Networks</title>
+      <link>/palimpsest/docs/notebooks/networks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/palimpsest/docs/notebooks/networks/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
       <title>Docs: </title>
       <link>/palimpsest/docs/notebooks/github_topic_browse/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1432,37 +1445,6 @@ monit monitor all
 &lt;p&gt;&lt;a href=&#34;www.ipnom.com/legato-NetWorker-Commands&#34;&gt;Legato Commands&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.emc.com/collateral/TechnicalDocument/docu53903.pdf&#34;&gt;EMC NetWorker 8.2 Admin Guide&lt;/a&gt;&lt;/p&gt;
 
-      </description>
-    </item>
-    
-    <item>
-      <title>Docs: Networking</title>
-      <link>/palimpsest/docs/notebooks/networking/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/palimpsest/docs/notebooks/networking/</guid>
-      <description>
-        
-        
-        &lt;h2 id=&#34;google-cloud&#34;&gt;Google Cloud&lt;/h2&gt;
-&lt;p&gt;Installing the SDK &lt;a href=&#34;https://cloud.google.com/sdk/docs/&#34;&gt;https://cloud.google.com/sdk/docs/&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&#34;a-few-commands-for-migrating-a-dns-zone&#34;&gt;A Few Commands for Migrating a DNS zone&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;gcloud auth login --project managed-dns-migration
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;gcloud dns managed-zones create myzone --dns-name&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;myzone.org&amp;#34;&lt;/span&gt; --description&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Zone for all the things&amp;#34;&lt;/span&gt; --visibility&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;public
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;gcloud dns record-sets import -z&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;myzone --zone-file-format /path/to/zonefile/myzone.org.zonefile.txt --delete-all-existing
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;gcloud dns managed-zones describe myzone
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;dns&#34;&gt;DNS&lt;/h2&gt;
-&lt;p&gt;General DNS commands&lt;/p&gt;
-&lt;h4 id=&#34;dig&#34;&gt;dig&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Query Cloudflare primary DNS to reply with the name servers for the cool-cat.org domain&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dig +short NS cool-cat.org 1.1.1.1
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Ask for the name servers every 2 seconds. Useful for monitoring propagation&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;watch dig +short NS cool-cat.org 1.1.1.1
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       </description>
     </item>
     

@@ -1,5 +1,5 @@
 ---
-title: "Networking"
+title: "Commands"
 description: >
     Notating useful networking commands, tasks, or related discoveries.
 ---

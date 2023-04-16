@@ -1,0 +1,1503 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.110.0">
+<meta name="robots" content="index, follow">
+
+
+<link rel="shortcut icon" href="/palimpsest/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/palimpsest/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/palimpsest/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/palimpsest/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/palimpsest/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/palimpsest/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/palimpsest/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/palimpsest/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/palimpsest/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/palimpsest/favicons/android-192x192.png" sizes="192x192">
+
+<title>Networking | Palimpsest</title>
+<meta name="description" content="Overview of IPv4 and IPv6 Networks
+">
+<meta property="og:title" content="Networking" />
+<meta property="og:description" content="Overview of IPv4 and IPv6 Networks
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/palimpsest/docs/notebooks/networks/networking/" /><meta property="article:section" content="docs" />
+
+<meta property="article:modified_time" content="2023-04-08T11:51:03-04:00" /><meta property="og:site_name" content="Palimpsest" />
+<meta itemprop="name" content="Networking">
+<meta itemprop="description" content="Overview of IPv4 and IPv6 Networks
+">
+<meta itemprop="dateModified" content="2023-04-08T11:51:03-04:00" />
+<meta itemprop="wordCount" content="2410">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Networking"/>
+<meta name="twitter:description" content="Overview of IPv4 and IPv6 Networks
+"/>
+
+
+
+
+<link rel="preload" href="/palimpsest/scss/main.min.73bc65c1e18bb0cbd02b071f40b73b018bed23b1835e915c0f4f73a772a6713b.css" as="style">
+<link href="/palimpsest/scss/main.min.73bc65c1e18bb0cbd02b071f40b73b018bed23b1835e915c0f4f73a772a6713b.css" rel="stylesheet" integrity="">
+
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
+  crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-00000000-0"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'UA-00000000-0');
+}
+</script>
+  </head>
+  <body class="td-page">
+    <header>
+      <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+  <a class="navbar-brand" href="/palimpsest/"><span class="navbar-brand__logo navbar-logo"></span><span class="navbar-brand__name">Palimpsest</span></a>
+  <div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+    <ul class="navbar-nav mt-2 mt-lg-0">
+      </ul>
+  </div>
+  <div class="navbar-nav d-none d-lg-block">
+    
+  </div>
+</nav>
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            
+<div id="td-sidebar-menu" class="td-sidebar__inner">
+  <form class="td-sidebar__search d-flex align-items-center">
+    
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button" data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-section-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  <nav class="collapse td-sidebar-nav foldable-nav" id="td-section-nav">
+    <ul class="td-sidebar-nav__section pr-md-3 ul-0">
+      <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-palimpsestdocs-li">
+  <a href="/palimpsest/docs/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-palimpsestdocs"><span class="">Docs</span></a>
+  <ul class="ul-1">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-palimpsestdocsdevops-li">
+  <input type="checkbox" id="m-palimpsestdocsdevops-check"/>
+  <label for="m-palimpsestdocsdevops-check"><a href="/palimpsest/docs/devops/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-palimpsestdocsdevops"><span class="">DevOps</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-palimpsestdocsdevopscodingcoding-li">
+  <input type="checkbox" id="m-palimpsestdocsdevopscodingcoding-check"/>
+  <label for="m-palimpsestdocsdevopscodingcoding-check"><a href="/palimpsest/docs/devops/coding/coding/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-palimpsestdocsdevopscodingcoding"><span class="">Coding</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-palimpsestdocsdevopsreferences-li">
+  <input type="checkbox" id="m-palimpsestdocsdevopsreferences-check"/>
+  <label for="m-palimpsestdocsdevopsreferences-check"><a href="/palimpsest/docs/devops/references/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-palimpsestdocsdevopsreferences"><span class="">References</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-palimpsestdocsdjango-li">
+  <input type="checkbox" id="m-palimpsestdocsdjango-check"/>
+  <label for="m-palimpsestdocsdjango-check"><a href="/palimpsest/docs/django/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-palimpsestdocsdjango"><span class="">Django</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-palimpsestdocslaboratory-li">
+  <input type="checkbox" id="m-palimpsestdocslaboratory-check"/>
+  <label for="m-palimpsestdocslaboratory-check"><a href="/palimpsest/docs/laboratory/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-palimpsestdocslaboratory"><span class="">Laboratory</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-palimpsestdocslaboratorykuberneteskubernetes-li">
+  <input type="checkbox" id="m-palimpsestdocslaboratorykuberneteskubernetes-check"/>
+  <label for="m-palimpsestdocslaboratorykuberneteskubernetes-check"><a href="/palimpsest/docs/laboratory/kubernetes/kubernetes/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-palimpsestdocslaboratorykuberneteskubernetes"><span class="">Kubernetes</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-palimpsestdocslaboratorynetworknetworking-gear-li">
+  <input type="checkbox" id="m-palimpsestdocslaboratorynetworknetworking-gear-check"/>
+  <label for="m-palimpsestdocslaboratorynetworknetworking-gear-check"><a href="/palimpsest/docs/laboratory/network/networking-gear/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-palimpsestdocslaboratorynetworknetworking-gear"><span class="">Network Description</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-palimpsestdocslaboratorykubernetesrancher-li">
+  <input type="checkbox" id="m-palimpsestdocslaboratorykubernetesrancher-check"/>
+  <label for="m-palimpsestdocslaboratorykubernetesrancher-check"><a href="/palimpsest/docs/laboratory/kubernetes/rancher/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-palimpsestdocslaboratorykubernetesrancher"><span class="">Rancher</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-palimpsestdocslaboratorykubernetescluster-li">
+  <input type="checkbox" id="m-palimpsestdocslaboratorykubernetescluster-check"/>
+  <label for="m-palimpsestdocslaboratorykubernetescluster-check"><a href="/palimpsest/docs/laboratory/kubernetes/cluster/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-palimpsestdocslaboratorykubernetescluster"><span class="">Raspberry Pi Cluster</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-palimpsestdocslaboratorykuberneteshelm-li">
+  <input type="checkbox" id="m-palimpsestdocslaboratorykuberneteshelm-check"/>
+  <label for="m-palimpsestdocslaboratorykuberneteshelm-check"><a href="/palimpsest/docs/laboratory/kubernetes/helm/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-palimpsestdocslaboratorykuberneteshelm"><span class="">Helm</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-palimpsestdocsnotebooks-li">
+  <input type="checkbox" id="m-palimpsestdocsnotebooks-check" checked/>
+  <label for="m-palimpsestdocsnotebooks-check"><a href="/palimpsest/docs/notebooks/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-palimpsestdocsnotebooks"><span class="">Notebooks</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-palimpsestdocsnotebooksdatabases-li">
+  <input type="checkbox" id="m-palimpsestdocsnotebooksdatabases-check"/>
+  <label for="m-palimpsestdocsnotebooksdatabases-check"><a href="/palimpsest/docs/notebooks/databases/" title="Databases" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-palimpsestdocsnotebooksdatabases"><span class="">databases</span></a></label>
+  
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-palimpsestdocsnotebooksdatabasesmariadb-li">
+  <input type="checkbox" id="m-palimpsestdocsnotebooksdatabasesmariadb-check"/>
+  <label for="m-palimpsestdocsnotebooksdatabasesmariadb-check"><a href="/palimpsest/docs/notebooks/databases/mariadb/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-palimpsestdocsnotebooksdatabasesmariadb"><span class="">MariaDB</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-palimpsestdocsnotebooksdatabasespostgres-li">
+  <input type="checkbox" id="m-palimpsestdocsnotebooksdatabasespostgres-check"/>
+  <label for="m-palimpsestdocsnotebooksdatabasespostgres-check"><a href="/palimpsest/docs/notebooks/databases/postgres/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-palimpsestdocsnotebooksdatabasespostgres"><span class="">PostgreSQL</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-palimpsestdocsnotebooksnetworks-li">
+  <input type="checkbox" id="m-palimpsestdocsnotebooksnetworks-check" checked/>
+  <label for="m-palimpsestdocsnotebooksnetworks-check"><a href="/palimpsest/docs/notebooks/networks/" title="Networks" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-palimpsestdocsnotebooksnetworks"><span class="">networks</span></a></label>
+  
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-palimpsestdocsnotebooksnetworkscommands-li">
+  <input type="checkbox" id="m-palimpsestdocsnotebooksnetworkscommands-check"/>
+  <label for="m-palimpsestdocsnotebooksnetworkscommands-check"><a href="/palimpsest/docs/notebooks/networks/commands/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-palimpsestdocsnotebooksnetworkscommands"><span class="">Commands</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-palimpsestdocsnotebooksnetworksnetworking-li">
+  <input type="checkbox" id="m-palimpsestdocsnotebooksnetworksnetworking-check" checked/>
+  <label for="m-palimpsestdocsnotebooksnetworksnetworking-check"><a href="/palimpsest/docs/notebooks/networks/networking/" class="align-left pl-0  active td-sidebar-link td-sidebar-link__page" id="m-palimpsestdocsnotebooksnetworksnetworking"><span class="td-sidebar-nav-active-item">Networking</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-palimpsestdocsnotebooksgithub_topic_browse-li">
+  <input type="checkbox" id="m-palimpsestdocsnotebooksgithub_topic_browse-check"/>
+  <label for="m-palimpsestdocsnotebooksgithub_topic_browse-check"><a href="/palimpsest/docs/notebooks/github_topic_browse/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-palimpsestdocsnotebooksgithub_topic_browse"><span class=""></span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-palimpsestdocsnotebooksambiance-li">
+  <input type="checkbox" id="m-palimpsestdocsnotebooksambiance-check"/>
+  <label for="m-palimpsestdocsnotebooksambiance-check"><a href="/palimpsest/docs/notebooks/ambiance/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-palimpsestdocsnotebooksambiance"><span class="">Ambiance</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-palimpsestdocsnotebooksbusiness_apps-li">
+  <input type="checkbox" id="m-palimpsestdocsnotebooksbusiness_apps-check"/>
+  <label for="m-palimpsestdocsnotebooksbusiness_apps-check"><a href="/palimpsest/docs/notebooks/business_apps/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-palimpsestdocsnotebooksbusiness_apps"><span class="">Business Apps</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-palimpsestdocsnotebookscables-li">
+  <input type="checkbox" id="m-palimpsestdocsnotebookscables-check"/>
+  <label for="m-palimpsestdocsnotebookscables-check"><a href="/palimpsest/docs/notebooks/cables/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-palimpsestdocsnotebookscables"><span class="">Cables</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-palimpsestdocsnotebookscertbot-li">
+  <input type="checkbox" id="m-palimpsestdocsnotebookscertbot-check"/>
+  <label for="m-palimpsestdocsnotebookscertbot-check"><a href="/palimpsest/docs/notebooks/certbot/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-palimpsestdocsnotebookscertbot"><span class="">Certbot</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-palimpsestdocsnotebookschroot-sftp-setup-li">
+  <input type="checkbox" id="m-palimpsestdocsnotebookschroot-sftp-setup-check"/>
+  <label for="m-palimpsestdocsnotebookschroot-sftp-setup-check"><a href="/palimpsest/docs/notebooks/chroot-sftp-setup/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-palimpsestdocsnotebookschroot-sftp-setup"><span class="">Chroot SFTP Setup</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-palimpsestdocsnotebookscron-li">
+  <input type="checkbox" id="m-palimpsestdocsnotebookscron-check"/>
+  <label for="m-palimpsestdocsnotebookscron-check"><a href="/palimpsest/docs/notebooks/cron/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-palimpsestdocsnotebookscron"><span class="">Cron</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-palimpsestdocsnotebooksdiagramming-li">
+  <input type="checkbox" id="m-palimpsestdocsnotebooksdiagramming-check"/>
+  <label for="m-palimpsestdocsnotebooksdiagramming-check"><a href="/palimpsest/docs/notebooks/diagramming/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-palimpsestdocsnotebooksdiagramming"><span class="">Diagramming Tool</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-palimpsestdocsnotebooksdocker-li">
+  <input type="checkbox" id="m-palimpsestdocsnotebooksdocker-check"/>
+  <label for="m-palimpsestdocsnotebooksdocker-check"><a href="/palimpsest/docs/notebooks/docker/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-palimpsestdocsnotebooksdocker"><span class="">Docker</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-palimpsestdocsnotebooksemail-li">
+  <input type="checkbox" id="m-palimpsestdocsnotebooksemail-check"/>
+  <label for="m-palimpsestdocsnotebooksemail-check"><a href="/palimpsest/docs/notebooks/email/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-palimpsestdocsnotebooksemail"><span class="">Email</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-palimpsestdocsnotebooksexpand_volumes-li">
+  <input type="checkbox" id="m-palimpsestdocsnotebooksexpand_volumes-check"/>
+  <label for="m-palimpsestdocsnotebooksexpand_volumes-check"><a href="/palimpsest/docs/notebooks/expand_volumes/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-palimpsestdocsnotebooksexpand_volumes"><span class="">Expanding Volumes</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-palimpsestdocsnotebooksezproxy-li">
+  <input type="checkbox" id="m-palimpsestdocsnotebooksezproxy-check"/>
+  <label for="m-palimpsestdocsnotebooksezproxy-check"><a href="/palimpsest/docs/notebooks/ezproxy/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-palimpsestdocsnotebooksezproxy"><span class="">EZproxy</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-palimpsestdocsnotebooksfail2ban-li">
+  <input type="checkbox" id="m-palimpsestdocsnotebooksfail2ban-check"/>
+  <label for="m-palimpsestdocsnotebooksfail2ban-check"><a href="/palimpsest/docs/notebooks/fail2ban/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-palimpsestdocsnotebooksfail2ban"><span class="">fail2ban</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-palimpsestdocsnotebooksgit-li">
+  <input type="checkbox" id="m-palimpsestdocsnotebooksgit-check"/>
+  <label for="m-palimpsestdocsnotebooksgit-check"><a href="/palimpsest/docs/notebooks/git/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-palimpsestdocsnotebooksgit"><span class="">Git</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-palimpsestdocsnotebooksgpg-li">
+  <input type="checkbox" id="m-palimpsestdocsnotebooksgpg-check"/>
+  <label for="m-palimpsestdocsnotebooksgpg-check"><a href="/palimpsest/docs/notebooks/gpg/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-palimpsestdocsnotebooksgpg"><span class="">GPG</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-palimpsestdocsnotebookshomebrew-li">
+  <input type="checkbox" id="m-palimpsestdocsnotebookshomebrew-check"/>
+  <label for="m-palimpsestdocsnotebookshomebrew-check"><a href="/palimpsest/docs/notebooks/homebrew/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-palimpsestdocsnotebookshomebrew"><span class="">Homebrew</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-palimpsestdocsnotebooksjs_forms-li">
+  <input type="checkbox" id="m-palimpsestdocsnotebooksjs_forms-check"/>
+  <label for="m-palimpsestdocsnotebooksjs_forms-check"><a href="/palimpsest/docs/notebooks/js_forms/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-palimpsestdocsnotebooksjs_forms"><span class="">JS Forms</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-palimpsestdocsnotebookslvm-li">
+  <input type="checkbox" id="m-palimpsestdocsnotebookslvm-check"/>
+  <label for="m-palimpsestdocsnotebookslvm-check"><a href="/palimpsest/docs/notebooks/lvm/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-palimpsestdocsnotebookslvm"><span class="">LVM</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-palimpsestdocsnotebooksmailman-li">
+  <input type="checkbox" id="m-palimpsestdocsnotebooksmailman-check"/>
+  <label for="m-palimpsestdocsnotebooksmailman-check"><a href="/palimpsest/docs/notebooks/mailman/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-palimpsestdocsnotebooksmailman"><span class="">Mailman</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-palimpsestdocsnotebooksmonit-li">
+  <input type="checkbox" id="m-palimpsestdocsnotebooksmonit-check"/>
+  <label for="m-palimpsestdocsnotebooksmonit-check"><a href="/palimpsest/docs/notebooks/monit/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-palimpsestdocsnotebooksmonit"><span class="">Monit</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-palimpsestdocsnotebooksnetworker_commands-li">
+  <input type="checkbox" id="m-palimpsestdocsnotebooksnetworker_commands-check"/>
+  <label for="m-palimpsestdocsnotebooksnetworker_commands-check"><a href="/palimpsest/docs/notebooks/networker_commands/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-palimpsestdocsnotebooksnetworker_commands"><span class="">networker</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-palimpsestdocsnotebookspackages-li">
+  <input type="checkbox" id="m-palimpsestdocsnotebookspackages-check"/>
+  <label for="m-palimpsestdocsnotebookspackages-check"><a href="/palimpsest/docs/notebooks/packages/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-palimpsestdocsnotebookspackages"><span class="">Packages</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-palimpsestdocsnotebooksperlbrew-li">
+  <input type="checkbox" id="m-palimpsestdocsnotebooksperlbrew-check"/>
+  <label for="m-palimpsestdocsnotebooksperlbrew-check"><a href="/palimpsest/docs/notebooks/perlbrew/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-palimpsestdocsnotebooksperlbrew"><span class="">Perlbrew</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-palimpsestdocsnotebooksphp-li">
+  <input type="checkbox" id="m-palimpsestdocsnotebooksphp-check"/>
+  <label for="m-palimpsestdocsnotebooksphp-check"><a href="/palimpsest/docs/notebooks/php/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-palimpsestdocsnotebooksphp"><span class="">PHP</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-palimpsestdocsnotebookspostfix-li">
+  <input type="checkbox" id="m-palimpsestdocsnotebookspostfix-check"/>
+  <label for="m-palimpsestdocsnotebookspostfix-check"><a href="/palimpsest/docs/notebooks/postfix/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-palimpsestdocsnotebookspostfix"><span class="">Postfix</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-palimpsestdocsnotebookspython4lib-li">
+  <input type="checkbox" id="m-palimpsestdocsnotebookspython4lib-check"/>
+  <label for="m-palimpsestdocsnotebookspython4lib-check"><a href="/palimpsest/docs/notebooks/python4lib/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-palimpsestdocsnotebookspython4lib"><span class="">Python4Lib</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-palimpsestdocsnotebooksreact-li">
+  <input type="checkbox" id="m-palimpsestdocsnotebooksreact-check"/>
+  <label for="m-palimpsestdocsnotebooksreact-check"><a href="/palimpsest/docs/notebooks/react/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-palimpsestdocsnotebooksreact"><span class="">React.js</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-palimpsestdocsnotebookssamba-li">
+  <input type="checkbox" id="m-palimpsestdocsnotebookssamba-check"/>
+  <label for="m-palimpsestdocsnotebookssamba-check"><a href="/palimpsest/docs/notebooks/samba/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-palimpsestdocsnotebookssamba"><span class="">Samba</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-palimpsestdocsnotebookssed_awk-li">
+  <input type="checkbox" id="m-palimpsestdocsnotebookssed_awk-check"/>
+  <label for="m-palimpsestdocsnotebookssed_awk-check"><a href="/palimpsest/docs/notebooks/sed_awk/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-palimpsestdocsnotebookssed_awk"><span class="">sed &amp; awk</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-palimpsestdocsnotebookssip-li">
+  <input type="checkbox" id="m-palimpsestdocsnotebookssip-check"/>
+  <label for="m-palimpsestdocsnotebookssip-check"><a href="/palimpsest/docs/notebooks/sip/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-palimpsestdocsnotebookssip"><span class="">SIP2</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-palimpsestdocsnotebooksssh-li">
+  <input type="checkbox" id="m-palimpsestdocsnotebooksssh-check"/>
+  <label for="m-palimpsestdocsnotebooksssh-check"><a href="/palimpsest/docs/notebooks/ssh/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-palimpsestdocsnotebooksssh"><span class="">SSH</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-palimpsestdocsnotebooksssl-li">
+  <input type="checkbox" id="m-palimpsestdocsnotebooksssl-check"/>
+  <label for="m-palimpsestdocsnotebooksssl-check"><a href="/palimpsest/docs/notebooks/ssl/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-palimpsestdocsnotebooksssl"><span class="">SSL</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-palimpsestdocsnotebookssysadmin_tasks-li">
+  <input type="checkbox" id="m-palimpsestdocsnotebookssysadmin_tasks-check"/>
+  <label for="m-palimpsestdocsnotebookssysadmin_tasks-check"><a href="/palimpsest/docs/notebooks/sysadmin_tasks/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-palimpsestdocsnotebookssysadmin_tasks"><span class="">SysAdmin Tasks</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-palimpsestdocsnotebooksyaz-li">
+  <input type="checkbox" id="m-palimpsestdocsnotebooksyaz-check"/>
+  <label for="m-palimpsestdocsnotebooksyaz-check"><a href="/palimpsest/docs/notebooks/yaz/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-palimpsestdocsnotebooksyaz"><span class="">Yaz</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-palimpsestdocsaccessibility-li">
+  <input type="checkbox" id="m-palimpsestdocsaccessibility-check"/>
+  <label for="m-palimpsestdocsaccessibility-check"><a href="/palimpsest/docs/accessibility/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-palimpsestdocsaccessibility"><span class="">Accessibility</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-palimpsestdocsaccessibilityreferences-li">
+  <input type="checkbox" id="m-palimpsestdocsaccessibilityreferences-check"/>
+  <label for="m-palimpsestdocsaccessibilityreferences-check"><a href="/palimpsest/docs/accessibility/references/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-palimpsestdocsaccessibilityreferences"><span class="">References</span></a></label>
+  
+</li>
+  </ul>
+</li>
+  </ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+          </aside>
+          <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+            
+<div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
+<a href="https://github.com/dzoladz/palimpsest//tree/main/content/en/docs/notebooks/networks/networking.md" class="td-page-meta--view" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines fa-fw"></i> View page source</a>
+  <a href="https://github.com/dzoladz/palimpsest//edit/main/content/en/docs/notebooks/networks/networking.md" class="td-page-meta--edit" target="_blank" rel="noopener"><i class="fa-solid fa-pen-to-square fa-fw"></i> Edit this page</a>
+  <a href="https://github.com/dzoladz/palimpsest//new/main/content/en/docs/notebooks/networks/networking.md?filename=change-me.md&amp;value=---%0Atitle%3A&#43;%22Long&#43;Page&#43;Title%22%0AlinkTitle%3A&#43;%22Short&#43;Nav&#43;Title%22%0Aweight%3A&#43;100%0Adescription%3A&#43;%3E-%0A&#43;&#43;&#43;&#43;&#43;Page&#43;description&#43;for&#43;heading&#43;and&#43;indexes.%0A---%0A%0A%23%23&#43;Heading%0A%0AEdit&#43;this&#43;template&#43;to&#43;create&#43;your&#43;new&#43;page.%0A%0A%2A&#43;Give&#43;it&#43;a&#43;good&#43;name%2C&#43;ending&#43;in&#43;%60.md%60&#43;-&#43;e.g.&#43;%60getting-started.md%60%0A%2A&#43;Edit&#43;the&#43;%22front&#43;matter%22&#43;section&#43;at&#43;the&#43;top&#43;of&#43;the&#43;page&#43;%28weight&#43;controls&#43;how&#43;its&#43;ordered&#43;amongst&#43;other&#43;pages&#43;in&#43;the&#43;same&#43;directory%3B&#43;lowest&#43;number&#43;first%29.%0A%2A&#43;Add&#43;a&#43;good&#43;commit&#43;message&#43;at&#43;the&#43;bottom&#43;of&#43;the&#43;page&#43;%28%3C80&#43;characters%3B&#43;use&#43;the&#43;extended&#43;description&#43;field&#43;for&#43;more&#43;detail%29.%0A%2A&#43;Create&#43;a&#43;new&#43;branch&#43;so&#43;you&#43;can&#43;preview&#43;your&#43;new&#43;file&#43;and&#43;request&#43;a&#43;review&#43;via&#43;Pull&#43;Request.%0A" class="td-page-meta--child" target="_blank" rel="noopener"><i class="fa-solid fa-pen-to-square fa-fw"></i> Create child page</a>
+  <a href="https://github.com/dzoladz/palimpsest//issues/new?title=Networking" class="td-page-meta--issue" target="_blank" rel="noopener"><i class="fa-solid fa-list-check fa-fw"></i> Create documentation issue</a>
+  <a href="https://github.com/dzoladz/palimpsest//issues/new" class="td-page-meta--project-issue" target="_blank" rel="noopener"><i class="fa-solid fa-list-check fa-fw"></i> Create project issue</a>
+  
+</div>
+
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#organizations">Organizations</a>
+      <ul>
+        <li><a href="#standards">Standards</a></li>
+        <li><a href="#international-telecommunications-unions">International Telecommunications Unions</a></li>
+        <li><a href="#united-states">United States</a></li>
+        <li><a href="#ohio">Ohio</a></li>
+      </ul>
+    </li>
+    <li><a href="#osi-open-systems-interconnection-layers">OSI (Open Systems Interconnection) Layers</a>
+      <ul>
+        <li><a href="#layer-1---physical">Layer 1 - Physical</a></li>
+        <li><a href="#layer-2---data-link">Layer 2 - Data Link</a></li>
+        <li><a href="#layer-3---network-layer">Layer 3 - Network Layer</a></li>
+        <li><a href="#layer-4---transport">Layer 4 - Transport</a></li>
+        <li><a href="#layer-5---session-not-used-very-often">Layer 5 - Session; not used very often</a></li>
+        <li><a href="#layer-6---presentation-not-used-very-often">Layer 6 - Presentation; not used very often</a></li>
+        <li><a href="#layer-7---application">Layer 7 - Application</a></li>
+        <li><a href="#cabling">Cabling</a></li>
+        <li><a href="#ethernet-nomencalture">Ethernet Nomencalture</a></li>
+      </ul>
+    </li>
+    <li><a href="#wifi">Wifi</a></li>
+    <li><a href="#ip-addressing-and-ipv4-subnetting">IP Addressing and IPv4 Subnetting</a>
+      <ul>
+        <li><a href="#dotted-decimal-notation">Dotted Decimal Notation</a></li>
+        <li><a href="#classful-addresses"><em>Classful</em> Addresses</a></li>
+        <li><a href="#private-addresses-also-reserved">Private Addresses (also reserved)</a></li>
+        <li><a href="#network-mask">Network Mask</a></li>
+        <li><a href="#classless-addressing"><em>Classless</em> addressing</a></li>
+      </ul>
+    </li>
+    <li><a href="#ipv6">IPv6</a>
+      <ul>
+        <li><a href="#subnetting">Subnetting</a></li>
+        <li><a href="#network-planning">Network Planning</a></li>
+        <li><a href="#tcp-udp-maintenance-protocols">TCP, UDP, Maintenance Protocols</a></li>
+        <li><a href="#connection-classes">Connection Classes</a></li>
+        <li><a href="#connectino">Connectino</a></li>
+        <li><a href="#port-numbering">Port Numbering</a></li>
+        <li><a href="#sockets">Sockets</a></li>
+        <li><a href="#nat">NAT</a></li>
+      </ul>
+    </li>
+    <li><a href="#support-and-management-protocols">Support and Management Protocols</a></li>
+    <li><a href="#routing-and-wide-area-networks">Routing and Wide Area Networks</a>
+      <ul>
+        <li><a href="#routing-protocols">Routing Protocols</a></li>
+        <li><a href="#configuring-routers">Configuring Routers</a></li>
+        <li><a href="#wan">WAN</a></li>
+      </ul>
+    </li>
+    <li><a href="#web-protocols">Web Protocols</a>
+      <ul>
+        <li><a href="#smtp">SMTP</a></li>
+        <li><a href="#pop3--imap4">POP3 &amp; IMAP4</a></li>
+        <li><a href="#instant-messaging">Instant Messaging</a></li>
+        <li><a href="#simple">SIMPLE</a></li>
+        <li><a href="#voip-voice-over-ip">VoIP Voice over IP</a></li>
+        <li><a href="#sip">SIP</a></li>
+        <li><a href="#rtp">RTP</a></li>
+        <li><a href="#media-gateway">Media Gateway</a></li>
+        <li><a href="#unified-communications">Unified Communications</a></li>
+        <li><a href="#remote-desktop-protocls">Remote desktop protocls</a></li>
+        <li><a href="#ftp">FTP</a></li>
+      </ul>
+    </li>
+    <li><a href="#malware">Malware</a></li>
+    <li><a href="#authentication">Authentication</a></li>
+    <li><a href="#credentials">credentials</a></li>
+    <li><a href="#firewall-edge-devices-perimeter">Firewall (edge devices, perimeter)</a></li>
+    <li><a href="#intrusion-detection-systems">Intrusion detection systems</a></li>
+    <li><a href="#improved-wireless-httpswwwwi-fiorg">Improved Wireless (<a href="https://www.wi-fi.org/">https://www.wi-fi.org/</a>)</a></li>
+    <li><a href="#software-defined-networks">Software Defined Networks</a></li>
+  </ul>
+</nav>
+      </div>
+    
+            
+
+	
+		
+			
+				
+			
+			
+
+
+
+  
+  
+
+		
+			
+				
+			
+			
+
+
+
+  
+  
+
+		
+	
+
+          </aside>
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="td-breadcrumbs">
+  <ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="/palimpsest/docs/">Docs</a>
+  </li>
+  <li class="breadcrumb-item">
+    <a href="/palimpsest/docs/notebooks/">Notebooks</a>
+  </li>
+  <li class="breadcrumb-item">
+    <a href="/palimpsest/docs/notebooks/networks/">networks</a>
+  </li>
+  <li class="breadcrumb-item active" aria-current="page">
+    <a href="/palimpsest/docs/notebooks/networks/networking/" aria-disabled="true" class="btn-link disabled">Networking</a>
+  </li>
+  </ol>
+</nav>
+            
+<div class="td-content">
+	<h1>Networking</h1>
+	<div class="lead">Overview of IPv4 and IPv6 Networks</div>
+	<header class="article-meta">
+		
+
+  
+    
+      
+
+
+    
+      
+
+
+    
+  
+
+		
+	</header>    
+	<h2 id="organizations">Organizations</h2>
+<ul>
+<li>Internet Society - <a href="https://www.internetsociety.org/">ISOC</a></li>
+<li>Internet Engineering Task Force - <a href="https://www.ietf.org/">IETF</a></li>
+<li>Internet Architecture Board, <a href="https://www.iab.org/">IAB</a></li>
+<li>Internet Engineering Steering Group - <a href="https://www.ietf.org/about/groups/iesg/">IESG</a></li>
+<li>Internet Corporation for Assigned Names and Numbers - <a href="https://www.icann.org/">ICANN</a></li>
+<li>Internet Assigned Numbers Authority - <a href="https://www.iana.org/">IANA</a></li>
+</ul>
+<h3 id="standards">Standards</h3>
+<ul>
+<li>IEEE LAN Standards <a href="https://ieeexplore.ieee.org/browse/standards/get-program/page/series?id=68">802.</a></li>
+</ul>
+<h3 id="international-telecommunications-unions">International Telecommunications Unions</h3>
+<p>The <a href="https://www.itu.int/">ITU</a> promotes and globally coordinates the use of the radio
+spectrum through standards and regulation.</p>
+<ul>
+<li>H Series (e.g., H.323 - VoIP)</li>
+<li>V Series (e.g., V.9)</li>
+<li>X Series (e.g., x.509 - SSL)</li>
+</ul>
+<h3 id="united-states">United States</h3>
+<p>The National Telecommunication and Information Administration <a href="https://www.ntia.doc.gov/">NTIA</a></p>
+<ul>
+<li><a href="https://broadbandusa.ntia.doc.gov/">Broadband USA</a></li>
+<li><a href="https://ntia.gov/category/spectrum-management">Spectrum Allocation &amp; Management</a></li>
+<li><a href="../assets/2016_frequency_spectrum.pdf">Spectrum Allocation Chart, 2016</a></li>
+</ul>
+<h3 id="ohio">Ohio</h3>
+<ul>
+<li><a href="https://broadband.ohio.gov/">Broadband Ohio</a></li>
+</ul>
+<h2 id="osi-open-systems-interconnection-layers">OSI (Open Systems Interconnection) Layers</h2>
+<p>A conceptual model in which communications between a computing system are split into seven different abstraction layers</p>
+<p><img src="../assets/osi-reference-model.png" alt="Diagram of the OSI Reference Model"></p>
+<h3 id="layer-1---physical">Layer 1 - Physical</h3>
+<p>Most closely associated with the physical connection between devices. The physical layer provides an electrical and
+mechanical interface to the transmission medium (e.g. CAT5 cabling, SMF fiber).</p>
+<h3 id="layer-2---data-link">Layer 2 - Data Link</h3>
+<p>This layer is responsible for the <strong>Physical Address</strong></p>
+<h4 id="network-interface-card--media-access-control">Network Interface Card &amp; Media Access Control</h4>
+<ul>
+<li>Hardware address, MAC address is burned into the NIC</li>
+<li>MAC Address (Media Access Control ; 48-bits binary (written in hexadecimal))
+<ul>
+<li>24-bits, first 3 hex numbers vendor identifier (OUI)
+<ul>
+<li>OUI: Organizationally-Unique Identifier</li>
+<li><a href="https://maclookup.app/">https://maclookup.app/</a></li>
+</ul>
+</li>
+<li>24-bits, serial number</li>
+</ul>
+</li>
+</ul>
+<h4 id="operating-at-layer-2">Operating at Layer 2</h4>
+<table>
+<thead>
+<tr>
+<th>Hardware</th>
+<th>Protocols</th>
+<th>Software</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ethernet switch</td>
+<td>Ethernet</td>
+<td></td>
+</tr>
+<tr>
+<td>NIC, Network Interface Card</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Unicast (one device)<br>
+Broadcast (all devices)</p>
+<p><img src="../assets/ethernet-frame.png" alt="Ethernet Frame Diagram">
+Ethernet Type field, values?</p>
+<h4 id="performance-issues">Performance Issues</h4>
+<ul>
+<li>Broadcasts (interruptions)</li>
+<li>Server Saturation ()</li>
+<li>Bottleneck (slow connection between devices)</li>
+<li>Router latency</li>
+<li>Security filtering (firewall, packet inspection)</li>
+</ul>
+<p>Switches use MAC Addresses</p>
+<ul>
+<li>VLANs reduce broadcast domains</li>
+<li>Switches analyze destination header of a frame and only route
+the packet out of the appropriate port, not <em>all</em> ports like a hub</li>
+<li>&lsquo;Backbones&rsquo; connect switches together</li>
+</ul>
+<p><img src="../assets/switch-backbones.png" alt="hierarchric structural diagram of core, distribution, and access switches">
+Core switches 10x faster than access switches</p>
+<p>lowest port cost</p>
+<p>Spanning Tree algorithm
+802.1 s</p>
+<ul>
+<li>root switch selection (root switch, forwards all ports) BPDU frames</li>
+<li>best path selection</li>
+</ul>
+<p>converged</p>
+<p>STP self-healing capability
+Port mirroring</p>
+<p>VLAN</p>
+<ul>
+<li>bandwidth conservation</li>
+<li>security benefits (only aware of devices in their own VLAN)</li>
+<li>separation of a switch to segregate broadcast domains</li>
+<li>Static VLANs (port-by-port basis)</li>
+</ul>
+<p>ARP request?</p>
+<p>802.1q &ldquo;tag&rdquo; a frame
+VLAN tag, inserted between the source | protocol type
+tags only seen between switches
+VLAN trunk port - switch to switch connection
+frames queued in a buffer to go out the trunk port
+QoS - for example to voice priority order</p>
+<p>IEEE 802.1ax and the link aggregation protocol</p>
+<h3 id="layer-3---network-layer">Layer 3 - Network Layer</h3>
+<ul>
+<li>Logical Addressing (IP Address; software addressing)</li>
+<li>Routing</li>
+<li>Prioritization</li>
+</ul>
+<h4 id="operating-at-layer-3">Operating at Layer 3</h4>
+<table>
+<thead>
+<tr>
+<th>Hardware</th>
+<th>Protocols</th>
+<th>Software</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Router</td>
+<td>IP</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>ICMP</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Routing</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="layer-4---transport">Layer 4 - Transport</h3>
+<ul>
+<li>Error handling</li>
+<li>Chunk large data into segments</li>
+<li>Port number of application</li>
+</ul>
+<h4 id="operating-at-layer-4">Operating at Layer 4</h4>
+<table>
+<thead>
+<tr>
+<th>Hardware</th>
+<th>Protocols</th>
+<th>Software</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>TCP</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>UDP</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="layer-5---session-not-used-very-often">Layer 5 - Session; not used very often</h3>
+<ul>
+<li>Session management (conversations)</li>
+</ul>
+<h4 id="operating-at-layer-5">Operating at Layer 5</h4>
+<table>
+<thead>
+<tr>
+<th>Hardware</th>
+<th>Protocols</th>
+<th>Software</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>RDP</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="layer-6---presentation-not-used-very-often">Layer 6 - Presentation; not used very often</h3>
+<ul>
+<li>Format conversions (ASCII to another format)</li>
+</ul>
+<h3 id="layer-7---application">Layer 7 - Application</h3>
+<p>Sits just below the OS. Supports user applications</p>
+<h4 id="operating-at-layer-7">Operating at Layer 7</h4>
+<table>
+<thead>
+<tr>
+<th>Hardware</th>
+<th>Protocols</th>
+<th>Software</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>HTTP</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>FTP</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>SMTP</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="cabling">Cabling</h3>
+<p>UTP cabling: unshielded twisted pair
+Cat 6 - 10 Gbps up to 50 m (this is what we&rsquo;re using in the SOCC)
+Numbering System - both ends of fixed horizontal</p>
+<h3 id="ethernet-nomencalture">Ethernet Nomencalture</h3>
+<p>10Base-T</p>
+<p>10 = Mbps
+Base =
+T = Type of cabling (in this case, UTP ; twisted pair)</p>
+<p>100Base-TX (X = full duplex)</p>
+<p>1000Base-SX (Gigabit Ethernet, S = short waveligth over fiber)</p>
+<p>10GBase-SR (Cat 6a for datacenters)</p>
+<p>40Base-SR4 (almost , fiber)</p>
+<p>100Base-SR10 (fiber)</p>
+<h2 id="wifi">Wifi</h2>
+<p>radio waves, rather than wired devices
+light socket, refrigerator, and expanding wireless clients</p>
+<ul>
+<li>IEEE 802.11 standard</li>
+<li>wifi alliance (certify compliance with IEEE standards)</li>
+</ul>
+<p>Access point = attena to read radio waves</p>
+<p>(Access Point, as translator) 802.11 wireless side, 802 on LAN side</p>
+<p>root/infrasture mode for AP</p>
+<ul>
+<li>lightweight AP - uses a WLAN controller software</li>
+<li>Enterprise networks</li>
+</ul>
+<p>RF is physical layer of wireless
+SSID (Service Set Identifier) = differentiates WLANs</p>
+<p>wifi - frequency bands
+2.4 Ghz or 5Ghz RF bands (unlicenses by FCC)
+2.4gHz (11 channels are 5 gHz apart, thus 3 non-overlapsing 1, 6, 11)</p>
+<p>802.11a is 5Ghz band
+National infrasture bands
+(4 non-orverlapping channels per band)
+(range is less than 2.4 Ghz)
+(supports more clients in an area)</p>
+<p>Transmission speeds</p>
+<ul>
+<li>11 Mbps (b)</li>
+<li>54 Mbps (a)</li>
+<li>54 (g)</li>
+<li>600 Mbps (n, 2009) 2.4 &amp; 5Ghz == Mimo</li>
+<li>6.7 Gbps (ah, 2011)</li>
+<li>6.9 Gbps, 5Ghz only(ac, 2016)</li>
+<li>10Gbps (ax, 2019)</li>
+</ul>
+<p>Transmission width</p>
+<ul>
+<li>20 Mhz</li>
+<li>802.11n - double wide - 40 Mhz</li>
+<li>802.11ac - MIMO 8 streams - 160 Mhz wide</li>
+</ul>
+<p>Wifi Discovery Tools</p>
+<ul>
+<li>Beacon Frame - sent from AP to advertise itself to wifi clients</li>
+<li>Wireless Diagnostics on MacOS</li>
+</ul>
+<p>WLAN Security</p>
+<ul>
+<li>? auth</li>
+</ul>
+<p>WLAN Authentication</p>
+<ul>
+<li>Open /</li>
+<li>802.11i (user auth) (Preshared-Key or 802.1x/ EAP, extensible authentication protocol)</li>
+</ul>
+<p>WLAN Encryption</p>
+<ul>
+<li>WEP (wireless encryption), don&rsquo;t use</li>
+<li>AES-CCMP (advanced encryption standard), WPA2 certification</li>
+<li>TKIP (temporal key ccc protocol), WPA certification</li>
+</ul>
+<p>WLAN Performance</p>
+<ul>
+<li>RF physical layer
+<ul>
+<li>(microwaves, cordless phones) - interference</li>
+<li>Environment (walls brick, people)</li>
+<li>distance from AP</li>
+<li>number of clients</li>
+</ul>
+</li>
+</ul>
+<p>References
+<a href="https://www.electronics-notes.com/articles/connectivity/wifi-ieee-802-11/standards.php">https://www.electronics-notes.com/articles/connectivity/wifi-ieee-802-11/standards.php</a></p>
+<p><a href="https://www.digitalairwireless.com/articles/blog/what-is-a-wireless-bridge">https://www.digitalairwireless.com/articles/blog/what-is-a-wireless-bridge</a></p>
+<p><a href="https://www.cablesandkits.com/learning-center/autonomous-vs-lightweight-access-points">https://www.cablesandkits.com/learning-center/autonomous-vs-lightweight-access-points</a></p>
+<h2 id="ip-addressing-and-ipv4-subnetting">IP Addressing and IPv4 Subnetting</h2>
+<p>Logical Addressing (Layer 3)
+IP, Internet Protocol
+Addressing Methods - <a href="https://en.wikipedia.org/wiki/Anycast">https://en.wikipedia.org/wiki/Anycast</a>
+IP is binary. (8 bits of binary in octets, 32 bits in total) - 0 - 255</p>
+<h3 id="dotted-decimal-notation">Dotted Decimal Notation</h3>
+<p>IPv4 uses 32 bits of binary in total. 8 bits of binary are grouped into octets,
+separated by a decimal. This format is known as dotted decimal notation. Adding up
+all bits in each octet equals 255; thus, the range of values for each octet is
+0 - 255.</p>
+<p><img src="../assets/dotted-decimal-notation.png" alt="diagram of dotted decimal notation illustrating the grouping structure and a basic calculation"></p>
+<h3 id="classful-addresses"><em>Classful</em> Addresses</h3>
+<p><img src="../assets/classful-addresses.png" alt=""></p>
+<p>C</p>
+<h4 id="reserved-ipv4-addresses">Reserved IPv4 Addresses</h4>
+<p><img src="../assets/reserved-ipv4-addresses.png" alt=""></p>
+<p>Loop-back can be used to check if the IP stack is functioning
+Ping yourself! (16 million addresses)</p>
+<p>Interface, all 0 bits (network name)
+Inferface, all 1 bits (broadcast address)</p>
+<p>APIPA (automatic private IP address)  169.254.c.c</p>
+<h3 id="private-addresses-also-reserved">Private Addresses (also reserved)</h3>
+<p>Class A private (10.0.0.0)
+Class B private (172.16.0.0)
+Class B (192.168.0.0)</p>
+<h3 id="network-mask">Network Mask</h3>
+<p>&lsquo;mask off&rsquo; the network part of the address (using 11111111.x.x), reducing the number
+of bits available for host addresses</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Class</td>
+<td>Binary Mask</td>
+<td>Decimal Mask</td>
+<td>Prefix</td>
+</tr>
+<tr>
+<td>A</td>
+<td>11111111.00000000.00000000.00000000</td>
+<td>255.0.0.0</td>
+<td>/8</td>
+</tr>
+<tr>
+<td>B</td>
+<td>11111111.11111111.00000000.00000000</td>
+<td>255.255.0.0</td>
+<td>/16</td>
+</tr>
+<tr>
+<td>C</td>
+<td>11111111.11111111.11111111.00000000</td>
+<td>255.255.255.0</td>
+<td>/24</td>
+</tr>
+</tbody>
+</table>
+<p>Often converted to a decimal mask 255.0.0.0  or /8</p>
+<p>the network mask differentiates the &rsquo;network&rsquo; bits of an IPv4 address, leaving the
+remaining bits to calculate hosts addresses.</p>
+<p>Network Prefix
+Class A  /8
+Class B  /16
+Class C  /24</p>
+<p>Can I use the switch (i.e. packet destination is in the same network)
+Do I need to use a router? (i.e. on another network)</p>
+<h4 id="binary-numbering">Binary Numbering</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Bit Position</strong></td>
+<td>8</td>
+<td>7</td>
+<td>6</td>
+<td>5</td>
+<td>4</td>
+<td>3</td>
+<td>2</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Binary Power</strong></td>
+<td>2⁷</td>
+<td>2⁶</td>
+<td>2⁵</td>
+<td>2⁴</td>
+<td>2³</td>
+<td>2²</td>
+<td>2¹</td>
+<td>2⁰</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Decimal Value</strong></td>
+<td>128</td>
+<td>64</td>
+<td>32</td>
+<td>16</td>
+<td>8</td>
+<td>4</td>
+<td>2</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>e.g., calculation</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>=</td>
+<td>18</td>
+</tr>
+</tbody>
+</table>
+<h3 id="classless-addressing"><em>Classless</em> addressing</h3>
+<p>CIDR (classless interdomain routing)</p>
+<p><img src="../assets/classless-addressing-CIDR.png" alt=""></p>
+<h2 id="ipv6">IPv6</h2>
+<p>128-bit address space
+Does not use Decimal Notation, Uses Hexadecimal addressing
+no subnet mask, uses prefix only</p>
+<p><img src="../assets/ipv6-addressing.png" alt="representational depiction of the hexidecimal groupings of an ipv4 address"></p>
+<h3 id="subnetting">Subnetting</h3>
+<p><img src="../assets/subnet-mask-rules.png" alt=""></p>
+<p>bit budget and binary tables
+subnetting table</p>
+<p>4 key subnet addresses</p>
+<table>
+<thead>
+<tr>
+<th>Key Address</th>
+<th>Binary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Subnet</td>
+<td>00000000</td>
+</tr>
+<tr>
+<td>First</td>
+<td>00000001</td>
+</tr>
+<tr>
+<td>Last</td>
+<td>11111110</td>
+</tr>
+<tr>
+<td>Broadcast</td>
+<td>11111111</td>
+</tr>
+</tbody>
+</table>
+<p>IP subnet calculator</p>
+<p><img src="../assets/calculating-subnets.png" alt=""></p>
+<h3 id="network-planning">Network Planning</h3>
+<p>Implementing a network requires an understanding of the business units and the potential
+for growth of the network in each segment.</p>
+<p><img src="../assets/planning-network-design.png" alt=""></p>
+<h3 id="tcp-udp-maintenance-protocols">TCP, UDP, Maintenance Protocols</h3>
+<p>Layer 4
+Flow Control
+TCP / UDP</p>
+<p><img src="../assets/TCP-handshake.png" alt=""></p>
+<p>Transmission Control Protocol
+User Datagram Protocol</p>
+<p>Voice and Video (speed is import)
+FTP (speed not as important, )</p>
+<h3 id="connection-classes">Connection Classes</h3>
+<ul>
+<li>Connection-Oriented (reliability)</li>
+<li>Connection-Less (speed) [no logical session]</li>
+</ul>
+<h3 id="connectino">Connectino</h3>
+<p>Client - initiates connection
+Server - Accepts request</p>
+<p>Connection - Transfer - Disconnect</p>
+<p><img src="../assets/message-packaging.png" alt=""></p>
+<h3 id="port-numbering">Port Numbering</h3>
+<ul>
+<li><a href="https://www.rfc-editor.org/rfc/rfc6335.html">RFC 6335</a>, Procedures for the Management of the Service Name and Transport Protocol Port Number Registry</li>
+<li><a href="https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml">IANA, Service Name and Transport Protocol Port Number Registry</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Port Ranges</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Well Known</td>
+<td>0- 1023</td>
+</tr>
+<tr>
+<td>Registered</td>
+<td>1024 - 49151</td>
+</tr>
+<tr>
+<td>Dynamic (Private)</td>
+<td>49152 - 65535</td>
+</tr>
+</tbody>
+</table>
+<p>service multiplexing (multiple applications)
+2 byte field - TCP Header</p>
+<h3 id="sockets">Sockets</h3>
+<p>Sockets are a combination of IP address and Port number.
+Sockets allow proper routing and communication of network packets</p>
+<p><img src="../assets/sockets.png" alt=""></p>
+<h3 id="nat">NAT</h3>
+<p>Router</p>
+<p>Router rewrites the TCP/UDP header to allow private IP addresses
+to travel to the public internet.</p>
+<p>NATing allows multiple devices on the private network to use
+a single public IP address for communications. In the early
+days, each private device had to have a corresponding public IP
+address (which is expensive and overwhelming)</p>
+<p>NAT Table</p>
+<p><img src="../assets/NAT.png" alt=""></p>
+<p>NAT uses Sockets for</p>
+<p>NAT table is only updated when packets go out</p>
+<h2 id="support-and-management-protocols">Support and Management Protocols</h2>
+<ul>
+<li>ARP -&gt;  method of determining the MAC address associated with a particular IP address, hardware device identification
+<ul>
+<li>Address Resolutoin protocol</li>
+<li>command line</li>
+</ul>
+</li>
+</ul>
+<p><img src="../assets/ARP.png" alt="diagram of an ARP message"></p>
+<ul>
+<li>IGMP
+<ul>
+<li>Internet Group Management Protocol</li>
+<li>Frames sent to multicast address and the group receives it</li>
+</ul>
+</li>
+</ul>
+<p><img src="../assets/IGMP.png" alt=""></p>
+<ul>
+<li>SNMP
+<ul>
+<li>Simple Network Management Protocl</li>
+<li>Agents - collect statistics about devices
+<ul>
+<li>utilization, throughput,</li>
+</ul>
+</li>
+<li>SNMP Management station/Console
+<ul>
+<li>HP Openview</li>
+<li>IBM Travolly</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="../assets/SNMP.png" alt=""></p>
+<ul>
+<li>DNS
+<ul>
+<li>domain name system</li>
+<li>NS.1 = authoritative DNS servers</li>
+<li>DNS Namespace (IANA)
+<ul>
+<li>root</li>
+<li>TLD e.g., .com</li>
+<li>subdomain - globalknowlwdge.com</li>
+<li>hostname - server1.globalknowledge.com</li>
+<li>FQDN -</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="../assets/DNS.png" alt=""></p>
+<ul>
+<li>TFTP</li>
+<li>DHCP - Dynamic Host Configuration Protocol</li>
+<li>ICMP - Internet Control Message Protocol
+<ul>
+<li>Protocol Analyzer</li>
+<li>Common Messages</li>
+<li><code>ping</code> uses ICMP echo request, echo reply</li>
+<li><a href="https://www.iana.org/assignments/icmp-parameters/icmp-parameters.xhtml">IANA, Internet Control Message Protocol (ICMP) Parameters</a></li>
+</ul>
+</li>
+</ul>
+<p><img src="../assets/ICMP.png" alt=""></p>
+<ul>
+<li>FTP</li>
+<li>Telnet
+<ul>
+<li>Terminal emulation</li>
+<li>Configure router and switches</li>
+<li></li>
+</ul>
+</li>
+</ul>
+<p>Header Type codes (08 06, for ARP)</p>
+<h2 id="routing-and-wide-area-networks">Routing and Wide Area Networks</h2>
+<p>Layer 3 - network layer</p>
+<ul>
+<li>one network to another</li>
+<li>one subnet to another</li>
+<li>one vlan to another</li>
+</ul>
+<p>Note:</p>
+<ul>
+<li>routers sit on the edge of a domain</li>
+<li>layer 2 broadcasts are not forward by routers</li>
+</ul>
+<p>Referred to as &rsquo;logical segmentation&rsquo;
+<img src="../assets/logical-segmentation.png" alt=""></p>
+<p>Routing metrics - best pathway</p>
+<ul>
+<li>bandwidth (higher bandwidth is better)</li>
+<li>hop count</li>
+<li>reliability</li>
+<li>arbitrary cost/weights</li>
+<li>delay</li>
+</ul>
+<h3 id="routing-protocols">Routing Protocols</h3>
+<ul>
+<li>RIP
+<ul>
+<li>RIP - Distance-Vector protocol (uses hop count, or number of routets)</li>
+<li>distance-vector</li>
+<li>Maximum 15 hops</li>
+<li>Not suitable for enterprose networks</li>
+</ul>
+</li>
+</ul>
+<p><img src="../assets/rip-routing-protocol.png" alt=""></p>
+<ul>
+<li>OSPF (open shortest path first)
+<ul>
+<li>interior gateway routing protocol</li>
+<li>Link-state routing protocol</li>
+</ul>
+</li>
+<li>EIGRP
+<ul>
+<li>Enhanced Interior Gateway Routing Protocol</li>
+<li>Enterprise network ready</li>
+<li>distance-vector &amp; link-state</li>
+<li>AD -&gt; administrative distance []</li>
+</ul>
+</li>
+<li>Border Gateway Protocol (BGP)
+<ul>
+<li>exterior routing protocol</li>
+<li>connects between multiple autonoumous systems</li>
+<li></li>
+</ul>
+</li>
+</ul>
+<h3 id="configuring-routers">Configuring Routers</h3>
+<ul>
+<li>IP addresses for each interface</li>
+<li>Which routing protocol</li>
+<li>security features</li>
+<li>user/password</li>
+</ul>
+<h3 id="wan">WAN</h3>
+<p>Connecting LANs together. Point to point circuits. ELINE, ELAN</p>
+<p>Packet-switching technology (carries packets)
+x.25
+frame relay
+ATM
+MPLS</p>
+<ul>
+<li>customer edge router</li>
+<li>label edge router</li>
+<li>label switching router</li>
+<li>label switched pathway</li>
+</ul>
+<p><img src="../assets/mpls.png" alt="">
+MPLS labels</p>
+<ul>
+<li>label , need a diagram</li>
+</ul>
+<p><img src="../assets/carrier-ethernet.png" alt="">
+carrier ethernet <a href="https://en.wikipedia.org/wiki/Carrier_Ethernet">https://en.wikipedia.org/wiki/Carrier_Ethernet</a></p>
+<ul>
+<li>&ldquo;metro ethernet&rdquo;</li>
+<li>dynamic bandwidth, pay-as-you-go</li>
+</ul>
+<p>UNI - user network interface, customer demarkcation point
+evc - ethernet virtual connection
+ovc - operator virtual connection
+cen -
+enni - extended network network interface</p>
+<p><img src="../assets/eline.png" alt="">
+E-Line</p>
+<ul>
+<li>point-to-point</li>
+<li>hub and spoke</li>
+<li>Ethernet Virtual Private Line or E-Line: a service connecting two customer Ethernet ports over a WAN.</li>
+</ul>
+<p>E-LAN</p>
+<ul>
+<li>multi-point to multi-point</li>
+<li>Ethernet Virtual Private LAN or E-LAN: a multipoint service connecting a set of customer endpoints, giving the appearance to the customer of a bridged Ethernet network connecting the sites.</li>
+</ul>
+<p>EVP-LAN</p>
+<ul>
+<li>Service multiplexing extension of the E-LAN service</li>
+</ul>
+<p>EP-LAN</p>
+<ul>
+<li>Single UNI at every customer site</li>
+<li>Provides transparent LAN services</li>
+</ul>
+<p>[Internet WANs]</p>
+<ul>
+<li>Residential (oversubscribed, no reliability)</li>
+<li>Small Business ()</li>
+<li>DIA - direct internet access - service-level agreement</li>
+</ul>
+<p>Circuit-switching (carries 0,1 bits)
+T1
+TDM - time division multiplexing
+SONET - synchronous optical networking</p>
+<ul>
+<li>sts</li>
+<li>oc - optical carrier</li>
+<li>dual fiber ring for fault-tolerance</li>
+</ul>
+<p>OC 768
+OC 1
+OC 192
+OC 3</p>
+<p>Optical Transport networks
+<img src="../assets/optical-transport-networks.png" alt=""></p>
+<ul>
+<li>IP traffic (packets)</li>
+<li>g.709</li>
+<li>OPU - optical payload unit</li>
+<li>optical data unit</li>
+<li>optical transport unit</li>
+</ul>
+<h2 id="web-protocols">Web Protocols</h2>
+<p>Email  (<a href="mailto:user@domain.name">user@domain.name</a>)</p>
+<ol>
+<li>user presses send on their email client</li>
+<li>email is sent to their local email server</li>
+<li>local mail server performs a DNS lookup to find the IP address of the receipiants mail server</li>
+<li>local mail server forwards message to receipients mail server</li>
+<li>receipiant mail server extracts the username and places the mail into a folder on the receipent mail server</li>
+<li>receipant user grabs their messages from their mail server</li>
+</ol>
+<h3 id="smtp">SMTP</h3>
+<p>simple mail transfer protocol
+only service to send outbound email
+port 25</p>
+<h3 id="pop3--imap4">POP3 &amp; IMAP4</h3>
+<p>used to retrieve email from a mail server to the client</p>
+<p>POP3 - post-office protocol
+&ldquo;moves&rdquo; the mail from the server to the client
+once obtained, removed from server
+port 110</p>
+<p>IMAP4 - internet message access protocol
+&ldquo;copies&rdquo; the mail from the server to the client
+port 143</p>
+<h3 id="instant-messaging">Instant Messaging</h3>
+<h3 id="simple">SIMPLE</h3>
+<p>SIP for instant messaging and presnce leveraging extensions</p>
+<p>RFC 3428
+IETF RFCs</p>
+<p>XMPP
+Extensible Messaging and presense protocol
+RFC 3920</p>
+<h3 id="voip-voice-over-ip">VoIP Voice over IP</h3>
+<p>Voice is digitized into packets and transmitted across the internet
+PBX (private branch express)</p>
+<p>SIP
+RTP</p>
+<h3 id="sip">SIP</h3>
+<p>Session initiation protocol</p>
+<ul>
+<li>multimedia session</li>
+</ul>
+<p>SIP sets up the connection
+RFC 3261 <a href="https://www.ietf.org/rfc/rfc3261.txt">https://www.ietf.org/rfc/rfc3261.txt</a></p>
+<p>Request/Response
+SIP proxy (sip server that tracks the IP of each phone)</p>
+<h3 id="rtp">RTP</h3>
+<p>Real-time transport protocol
+carries voice packets</p>
+<p>150 ms or less to eliminate jitter</p>
+<p>RTP restores the temporal order of each packet
+each packet contains about 20 ms of voice data</p>
+<h3 id="media-gateway">Media Gateway</h3>
+<p>Used to translate VoIP to the public telephone swithch system</p>
+<p>H.323 <a href="https://www.packetizer.com/standards/">https://www.packetizer.com/standards/</a>
+ITU protocol</p>
+<p>MGCP
+Media gateway control protocol</p>
+<h3 id="unified-communications">Unified Communications</h3>
+<p>Multiple tech into a single platform</p>
+<h3 id="remote-desktop-protocls">Remote desktop protocls</h3>
+<p>RDP (Remote Desktop Protocl), windows
+ICA (Independent Computing Archtiecture), citrix
+RFB (Remote Frame Buffer)</p>
+<h3 id="ftp">FTP</h3>
+<p>File transfer protocol</p>
+<h2 id="malware">Malware</h2>
+<ul>
+<li>RATs (remote access trojans)</li>
+<li>Keylogger (records keystrokes)</li>
+<li>trojans (appears to be beneficial, but cloaks )</li>
+<li>spyware (monitors user behavior)</li>
+</ul>
+<h2 id="authentication">Authentication</h2>
+<p>Verify the identity of a user</p>
+<ul>
+<li>RADIUS</li>
+<li>Kerberos (MIT, Microsoft Windows server)</li>
+<li>PAP</li>
+<li>CHAP</li>
+<li>TACACS</li>
+</ul>
+<h2 id="credentials">credentials</h2>
+<p>Proof of identity</p>
+<ul>
+<li>factors (or factiods)
+<ul>
+<li>something you know (maiden name)</li>
+<li>something you have (cards, token)</li>
+<li>something you are (retinal scan)</li>
+</ul>
+</li>
+</ul>
+<h2 id="firewall-edge-devices-perimeter">Firewall (edge devices, perimeter)</h2>
+<ul>
+<li>Packet filter (packet header examination, IP address)</li>
+<li>proxy server (intermediary)</li>
+<li>SMLI (stateful multi-layer inspection) - stateful inspection and deep packet inspection</li>
+<li>UTM (unified threat management | combines above)</li>
+<li>personal firewall (on the device connecting to a network)</li>
+</ul>
+<h2 id="intrusion-detection-systems">Intrusion detection systems</h2>
+<ul>
+<li>IDS (intrusion detection system) -&gt; monitor logs and report to security professionals</li>
+<li>IPS (intrusion prevention system) -&gt; can take action by updating firewall rules during an identified attack</li>
+</ul>
+<h2 id="improved-wireless-httpswwwwi-fiorg">Improved Wireless (<a href="https://www.wi-fi.org/">https://www.wi-fi.org/</a>)</h2>
+<ul>
+<li>WiGig, 60 GHz band, under 10m distance. Cable replacement technology</li>
+<li>HaLow, 802.11ah , 950mhz , low-power wireless connections for IoT</li>
+<li>BLE (bluetooth low energy), 2.4ghz band, only sends small packets to data</li>
+<li>5G, new antenna technologies, download speeds of up to 10 gbps</li>
+</ul>
+<h2 id="software-defined-networks">Software Defined Networks</h2>
+<p>Separates control plane from network/switching plane. Remote network devices can pull their configuration from a central
+control plane device, removing the need to configure each switch individually. This also allows for rapid response
+to changing network conditions by updating a single control place device.</p>
+<p><img src="../assets/software-defined-networks.png" alt="diagram of software device network application layers"></p>
+<ul>
+<li>Application layer (Northbound API), automation of the network for business applications</li>
+<li>Control place (SDN controller), changes to 1000s of device immediately</li>
+<li>Forwarding later (Southbound APIs | [OpenFlow](<a href="https://opennetworking.org/sdn-resources/customer-case-studies/openflow/">https://opennetworking.org/sdn-resources/customer-case-studies/openflow/</a>,
+remove administration of layer 3 packet forwarding tables)</li>
+</ul>
+<p><a href="https://opennetworking.org/">Open Networking Foundation</a></p>
+
+	
+	
+	<div class="text-muted mt-5 pt-3 border-top">
+  Last modified April 8, 2023: <a href="https://github.com/dzoladz/palimpsest//commit/c55dfe78a5053b9bcf274adaf59f00246ce032c3">UPDATE: security and SDN section (c55dfe7)</a>
+</div>
+
+</div>
+
+
+          </main>
+        </div>
+      </div>
+      
+<footer class="bg-dark py-5 row d-print-none">
+  <div class="container-fluid mx-sm-5">
+    <div class="row">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Email" aria-label="Email">
+    <a class="text-white" target="_blank" rel="noopener" href="mailto:derek@derekzoladz.com" aria-label="Email">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Twitter" aria-label="Twitter">
+    <a class="text-white" target="_blank" rel="noopener" href="https://twitter.com/derek_zoladz" aria-label="Twitter">
+      <i class="fab fa-twitter"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="GitHub" aria-label="GitHub">
+    <a class="text-white" target="_blank" rel="noopener" href="https://github.com/dzoladz" aria-label="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Website" aria-label="Website">
+    <a class="text-white" target="_blank" rel="noopener" href="https://www.derekzoladz.com/" aria-label="Website">
+      <i class="fas fa-globe-americas"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+        <small class="text-white">&copy; 2023 Derek Zoladz All Rights Reserved</small>
+        
+	
+		
+	
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+    
+  <script src="/palimpsest/js/main.min.6227ad7036f289989c8d2be757b53e3a42aedf74e0b3837489c15e442ee0d71b.js" integrity="sha256-YietcDbyiZicjSvnV7U&#43;OkKu33Tgs4N0icFeRC7g1xs=" crossorigin="anonymous"></script>
+<script src='/palimpsest/js/tabpane-persist.js'></script>
+
+  </body>
+</html>
