@@ -41,7 +41,15 @@ A conceptual model in which communications between a computing system are split 
 ### Layer 1 - Physical
 
 Most closely associated with the physical connection between devices. The physical layer provides an electrical and
-mechanical interface to the transmission medium (e.g. CAT5 cabling, SMF fiber). 
+mechanical interface to the transmission medium (e.g. CAT5 cabling, SMF fiber).
+
+Ethernet can travel 100m max distance.
+
+Hardware
+* Repeaters
+* Extenders
+* Hub
+* Bridges
 
 ### Layer 2 - Data Link
 This layer is responsible for the **Physical Address**
@@ -54,11 +62,34 @@ This layer is responsible for the **Physical Address**
     * https://maclookup.app/
   * 24-bits, serial number
 
+NIC Properties
+* Speed
+  * Manually set or auto-negotiate
+  * mbps (megabits per second)
+* Modes
+  * Simplex - One-way communication
+  * Duplex - Two-way communication
+    * Full duplex - simulatenaous send and receive
+    * Half duplex - one sends, other receives
+* Wake on LAN
+
 #### Operating at Layer 2
 | Hardware                    | Protocols  | Software   |
 |-----------------------------|------------|------------|
 | Ethernet switch             | Ethernet   |            |
 | NIC, Network Interface Card |            |            |
+
+Hardware -
+* Switches - Concerned with connecting individual computers together
+* Switches can example the layer 2 header information on incoming packets and only forward 
+those packets to a specific port
+* Intellegence - this physical port is connected to that physical computer
+* Switches (1) reduce noise on the network, reduce collisons; thus, improve performance and increase available bandwidth
+Improves security by only sending packets to specific machines, not all
+* 
+
+Two types: managed and unmanaged
+
 
 Unicast (one device)  
 Broadcast (all devices)
@@ -116,7 +147,7 @@ IEEE 802.1ax and the link aggregation protocol
 
 ### Layer 3 - Network Layer 
 * Logical Addressing (IP Address; software addressing)
-* Routing
+* Routing (TCP/IP)
 * Prioritization
 
 #### Operating at Layer 3
@@ -125,6 +156,13 @@ IEEE 802.1ax and the link aggregation protocol
 | Router     | IP        |             |
 |            | ICMP      |             |
 |            | Routing   |             |
+
+Hardware - 
+* Routers - Concerned with connecting *networks* together.
+
+Routers determine the best route for transmitting data.
+Do not forward broadcast packets.
+Routers can communicate with each other and exchange networks that each know s about
 
 
 ### Layer 4 - Transport
@@ -169,6 +207,10 @@ UTP cabling: unshielded twisted pair
 Cat 6 - 10 Gbps up to 50 m (this is what we're using in the SOCC)
 Numbering System - both ends of fixed horizontal
 
+Cat 5e
+Cat 6
+Cat 6a
+Cat 7
 
 ### Ethernet Nomencalture
 10Base-T
@@ -735,6 +777,19 @@ Proof of identity
 - UTM (unified threat management | combines above)
 - personal firewall (on the device connecting to a network)
 
+Hardware
+* Port
+* IP
+* VPN Concentrator
+* Honeypot
+* Content Filter (can analyze packets)
+
+Software
+* application
+* Usually only port based
+* controls internet access per application
+
+
 ## Intrusion detection systems
 - IDS (intrusion detection system) -> monitor logs and report to security professionals
 - IPS (intrusion prevention system) -> can take action by updating firewall rules during an identified attack
@@ -758,3 +813,21 @@ to changing network conditions by updating a single control place device.
 remove administration of layer 3 packet forwarding tables)
 
 [Open Networking Foundation](https://opennetworking.org/)
+
+## Power over Ethernet (PoE)
+802.3bt 
+
+## On-premise Network Controllers
+Wireless backhaul - Communication is tunneled back to the controller 
+* control plane (instructions, rules, lanes of traffic, stop signs)
+* data plane (actual data)
+
+## Cloud-based Network Controllers
+
+Backhaul - https://en.wikipedia.org/wiki/Backhaul_(telecommunications)
+
+Access points report back to a virtual controler in the public cloud
+
+
+
+
