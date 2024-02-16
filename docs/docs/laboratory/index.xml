@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Palimpsest – Laboratory</title>
-    <link>/palimpsest/docs/laboratory/</link>
+    <link>/docs/laboratory/</link>
     <description>Recent content in Laboratory on Palimpsest</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	  <atom:link href="/palimpsest/docs/laboratory/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/docs/laboratory/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: Kubernetes</title>
-      <link>/palimpsest/docs/laboratory/kubernetes/kubernetes/</link>
+      <link>/docs/laboratory/kubernetes/kubernetes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/laboratory/kubernetes/kubernetes/</guid>
+      <guid>/docs/laboratory/kubernetes/kubernetes/</guid>
       <description>
         
         
@@ -43,10 +43,10 @@
     
     <item>
       <title>Docs: Network Description</title>
-      <link>/palimpsest/docs/laboratory/network/networking-gear/</link>
+      <link>/docs/laboratory/network/networking-gear/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/laboratory/network/networking-gear/</guid>
+      <guid>/docs/laboratory/network/networking-gear/</guid>
       <description>
         
         
@@ -130,10 +130,10 @@
     
     <item>
       <title>Docs: Rancher</title>
-      <link>/palimpsest/docs/laboratory/kubernetes/rancher/</link>
+      <link>/docs/laboratory/kubernetes/rancher/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/laboratory/kubernetes/rancher/</guid>
+      <guid>/docs/laboratory/kubernetes/rancher/</guid>
       <description>
         
         
@@ -189,10 +189,10 @@
     
     <item>
       <title>Docs: Raspberry Pi Cluster</title>
-      <link>/palimpsest/docs/laboratory/kubernetes/cluster/</link>
+      <link>/docs/laboratory/kubernetes/cluster/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/laboratory/kubernetes/cluster/</guid>
+      <guid>/docs/laboratory/kubernetes/cluster/</guid>
       <description>
         
         
@@ -298,10 +298,10 @@
     
     <item>
       <title>Docs: Helm</title>
-      <link>/palimpsest/docs/laboratory/kubernetes/helm/</link>
+      <link>/docs/laboratory/kubernetes/helm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/laboratory/kubernetes/helm/</guid>
+      <guid>/docs/laboratory/kubernetes/helm/</guid>
       <description>
         
         

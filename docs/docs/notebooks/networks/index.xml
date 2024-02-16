@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Palimpsest – Networks</title>
-    <link>/palimpsest/docs/notebooks/networks/</link>
+    <link>/docs/notebooks/networks/</link>
     <description>Recent content in Networks on Palimpsest</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	  <atom:link href="/palimpsest/docs/notebooks/networks/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/docs/notebooks/networks/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: Commands</title>
-      <link>/palimpsest/docs/notebooks/networks/commands/</link>
+      <link>/docs/notebooks/networks/commands/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/networks/commands/</guid>
+      <guid>/docs/notebooks/networks/commands/</guid>
       <description>
         
         
@@ -47,10 +47,10 @@
     
     <item>
       <title>Docs: Networking</title>
-      <link>/palimpsest/docs/notebooks/networks/networking/</link>
+      <link>/docs/notebooks/networks/networking/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/networks/networking/</guid>
+      <guid>/docs/notebooks/networks/networking/</guid>
       <description>
         
         
@@ -92,6 +92,14 @@ spectrum through standards and regulation.&lt;/p&gt;
 &lt;h3 id=&#34;layer-1---physical&#34;&gt;Layer 1 - Physical&lt;/h3&gt;
 &lt;p&gt;Most closely associated with the physical connection between devices. The physical layer provides an electrical and
 mechanical interface to the transmission medium (e.g. CAT5 cabling, SMF fiber).&lt;/p&gt;
+&lt;p&gt;Ethernet can travel 100m max distance.&lt;/p&gt;
+&lt;p&gt;Hardware&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Repeaters&lt;/li&gt;
+&lt;li&gt;Extenders&lt;/li&gt;
+&lt;li&gt;Hub&lt;/li&gt;
+&lt;li&gt;Bridges&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3 id=&#34;layer-2---data-link&#34;&gt;Layer 2 - Data Link&lt;/h3&gt;
 &lt;p&gt;This layer is responsible for the &lt;strong&gt;Physical Address&lt;/strong&gt;&lt;/p&gt;
 &lt;h4 id=&#34;network-interface-card--media-access-control&#34;&gt;Network Interface Card &amp;amp; Media Access Control&lt;/h4&gt;
@@ -108,6 +116,27 @@ mechanical interface to the transmission medium (e.g. CAT5 cabling, SMF fiber).&
 &lt;li&gt;24-bits, serial number&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;NIC Properties&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Speed
+&lt;ul&gt;
+&lt;li&gt;Manually set or auto-negotiate&lt;/li&gt;
+&lt;li&gt;mbps (megabits per second)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Modes
+&lt;ul&gt;
+&lt;li&gt;Simplex - One-way communication&lt;/li&gt;
+&lt;li&gt;Duplex - Two-way communication
+&lt;ul&gt;
+&lt;li&gt;Full duplex - simulatenaous send and receive&lt;/li&gt;
+&lt;li&gt;Half duplex - one sends, other receives&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Wake on LAN&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id=&#34;operating-at-layer-2&#34;&gt;Operating at Layer 2&lt;/h4&gt;
 &lt;table&gt;
@@ -131,6 +160,17 @@ mechanical interface to the transmission medium (e.g. CAT5 cabling, SMF fiber).&
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;p&gt;Hardware -&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Switches - Concerned with connecting individual computers together&lt;/li&gt;
+&lt;li&gt;Switches can example the layer 2 header information on incoming packets and only forward
+those packets to a specific port&lt;/li&gt;
+&lt;li&gt;Intellegence - this physical port is connected to that physical computer&lt;/li&gt;
+&lt;li&gt;Switches (1) reduce noise on the network, reduce collisons; thus, improve performance and increase available bandwidth
+Improves security by only sending packets to specific machines, not all&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Two types: managed and unmanaged&lt;/p&gt;
 &lt;p&gt;Unicast (one device)&lt;br&gt;
 Broadcast (all devices)&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;../assets/ethernet-frame.png&#34; alt=&#34;Ethernet Frame Diagram&#34;&gt;
@@ -180,7 +220,7 @@ QoS - for example to voice priority order&lt;/p&gt;
 &lt;h3 id=&#34;layer-3---network-layer&#34;&gt;Layer 3 - Network Layer&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Logical Addressing (IP Address; software addressing)&lt;/li&gt;
-&lt;li&gt;Routing&lt;/li&gt;
+&lt;li&gt;Routing (TCP/IP)&lt;/li&gt;
 &lt;li&gt;Prioritization&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id=&#34;operating-at-layer-3&#34;&gt;Operating at Layer 3&lt;/h4&gt;
@@ -210,6 +250,13 @@ QoS - for example to voice priority order&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;p&gt;Hardware -&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Routers - Concerned with connecting &lt;em&gt;networks&lt;/em&gt; together.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Routers determine the best route for transmitting data.
+Do not forward broadcast packets.
+Routers can communicate with each other and exchange networks that each know s about&lt;/p&gt;
 &lt;h3 id=&#34;layer-4---transport&#34;&gt;Layer 4 - Transport&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Error handling&lt;/li&gt;
@@ -301,6 +348,10 @@ QoS - for example to voice priority order&lt;/p&gt;
 &lt;p&gt;UTP cabling: unshielded twisted pair
 Cat 6 - 10 Gbps up to 50 m (this is what we&amp;rsquo;re using in the SOCC)
 Numbering System - both ends of fixed horizontal&lt;/p&gt;
+&lt;p&gt;Cat 5e
+Cat 6
+Cat 6a
+Cat 7&lt;/p&gt;
 &lt;h3 id=&#34;ethernet-nomencalture&#34;&gt;Ethernet Nomencalture&lt;/h3&gt;
 &lt;p&gt;10Base-T&lt;/p&gt;
 &lt;p&gt;10 = Mbps
@@ -962,6 +1013,20 @@ RFB (Remote Frame Buffer)&lt;/p&gt;
 &lt;li&gt;UTM (unified threat management | combines above)&lt;/li&gt;
 &lt;li&gt;personal firewall (on the device connecting to a network)&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;Hardware&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Port&lt;/li&gt;
+&lt;li&gt;IP&lt;/li&gt;
+&lt;li&gt;VPN Concentrator&lt;/li&gt;
+&lt;li&gt;Honeypot&lt;/li&gt;
+&lt;li&gt;Content Filter (can analyze packets)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Software&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;application&lt;/li&gt;
+&lt;li&gt;Usually only port based&lt;/li&gt;
+&lt;li&gt;controls internet access per application&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;intrusion-detection-systems&#34;&gt;Intrusion detection systems&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;IDS (intrusion detection system) -&amp;gt; monitor logs and report to security professionals&lt;/li&gt;
@@ -986,6 +1051,17 @@ to changing network conditions by updating a single control place device.&lt;/p&
 remove administration of layer 3 packet forwarding tables)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;a href=&#34;https://opennetworking.org/&#34;&gt;Open Networking Foundation&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;power-over-ethernet-poe&#34;&gt;Power over Ethernet (PoE)&lt;/h2&gt;
+&lt;p&gt;802.3bt&lt;/p&gt;
+&lt;h2 id=&#34;on-premise-network-controllers&#34;&gt;On-premise Network Controllers&lt;/h2&gt;
+&lt;p&gt;Wireless backhaul - Communication is tunneled back to the controller&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;control plane (instructions, rules, lanes of traffic, stop signs)&lt;/li&gt;
+&lt;li&gt;data plane (actual data)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;cloud-based-network-controllers&#34;&gt;Cloud-based Network Controllers&lt;/h2&gt;
+&lt;p&gt;Backhaul - &lt;a href=&#34;https://en.wikipedia.org/wiki/Backhaul_(telecommunications)&#34;&gt;https://en.wikipedia.org/wiki/Backhaul_(telecommunications)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Access points report back to a virtual controler in the public cloud&lt;/p&gt;
 
       </description>
     </item>

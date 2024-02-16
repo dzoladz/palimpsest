@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Palimpsest – SysAdmin</title>
-    <link>/palimpsest/docs/notebooks/sysadmin/</link>
+    <link>/docs/notebooks/sysadmin/</link>
     <description>Recent content in SysAdmin on Palimpsest</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	  <atom:link href="/palimpsest/docs/notebooks/sysadmin/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/docs/notebooks/sysadmin/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: Chroot SFTP Setup</title>
-      <link>/palimpsest/docs/notebooks/sysadmin/chroot-sftp-setup/</link>
+      <link>/docs/notebooks/sysadmin/chroot-sftp-setup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/sysadmin/chroot-sftp-setup/</guid>
+      <guid>/docs/notebooks/sysadmin/chroot-sftp-setup/</guid>
       <description>
         
         
@@ -97,10 +97,10 @@
     
     <item>
       <title>Docs: Cron</title>
-      <link>/palimpsest/docs/notebooks/sysadmin/cron/</link>
+      <link>/docs/notebooks/sysadmin/cron/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/sysadmin/cron/</guid>
+      <guid>/docs/notebooks/sysadmin/cron/</guid>
       <description>
         
         
@@ -169,10 +169,10 @@
     
     <item>
       <title>Docs: Expanding Volumes</title>
-      <link>/palimpsest/docs/notebooks/sysadmin/expand_volumes/</link>
+      <link>/docs/notebooks/sysadmin/expand_volumes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/sysadmin/expand_volumes/</guid>
+      <guid>/docs/notebooks/sysadmin/expand_volumes/</guid>
       <description>
         
         
@@ -205,10 +205,10 @@
     
     <item>
       <title>Docs: fail2ban</title>
-      <link>/palimpsest/docs/notebooks/sysadmin/fail2ban/</link>
+      <link>/docs/notebooks/sysadmin/fail2ban/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/sysadmin/fail2ban/</guid>
+      <guid>/docs/notebooks/sysadmin/fail2ban/</guid>
       <description>
         
         
@@ -225,10 +225,10 @@
     
     <item>
       <title>Docs: LVM</title>
-      <link>/palimpsest/docs/notebooks/sysadmin/lvm/</link>
+      <link>/docs/notebooks/sysadmin/lvm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/sysadmin/lvm/</guid>
+      <guid>/docs/notebooks/sysadmin/lvm/</guid>
       <description>
         
         
@@ -344,10 +344,10 @@
     
     <item>
       <title>Docs: Packages</title>
-      <link>/palimpsest/docs/notebooks/sysadmin/packages/</link>
+      <link>/docs/notebooks/sysadmin/packages/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/sysadmin/packages/</guid>
+      <guid>/docs/notebooks/sysadmin/packages/</guid>
       <description>
         
         
@@ -380,10 +380,10 @@ apt - works with software repos&lt;/p&gt;
     
     <item>
       <title>Docs: sed &amp; awk</title>
-      <link>/palimpsest/docs/notebooks/sysadmin/sed_awk/</link>
+      <link>/docs/notebooks/sysadmin/sed_awk/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/sysadmin/sed_awk/</guid>
+      <guid>/docs/notebooks/sysadmin/sed_awk/</guid>
       <description>
         
         
@@ -423,10 +423,10 @@ tac config.txt | sed -n &amp;#39;/^IncludeFile.*/ {p;q}&amp;#39;
     
     <item>
       <title>Docs: SSH</title>
-      <link>/palimpsest/docs/notebooks/sysadmin/ssh/</link>
+      <link>/docs/notebooks/sysadmin/ssh/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/sysadmin/ssh/</guid>
+      <guid>/docs/notebooks/sysadmin/ssh/</guid>
       <description>
         
         
@@ -443,10 +443,10 @@ tac config.txt | sed -n &amp;#39;/^IncludeFile.*/ {p;q}&amp;#39;
     
     <item>
       <title>Docs: SSL</title>
-      <link>/palimpsest/docs/notebooks/sysadmin/ssl/</link>
+      <link>/docs/notebooks/sysadmin/ssl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/sysadmin/ssl/</guid>
+      <guid>/docs/notebooks/sysadmin/ssl/</guid>
       <description>
         
         
@@ -531,10 +531,10 @@ tac config.txt | sed -n &amp;#39;/^IncludeFile.*/ {p;q}&amp;#39;
     
     <item>
       <title>Docs: SysAdmin Tasks</title>
-      <link>/palimpsest/docs/notebooks/sysadmin/sysadmin_tasks/</link>
+      <link>/docs/notebooks/sysadmin/sysadmin_tasks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/sysadmin/sysadmin_tasks/</guid>
+      <guid>/docs/notebooks/sysadmin/sysadmin_tasks/</guid>
       <description>
         
         
