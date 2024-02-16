@@ -448,30 +448,6 @@ Sound generators for ambient coding environments
     </item>
     
     <item>
-      <title>Docs: </title>
-      <link>/palimpsest/docs/notebooks/github_topic_browse/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/palimpsest/docs/notebooks/github_topic_browse/</guid>
-      <description>
-        
-        
-        &lt;p&gt;&lt;a href=&#34;https://github.com/topics/pdf-parsing&#34;&gt;https://github.com/topics/pdf-parsing&lt;/a&gt;
-&lt;a href=&#34;https://github.com/topics/table-extraction&#34;&gt;https://github.com/topics/table-extraction&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/topics/visidata&#34;&gt;https://github.com/topics/visidata&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/topics/sierra-api&#34;&gt;https://github.com/topics/sierra-api&lt;/a&gt;
-&lt;a href=&#34;https://github.com/topics/innovative-interfaces&#34;&gt;https://github.com/topics/innovative-interfaces&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/topics/metadata&#34;&gt;https://github.com/topics/metadata&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/topics/code4lib&#34;&gt;https://github.com/topics/code4lib&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/topics/bagit&#34;&gt;https://github.com/topics/bagit&lt;/a&gt;
-&lt;a href=&#34;https://github.com/topics/oai-pmh&#34;&gt;https://github.com/topics/oai-pmh&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/topics/marcxml-record&#34;&gt;https://github.com/topics/marcxml-record&lt;/a&gt;
-&lt;a href=&#34;https://github.com/topics/marc&#34;&gt;https://github.com/topics/marc&lt;/a&gt;&lt;/p&gt;
-
-      </description>
-    </item>
-    
-    <item>
       <title>Docs: Authentication</title>
       <link>/palimpsest/docs/notebooks/authentication/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -3529,10 +3505,10 @@ tac config.txt | sed -n &amp;#39;/^IncludeFile.*/ {p;q}&amp;#39;
     
     <item>
       <title>Docs: SSL</title>
-      <link>/palimpsest/docs/notebooks/ssl/</link>
+      <link>/palimpsest/docs/notebooks/sysadmin/ssl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/ssl/</guid>
+      <guid>/palimpsest/docs/notebooks/sysadmin/ssl/</guid>
       <description>
         
         

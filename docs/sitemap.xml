@@ -20,6 +20,9 @@
     <loc>/palimpsest/docs/notebooks/</loc>
     <lastmod>2021-11-26T14:45:59-05:00</lastmod>
   </url><url>
+    <loc>/palimpsest/docs/notebooks/sysadmin/</loc>
+    <lastmod>2024-02-15T21:15:42-05:00</lastmod>
+  </url><url>
     <loc>/palimpsest/docs/accessibility/</loc>
     <lastmod>2021-05-20T06:52:50-04:00</lastmod>
   </url><url>
@@ -50,9 +53,6 @@
     <loc>/palimpsest/docs/notebooks/ambiance/</loc>
     <lastmod>2023-04-19T09:13:28-04:00</lastmod>
   </url><url>
-    <loc>/palimpsest/docs/notebooks/github_topic_browse/</loc>
-    <lastmod>2021-05-10T21:39:45-04:00</lastmod>
-  </url><url>
     <loc>/palimpsest/docs/notebooks/authentication/</loc>
     <lastmod>2023-04-18T21:02:41-04:00</lastmod>
   </url><url>
@@ -68,6 +68,7 @@
     <lastmod>2021-05-10T21:39:45-04:00</lastmod>
   </url><url>
     <loc>/palimpsest/docs/notebooks/sysadmin/chroot-sftp-setup/</loc>
+    <lastmod>2024-02-15T21:15:42-05:00</lastmod>
   </url><url>
     <loc>/palimpsest/docs/notebooks/networks/commands/</loc>
     <lastmod>2023-04-01T18:14:10-04:00</lastmod>
@@ -76,6 +77,7 @@
     <lastmod>2021-05-09T17:51:15-04:00</lastmod>
   </url><url>
     <loc>/palimpsest/docs/notebooks/sysadmin/cron/</loc>
+    <lastmod>2024-02-15T21:15:42-05:00</lastmod>
   </url><url>
     <loc>/palimpsest/docs/notebooks/diagramming/</loc>
     <lastmod>2023-04-18T21:03:38-04:00</lastmod>
@@ -90,11 +92,13 @@
     <lastmod>2023-01-04T21:19:20-05:00</lastmod>
   </url><url>
     <loc>/palimpsest/docs/notebooks/sysadmin/expand_volumes/</loc>
+    <lastmod>2024-02-15T21:15:42-05:00</lastmod>
   </url><url>
     <loc>/palimpsest/docs/notebooks/ezproxy/</loc>
     <lastmod>2022-05-19T10:14:34-04:00</lastmod>
   </url><url>
     <loc>/palimpsest/docs/notebooks/sysadmin/fail2ban/</loc>
+    <lastmod>2024-02-15T21:15:42-05:00</lastmod>
   </url><url>
     <loc>/palimpsest/docs/notebooks/geospatial/</loc>
     <lastmod>2024-02-15T20:57:55-05:00</lastmod>
@@ -115,6 +119,7 @@
     <lastmod>2021-05-10T21:39:45-04:00</lastmod>
   </url><url>
     <loc>/palimpsest/docs/notebooks/sysadmin/lvm/</loc>
+    <lastmod>2024-02-15T21:15:42-05:00</lastmod>
   </url><url>
     <loc>/palimpsest/docs/notebooks/mailman/</loc>
     <lastmod>2021-09-24T14:43:24-04:00</lastmod>
@@ -132,6 +137,7 @@
     <lastmod>2023-04-08T11:51:03-04:00</lastmod>
   </url><url>
     <loc>/palimpsest/docs/notebooks/sysadmin/packages/</loc>
+    <lastmod>2024-02-15T21:15:42-05:00</lastmod>
   </url><url>
     <loc>/palimpsest/</loc>
     <lastmod>2021-05-09T18:17:44-04:00</lastmod>
@@ -161,16 +167,19 @@
     <lastmod>2018-09-04T11:36:40+02:00</lastmod>
   </url><url>
     <loc>/palimpsest/docs/notebooks/sysadmin/sed_awk/</loc>
+    <lastmod>2024-02-15T21:15:42-05:00</lastmod>
   </url><url>
     <loc>/palimpsest/docs/notebooks/sip/</loc>
     <lastmod>2021-05-10T21:39:45-04:00</lastmod>
   </url><url>
     <loc>/palimpsest/docs/notebooks/sysadmin/ssh/</loc>
+    <lastmod>2024-02-15T21:15:42-05:00</lastmod>
   </url><url>
-    <loc>/palimpsest/docs/notebooks/ssl/</loc>
-    <lastmod>2022-03-07T14:45:23-05:00</lastmod>
+    <loc>/palimpsest/docs/notebooks/sysadmin/ssl/</loc>
+    <lastmod>2024-02-15T21:15:42-05:00</lastmod>
   </url><url>
     <loc>/palimpsest/docs/notebooks/sysadmin/sysadmin_tasks/</loc>
+    <lastmod>2024-02-15T21:15:42-05:00</lastmod>
   </url><url>
     <loc>/palimpsest/tags/</loc>
   </url><url>

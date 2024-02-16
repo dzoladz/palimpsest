@@ -74,10 +74,12 @@ id = "UA-00000000-0"
 [languages]
 [languages.en]
 title = "Palimpsest"
-description = "Palimpsest"
 languageName ="English"
-# Weight used for sorting.
 weight = 1
+
+[languages.en.params]
+description = "Palimpsest"
+
 
 # ----------------------------------------------------------------------------------
 # MARKUP
@@ -147,8 +149,11 @@ github_branch= "main"
 #
 # Use booleans to enable/disable search features
 # ----------------------------------------------------------------------------------
-# Algolia DocSearch
-algolia_docsearch = false
+[params.search.algolia]
+appId = ""
+apiKey = ""
+indexName = "docsearch"
+
 
 # Lunr.js offline search
 offlineSearch = false
@@ -165,8 +170,8 @@ prism_syntax_highlighting = false
 [params.ui]
 #  Set to true to disable breadcrumb navigation.
 breadcrumb_disable = false
-# Set to true to disable the About link in the site footer
-footer_about_disable = false
+# Set to true to enable the About link in the site footer
+footer_about_enable = true
 # Set to false if you don't want to display a logo (/assets/icons/logo.svg) in the top navbar
 navbar_logo = false
 # Set to true if you don't want the top navbar to be translucent when over a `block/cover`, like on the homepage.
