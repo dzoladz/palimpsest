@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Palimpsest – Community</title>
-    <link>/tear-it-down/</link>
+    <link>/palimpsest/tear-it-down/</link>
     <description>Recent content in Community on Palimpsest</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	  <atom:link href="/tear-it-down/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/palimpsest/tear-it-down/index.xml" rel="self" type="application/rss+xml" />
     
     
       
