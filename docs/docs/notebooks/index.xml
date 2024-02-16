@@ -4,6 +4,7 @@
     <link>/palimpsest/docs/notebooks/</link>
     <description>Recent content in Notebooks on Palimpsest</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     
 	  <atom:link href="/palimpsest/docs/notebooks/index.xml" rel="self" type="application/rss+xml" />
     
@@ -41,6 +42,31 @@
     
     <item>
       <title>Docs: </title>
+      <link>/palimpsest/docs/notebooks/ambiance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/palimpsest/docs/notebooks/ambiance/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;a href=&#34;&#34;&gt;&amp;mdash;
+title: &amp;ldquo;Ambiance&amp;rdquo;
+description: &amp;gt;
+Sound generators for ambient coding environments
+&amp;mdash;&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://musicforprogramming.net/latest/&#34;&gt;musicForProgramming&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mynoise.net/&#34;&gt;myNoise&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://noises.online/&#34;&gt;noisesOnline&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://atimexp.blogspot.com/&#34;&gt;Experiment in Time&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=sXC6AUbY69A&#34;&gt;Polyrhythmic Music for Focus and Studying&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: </title>
       <link>/palimpsest/docs/notebooks/github_topic_browse/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -64,19 +90,18 @@
     </item>
     
     <item>
-      <title>Docs: Ambiance</title>
-      <link>/palimpsest/docs/notebooks/ambiance/</link>
+      <title>Docs: Authentication</title>
+      <link>/palimpsest/docs/notebooks/authentication/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/ambiance/</guid>
+      <guid>/palimpsest/docs/notebooks/authentication/</guid>
       <description>
         
         
         &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://musicforprogramming.net/latest/&#34;&gt;musicForProgramming&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://mynoise.net/&#34;&gt;myNoise&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://noises.online/&#34;&gt;noisesOnline&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://openid.net/&#34;&gt;OpenID&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://isni.org/&#34;&gt;ISNI&lt;/a&gt;&lt;br&gt;
+ISNI (International Standard Name Identifier) is an ISO standard, in use by numerous libraries, publishers, databases, and rights management organizations around the world. It is used to uniquely identify persons and organizations involved in creative activities, as well as public personas of both, such as pseudonyms, stage names, record labels or publishing imprints&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>
@@ -188,10 +213,10 @@
     
     <item>
       <title>Docs: Chroot SFTP Setup</title>
-      <link>/palimpsest/docs/notebooks/chroot-sftp-setup/</link>
+      <link>/palimpsest/docs/notebooks/sysadmin/chroot-sftp-setup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/chroot-sftp-setup/</guid>
+      <guid>/palimpsest/docs/notebooks/sysadmin/chroot-sftp-setup/</guid>
       <description>
         
         
@@ -269,10 +294,10 @@
     
     <item>
       <title>Docs: Cron</title>
-      <link>/palimpsest/docs/notebooks/cron/</link>
+      <link>/palimpsest/docs/notebooks/sysadmin/cron/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/cron/</guid>
+      <guid>/palimpsest/docs/notebooks/sysadmin/cron/</guid>
       <description>
         
         
@@ -352,6 +377,7 @@
 &lt;li&gt;&lt;a href=&#34;https://www.graphviz.org/documentation/&#34;&gt;Graphviz Docs&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.graphviz.org/doc/info/attrs.html&#34;&gt;Graphviz Attribute Reference&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://magjac.com/graphviz-visual-editor/&#34;&gt;Web-based Visual Editor&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://diagrams.mingrammer.com/&#34;&gt;Diagrams&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>
@@ -525,10 +551,10 @@ EXPOSE * expose container ports to host system&lt;/p&gt;
     
     <item>
       <title>Docs: Expanding Volumes</title>
-      <link>/palimpsest/docs/notebooks/expand_volumes/</link>
+      <link>/palimpsest/docs/notebooks/sysadmin/expand_volumes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/expand_volumes/</guid>
+      <guid>/palimpsest/docs/notebooks/sysadmin/expand_volumes/</guid>
       <description>
         
         
@@ -695,10 +721,10 @@ EXPOSE * expose container ports to host system&lt;/p&gt;
     
     <item>
       <title>Docs: fail2ban</title>
-      <link>/palimpsest/docs/notebooks/fail2ban/</link>
+      <link>/palimpsest/docs/notebooks/sysadmin/fail2ban/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/fail2ban/</guid>
+      <guid>/palimpsest/docs/notebooks/sysadmin/fail2ban/</guid>
       <description>
         
         
@@ -709,6 +735,79 @@ EXPOSE * expose container ports to host system&lt;/p&gt;
 &lt;li&gt;Manually Unban an IP from a Jail: &lt;code&gt;fail2ban-client set {jail name} unbanip {ip address}&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Manually Ban an IP to a Jail: &lt;code&gt;fail2ban-client set {jail name} banip {ip address}&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Geospatial</title>
+      <link>/palimpsest/docs/notebooks/geospatial/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/palimpsest/docs/notebooks/geospatial/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;types-of-geospatial-data&#34;&gt;Types of Geospatial Data&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Raster data&lt;/strong&gt; - Suitable for continuous information without fixed borders, represented as a grid of cells
+with values indicating observed features. It is often monitored at regular intervals and interpolated to
+create a continuous surface.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Vector data&lt;/strong&gt; - Uses points, lines, and polygons to represent spatial properties, including points of interest,
+transportation networks, administrative boundaries, and land parcels, often used for discrete data with precise
+positions or hard constraints.&lt;/p&gt;
+&lt;h2 id=&#34;storage-formats-for-geospatial-data&#34;&gt;Storage Formats for Geospatial Data&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;ESRI Shapefile (vector)&lt;/li&gt;
+&lt;li&gt;GeoJSON (vector)&lt;/li&gt;
+&lt;li&gt;Erdas Imagine Image File Format (EIF)&lt;/li&gt;
+&lt;li&gt;GeoTIFF&lt;/li&gt;
+&lt;li&gt;Geopackage (GPKG)&lt;/li&gt;
+&lt;li&gt;GeoJSON&lt;/li&gt;
+&lt;li&gt;Light Detection Ranging (LiDAR)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;python-packages-for-geospatial-data-analysis&#34;&gt;Python Packages for Geospatial Data Analysis&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Package&lt;/th&gt;
+&lt;th&gt;Suitable for Data Type&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Geopandas&lt;/td&gt;
+&lt;td&gt;Vector Data&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Folium&lt;/td&gt;
+&lt;td&gt;Point clouds&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ipyleaflet&lt;/td&gt;
+&lt;td&gt;Point clouds&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Rasterio&lt;/td&gt;
+&lt;td&gt;Raster Data&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Geoplot&lt;/td&gt;
+&lt;td&gt;Vector Data&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Shapely&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Pandas&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Cartopy&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 
       </description>
     </item>
@@ -1126,10 +1225,10 @@ function submitArticleDatabasesSearch() {
     
     <item>
       <title>Docs: LVM</title>
-      <link>/palimpsest/docs/notebooks/lvm/</link>
+      <link>/palimpsest/docs/notebooks/sysadmin/lvm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/lvm/</guid>
+      <guid>/palimpsest/docs/notebooks/sysadmin/lvm/</guid>
       <description>
         
         
@@ -1450,10 +1549,10 @@ monit monitor all
     
     <item>
       <title>Docs: Packages</title>
-      <link>/palimpsest/docs/notebooks/packages/</link>
+      <link>/palimpsest/docs/notebooks/sysadmin/packages/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/packages/</guid>
+      <guid>/palimpsest/docs/notebooks/sysadmin/packages/</guid>
       <description>
         
         
@@ -1811,10 +1910,10 @@ configuration file.&lt;/p&gt;
     
     <item>
       <title>Docs: sed &amp; awk</title>
-      <link>/palimpsest/docs/notebooks/sed_awk/</link>
+      <link>/palimpsest/docs/notebooks/sysadmin/sed_awk/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/sed_awk/</guid>
+      <guid>/palimpsest/docs/notebooks/sysadmin/sed_awk/</guid>
       <description>
         
         
@@ -1885,10 +1984,10 @@ tac config.txt | sed -n &amp;#39;/^IncludeFile.*/ {p;q}&amp;#39;
     
     <item>
       <title>Docs: SSH</title>
-      <link>/palimpsest/docs/notebooks/ssh/</link>
+      <link>/palimpsest/docs/notebooks/sysadmin/ssh/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/ssh/</guid>
+      <guid>/palimpsest/docs/notebooks/sysadmin/ssh/</guid>
       <description>
         
         
@@ -1993,10 +2092,10 @@ tac config.txt | sed -n &amp;#39;/^IncludeFile.*/ {p;q}&amp;#39;
     
     <item>
       <title>Docs: SysAdmin Tasks</title>
-      <link>/palimpsest/docs/notebooks/sysadmin_tasks/</link>
+      <link>/palimpsest/docs/notebooks/sysadmin/sysadmin_tasks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/sysadmin_tasks/</guid>
+      <guid>/palimpsest/docs/notebooks/sysadmin/sysadmin_tasks/</guid>
       <description>
         
         
