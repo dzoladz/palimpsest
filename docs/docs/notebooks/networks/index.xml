@@ -46,6 +46,79 @@
     </item>
     
     <item>
+      <title>Docs: Fiber Optics</title>
+      <link>/palimpsest/docs/notebooks/networks/fiber_optics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/palimpsest/docs/notebooks/networks/fiber_optics/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;optics&#34;&gt;Optics&lt;/h2&gt;
+&lt;h3 id=&#34;single-mode-fiber&#34;&gt;Single Mode Fiber&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;size&lt;/td&gt;
+&lt;td&gt;4 μm core (micron)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;use&lt;/td&gt;
+&lt;td&gt;long-haul applications&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;bandwidth&lt;/td&gt;
+&lt;td&gt;theoretically, unlimited&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;cost&lt;/td&gt;
+&lt;td&gt;$$$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;video controls width=&#34;100%&#34;&gt;
+  &lt;source src=&#34;../assets/optics_single_mode_fiber.mp4&#34; type=&#34;video/mp4&#34; /&gt;
+&lt;/video&gt;
+&lt;h3 id=&#34;multi-mode-fiber&#34;&gt;Multi-Mode Fiber&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;size&lt;/td&gt;
+&lt;td&gt;50 - 62.5 μm core (micron)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;use&lt;/td&gt;
+&lt;td&gt;internal building / data center&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;bandwidth&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;cost&lt;/td&gt;
+&lt;td&gt;$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;video controls width=&#34;100%&#34;&gt;
+  &lt;source src=&#34;../assets/optics_multimode_mode_fiber.mp4&#34; type=&#34;video/mp4&#34; /&gt;
+&lt;/video&gt;
+      </description>
+    </item>
+    
+    <item>
       <title>Docs: Interfaces</title>
       <link>/palimpsest/docs/notebooks/networks/interfaces/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
