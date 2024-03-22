@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Palimpsest – DevOps</title>
-    <link>/palimpsest/docs/devops/</link>
+    <link>/docs/devops/</link>
     <description>Recent content in DevOps on Palimpsest</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	  <atom:link href="/palimpsest/docs/devops/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/docs/devops/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: Coding</title>
-      <link>/palimpsest/docs/devops/coding/coding/</link>
+      <link>/docs/devops/coding/coding/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/devops/coding/coding/</guid>
+      <guid>/docs/devops/coding/coding/</guid>
       <description>
         
         
@@ -35,10 +35,10 @@
     
     <item>
       <title>Docs: References</title>
-      <link>/palimpsest/docs/devops/references/</link>
+      <link>/docs/devops/references/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/devops/references/</guid>
+      <guid>/docs/devops/references/</guid>
       <description>
         
         

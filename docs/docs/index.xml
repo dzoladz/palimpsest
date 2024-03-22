@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Palimpsest – Docs</title>
-    <link>/palimpsest/docs/</link>
+    <link>/docs/</link>
     <description>Recent content in Docs on Palimpsest</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	  <atom:link href="/palimpsest/docs/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/docs/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: Coding</title>
-      <link>/palimpsest/docs/devops/coding/coding/</link>
+      <link>/docs/devops/coding/coding/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/devops/coding/coding/</guid>
+      <guid>/docs/devops/coding/coding/</guid>
       <description>
         
         
@@ -35,10 +35,10 @@
     
     <item>
       <title>Docs: Kubernetes</title>
-      <link>/palimpsest/docs/laboratory/kubernetes/kubernetes/</link>
+      <link>/docs/laboratory/kubernetes/kubernetes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/laboratory/kubernetes/kubernetes/</guid>
+      <guid>/docs/laboratory/kubernetes/kubernetes/</guid>
       <description>
         
         
@@ -62,10 +62,10 @@
     
     <item>
       <title>Docs: Network Description</title>
-      <link>/palimpsest/docs/laboratory/network/networking-gear/</link>
+      <link>/docs/laboratory/network/networking-gear/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/laboratory/network/networking-gear/</guid>
+      <guid>/docs/laboratory/network/networking-gear/</guid>
       <description>
         
         
@@ -142,17 +142,17 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h2 id=&#34;network-diagram&#34;&gt;Network Diagram&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;../img/lab_network.png&#34; alt=&#34;Lab Network Diagram&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;Lab Network Diagram&#34; src=&#34;../img/lab_network.png&#34;&gt;&lt;/p&gt;
 
       </description>
     </item>
     
     <item>
       <title>Docs: Rancher</title>
-      <link>/palimpsest/docs/laboratory/kubernetes/rancher/</link>
+      <link>/docs/laboratory/kubernetes/rancher/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/laboratory/kubernetes/rancher/</guid>
+      <guid>/docs/laboratory/kubernetes/rancher/</guid>
       <description>
         
         
@@ -208,10 +208,10 @@
     
     <item>
       <title>Docs: Raspberry Pi Cluster</title>
-      <link>/palimpsest/docs/laboratory/kubernetes/cluster/</link>
+      <link>/docs/laboratory/kubernetes/cluster/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/laboratory/kubernetes/cluster/</guid>
+      <guid>/docs/laboratory/kubernetes/cluster/</guid>
       <description>
         
         
@@ -317,10 +317,10 @@
     
     <item>
       <title>Docs: References</title>
-      <link>/palimpsest/docs/accessibility/references/</link>
+      <link>/docs/accessibility/references/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/accessibility/references/</guid>
+      <guid>/docs/accessibility/references/</guid>
       <description>
         
         
@@ -358,10 +358,10 @@
     
     <item>
       <title>Docs: References</title>
-      <link>/palimpsest/docs/devops/references/</link>
+      <link>/docs/devops/references/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/devops/references/</guid>
+      <guid>/docs/devops/references/</guid>
       <description>
         
         
@@ -380,10 +380,10 @@ U.S. Department of Homeland Security&amp;rsquo;s Product Realization Guide, whic
     
     <item>
       <title>Docs: Helm</title>
-      <link>/palimpsest/docs/laboratory/kubernetes/helm/</link>
+      <link>/docs/laboratory/kubernetes/helm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/laboratory/kubernetes/helm/</guid>
+      <guid>/docs/laboratory/kubernetes/helm/</guid>
       <description>
         
         
@@ -424,14 +424,14 @@ U.S. Department of Homeland Security&amp;rsquo;s Product Realization Guide, whic
     
     <item>
       <title>Docs: </title>
-      <link>/palimpsest/docs/notebooks/ambiance/</link>
+      <link>/docs/notebooks/ambiance/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/ambiance/</guid>
+      <guid>/docs/notebooks/ambiance/</guid>
       <description>
         
         
-        &lt;p&gt;&lt;a href=&#34;&#34;&gt;&amp;mdash;
+        &lt;p&gt;&lt;a href=&#34;/&#34;&gt;&amp;mdash;
 title: &amp;ldquo;Ambiance&amp;rdquo;
 description: &amp;gt;
 Sound generators for ambient coding environments
@@ -449,10 +449,10 @@ Sound generators for ambient coding environments
     
     <item>
       <title>Docs: Authentication</title>
-      <link>/palimpsest/docs/notebooks/authentication/</link>
+      <link>/docs/notebooks/authentication/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/authentication/</guid>
+      <guid>/docs/notebooks/authentication/</guid>
       <description>
         
         
@@ -467,10 +467,10 @@ ISNI (International Standard Name Identifier) is an ISO standard, in use by nume
     
     <item>
       <title>Docs: Business Apps</title>
-      <link>/palimpsest/docs/notebooks/business_apps/</link>
+      <link>/docs/notebooks/business_apps/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/business_apps/</guid>
+      <guid>/docs/notebooks/business_apps/</guid>
       <description>
         
         
@@ -533,10 +533,10 @@ ISNI (International Standard Name Identifier) is an ISO standard, in use by nume
     
     <item>
       <title>Docs: Cables</title>
-      <link>/palimpsest/docs/notebooks/cables/</link>
+      <link>/docs/notebooks/cables/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/cables/</guid>
+      <guid>/docs/notebooks/cables/</guid>
       <description>
         
         
@@ -549,10 +549,10 @@ ISNI (International Standard Name Identifier) is an ISO standard, in use by nume
     
     <item>
       <title>Docs: Certbot</title>
-      <link>/palimpsest/docs/notebooks/certbot/</link>
+      <link>/docs/notebooks/certbot/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/certbot/</guid>
+      <guid>/docs/notebooks/certbot/</guid>
       <description>
         
         
@@ -571,10 +571,10 @@ ISNI (International Standard Name Identifier) is an ISO standard, in use by nume
     
     <item>
       <title>Docs: Chroot SFTP Setup</title>
-      <link>/palimpsest/docs/notebooks/sysadmin/chroot-sftp-setup/</link>
+      <link>/docs/notebooks/sysadmin/chroot-sftp-setup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/sysadmin/chroot-sftp-setup/</guid>
+      <guid>/docs/notebooks/sysadmin/chroot-sftp-setup/</guid>
       <description>
         
         
@@ -652,10 +652,10 @@ ISNI (International Standard Name Identifier) is an ISO standard, in use by nume
     
     <item>
       <title>Docs: Commands</title>
-      <link>/palimpsest/docs/notebooks/networks/commands/</link>
+      <link>/docs/notebooks/networks/commands/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/networks/commands/</guid>
+      <guid>/docs/notebooks/networks/commands/</guid>
       <description>
         
         
@@ -683,10 +683,10 @@ ISNI (International Standard Name Identifier) is an ISO standard, in use by nume
     
     <item>
       <title>Docs: Cron</title>
-      <link>/palimpsest/docs/notebooks/sysadmin/cron/</link>
+      <link>/docs/notebooks/sysadmin/cron/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/sysadmin/cron/</guid>
+      <guid>/docs/notebooks/sysadmin/cron/</guid>
       <description>
         
         
@@ -755,10 +755,10 @@ ISNI (International Standard Name Identifier) is an ISO standard, in use by nume
     
     <item>
       <title>Docs: Diagramming Tool</title>
-      <link>/palimpsest/docs/notebooks/diagramming/</link>
+      <link>/docs/notebooks/diagramming/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/diagramming/</guid>
+      <guid>/docs/notebooks/diagramming/</guid>
       <description>
         
         
@@ -774,10 +774,10 @@ ISNI (International Standard Name Identifier) is an ISO standard, in use by nume
     
     <item>
       <title>Docs: Docker</title>
-      <link>/palimpsest/docs/notebooks/docker/</link>
+      <link>/docs/notebooks/docker/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/docker/</guid>
+      <guid>/docs/notebooks/docker/</guid>
       <description>
         
         
@@ -923,10 +923,10 @@ EXPOSE * expose container ports to host system&lt;/p&gt;
     
     <item>
       <title>Docs: Email</title>
-      <link>/palimpsest/docs/notebooks/email/</link>
+      <link>/docs/notebooks/email/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/email/</guid>
+      <guid>/docs/notebooks/email/</guid>
       <description>
         
         
@@ -959,10 +959,10 @@ EXPOSE * expose container ports to host system&lt;/p&gt;
     
     <item>
       <title>Docs: Expanding Volumes</title>
-      <link>/palimpsest/docs/notebooks/sysadmin/expand_volumes/</link>
+      <link>/docs/notebooks/sysadmin/expand_volumes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/sysadmin/expand_volumes/</guid>
+      <guid>/docs/notebooks/sysadmin/expand_volumes/</guid>
       <description>
         
         
@@ -995,10 +995,10 @@ EXPOSE * expose container ports to host system&lt;/p&gt;
     
     <item>
       <title>Docs: EZproxy</title>
-      <link>/palimpsest/docs/notebooks/ezproxy/</link>
+      <link>/docs/notebooks/ezproxy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/ezproxy/</guid>
+      <guid>/docs/notebooks/ezproxy/</guid>
       <description>
         
         
@@ -1129,10 +1129,10 @@ EXPOSE * expose container ports to host system&lt;/p&gt;
     
     <item>
       <title>Docs: fail2ban</title>
-      <link>/palimpsest/docs/notebooks/sysadmin/fail2ban/</link>
+      <link>/docs/notebooks/sysadmin/fail2ban/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/sysadmin/fail2ban/</guid>
+      <guid>/docs/notebooks/sysadmin/fail2ban/</guid>
       <description>
         
         
@@ -1149,10 +1149,10 @@ EXPOSE * expose container ports to host system&lt;/p&gt;
     
     <item>
       <title>Docs: Geospatial</title>
-      <link>/palimpsest/docs/notebooks/geospatial/</link>
+      <link>/docs/notebooks/geospatial/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/geospatial/</guid>
+      <guid>/docs/notebooks/geospatial/</guid>
       <description>
         
         
@@ -1222,10 +1222,10 @@ positions or hard constraints.&lt;/p&gt;
     
     <item>
       <title>Docs: Git</title>
-      <link>/palimpsest/docs/notebooks/git/</link>
+      <link>/docs/notebooks/git/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/git/</guid>
+      <guid>/docs/notebooks/git/</guid>
       <description>
         
         
@@ -1366,10 +1366,10 @@ git stash pop&lt;/p&gt;
     
     <item>
       <title>Docs: GPG</title>
-      <link>/palimpsest/docs/notebooks/gpg/</link>
+      <link>/docs/notebooks/gpg/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/gpg/</guid>
+      <guid>/docs/notebooks/gpg/</guid>
       <description>
         
         
@@ -1426,10 +1426,10 @@ commit&lt;/li&gt;
     
     <item>
       <title>Docs: Homebrew</title>
-      <link>/palimpsest/docs/notebooks/homebrew/</link>
+      <link>/docs/notebooks/homebrew/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/homebrew/</guid>
+      <guid>/docs/notebooks/homebrew/</guid>
       <description>
         
         
@@ -1497,10 +1497,10 @@ commit&lt;/li&gt;
     
     <item>
       <title>Docs: JavaScript</title>
-      <link>/palimpsest/docs/notebooks/javascript/</link>
+      <link>/docs/notebooks/javascript/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/javascript/</guid>
+      <guid>/docs/notebooks/javascript/</guid>
       <description>
         
         
@@ -1521,10 +1521,10 @@ commit&lt;/li&gt;
     
     <item>
       <title>Docs: JS Forms</title>
-      <link>/palimpsest/docs/notebooks/js_forms/</link>
+      <link>/docs/notebooks/js_forms/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/js_forms/</guid>
+      <guid>/docs/notebooks/js_forms/</guid>
       <description>
         
         
@@ -1633,14 +1633,14 @@ function submitArticleDatabasesSearch() {
     
     <item>
       <title>Docs: LVM</title>
-      <link>/palimpsest/docs/notebooks/sysadmin/lvm/</link>
+      <link>/docs/notebooks/sysadmin/lvm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/sysadmin/lvm/</guid>
+      <guid>/docs/notebooks/sysadmin/lvm/</guid>
       <description>
         
         
-        &lt;p&gt;&lt;img src=&#34;../img/lvm_diagram.png&#34; alt=&#34;LVM Diagram&#34;&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;img alt=&#34;LVM Diagram&#34; src=&#34;../img/lvm_diagram.png&#34;&gt;&lt;/p&gt;
 &lt;h4 id=&#34;references&#34;&gt;References&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.kernel.org/doc/Documentation/admin-guide/devices.txt&#34;&gt;Kernel Device Naming&lt;/a&gt;&lt;/li&gt;
@@ -1752,10 +1752,10 @@ function submitArticleDatabasesSearch() {
     
     <item>
       <title>Docs: Mailman</title>
-      <link>/palimpsest/docs/notebooks/mailman/</link>
+      <link>/docs/notebooks/mailman/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/mailman/</guid>
+      <guid>/docs/notebooks/mailman/</guid>
       <description>
         
         
@@ -1802,10 +1802,10 @@ function submitArticleDatabasesSearch() {
     
     <item>
       <title>Docs: MariaDB</title>
-      <link>/palimpsest/docs/notebooks/databases/mariadb/</link>
+      <link>/docs/notebooks/databases/mariadb/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/databases/mariadb/</guid>
+      <guid>/docs/notebooks/databases/mariadb/</guid>
       <description>
         
         
@@ -1839,10 +1839,10 @@ function submitArticleDatabasesSearch() {
     
     <item>
       <title>Docs: Monit</title>
-      <link>/palimpsest/docs/notebooks/monit/</link>
+      <link>/docs/notebooks/monit/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/monit/</guid>
+      <guid>/docs/notebooks/monit/</guid>
       <description>
         
         
@@ -1930,10 +1930,10 @@ monit monitor all
     
     <item>
       <title>Docs: networker</title>
-      <link>/palimpsest/docs/notebooks/networker_commands/</link>
+      <link>/docs/notebooks/networker_commands/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/networker_commands/</guid>
+      <guid>/docs/notebooks/networker_commands/</guid>
       <description>
         
         
@@ -1994,10 +1994,10 @@ monit monitor all
     
     <item>
       <title>Docs: Networking</title>
-      <link>/palimpsest/docs/notebooks/networks/networking/</link>
+      <link>/docs/notebooks/networks/networking/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/networks/networking/</guid>
+      <guid>/docs/notebooks/networks/networking/</guid>
       <description>
         
         
@@ -2035,7 +2035,7 @@ spectrum through standards and regulation.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;osi-open-systems-interconnection-layers&#34;&gt;OSI (Open Systems Interconnection) Layers&lt;/h2&gt;
 &lt;p&gt;A conceptual model in which communications between a computing system are split into seven different abstraction layers&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;../assets/osi-reference-model.png&#34; alt=&#34;Diagram of the OSI Reference Model&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;Diagram of the OSI Reference Model&#34; src=&#34;../assets/osi-reference-model.png&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;layer-1---physical&#34;&gt;Layer 1 - Physical&lt;/h3&gt;
 &lt;p&gt;Most closely associated with the physical connection between devices. The physical layer provides an electrical and
 mechanical interface to the transmission medium (e.g. CAT5 cabling, SMF fiber).&lt;/p&gt;
@@ -2120,7 +2120,7 @@ Improves security by only sending packets to specific machines, not all&lt;/li&g
 &lt;p&gt;Two types: managed and unmanaged&lt;/p&gt;
 &lt;p&gt;Unicast (one device)&lt;br&gt;
 Broadcast (all devices)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;../assets/ethernet-frame.png&#34; alt=&#34;Ethernet Frame Diagram&#34;&gt;
+&lt;p&gt;&lt;img alt=&#34;Ethernet Frame Diagram&#34; src=&#34;../assets/ethernet-frame.png&#34;&gt;
 Ethernet Type field, values?&lt;/p&gt;
 &lt;h4 id=&#34;performance-issues&#34;&gt;Performance Issues&lt;/h4&gt;
 &lt;ul&gt;
@@ -2137,7 +2137,7 @@ Ethernet Type field, values?&lt;/p&gt;
 the packet out of the appropriate port, not &lt;em&gt;all&lt;/em&gt; ports like a hub&lt;/li&gt;
 &lt;li&gt;&amp;lsquo;Backbones&amp;rsquo; connect switches together&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;../assets/switch-backbones.png&#34; alt=&#34;hierarchric structural diagram of core, distribution, and access switches&#34;&gt;
+&lt;p&gt;&lt;img alt=&#34;hierarchric structural diagram of core, distribution, and access switches&#34; src=&#34;../assets/switch-backbones.png&#34;&gt;
 Core switches 10x faster than access switches&lt;/p&gt;
 &lt;p&gt;lowest port cost&lt;/p&gt;
 &lt;p&gt;Spanning Tree algorithm
@@ -2394,12 +2394,12 @@ IP is binary. (8 bits of binary in octets, 32 bits in total) - 0 - 255&lt;/p&gt;
 separated by a decimal. This format is known as dotted decimal notation. Adding up
 all bits in each octet equals 255; thus, the range of values for each octet is
 0 - 255.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;../assets/dotted-decimal-notation.png&#34; alt=&#34;diagram of dotted decimal notation illustrating the grouping structure and a basic calculation&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;diagram of dotted decimal notation illustrating the grouping structure and a basic calculation&#34; src=&#34;../assets/dotted-decimal-notation.png&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;classful-addresses&#34;&gt;&lt;em&gt;Classful&lt;/em&gt; Addresses&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;../assets/classful-addresses.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/classful-addresses.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;C&lt;/p&gt;
 &lt;h4 id=&#34;reserved-ipv4-addresses&#34;&gt;Reserved IPv4 Addresses&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&#34;../assets/reserved-ipv4-addresses.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/reserved-ipv4-addresses.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Loop-back can be used to check if the IP stack is functioning
 Ping yourself! (16 million addresses)&lt;/p&gt;
 &lt;p&gt;Interface, all 0 bits (network name)
@@ -2531,14 +2531,14 @@ Do I need to use a router? (i.e. on another network)&lt;/p&gt;
 &lt;/table&gt;
 &lt;h3 id=&#34;classless-addressing&#34;&gt;&lt;em&gt;Classless&lt;/em&gt; addressing&lt;/h3&gt;
 &lt;p&gt;CIDR (classless interdomain routing)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;../assets/classless-addressing-CIDR.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/classless-addressing-CIDR.png&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;ipv6&#34;&gt;IPv6&lt;/h2&gt;
 &lt;p&gt;128-bit address space
 Does not use Decimal Notation, Uses Hexadecimal addressing
 no subnet mask, uses prefix only&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;../assets/ipv6-addressing.png&#34; alt=&#34;representational depiction of the hexidecimal groupings of an ipv4 address&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;representational depiction of the hexidecimal groupings of an ipv4 address&#34; src=&#34;../assets/ipv6-addressing.png&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;subnetting&#34;&gt;Subnetting&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;../assets/subnet-mask-rules.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/subnet-mask-rules.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;bit budget and binary tables
 subnetting table&lt;/p&gt;
 &lt;p&gt;4 key subnet addresses&lt;/p&gt;
@@ -2569,16 +2569,16 @@ subnetting table&lt;/p&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;IP subnet calculator&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;../assets/calculating-subnets.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/calculating-subnets.png&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;network-planning&#34;&gt;Network Planning&lt;/h3&gt;
 &lt;p&gt;Implementing a network requires an understanding of the business units and the potential
 for growth of the network in each segment.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;../assets/planning-network-design.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/planning-network-design.png&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;tcp-udp-maintenance-protocols&#34;&gt;TCP, UDP, Maintenance Protocols&lt;/h3&gt;
 &lt;p&gt;Layer 4
 Flow Control
 TCP / UDP&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;../assets/TCP-handshake.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/TCP-handshake.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Transmission Control Protocol
 User Datagram Protocol&lt;/p&gt;
 &lt;p&gt;Voice and Video (speed is import)
@@ -2592,7 +2592,7 @@ FTP (speed not as important, )&lt;/p&gt;
 &lt;p&gt;Client - initiates connection
 Server - Accepts request&lt;/p&gt;
 &lt;p&gt;Connection - Transfer - Disconnect&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;../assets/message-packaging.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/message-packaging.png&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;port-numbering&#34;&gt;Port Numbering&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.rfc-editor.org/rfc/rfc6335.html&#34;&gt;RFC 6335&lt;/a&gt;, Procedures for the Management of the Service Name and Transport Protocol Port Number Registry&lt;/li&gt;
@@ -2625,7 +2625,7 @@ Server - Accepts request&lt;/p&gt;
 &lt;h3 id=&#34;sockets&#34;&gt;Sockets&lt;/h3&gt;
 &lt;p&gt;Sockets are a combination of IP address and Port number.
 Sockets allow proper routing and communication of network packets&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;../assets/sockets.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/sockets.png&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;nat&#34;&gt;NAT&lt;/h3&gt;
 &lt;p&gt;Router&lt;/p&gt;
 &lt;p&gt;Router rewrites the TCP/UDP header to allow private IP addresses
@@ -2635,7 +2635,7 @@ a single public IP address for communications. In the early
 days, each private device had to have a corresponding public IP
 address (which is expensive and overwhelming)&lt;/p&gt;
 &lt;p&gt;NAT Table&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;../assets/NAT.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/NAT.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;NAT uses Sockets for&lt;/p&gt;
 &lt;p&gt;NAT table is only updated when packets go out&lt;/p&gt;
 &lt;h2 id=&#34;support-and-management-protocols&#34;&gt;Support and Management Protocols&lt;/h2&gt;
@@ -2647,7 +2647,7 @@ address (which is expensive and overwhelming)&lt;/p&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;../assets/ARP.png&#34; alt=&#34;diagram of an ARP message&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;diagram of an ARP message&#34; src=&#34;../assets/ARP.png&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;IGMP
 &lt;ul&gt;
@@ -2656,7 +2656,7 @@ address (which is expensive and overwhelming)&lt;/p&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;../assets/IGMP.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/IGMP.png&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;SNMP
 &lt;ul&gt;
@@ -2675,7 +2675,7 @@ address (which is expensive and overwhelming)&lt;/p&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;../assets/SNMP.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/SNMP.png&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;DNS
 &lt;ul&gt;
@@ -2693,7 +2693,7 @@ address (which is expensive and overwhelming)&lt;/p&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;../assets/DNS.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/DNS.png&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;TFTP&lt;/li&gt;
 &lt;li&gt;DHCP - Dynamic Host Configuration Protocol&lt;/li&gt;
@@ -2706,7 +2706,7 @@ address (which is expensive and overwhelming)&lt;/p&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;../assets/ICMP.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/ICMP.png&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;FTP&lt;/li&gt;
 &lt;li&gt;Telnet
@@ -2731,7 +2731,7 @@ address (which is expensive and overwhelming)&lt;/p&gt;
 &lt;li&gt;layer 2 broadcasts are not forward by routers&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Referred to as &amp;rsquo;logical segmentation&amp;rsquo;
-&lt;img src=&#34;../assets/logical-segmentation.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;../assets/logical-segmentation.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Routing metrics - best pathway&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;bandwidth (higher bandwidth is better)&lt;/li&gt;
@@ -2751,7 +2751,7 @@ address (which is expensive and overwhelming)&lt;/p&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;../assets/rip-routing-protocol.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/rip-routing-protocol.png&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;OSPF (open shortest path first)
 &lt;ul&gt;
@@ -2795,12 +2795,12 @@ MPLS&lt;/p&gt;
 &lt;li&gt;label switching router&lt;/li&gt;
 &lt;li&gt;label switched pathway&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;../assets/mpls.png&#34; alt=&#34;&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/mpls.png&#34;&gt;
 MPLS labels&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;label , need a diagram&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;../assets/carrier-ethernet.png&#34; alt=&#34;&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/carrier-ethernet.png&#34;&gt;
 carrier ethernet &lt;a href=&#34;https://en.wikipedia.org/wiki/Carrier_Ethernet&#34;&gt;https://en.wikipedia.org/wiki/Carrier_Ethernet&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&amp;ldquo;metro ethernet&amp;rdquo;&lt;/li&gt;
@@ -2811,7 +2811,7 @@ evc - ethernet virtual connection
 ovc - operator virtual connection
 cen -
 enni - extended network network interface&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;../assets/eline.png&#34; alt=&#34;&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/eline.png&#34;&gt;
 E-Line&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;point-to-point&lt;/li&gt;
@@ -2852,7 +2852,7 @@ OC 1
 OC 192
 OC 3&lt;/p&gt;
 &lt;p&gt;Optical Transport networks
-&lt;img src=&#34;../assets/optical-transport-networks.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;../assets/optical-transport-networks.png&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;IP traffic (packets)&lt;/li&gt;
 &lt;li&gt;g.709&lt;/li&gt;
@@ -2990,7 +2990,7 @@ RFB (Remote Frame Buffer)&lt;/p&gt;
 &lt;p&gt;Separates control plane from network/switching plane. Remote network devices can pull their configuration from a central
 control plane device, removing the need to configure each switch individually. This also allows for rapid response
 to changing network conditions by updating a single control place device.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;../assets/software-defined-networks.png&#34; alt=&#34;diagram of software device network application layers&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;diagram of software device network application layers&#34; src=&#34;../assets/software-defined-networks.png&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Application layer (Northbound API), automation of the network for business applications&lt;/li&gt;
 &lt;li&gt;Control place (SDN controller), changes to 1000s of device immediately&lt;/li&gt;
@@ -3015,10 +3015,10 @@ remove administration of layer 3 packet forwarding tables)&lt;/li&gt;
     
     <item>
       <title>Docs: Packages</title>
-      <link>/palimpsest/docs/notebooks/sysadmin/packages/</link>
+      <link>/docs/notebooks/sysadmin/packages/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/sysadmin/packages/</guid>
+      <guid>/docs/notebooks/sysadmin/packages/</guid>
       <description>
         
         
@@ -3051,10 +3051,10 @@ apt - works with software repos&lt;/p&gt;
     
     <item>
       <title>Docs: Perlbrew</title>
-      <link>/palimpsest/docs/notebooks/perlbrew/</link>
+      <link>/docs/notebooks/perlbrew/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/perlbrew/</guid>
+      <guid>/docs/notebooks/perlbrew/</guid>
       <description>
         
         
@@ -3091,10 +3091,10 @@ apt - works with software repos&lt;/p&gt;
     
     <item>
       <title>Docs: PHP</title>
-      <link>/palimpsest/docs/notebooks/php/</link>
+      <link>/docs/notebooks/php/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/php/</guid>
+      <guid>/docs/notebooks/php/</guid>
       <description>
         
         
@@ -3110,14 +3110,14 @@ apt - works with software repos&lt;/p&gt;
     
     <item>
       <title>Docs: Postfix</title>
-      <link>/palimpsest/docs/notebooks/postfix/</link>
+      <link>/docs/notebooks/postfix/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/postfix/</guid>
+      <guid>/docs/notebooks/postfix/</guid>
       <description>
         
         
-        &lt;p&gt;&lt;img src=&#34;../img/postfix-integrations.png&#34; alt=&#34;Postfix Diagram&#34;&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;img alt=&#34;Postfix Diagram&#34; src=&#34;../img/postfix-integrations.png&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;blacklist--whitelist-with-postfix&#34;&gt;Blacklist &amp;amp; Whitelist with Postfix&lt;/h1&gt;
 &lt;h3 id=&#34;1-create-a-file-of-ips-to-blacklist---postfix-referencehttpwwwpostfixorgcidr_table5html&#34;&gt;1. Create a file of IPs to blacklist - &lt;a href=&#34;http://www.postfix.org/cidr_table.5.html&#34;&gt;Postfix Reference&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Create a &lt;code&gt;reject.cidr&lt;/code&gt; file in &lt;code&gt;/etc/postfix&lt;/code&gt;. To it, add one or more problematic IPs or ranges from your logwatch reports, mail logs, email headers, etc.:&lt;/p&gt;
@@ -3152,10 +3152,10 @@ apt - works with software repos&lt;/p&gt;
     
     <item>
       <title>Docs: PostgreSQL</title>
-      <link>/palimpsest/docs/notebooks/databases/postgres/</link>
+      <link>/docs/notebooks/databases/postgres/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/databases/postgres/</guid>
+      <guid>/docs/notebooks/databases/postgres/</guid>
       <description>
         
         
@@ -3282,10 +3282,10 @@ apt - works with software repos&lt;/p&gt;
     
     <item>
       <title>Docs: Python4Lib</title>
-      <link>/palimpsest/docs/notebooks/python4lib/</link>
+      <link>/docs/notebooks/python4lib/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/python4lib/</guid>
+      <guid>/docs/notebooks/python4lib/</guid>
       <description>
         
         
@@ -3360,10 +3360,10 @@ apt - works with software repos&lt;/p&gt;
     
     <item>
       <title>Docs: React.js</title>
-      <link>/palimpsest/docs/notebooks/react/</link>
+      <link>/docs/notebooks/react/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/react/</guid>
+      <guid>/docs/notebooks/react/</guid>
       <description>
         
         
@@ -3410,10 +3410,10 @@ Page: Collection-level classes&lt;/p&gt;
     
     <item>
       <title>Docs: Samba</title>
-      <link>/palimpsest/docs/notebooks/samba/</link>
+      <link>/docs/notebooks/samba/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/samba/</guid>
+      <guid>/docs/notebooks/samba/</guid>
       <description>
         
         
@@ -3506,10 +3506,10 @@ configuration file.&lt;/p&gt;
     
     <item>
       <title>Docs: sed &amp; awk</title>
-      <link>/palimpsest/docs/notebooks/sysadmin/sed_awk/</link>
+      <link>/docs/notebooks/sysadmin/sed_awk/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/sysadmin/sed_awk/</guid>
+      <guid>/docs/notebooks/sysadmin/sed_awk/</guid>
       <description>
         
         
@@ -3549,10 +3549,10 @@ tac config.txt | sed -n &amp;#39;/^IncludeFile.*/ {p;q}&amp;#39;
     
     <item>
       <title>Docs: SIP2</title>
-      <link>/palimpsest/docs/notebooks/sip/</link>
+      <link>/docs/notebooks/sip/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/sip/</guid>
+      <guid>/docs/notebooks/sip/</guid>
       <description>
         
         
@@ -3580,10 +3580,10 @@ tac config.txt | sed -n &amp;#39;/^IncludeFile.*/ {p;q}&amp;#39;
     
     <item>
       <title>Docs: SSH</title>
-      <link>/palimpsest/docs/notebooks/sysadmin/ssh/</link>
+      <link>/docs/notebooks/sysadmin/ssh/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/sysadmin/ssh/</guid>
+      <guid>/docs/notebooks/sysadmin/ssh/</guid>
       <description>
         
         
@@ -3600,10 +3600,10 @@ tac config.txt | sed -n &amp;#39;/^IncludeFile.*/ {p;q}&amp;#39;
     
     <item>
       <title>Docs: SSL</title>
-      <link>/palimpsest/docs/notebooks/sysadmin/ssl/</link>
+      <link>/docs/notebooks/sysadmin/ssl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/sysadmin/ssl/</guid>
+      <guid>/docs/notebooks/sysadmin/ssl/</guid>
       <description>
         
         
@@ -3688,10 +3688,10 @@ tac config.txt | sed -n &amp;#39;/^IncludeFile.*/ {p;q}&amp;#39;
     
     <item>
       <title>Docs: SysAdmin Tasks</title>
-      <link>/palimpsest/docs/notebooks/sysadmin/sysadmin_tasks/</link>
+      <link>/docs/notebooks/sysadmin/sysadmin_tasks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/sysadmin/sysadmin_tasks/</guid>
+      <guid>/docs/notebooks/sysadmin/sysadmin_tasks/</guid>
       <description>
         
         
@@ -3777,11 +3777,99 @@ tac config.txt | sed -n &amp;#39;/^IncludeFile.*/ {p;q}&amp;#39;
     </item>
     
     <item>
-      <title>Docs: Yaz</title>
-      <link>/palimpsest/docs/notebooks/yaz/</link>
+      <title>Docs: UFW</title>
+      <link>/docs/notebooks/sysadmin/ufw/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/yaz/</guid>
+      <guid>/docs/notebooks/sysadmin/ufw/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;p&gt;The default firewall configuration tool for Ubuntu is &lt;code&gt;ufw&lt;/code&gt;. Developed to ease iptables firewall configuration,
+&lt;code&gt;ufw&lt;/code&gt; provides a user-friendly way to create an IPv4 or IPv6 host-based firewall.&lt;/p&gt;
+&lt;p&gt;Once a rule is matched the others will &lt;strong&gt;not&lt;/strong&gt; be evaluated. Putting the specific rules first and any generic
+rules second is expected. As rules change &lt;strong&gt;you may need to delete old rules to ensure that new rules are put
+in the proper order&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Manual: &lt;a href=&#34;https://manpages.ubuntu.com/manpages/noble/en/man8/ufw.8.html&#34;&gt;ufw&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;considerations&#34;&gt;Considerations&lt;/h2&gt;
+&lt;p&gt;CISA WAS (Web Application Scanning) IP, ie., do not reject these IPs
+&lt;a href=&#34;https://rules.ncats.cyber.dhs.gov/was.txt&#34;&gt;https://rules.ncats.cyber.dhs.gov/was.txt&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;common-commands&#34;&gt;Common Commands&lt;/h2&gt;
+&lt;p&gt;Enable UFW&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ufw &lt;span style=&#34;color:#204a87&#34;&gt;enable&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Enable Logging&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ufw logging on
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Check Status&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ufw status
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Block ALL Incoming Traffic from IP&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ufw deny from &amp;lt;ip address&amp;gt; comment &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;COMMENT HERE&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Allow Incoming TCP Traffic to Port from IP&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ufw allow from &amp;lt;ip address&amp;gt; proto tcp to any port &amp;lt;port number&amp;gt; comment &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;COMMENT HERE&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;List Rules by Reference Number&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ufw status numbered
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Delete a numbered rule&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ufw delete &amp;lt;rule number&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;interpreting-log-entries&#34;&gt;Interpreting Log Entries&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Feb  4 23:33:37 hostname kernel: [ 3529.289825] [UFW BLOCK] IN=eth0 OUT= MAC=00:11:22:33:44:55:66:77:88:99:aa:bb:cc:dd 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;SRC=444.333.222.111 DST=111.222.333.444 LEN=103 TOS=0x00 PREC=0x00 TTL=52 ID=0 DF PROTO=UDP SPT=53 DPT=36427 LEN=83
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Date&lt;/strong&gt;
+Date of event&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Hostname&lt;/strong&gt;
+The server’s hostname&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Uptime&lt;/strong&gt;
+Kernel time since boot.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Logged Event&lt;/strong&gt;
+Short description of the logged event: i.e., [UFW BLOCK]&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IN&lt;/strong&gt;
+If set, the event was an incoming event. Shows the interface from which the packet has arrived.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;OUT&lt;/strong&gt;
+If set, the event was an outgoing event.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;MAC&lt;/strong&gt;
+This provides a 14-byte combination of the Destination MAC, Source MAC, and EtherType fields, following
+the order found in the Ethernet II header.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;SRC&lt;/strong&gt;
+The packet source, or who sent the packet initially.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;DST&lt;/strong&gt;
+The destination IP, who is meant to receive the packet.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;LEN&lt;/strong&gt;
+Length of the packet in bytes.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;TOS&lt;/strong&gt; (Hex: 0x00, Decimal: 0)
+Originally, ToS (Type of Service) field of the IPv4 header. Now, primarily used for Quality of Service
+as Differentiated Services Code Point.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;PREC&lt;/strong&gt; (Hex: 0x00, Decimal: 0)
+The Precedence field of the IPv4 header.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;TTL&lt;/strong&gt;
+“Time to live” for the packet. Each packet will only bounce through the network until the TTL expires. If the packet
+hasn’t found its destination before the TTL expires, it dies and evaporates. This field keeps lost packets from
+clogging the network forever.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ID&lt;/strong&gt;
+Unique ID of the IP datagram. This ID will be shared by the fragments of the same packets.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;DF&lt;/strong&gt;
+The &amp;ldquo;Do not fragment&amp;rdquo; flag of TCP&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;PROTO&lt;/strong&gt;
+The protocol of the packet: TCP or UDP.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;SPT&lt;/strong&gt;
+Indicates the source port.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;DPT&lt;/strong&gt;
+Indicates the destination port.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;WINDOW&lt;/strong&gt;
+Indicates the size of packet the sender is willing to receive. TCP&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;RES&lt;/strong&gt;
+This bit is reserved for future use &amp;amp; is always set to 0. (Hex, 0x00)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;SYN URGP&lt;/strong&gt;
+SYN indicates that this connection requires a three-way handshake, which is typical of TCP connections.
+URGP indicates whether the urgent pointer field is relevant. 0 means it&amp;rsquo;s not.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Yaz</title>
+      <link>/docs/notebooks/yaz/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/notebooks/yaz/</guid>
       <description>
         
         

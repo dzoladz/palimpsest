@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Palimpsest – SysAdmin</title>
-    <link>/palimpsest/docs/notebooks/sysadmin/</link>
+    <link>/docs/notebooks/sysadmin/</link>
     <description>Recent content in SysAdmin on Palimpsest</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	  <atom:link href="/palimpsest/docs/notebooks/sysadmin/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/docs/notebooks/sysadmin/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: Chroot SFTP Setup</title>
-      <link>/palimpsest/docs/notebooks/sysadmin/chroot-sftp-setup/</link>
+      <link>/docs/notebooks/sysadmin/chroot-sftp-setup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/sysadmin/chroot-sftp-setup/</guid>
+      <guid>/docs/notebooks/sysadmin/chroot-sftp-setup/</guid>
       <description>
         
         
@@ -97,10 +97,10 @@
     
     <item>
       <title>Docs: Cron</title>
-      <link>/palimpsest/docs/notebooks/sysadmin/cron/</link>
+      <link>/docs/notebooks/sysadmin/cron/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/sysadmin/cron/</guid>
+      <guid>/docs/notebooks/sysadmin/cron/</guid>
       <description>
         
         
@@ -169,10 +169,10 @@
     
     <item>
       <title>Docs: Expanding Volumes</title>
-      <link>/palimpsest/docs/notebooks/sysadmin/expand_volumes/</link>
+      <link>/docs/notebooks/sysadmin/expand_volumes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/sysadmin/expand_volumes/</guid>
+      <guid>/docs/notebooks/sysadmin/expand_volumes/</guid>
       <description>
         
         
@@ -205,10 +205,10 @@
     
     <item>
       <title>Docs: fail2ban</title>
-      <link>/palimpsest/docs/notebooks/sysadmin/fail2ban/</link>
+      <link>/docs/notebooks/sysadmin/fail2ban/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/sysadmin/fail2ban/</guid>
+      <guid>/docs/notebooks/sysadmin/fail2ban/</guid>
       <description>
         
         
@@ -225,14 +225,14 @@
     
     <item>
       <title>Docs: LVM</title>
-      <link>/palimpsest/docs/notebooks/sysadmin/lvm/</link>
+      <link>/docs/notebooks/sysadmin/lvm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/sysadmin/lvm/</guid>
+      <guid>/docs/notebooks/sysadmin/lvm/</guid>
       <description>
         
         
-        &lt;p&gt;&lt;img src=&#34;../img/lvm_diagram.png&#34; alt=&#34;LVM Diagram&#34;&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;img alt=&#34;LVM Diagram&#34; src=&#34;../img/lvm_diagram.png&#34;&gt;&lt;/p&gt;
 &lt;h4 id=&#34;references&#34;&gt;References&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.kernel.org/doc/Documentation/admin-guide/devices.txt&#34;&gt;Kernel Device Naming&lt;/a&gt;&lt;/li&gt;
@@ -344,10 +344,10 @@
     
     <item>
       <title>Docs: Packages</title>
-      <link>/palimpsest/docs/notebooks/sysadmin/packages/</link>
+      <link>/docs/notebooks/sysadmin/packages/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/sysadmin/packages/</guid>
+      <guid>/docs/notebooks/sysadmin/packages/</guid>
       <description>
         
         
@@ -380,10 +380,10 @@ apt - works with software repos&lt;/p&gt;
     
     <item>
       <title>Docs: sed &amp; awk</title>
-      <link>/palimpsest/docs/notebooks/sysadmin/sed_awk/</link>
+      <link>/docs/notebooks/sysadmin/sed_awk/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/sysadmin/sed_awk/</guid>
+      <guid>/docs/notebooks/sysadmin/sed_awk/</guid>
       <description>
         
         
@@ -423,10 +423,10 @@ tac config.txt | sed -n &amp;#39;/^IncludeFile.*/ {p;q}&amp;#39;
     
     <item>
       <title>Docs: SSH</title>
-      <link>/palimpsest/docs/notebooks/sysadmin/ssh/</link>
+      <link>/docs/notebooks/sysadmin/ssh/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/sysadmin/ssh/</guid>
+      <guid>/docs/notebooks/sysadmin/ssh/</guid>
       <description>
         
         
@@ -443,10 +443,10 @@ tac config.txt | sed -n &amp;#39;/^IncludeFile.*/ {p;q}&amp;#39;
     
     <item>
       <title>Docs: SSL</title>
-      <link>/palimpsest/docs/notebooks/sysadmin/ssl/</link>
+      <link>/docs/notebooks/sysadmin/ssl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/sysadmin/ssl/</guid>
+      <guid>/docs/notebooks/sysadmin/ssl/</guid>
       <description>
         
         
@@ -531,10 +531,10 @@ tac config.txt | sed -n &amp;#39;/^IncludeFile.*/ {p;q}&amp;#39;
     
     <item>
       <title>Docs: SysAdmin Tasks</title>
-      <link>/palimpsest/docs/notebooks/sysadmin/sysadmin_tasks/</link>
+      <link>/docs/notebooks/sysadmin/sysadmin_tasks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/sysadmin/sysadmin_tasks/</guid>
+      <guid>/docs/notebooks/sysadmin/sysadmin_tasks/</guid>
       <description>
         
         
@@ -616,6 +616,94 @@ tac config.txt | sed -n &amp;#39;/^IncludeFile.*/ {p;q}&amp;#39;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;show-me-the-redirects&#34;&gt;Show Me the Redirects!&lt;/h4&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;wget http://libguides.heidelberg.edu/asc 2&amp;gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;|&lt;/span&gt; grep Location:
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: UFW</title>
+      <link>/docs/notebooks/sysadmin/ufw/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/notebooks/sysadmin/ufw/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;p&gt;The default firewall configuration tool for Ubuntu is &lt;code&gt;ufw&lt;/code&gt;. Developed to ease iptables firewall configuration,
+&lt;code&gt;ufw&lt;/code&gt; provides a user-friendly way to create an IPv4 or IPv6 host-based firewall.&lt;/p&gt;
+&lt;p&gt;Once a rule is matched the others will &lt;strong&gt;not&lt;/strong&gt; be evaluated. Putting the specific rules first and any generic
+rules second is expected. As rules change &lt;strong&gt;you may need to delete old rules to ensure that new rules are put
+in the proper order&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Manual: &lt;a href=&#34;https://manpages.ubuntu.com/manpages/noble/en/man8/ufw.8.html&#34;&gt;ufw&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;considerations&#34;&gt;Considerations&lt;/h2&gt;
+&lt;p&gt;CISA WAS (Web Application Scanning) IP, ie., do not reject these IPs
+&lt;a href=&#34;https://rules.ncats.cyber.dhs.gov/was.txt&#34;&gt;https://rules.ncats.cyber.dhs.gov/was.txt&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;common-commands&#34;&gt;Common Commands&lt;/h2&gt;
+&lt;p&gt;Enable UFW&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ufw &lt;span style=&#34;color:#204a87&#34;&gt;enable&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Enable Logging&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ufw logging on
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Check Status&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ufw status
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Block ALL Incoming Traffic from IP&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ufw deny from &amp;lt;ip address&amp;gt; comment &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;COMMENT HERE&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Allow Incoming TCP Traffic to Port from IP&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ufw allow from &amp;lt;ip address&amp;gt; proto tcp to any port &amp;lt;port number&amp;gt; comment &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;COMMENT HERE&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;List Rules by Reference Number&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ufw status numbered
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Delete a numbered rule&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ufw delete &amp;lt;rule number&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;interpreting-log-entries&#34;&gt;Interpreting Log Entries&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Feb  4 23:33:37 hostname kernel: [ 3529.289825] [UFW BLOCK] IN=eth0 OUT= MAC=00:11:22:33:44:55:66:77:88:99:aa:bb:cc:dd 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;SRC=444.333.222.111 DST=111.222.333.444 LEN=103 TOS=0x00 PREC=0x00 TTL=52 ID=0 DF PROTO=UDP SPT=53 DPT=36427 LEN=83
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Date&lt;/strong&gt;
+Date of event&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Hostname&lt;/strong&gt;
+The server’s hostname&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Uptime&lt;/strong&gt;
+Kernel time since boot.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Logged Event&lt;/strong&gt;
+Short description of the logged event: i.e., [UFW BLOCK]&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IN&lt;/strong&gt;
+If set, the event was an incoming event. Shows the interface from which the packet has arrived.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;OUT&lt;/strong&gt;
+If set, the event was an outgoing event.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;MAC&lt;/strong&gt;
+This provides a 14-byte combination of the Destination MAC, Source MAC, and EtherType fields, following
+the order found in the Ethernet II header.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;SRC&lt;/strong&gt;
+The packet source, or who sent the packet initially.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;DST&lt;/strong&gt;
+The destination IP, who is meant to receive the packet.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;LEN&lt;/strong&gt;
+Length of the packet in bytes.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;TOS&lt;/strong&gt; (Hex: 0x00, Decimal: 0)
+Originally, ToS (Type of Service) field of the IPv4 header. Now, primarily used for Quality of Service
+as Differentiated Services Code Point.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;PREC&lt;/strong&gt; (Hex: 0x00, Decimal: 0)
+The Precedence field of the IPv4 header.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;TTL&lt;/strong&gt;
+“Time to live” for the packet. Each packet will only bounce through the network until the TTL expires. If the packet
+hasn’t found its destination before the TTL expires, it dies and evaporates. This field keeps lost packets from
+clogging the network forever.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ID&lt;/strong&gt;
+Unique ID of the IP datagram. This ID will be shared by the fragments of the same packets.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;DF&lt;/strong&gt;
+The &amp;ldquo;Do not fragment&amp;rdquo; flag of TCP&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;PROTO&lt;/strong&gt;
+The protocol of the packet: TCP or UDP.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;SPT&lt;/strong&gt;
+Indicates the source port.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;DPT&lt;/strong&gt;
+Indicates the destination port.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;WINDOW&lt;/strong&gt;
+Indicates the size of packet the sender is willing to receive. TCP&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;RES&lt;/strong&gt;
+This bit is reserved for future use &amp;amp; is always set to 0. (Hex, 0x00)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;SYN URGP&lt;/strong&gt;
+SYN indicates that this connection requires a three-way handshake, which is typical of TCP connections.
+URGP indicates whether the urgent pointer field is relevant. 0 means it&amp;rsquo;s not.&lt;/p&gt;
+
       </description>
     </item>
     

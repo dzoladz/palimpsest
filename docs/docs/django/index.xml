@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Palimpsest – Django</title>
-    <link>/palimpsest/docs/django/</link>
+    <link>/docs/django/</link>
     <description>Recent content in Django on Palimpsest</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	  <atom:link href="/palimpsest/docs/django/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/docs/django/index.xml" rel="self" type="application/rss+xml" />
     
     
       

@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Palimpsest – Networks</title>
-    <link>/palimpsest/docs/notebooks/networks/</link>
+    <link>/docs/notebooks/networks/</link>
     <description>Recent content in Networks on Palimpsest</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	  <atom:link href="/palimpsest/docs/notebooks/networks/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/docs/notebooks/networks/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: Commands</title>
-      <link>/palimpsest/docs/notebooks/networks/commands/</link>
+      <link>/docs/notebooks/networks/commands/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/networks/commands/</guid>
+      <guid>/docs/notebooks/networks/commands/</guid>
       <description>
         
         
@@ -47,10 +47,10 @@
     
     <item>
       <title>Docs: Networking</title>
-      <link>/palimpsest/docs/notebooks/networks/networking/</link>
+      <link>/docs/notebooks/networks/networking/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/palimpsest/docs/notebooks/networks/networking/</guid>
+      <guid>/docs/notebooks/networks/networking/</guid>
       <description>
         
         
@@ -88,7 +88,7 @@ spectrum through standards and regulation.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;osi-open-systems-interconnection-layers&#34;&gt;OSI (Open Systems Interconnection) Layers&lt;/h2&gt;
 &lt;p&gt;A conceptual model in which communications between a computing system are split into seven different abstraction layers&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;../assets/osi-reference-model.png&#34; alt=&#34;Diagram of the OSI Reference Model&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;Diagram of the OSI Reference Model&#34; src=&#34;../assets/osi-reference-model.png&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;layer-1---physical&#34;&gt;Layer 1 - Physical&lt;/h3&gt;
 &lt;p&gt;Most closely associated with the physical connection between devices. The physical layer provides an electrical and
 mechanical interface to the transmission medium (e.g. CAT5 cabling, SMF fiber).&lt;/p&gt;
@@ -173,7 +173,7 @@ Improves security by only sending packets to specific machines, not all&lt;/li&g
 &lt;p&gt;Two types: managed and unmanaged&lt;/p&gt;
 &lt;p&gt;Unicast (one device)&lt;br&gt;
 Broadcast (all devices)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;../assets/ethernet-frame.png&#34; alt=&#34;Ethernet Frame Diagram&#34;&gt;
+&lt;p&gt;&lt;img alt=&#34;Ethernet Frame Diagram&#34; src=&#34;../assets/ethernet-frame.png&#34;&gt;
 Ethernet Type field, values?&lt;/p&gt;
 &lt;h4 id=&#34;performance-issues&#34;&gt;Performance Issues&lt;/h4&gt;
 &lt;ul&gt;
@@ -190,7 +190,7 @@ Ethernet Type field, values?&lt;/p&gt;
 the packet out of the appropriate port, not &lt;em&gt;all&lt;/em&gt; ports like a hub&lt;/li&gt;
 &lt;li&gt;&amp;lsquo;Backbones&amp;rsquo; connect switches together&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;../assets/switch-backbones.png&#34; alt=&#34;hierarchric structural diagram of core, distribution, and access switches&#34;&gt;
+&lt;p&gt;&lt;img alt=&#34;hierarchric structural diagram of core, distribution, and access switches&#34; src=&#34;../assets/switch-backbones.png&#34;&gt;
 Core switches 10x faster than access switches&lt;/p&gt;
 &lt;p&gt;lowest port cost&lt;/p&gt;
 &lt;p&gt;Spanning Tree algorithm
@@ -447,12 +447,12 @@ IP is binary. (8 bits of binary in octets, 32 bits in total) - 0 - 255&lt;/p&gt;
 separated by a decimal. This format is known as dotted decimal notation. Adding up
 all bits in each octet equals 255; thus, the range of values for each octet is
 0 - 255.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;../assets/dotted-decimal-notation.png&#34; alt=&#34;diagram of dotted decimal notation illustrating the grouping structure and a basic calculation&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;diagram of dotted decimal notation illustrating the grouping structure and a basic calculation&#34; src=&#34;../assets/dotted-decimal-notation.png&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;classful-addresses&#34;&gt;&lt;em&gt;Classful&lt;/em&gt; Addresses&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;../assets/classful-addresses.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/classful-addresses.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;C&lt;/p&gt;
 &lt;h4 id=&#34;reserved-ipv4-addresses&#34;&gt;Reserved IPv4 Addresses&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&#34;../assets/reserved-ipv4-addresses.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/reserved-ipv4-addresses.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Loop-back can be used to check if the IP stack is functioning
 Ping yourself! (16 million addresses)&lt;/p&gt;
 &lt;p&gt;Interface, all 0 bits (network name)
@@ -584,14 +584,14 @@ Do I need to use a router? (i.e. on another network)&lt;/p&gt;
 &lt;/table&gt;
 &lt;h3 id=&#34;classless-addressing&#34;&gt;&lt;em&gt;Classless&lt;/em&gt; addressing&lt;/h3&gt;
 &lt;p&gt;CIDR (classless interdomain routing)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;../assets/classless-addressing-CIDR.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/classless-addressing-CIDR.png&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;ipv6&#34;&gt;IPv6&lt;/h2&gt;
 &lt;p&gt;128-bit address space
 Does not use Decimal Notation, Uses Hexadecimal addressing
 no subnet mask, uses prefix only&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;../assets/ipv6-addressing.png&#34; alt=&#34;representational depiction of the hexidecimal groupings of an ipv4 address&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;representational depiction of the hexidecimal groupings of an ipv4 address&#34; src=&#34;../assets/ipv6-addressing.png&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;subnetting&#34;&gt;Subnetting&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;../assets/subnet-mask-rules.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/subnet-mask-rules.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;bit budget and binary tables
 subnetting table&lt;/p&gt;
 &lt;p&gt;4 key subnet addresses&lt;/p&gt;
@@ -622,16 +622,16 @@ subnetting table&lt;/p&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;IP subnet calculator&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;../assets/calculating-subnets.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/calculating-subnets.png&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;network-planning&#34;&gt;Network Planning&lt;/h3&gt;
 &lt;p&gt;Implementing a network requires an understanding of the business units and the potential
 for growth of the network in each segment.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;../assets/planning-network-design.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/planning-network-design.png&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;tcp-udp-maintenance-protocols&#34;&gt;TCP, UDP, Maintenance Protocols&lt;/h3&gt;
 &lt;p&gt;Layer 4
 Flow Control
 TCP / UDP&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;../assets/TCP-handshake.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/TCP-handshake.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Transmission Control Protocol
 User Datagram Protocol&lt;/p&gt;
 &lt;p&gt;Voice and Video (speed is import)
@@ -645,7 +645,7 @@ FTP (speed not as important, )&lt;/p&gt;
 &lt;p&gt;Client - initiates connection
 Server - Accepts request&lt;/p&gt;
 &lt;p&gt;Connection - Transfer - Disconnect&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;../assets/message-packaging.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/message-packaging.png&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;port-numbering&#34;&gt;Port Numbering&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.rfc-editor.org/rfc/rfc6335.html&#34;&gt;RFC 6335&lt;/a&gt;, Procedures for the Management of the Service Name and Transport Protocol Port Number Registry&lt;/li&gt;
@@ -678,7 +678,7 @@ Server - Accepts request&lt;/p&gt;
 &lt;h3 id=&#34;sockets&#34;&gt;Sockets&lt;/h3&gt;
 &lt;p&gt;Sockets are a combination of IP address and Port number.
 Sockets allow proper routing and communication of network packets&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;../assets/sockets.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/sockets.png&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;nat&#34;&gt;NAT&lt;/h3&gt;
 &lt;p&gt;Router&lt;/p&gt;
 &lt;p&gt;Router rewrites the TCP/UDP header to allow private IP addresses
@@ -688,7 +688,7 @@ a single public IP address for communications. In the early
 days, each private device had to have a corresponding public IP
 address (which is expensive and overwhelming)&lt;/p&gt;
 &lt;p&gt;NAT Table&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;../assets/NAT.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/NAT.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;NAT uses Sockets for&lt;/p&gt;
 &lt;p&gt;NAT table is only updated when packets go out&lt;/p&gt;
 &lt;h2 id=&#34;support-and-management-protocols&#34;&gt;Support and Management Protocols&lt;/h2&gt;
@@ -700,7 +700,7 @@ address (which is expensive and overwhelming)&lt;/p&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;../assets/ARP.png&#34; alt=&#34;diagram of an ARP message&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;diagram of an ARP message&#34; src=&#34;../assets/ARP.png&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;IGMP
 &lt;ul&gt;
@@ -709,7 +709,7 @@ address (which is expensive and overwhelming)&lt;/p&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;../assets/IGMP.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/IGMP.png&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;SNMP
 &lt;ul&gt;
@@ -728,7 +728,7 @@ address (which is expensive and overwhelming)&lt;/p&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;../assets/SNMP.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/SNMP.png&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;DNS
 &lt;ul&gt;
@@ -746,7 +746,7 @@ address (which is expensive and overwhelming)&lt;/p&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;../assets/DNS.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/DNS.png&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;TFTP&lt;/li&gt;
 &lt;li&gt;DHCP - Dynamic Host Configuration Protocol&lt;/li&gt;
@@ -759,7 +759,7 @@ address (which is expensive and overwhelming)&lt;/p&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;../assets/ICMP.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/ICMP.png&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;FTP&lt;/li&gt;
 &lt;li&gt;Telnet
@@ -784,7 +784,7 @@ address (which is expensive and overwhelming)&lt;/p&gt;
 &lt;li&gt;layer 2 broadcasts are not forward by routers&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Referred to as &amp;rsquo;logical segmentation&amp;rsquo;
-&lt;img src=&#34;../assets/logical-segmentation.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;../assets/logical-segmentation.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Routing metrics - best pathway&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;bandwidth (higher bandwidth is better)&lt;/li&gt;
@@ -804,7 +804,7 @@ address (which is expensive and overwhelming)&lt;/p&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;../assets/rip-routing-protocol.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/rip-routing-protocol.png&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;OSPF (open shortest path first)
 &lt;ul&gt;
@@ -848,12 +848,12 @@ MPLS&lt;/p&gt;
 &lt;li&gt;label switching router&lt;/li&gt;
 &lt;li&gt;label switched pathway&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;../assets/mpls.png&#34; alt=&#34;&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/mpls.png&#34;&gt;
 MPLS labels&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;label , need a diagram&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;../assets/carrier-ethernet.png&#34; alt=&#34;&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/carrier-ethernet.png&#34;&gt;
 carrier ethernet &lt;a href=&#34;https://en.wikipedia.org/wiki/Carrier_Ethernet&#34;&gt;https://en.wikipedia.org/wiki/Carrier_Ethernet&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&amp;ldquo;metro ethernet&amp;rdquo;&lt;/li&gt;
@@ -864,7 +864,7 @@ evc - ethernet virtual connection
 ovc - operator virtual connection
 cen -
 enni - extended network network interface&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;../assets/eline.png&#34; alt=&#34;&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/eline.png&#34;&gt;
 E-Line&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;point-to-point&lt;/li&gt;
@@ -905,7 +905,7 @@ OC 1
 OC 192
 OC 3&lt;/p&gt;
 &lt;p&gt;Optical Transport networks
-&lt;img src=&#34;../assets/optical-transport-networks.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;../assets/optical-transport-networks.png&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;IP traffic (packets)&lt;/li&gt;
 &lt;li&gt;g.709&lt;/li&gt;
@@ -1043,7 +1043,7 @@ RFB (Remote Frame Buffer)&lt;/p&gt;
 &lt;p&gt;Separates control plane from network/switching plane. Remote network devices can pull their configuration from a central
 control plane device, removing the need to configure each switch individually. This also allows for rapid response
 to changing network conditions by updating a single control place device.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;../assets/software-defined-networks.png&#34; alt=&#34;diagram of software device network application layers&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;diagram of software device network application layers&#34; src=&#34;../assets/software-defined-networks.png&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Application layer (Northbound API), automation of the network for business applications&lt;/li&gt;
 &lt;li&gt;Control place (SDN controller), changes to 1000s of device immediately&lt;/li&gt;
