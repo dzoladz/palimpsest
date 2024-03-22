@@ -181,5 +181,59 @@
       </description>
     </item>
     
+    <item>
+      <title>Docs: SQL</title>
+      <link>/docs/notebooks/databases/sql/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/notebooks/databases/sql/</guid>
+      <description>
+        
+        
+        &lt;p&gt;SQL (Structured Query Language) is used to manage data in a relational database management system.&lt;/p&gt;
+&lt;p&gt;Diagrams from &lt;a href=&#34;https://bytebytego.com/&#34;&gt;ByteByteGo&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;execution-order&#34;&gt;Execution Order&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/execution_order.jpg&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;sql-components&#34;&gt;SQL Components&lt;/h2&gt;
+&lt;p&gt;Engineering relational databases required an understanding of the following components&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;DDL&lt;/strong&gt;: (data definition language)
+&lt;ul&gt;
+&lt;li&gt;syntax for creating and modifying database objects such as tables, indices, and users&lt;/li&gt;
+&lt;li&gt;e.g., CREATE, ALTER, DROP&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;DQL&lt;/strong&gt;: (data query language)
+&lt;ul&gt;
+&lt;li&gt;used for performing queries on the data within schema objects&lt;/li&gt;
+&lt;li&gt;e.g., SELECT&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;DML&lt;/strong&gt;: (data manipulation language)
+&lt;ul&gt;
+&lt;li&gt;used for adding (inserting), deleting, and modifying (updating) data&lt;/li&gt;
+&lt;li&gt;e.g., INSERT, UPDATE, DELETE&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;DCL&lt;/strong&gt;: (data control language)
+&lt;ul&gt;
+&lt;li&gt;used to control access to data stored in a database i.e., authorization&lt;/li&gt;
+&lt;li&gt;e.g., GRANT, REVOKE&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;TCL&lt;/strong&gt;: (transaction control language)
+&lt;ul&gt;
+&lt;li&gt;used to maintain the integrity and consistency of the data stored in the database&lt;/li&gt;
+&lt;li&gt;e.g., COMMIT, ROLLBACK&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/sql_components.png&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;types-of-joins&#34;&gt;Types of Joins&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../assets/join_types.png&#34;&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
   </channel>
 </rss>

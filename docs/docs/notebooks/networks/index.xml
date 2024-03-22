@@ -46,6 +46,214 @@
     </item>
     
     <item>
+      <title>Docs: Fiber Optics</title>
+      <link>/docs/notebooks/networks/fiber_optics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/notebooks/networks/fiber_optics/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;optics&#34;&gt;Optics&lt;/h2&gt;
+&lt;h3 id=&#34;single-mode-fiber&#34;&gt;Single Mode Fiber&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;size&lt;/td&gt;
+&lt;td&gt;4 μm core (micron)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;use&lt;/td&gt;
+&lt;td&gt;long-haul applications&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;bandwidth&lt;/td&gt;
+&lt;td&gt;theoretically, unlimited&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;cost&lt;/td&gt;
+&lt;td&gt;$$$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;video controls width=&#34;100%&#34;&gt;
+  &lt;source src=&#34;../assets/optics_single_mode_fiber.mp4&#34; type=&#34;video/mp4&#34; /&gt;
+&lt;/video&gt;
+&lt;h3 id=&#34;multi-mode-fiber&#34;&gt;Multi-Mode Fiber&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;size&lt;/td&gt;
+&lt;td&gt;50 - 62.5 μm core (micron)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;use&lt;/td&gt;
+&lt;td&gt;internal building / data center&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;bandwidth&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;cost&lt;/td&gt;
+&lt;td&gt;$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;video controls width=&#34;100%&#34;&gt;
+  &lt;source src=&#34;../assets/optics_multimode_mode_fiber.mp4&#34; type=&#34;video/mp4&#34; /&gt;
+&lt;/video&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Interfaces</title>
+      <link>/docs/notebooks/networks/interfaces/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/notebooks/networks/interfaces/</guid>
+      <description>
+        
+        
+        &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;root@proxmox:~# ip a
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;1: lo: &amp;lt;LOOPBACK,UP,LOWER_UP&amp;gt; mtu &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;65536&lt;/span&gt; qdisc noqueue state UNKNOWN group default qlen &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1000&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    inet 127.0.0.1/8 scope host lo
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       valid_lft forever preferred_lft forever
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    inet6 ::1/128 scope host noprefixroute
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       valid_lft forever preferred_lft forever
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;2: eno1: &amp;lt;BROADCAST,MULTICAST,UP,LOWER_UP&amp;gt; mtu &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1500&lt;/span&gt; qdisc mq master vmbr0 state UP group default qlen &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1000&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    link/ether 78:2b:cb:5a:13:8a brd ff:ff:ff:ff:ff:ff
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    altname enp1s0f0
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;3: eno2: &amp;lt;BROADCAST,MULTICAST&amp;gt; mtu &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1500&lt;/span&gt; qdisc mq state DOWN group default qlen &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1000&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    link/ether 78:2b:cb:5a:13:8b brd ff:ff:ff:ff:ff:ff
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    altname enp1s0f1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;5: vmbr0: &amp;lt;BROADCAST,MULTICAST,UP,LOWER_UP&amp;gt; mtu &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1500&lt;/span&gt; qdisc noqueue state UP group default qlen &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1000&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    link/ether 78:2b:cb:5a:13:8a brd ff:ff:ff:ff:ff:ff
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    inet 192.168.1.20/24 scope global vmbr0
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       valid_lft forever preferred_lft forever
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    inet6 fe80::7a2b:cbff:fe5a:138a/64 scope link
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;       valid_lft forever preferred_lft forever
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;interface-details&#34;&gt;Interface Details&lt;/h2&gt;
+&lt;h3 id=&#34;physical-layer---layer-1&#34;&gt;Physical Layer - Layer 1&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;eno1&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;The name of the interface from the operating system’s perspective. This depends a lot on the specific distribution of Linux you are running, whether it is a virtual or physical machine, and the type of interface.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&amp;lt;BROADCAST,MULTICAST,UP,LOWER_UP&amp;gt;&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;A series of flags that provide details about the interface state. This shows that my interface is both broadcast and multicast capable and that the interface is enabled (UP) and that the physical layer is connected (LOWER_UP).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;mtu 1500&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Maximum transmission unit (MTU), in bytes, for the interface.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;qdisc mq&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Queueing approach being used by the interface: “noqueue” (send immediately) or “noop” (drop all).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;state UP&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Operational state of an interface. “UP”, “DOWN”, and “UNKNOWN”. “UNKNOWN” indicates that the interface is up and operational, but nothing is connected.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;group default&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Interfaces can be grouped together on Linux to allow common attributes or commands. Having all interfaces connected to “group default” is the most common setup.&lt;/li&gt;
+&lt;li&gt;There are some handy things you can do if you group interfaces together. For example, imagine a VM host system with 2 interfaces for management and 8 for data traffic. You could group them into “mgmt” and “data” groups and then control all interfaces of a type together.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;qlen 1000&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;The interface has a 1000 packet queue. The 1001st packet would be dropped.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;data-link-layer---layer-2&#34;&gt;Data Link Layer - Layer 2&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;link/ether&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;MAC (Medium Access Control) address of the interface&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;network-layer---layer-3&#34;&gt;Network Layer - Layer 3&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;inet&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;The IPv4 interface configuration
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;scope global&lt;/strong&gt; - This address is globally reachable. Other options include link and host.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;dynamic&lt;/strong&gt; - This IP address was assigned by DHCP. The lease length is listed in “valid_lft”.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;vmbr0&lt;/strong&gt; - A reference back to the interface this IP address is associated with.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;inet6&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;The IPv6 interface configuration
+&lt;ul&gt;
+&lt;li&gt;Only the link local address is configured. IPv4 link-local addresses are assigned from address block
+&lt;code&gt;169.254.0.0/16&lt;/code&gt;. In IPv6, they are assigned from the block &lt;code&gt;fe80::&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;media-layers&#34;&gt;Media layers&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;OSI Layer&lt;/th&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Protocol data unit (PDU)&lt;/th&gt;
+&lt;th&gt;Function&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;Network&lt;/td&gt;
+&lt;td&gt;Packet&lt;/td&gt;
+&lt;td&gt;Structuring and managing a multi-node network, including addressing, routing and traffic control&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;Data Link&lt;/td&gt;
+&lt;td&gt;Frame&lt;/td&gt;
+&lt;td&gt;Transmission of data frames between two nodes connected by a physical layer&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;Physical&lt;/td&gt;
+&lt;td&gt;Bit, Symbol&lt;/td&gt;
+&lt;td&gt;Transmission and reception of raw bit streams over a physical medium&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Docs: Networking</title>
       <link>/docs/notebooks/networks/networking/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

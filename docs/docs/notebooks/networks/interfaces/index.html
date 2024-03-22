@@ -1,0 +1,614 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>Interfaces | Palimpsest</title>
+<meta name="description" content="Network Interfaces
+">
+<meta property="og:title" content="Interfaces" />
+<meta property="og:description" content="Network Interfaces
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/docs/notebooks/networks/interfaces/" /><meta property="article:section" content="docs" />
+
+
+
+<meta itemprop="name" content="Interfaces">
+<meta itemprop="description" content="Network Interfaces
+">
+
+<meta itemprop="wordCount" content="490">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Interfaces"/>
+<meta name="twitter:description" content="Network Interfaces
+"/>
+
+
+
+
+<link rel="preload" href="/scss/main.min.9e0bdf42d611195ba915a3360d7383f4ed257828b694cb55ef42c6f8452afae0.css" as="style">
+<link href="/scss/main.min.9e0bdf42d611195ba915a3360d7383f4ed257828b694cb55ef42c6f8452afae0.css" rel="stylesheet" integrity="">
+
+<script
+  src="https://code.jquery.com/jquery-3.6.3.min.js"
+  integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+  crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3.5.2"
+  integrity="sha512-TW5eKlwwg7OfQUVBqxjp94/uqtjJJbhkRE3++XGEQjAL1n3y//QVqS3acPkwqkzInaFRtj+w05uyxDbfDXiI1A=="
+  crossorigin="anonymous" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-00000000-0"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'UA-00000000-0');
+}
+</script>
+  </head>
+  <body class="td-page">
+    <header>
+      <nav class="td-navbar navbar-dark js-navbar-scroll">
+<div class="container-fluid flex-column flex-md-row">
+  <a class="navbar-brand" href="/"><span class="navbar-brand__logo navbar-logo"></span><span class="navbar-brand__name">Palimpsest</span></a>
+  <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
+    <ul class="navbar-nav">
+      </ul>
+  </div>
+  <div class="d-none d-lg-block">
+    <div class="td-search">
+  <div class="td-search--algolia" id="docsearch-1"></div>
+</div>
+  </div>
+</div>
+</nav>
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            <div id="td-sidebar-menu" class="td-sidebar__inner">
+  <form class="td-sidebar__search d-flex align-items-center">
+    <div class="td-search">
+  <div class="td-search--algolia" id="docsearch-0"></div>
+</div>
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ms-3 fas fa-bars" type="button" data-bs-toggle="collapse" data-bs-target="#td-section-nav" aria-controls="td-section-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  <nav class="td-sidebar-nav collapse foldable-nav" id="td-section-nav">
+    <ul class="td-sidebar-nav__section pe-md-3 ul-0">
+      <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docs-li">
+  <a href="/docs/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-docs"><span class="">Docs</span></a>
+  <ul class="ul-1">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsdevops-li">
+  <input type="checkbox" id="m-docsdevops-check"/>
+  <label for="m-docsdevops-check"><a href="/docs/devops/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsdevops"><span class="">DevOps</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdevopscodingcoding-li">
+  <input type="checkbox" id="m-docsdevopscodingcoding-check"/>
+  <label for="m-docsdevopscodingcoding-check"><a href="/docs/devops/coding/coding/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsdevopscodingcoding"><span class="">Coding</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdevopsreferences-li">
+  <input type="checkbox" id="m-docsdevopsreferences-check"/>
+  <label for="m-docsdevopsreferences-check"><a href="/docs/devops/references/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsdevopsreferences"><span class="">References</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdjango-li">
+  <input type="checkbox" id="m-docsdjango-check"/>
+  <label for="m-docsdjango-check"><a href="/docs/django/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsdjango"><span class="">Django</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docslaboratory-li">
+  <input type="checkbox" id="m-docslaboratory-check"/>
+  <label for="m-docslaboratory-check"><a href="/docs/laboratory/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docslaboratory"><span class="">Laboratory</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docslaboratorykuberneteskubernetes-li">
+  <input type="checkbox" id="m-docslaboratorykuberneteskubernetes-check"/>
+  <label for="m-docslaboratorykuberneteskubernetes-check"><a href="/docs/laboratory/kubernetes/kubernetes/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docslaboratorykuberneteskubernetes"><span class="">Kubernetes</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docslaboratorynetworknetworking-gear-li">
+  <input type="checkbox" id="m-docslaboratorynetworknetworking-gear-check"/>
+  <label for="m-docslaboratorynetworknetworking-gear-check"><a href="/docs/laboratory/network/networking-gear/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docslaboratorynetworknetworking-gear"><span class="">Network Description</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docslaboratorykubernetesrancher-li">
+  <input type="checkbox" id="m-docslaboratorykubernetesrancher-check"/>
+  <label for="m-docslaboratorykubernetesrancher-check"><a href="/docs/laboratory/kubernetes/rancher/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docslaboratorykubernetesrancher"><span class="">Rancher</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docslaboratorykubernetescluster-li">
+  <input type="checkbox" id="m-docslaboratorykubernetescluster-check"/>
+  <label for="m-docslaboratorykubernetescluster-check"><a href="/docs/laboratory/kubernetes/cluster/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docslaboratorykubernetescluster"><span class="">Raspberry Pi Cluster</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docslaboratorykuberneteshelm-li">
+  <input type="checkbox" id="m-docslaboratorykuberneteshelm-check"/>
+  <label for="m-docslaboratorykuberneteshelm-check"><a href="/docs/laboratory/kubernetes/helm/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docslaboratorykuberneteshelm"><span class="">Helm</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docsnotebooks-li">
+  <input type="checkbox" id="m-docsnotebooks-check" checked/>
+  <label for="m-docsnotebooks-check"><a href="/docs/notebooks/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsnotebooks"><span class="">Notebooks</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsnotebooksdatabases-li">
+  <input type="checkbox" id="m-docsnotebooksdatabases-check"/>
+  <label for="m-docsnotebooksdatabases-check"><a href="/docs/notebooks/databases/" title="Databases" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsnotebooksdatabases"><span class="">databases</span></a></label>
+  
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsnotebooksdatabasesmariadb-li">
+  <input type="checkbox" id="m-docsnotebooksdatabasesmariadb-check"/>
+  <label for="m-docsnotebooksdatabasesmariadb-check"><a href="/docs/notebooks/databases/mariadb/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsnotebooksdatabasesmariadb"><span class="">MariaDB</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsnotebooksdatabasespostgres-li">
+  <input type="checkbox" id="m-docsnotebooksdatabasespostgres-check"/>
+  <label for="m-docsnotebooksdatabasespostgres-check"><a href="/docs/notebooks/databases/postgres/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsnotebooksdatabasespostgres"><span class="">PostgreSQL</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsnotebooksdatabasessql-li">
+  <input type="checkbox" id="m-docsnotebooksdatabasessql-check"/>
+  <label for="m-docsnotebooksdatabasessql-check"><a href="/docs/notebooks/databases/sql/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsnotebooksdatabasessql"><span class="">SQL</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docsnotebooksnetworks-li">
+  <input type="checkbox" id="m-docsnotebooksnetworks-check" checked/>
+  <label for="m-docsnotebooksnetworks-check"><a href="/docs/notebooks/networks/" title="Networks" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsnotebooksnetworks"><span class="">networks</span></a></label>
+  
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsnotebooksnetworkscommands-li">
+  <input type="checkbox" id="m-docsnotebooksnetworkscommands-check"/>
+  <label for="m-docsnotebooksnetworkscommands-check"><a href="/docs/notebooks/networks/commands/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsnotebooksnetworkscommands"><span class="">Commands</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsnotebooksnetworksfiber_optics-li">
+  <input type="checkbox" id="m-docsnotebooksnetworksfiber_optics-check"/>
+  <label for="m-docsnotebooksnetworksfiber_optics-check"><a href="/docs/notebooks/networks/fiber_optics/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsnotebooksnetworksfiber_optics"><span class="">Fiber Optics</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docsnotebooksnetworksinterfaces-li">
+  <input type="checkbox" id="m-docsnotebooksnetworksinterfaces-check" checked/>
+  <label for="m-docsnotebooksnetworksinterfaces-check"><a href="/docs/notebooks/networks/interfaces/" class="align-left ps-0  active td-sidebar-link td-sidebar-link__page" id="m-docsnotebooksnetworksinterfaces"><span class="td-sidebar-nav-active-item">Interfaces</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsnotebooksnetworksnetworking-li">
+  <input type="checkbox" id="m-docsnotebooksnetworksnetworking-check"/>
+  <label for="m-docsnotebooksnetworksnetworking-check"><a href="/docs/notebooks/networks/networking/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsnotebooksnetworksnetworking"><span class="">Networking</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsnotebookssysadmin-li">
+  <input type="checkbox" id="m-docsnotebookssysadmin-check"/>
+  <label for="m-docsnotebookssysadmin-check"><a href="/docs/notebooks/sysadmin/" title="SysAdmin" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsnotebookssysadmin"><span class="">sysadmin</span></a></label>
+  
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsnotebookssysadminchroot-sftp-setup-li">
+  <input type="checkbox" id="m-docsnotebookssysadminchroot-sftp-setup-check"/>
+  <label for="m-docsnotebookssysadminchroot-sftp-setup-check"><a href="/docs/notebooks/sysadmin/chroot-sftp-setup/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsnotebookssysadminchroot-sftp-setup"><span class="">Chroot SFTP Setup</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsnotebookssysadmincron-li">
+  <input type="checkbox" id="m-docsnotebookssysadmincron-check"/>
+  <label for="m-docsnotebookssysadmincron-check"><a href="/docs/notebooks/sysadmin/cron/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsnotebookssysadmincron"><span class="">Cron</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsnotebookssysadminexpand_volumes-li">
+  <input type="checkbox" id="m-docsnotebookssysadminexpand_volumes-check"/>
+  <label for="m-docsnotebookssysadminexpand_volumes-check"><a href="/docs/notebooks/sysadmin/expand_volumes/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsnotebookssysadminexpand_volumes"><span class="">Expanding Volumes</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsnotebookssysadminfail2ban-li">
+  <input type="checkbox" id="m-docsnotebookssysadminfail2ban-check"/>
+  <label for="m-docsnotebookssysadminfail2ban-check"><a href="/docs/notebooks/sysadmin/fail2ban/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsnotebookssysadminfail2ban"><span class="">fail2ban</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsnotebookssysadminlvm-li">
+  <input type="checkbox" id="m-docsnotebookssysadminlvm-check"/>
+  <label for="m-docsnotebookssysadminlvm-check"><a href="/docs/notebooks/sysadmin/lvm/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsnotebookssysadminlvm"><span class="">LVM</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsnotebookssysadminpackages-li">
+  <input type="checkbox" id="m-docsnotebookssysadminpackages-check"/>
+  <label for="m-docsnotebookssysadminpackages-check"><a href="/docs/notebooks/sysadmin/packages/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsnotebookssysadminpackages"><span class="">Packages</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsnotebookssysadminsed_awk-li">
+  <input type="checkbox" id="m-docsnotebookssysadminsed_awk-check"/>
+  <label for="m-docsnotebookssysadminsed_awk-check"><a href="/docs/notebooks/sysadmin/sed_awk/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsnotebookssysadminsed_awk"><span class="">sed &amp; awk</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsnotebookssysadminssh-li">
+  <input type="checkbox" id="m-docsnotebookssysadminssh-check"/>
+  <label for="m-docsnotebookssysadminssh-check"><a href="/docs/notebooks/sysadmin/ssh/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsnotebookssysadminssh"><span class="">SSH</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsnotebookssysadminssl-li">
+  <input type="checkbox" id="m-docsnotebookssysadminssl-check"/>
+  <label for="m-docsnotebookssysadminssl-check"><a href="/docs/notebooks/sysadmin/ssl/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsnotebookssysadminssl"><span class="">SSL</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsnotebookssysadminsysadmin_tasks-li">
+  <input type="checkbox" id="m-docsnotebookssysadminsysadmin_tasks-check"/>
+  <label for="m-docsnotebookssysadminsysadmin_tasks-check"><a href="/docs/notebooks/sysadmin/sysadmin_tasks/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsnotebookssysadminsysadmin_tasks"><span class="">SysAdmin Tasks</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsnotebookssysadminufw-li">
+  <input type="checkbox" id="m-docsnotebookssysadminufw-check"/>
+  <label for="m-docsnotebookssysadminufw-check"><a href="/docs/notebooks/sysadmin/ufw/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsnotebookssysadminufw"><span class="">UFW</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsnotebooksambiance-li">
+  <input type="checkbox" id="m-docsnotebooksambiance-check"/>
+  <label for="m-docsnotebooksambiance-check"><a href="/docs/notebooks/ambiance/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsnotebooksambiance"><span class=""></span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsnotebooksauthentication-li">
+  <input type="checkbox" id="m-docsnotebooksauthentication-check"/>
+  <label for="m-docsnotebooksauthentication-check"><a href="/docs/notebooks/authentication/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsnotebooksauthentication"><span class="">Authentication</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsnotebooksbusiness_apps-li">
+  <input type="checkbox" id="m-docsnotebooksbusiness_apps-check"/>
+  <label for="m-docsnotebooksbusiness_apps-check"><a href="/docs/notebooks/business_apps/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsnotebooksbusiness_apps"><span class="">Business Apps</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsnotebookscables-li">
+  <input type="checkbox" id="m-docsnotebookscables-check"/>
+  <label for="m-docsnotebookscables-check"><a href="/docs/notebooks/cables/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsnotebookscables"><span class="">Cables</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsnotebookscertbot-li">
+  <input type="checkbox" id="m-docsnotebookscertbot-check"/>
+  <label for="m-docsnotebookscertbot-check"><a href="/docs/notebooks/certbot/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsnotebookscertbot"><span class="">Certbot</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsnotebooksdiagramming-li">
+  <input type="checkbox" id="m-docsnotebooksdiagramming-check"/>
+  <label for="m-docsnotebooksdiagramming-check"><a href="/docs/notebooks/diagramming/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsnotebooksdiagramming"><span class="">Diagramming Tool</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsnotebooksdocker-li">
+  <input type="checkbox" id="m-docsnotebooksdocker-check"/>
+  <label for="m-docsnotebooksdocker-check"><a href="/docs/notebooks/docker/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsnotebooksdocker"><span class="">Docker</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsnotebooksemail-li">
+  <input type="checkbox" id="m-docsnotebooksemail-check"/>
+  <label for="m-docsnotebooksemail-check"><a href="/docs/notebooks/email/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsnotebooksemail"><span class="">Email</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsnotebooksezproxy-li">
+  <input type="checkbox" id="m-docsnotebooksezproxy-check"/>
+  <label for="m-docsnotebooksezproxy-check"><a href="/docs/notebooks/ezproxy/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsnotebooksezproxy"><span class="">EZproxy</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsnotebooksgeospatial-li">
+  <input type="checkbox" id="m-docsnotebooksgeospatial-check"/>
+  <label for="m-docsnotebooksgeospatial-check"><a href="/docs/notebooks/geospatial/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsnotebooksgeospatial"><span class="">Geospatial</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsnotebooksgit-li">
+  <input type="checkbox" id="m-docsnotebooksgit-check"/>
+  <label for="m-docsnotebooksgit-check"><a href="/docs/notebooks/git/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsnotebooksgit"><span class="">Git</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsnotebooksgpg-li">
+  <input type="checkbox" id="m-docsnotebooksgpg-check"/>
+  <label for="m-docsnotebooksgpg-check"><a href="/docs/notebooks/gpg/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsnotebooksgpg"><span class="">GPG</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsnotebookshomebrew-li">
+  <input type="checkbox" id="m-docsnotebookshomebrew-check"/>
+  <label for="m-docsnotebookshomebrew-check"><a href="/docs/notebooks/homebrew/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsnotebookshomebrew"><span class="">Homebrew</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsnotebooksjavascript-li">
+  <input type="checkbox" id="m-docsnotebooksjavascript-check"/>
+  <label for="m-docsnotebooksjavascript-check"><a href="/docs/notebooks/javascript/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsnotebooksjavascript"><span class="">JavaScript</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsnotebooksjs_forms-li">
+  <input type="checkbox" id="m-docsnotebooksjs_forms-check"/>
+  <label for="m-docsnotebooksjs_forms-check"><a href="/docs/notebooks/js_forms/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsnotebooksjs_forms"><span class="">JS Forms</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsnotebooksmailman-li">
+  <input type="checkbox" id="m-docsnotebooksmailman-check"/>
+  <label for="m-docsnotebooksmailman-check"><a href="/docs/notebooks/mailman/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsnotebooksmailman"><span class="">Mailman</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsnotebooksmonit-li">
+  <input type="checkbox" id="m-docsnotebooksmonit-check"/>
+  <label for="m-docsnotebooksmonit-check"><a href="/docs/notebooks/monit/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsnotebooksmonit"><span class="">Monit</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsnotebooksnetworker_commands-li">
+  <input type="checkbox" id="m-docsnotebooksnetworker_commands-check"/>
+  <label for="m-docsnotebooksnetworker_commands-check"><a href="/docs/notebooks/networker_commands/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsnotebooksnetworker_commands"><span class="">networker</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsnotebooksperlbrew-li">
+  <input type="checkbox" id="m-docsnotebooksperlbrew-check"/>
+  <label for="m-docsnotebooksperlbrew-check"><a href="/docs/notebooks/perlbrew/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsnotebooksperlbrew"><span class="">Perlbrew</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsnotebooksphp-li">
+  <input type="checkbox" id="m-docsnotebooksphp-check"/>
+  <label for="m-docsnotebooksphp-check"><a href="/docs/notebooks/php/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsnotebooksphp"><span class="">PHP</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsnotebookspostfix-li">
+  <input type="checkbox" id="m-docsnotebookspostfix-check"/>
+  <label for="m-docsnotebookspostfix-check"><a href="/docs/notebooks/postfix/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsnotebookspostfix"><span class="">Postfix</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsnotebookspython4lib-li">
+  <input type="checkbox" id="m-docsnotebookspython4lib-check"/>
+  <label for="m-docsnotebookspython4lib-check"><a href="/docs/notebooks/python4lib/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsnotebookspython4lib"><span class="">Python4Lib</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsnotebooksreact-li">
+  <input type="checkbox" id="m-docsnotebooksreact-check"/>
+  <label for="m-docsnotebooksreact-check"><a href="/docs/notebooks/react/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsnotebooksreact"><span class="">React.js</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsnotebookssamba-li">
+  <input type="checkbox" id="m-docsnotebookssamba-check"/>
+  <label for="m-docsnotebookssamba-check"><a href="/docs/notebooks/samba/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsnotebookssamba"><span class="">Samba</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsnotebookssip-li">
+  <input type="checkbox" id="m-docsnotebookssip-check"/>
+  <label for="m-docsnotebookssip-check"><a href="/docs/notebooks/sip/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsnotebookssip"><span class="">SIP2</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsnotebooksyaz-li">
+  <input type="checkbox" id="m-docsnotebooksyaz-check"/>
+  <label for="m-docsnotebooksyaz-check"><a href="/docs/notebooks/yaz/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsnotebooksyaz"><span class="">Yaz</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsaccessibility-li">
+  <input type="checkbox" id="m-docsaccessibility-check"/>
+  <label for="m-docsaccessibility-check"><a href="/docs/accessibility/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-docsaccessibility"><span class="">Accessibility</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsaccessibilityreferences-li">
+  <input type="checkbox" id="m-docsaccessibilityreferences-check"/>
+  <label for="m-docsaccessibilityreferences-check"><a href="/docs/accessibility/references/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-docsaccessibilityreferences"><span class="">References</span></a></label>
+  
+</li>
+  </ul>
+</li>
+  </ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+          </aside>
+          <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+            <div class="td-page-meta ms-2 pb-1 pt-2 mb-0">
+<a href="https://github.com/dzoladz/palimpsest//tree/main/content/en/docs/notebooks/networks/interfaces.md" class="td-page-meta--view td-page-meta__view" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines fa-fw"></i> View page source</a>
+  <a href="https://github.com/dzoladz/palimpsest//edit/main/content/en/docs/notebooks/networks/interfaces.md" class="td-page-meta--edit td-page-meta__edit" target="_blank" rel="noopener"><i class="fa-solid fa-pen-to-square fa-fw"></i> Edit this page</a>
+  <a href="https://github.com/dzoladz/palimpsest//new/main/content/en/docs/notebooks/networks?filename=change-me.md&amp;value=---%0Atitle%3A&#43;%22Long&#43;Page&#43;Title%22%0AlinkTitle%3A&#43;%22Short&#43;Nav&#43;Title%22%0Aweight%3A&#43;100%0Adescription%3A&#43;%3E-%0A&#43;&#43;&#43;&#43;&#43;Page&#43;description&#43;for&#43;heading&#43;and&#43;indexes.%0A---%0A%0A%23%23&#43;Heading%0A%0AEdit&#43;this&#43;template&#43;to&#43;create&#43;your&#43;new&#43;page.%0A%0A%2A&#43;Give&#43;it&#43;a&#43;good&#43;name%2C&#43;ending&#43;in&#43;%60.md%60&#43;-&#43;e.g.&#43;%60getting-started.md%60%0A%2A&#43;Edit&#43;the&#43;%22front&#43;matter%22&#43;section&#43;at&#43;the&#43;top&#43;of&#43;the&#43;page&#43;%28weight&#43;controls&#43;how&#43;its&#43;ordered&#43;amongst&#43;other&#43;pages&#43;in&#43;the&#43;same&#43;directory%3B&#43;lowest&#43;number&#43;first%29.%0A%2A&#43;Add&#43;a&#43;good&#43;commit&#43;message&#43;at&#43;the&#43;bottom&#43;of&#43;the&#43;page&#43;%28%3C80&#43;characters%3B&#43;use&#43;the&#43;extended&#43;description&#43;field&#43;for&#43;more&#43;detail%29.%0A%2A&#43;Create&#43;a&#43;new&#43;branch&#43;so&#43;you&#43;can&#43;preview&#43;your&#43;new&#43;file&#43;and&#43;request&#43;a&#43;review&#43;via&#43;Pull&#43;Request.%0A" class="td-page-meta--child td-page-meta__child" target="_blank" rel="noopener"><i class="fa-solid fa-pen-to-square fa-fw"></i> Create child page</a>
+  <a href="https://github.com/dzoladz/palimpsest//issues/new?title=Interfaces" class="td-page-meta--issue td-page-meta__issue" target="_blank" rel="noopener"><i class="fa-solid fa-list-check fa-fw"></i> Create documentation issue</a>
+  <a href="https://github.com/dzoladz/palimpsest//issues/new" class="td-page-meta--project td-page-meta__project-issue" target="_blank" rel="noopener"><i class="fa-solid fa-list-check fa-fw"></i> Create project issue</a>
+  
+</div>
+
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#interface-details">Interface Details</a>
+      <ul>
+        <li><a href="#physical-layer---layer-1">Physical Layer - Layer 1</a></li>
+        <li><a href="#data-link-layer---layer-2">Data Link Layer - Layer 2</a></li>
+        <li><a href="#network-layer---layer-3">Network Layer - Layer 3</a></li>
+      </ul>
+    </li>
+    <li><a href="#media-layers">Media layers</a></li>
+  </ul>
+</nav>
+      </div>
+    
+            
+	
+          </aside>
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="td-breadcrumbs">
+  <ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="/docs/">Docs</a></li>
+  <li class="breadcrumb-item">
+    <a href="/docs/notebooks/">Notebooks</a></li>
+  <li class="breadcrumb-item">
+    <a href="/docs/notebooks/networks/">networks</a></li>
+  <li class="breadcrumb-item active" aria-current="page">
+    Interfaces</li>
+  </ol>
+</nav>
+            
+<div class="td-content">
+	<h1>Interfaces</h1>
+	<div class="lead">Network Interfaces</div>
+	<header class="article-meta">
+		
+  </header>
+	<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>root@proxmox:~# ip a
+</span></span><span style="display:flex;"><span>1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu <span style="color:#0000cf;font-weight:bold">65536</span> qdisc noqueue state UNKNOWN group default qlen <span style="color:#0000cf;font-weight:bold">1000</span>
+</span></span><span style="display:flex;"><span>    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+</span></span><span style="display:flex;"><span>    inet 127.0.0.1/8 scope host lo
+</span></span><span style="display:flex;"><span>       valid_lft forever preferred_lft forever
+</span></span><span style="display:flex;"><span>    inet6 ::1/128 scope host noprefixroute
+</span></span><span style="display:flex;"><span>       valid_lft forever preferred_lft forever
+</span></span><span style="display:flex;"><span>2: eno1: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu <span style="color:#0000cf;font-weight:bold">1500</span> qdisc mq master vmbr0 state UP group default qlen <span style="color:#0000cf;font-weight:bold">1000</span>
+</span></span><span style="display:flex;"><span>    link/ether 78:2b:cb:5a:13:8a brd ff:ff:ff:ff:ff:ff
+</span></span><span style="display:flex;"><span>    altname enp1s0f0
+</span></span><span style="display:flex;"><span>3: eno2: &lt;BROADCAST,MULTICAST&gt; mtu <span style="color:#0000cf;font-weight:bold">1500</span> qdisc mq state DOWN group default qlen <span style="color:#0000cf;font-weight:bold">1000</span>
+</span></span><span style="display:flex;"><span>    link/ether 78:2b:cb:5a:13:8b brd ff:ff:ff:ff:ff:ff
+</span></span><span style="display:flex;"><span>    altname enp1s0f1
+</span></span><span style="display:flex;"><span>5: vmbr0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu <span style="color:#0000cf;font-weight:bold">1500</span> qdisc noqueue state UP group default qlen <span style="color:#0000cf;font-weight:bold">1000</span>
+</span></span><span style="display:flex;"><span>    link/ether 78:2b:cb:5a:13:8a brd ff:ff:ff:ff:ff:ff
+</span></span><span style="display:flex;"><span>    inet 192.168.1.20/24 scope global vmbr0
+</span></span><span style="display:flex;"><span>       valid_lft forever preferred_lft forever
+</span></span><span style="display:flex;"><span>    inet6 fe80::7a2b:cbff:fe5a:138a/64 scope link
+</span></span><span style="display:flex;"><span>       valid_lft forever preferred_lft forever
+</span></span></code></pre></div><h2 id="interface-details">Interface Details</h2>
+<h3 id="physical-layer---layer-1">Physical Layer - Layer 1</h3>
+<ul>
+<li><strong>eno1</strong>
+<ul>
+<li>The name of the interface from the operating system’s perspective. This depends a lot on the specific distribution of Linux you are running, whether it is a virtual or physical machine, and the type of interface.</li>
+</ul>
+</li>
+<li><strong>&lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt;</strong>
+<ul>
+<li>A series of flags that provide details about the interface state. This shows that my interface is both broadcast and multicast capable and that the interface is enabled (UP) and that the physical layer is connected (LOWER_UP).</li>
+</ul>
+</li>
+<li><strong>mtu 1500</strong>
+<ul>
+<li>Maximum transmission unit (MTU), in bytes, for the interface.</li>
+</ul>
+</li>
+<li><strong>qdisc mq</strong>
+<ul>
+<li>Queueing approach being used by the interface: “noqueue” (send immediately) or “noop” (drop all).</li>
+</ul>
+</li>
+<li><strong>state UP</strong>
+<ul>
+<li>Operational state of an interface. “UP”, “DOWN”, and “UNKNOWN”. “UNKNOWN” indicates that the interface is up and operational, but nothing is connected.</li>
+</ul>
+</li>
+<li><strong>group default</strong>
+<ul>
+<li>Interfaces can be grouped together on Linux to allow common attributes or commands. Having all interfaces connected to “group default” is the most common setup.</li>
+<li>There are some handy things you can do if you group interfaces together. For example, imagine a VM host system with 2 interfaces for management and 8 for data traffic. You could group them into “mgmt” and “data” groups and then control all interfaces of a type together.</li>
+</ul>
+</li>
+<li><strong>qlen 1000</strong>
+<ul>
+<li>The interface has a 1000 packet queue. The 1001st packet would be dropped.</li>
+</ul>
+</li>
+</ul>
+<h3 id="data-link-layer---layer-2">Data Link Layer - Layer 2</h3>
+<ul>
+<li><strong>link/ether</strong>
+<ul>
+<li>MAC (Medium Access Control) address of the interface</li>
+</ul>
+</li>
+</ul>
+<h3 id="network-layer---layer-3">Network Layer - Layer 3</h3>
+<ul>
+<li><strong>inet</strong>
+<ul>
+<li>The IPv4 interface configuration
+<ul>
+<li><strong>scope global</strong> - This address is globally reachable. Other options include link and host.</li>
+<li><strong>dynamic</strong> - This IP address was assigned by DHCP. The lease length is listed in “valid_lft”.</li>
+<li><strong>vmbr0</strong> - A reference back to the interface this IP address is associated with.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>inet6</strong>
+<ul>
+<li>The IPv6 interface configuration
+<ul>
+<li>Only the link local address is configured. IPv4 link-local addresses are assigned from address block
+<code>169.254.0.0/16</code>. In IPv6, they are assigned from the block <code>fe80::</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="media-layers">Media layers</h2>
+<table>
+<thead>
+<tr>
+<th>OSI Layer</th>
+<th>Name</th>
+<th>Protocol data unit (PDU)</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3</td>
+<td>Network</td>
+<td>Packet</td>
+<td>Structuring and managing a multi-node network, including addressing, routing and traffic control</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Data Link</td>
+<td>Frame</td>
+<td>Transmission of data frames between two nodes connected by a physical layer</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Physical</td>
+<td>Bit, Symbol</td>
+<td>Transmission and reception of raw bit streams over a physical medium</td>
+</tr>
+</tbody>
+</table>
+
+	
+</div>
+
+
+          </main>
+        </div>
+      </div>
+      <footer class="td-footer row d-print-none">
+  <div class="container-fluid">
+    <div class="row mx-md-2">
+      <div class="td-footer__left col-6 col-sm-4 order-sm-1">
+        <ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Email" aria-label="Email">
+    <a target="_blank" rel="noopener" href="mailto:derek@derekzoladz.com" aria-label="Email">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Twitter" aria-label="Twitter">
+    <a target="_blank" rel="noopener" href="https://twitter.com/derek_zoladz" aria-label="Twitter">
+      <i class="fab fa-twitter"></i>
+    </a>
+  </li>
+  
+</ul>
+
+      </div><div class="td-footer__right col-6 col-sm-4 order-sm-3">
+        <ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="GitHub" aria-label="GitHub">
+    <a target="_blank" rel="noopener" href="https://github.com/dzoladz" aria-label="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Website" aria-label="Website">
+    <a target="_blank" rel="noopener" href="https://www.derekzoladz.com/" aria-label="Website">
+      <i class="fas fa-globe-americas"></i>
+    </a>
+  </li>
+  
+</ul>
+
+      </div><div class="td-footer__center col-12 col-sm-4 py-2 order-sm-2">
+        <span class="td-footer__copyright">&copy;
+    2024
+    <span class="td-footer__authors">Derek Zoladz</span></span><span class="td-footer__all_rights_reserved">All Rights Reserved</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <script src="/js/main.min.1f48fc7981e4db829114650dc98d270b6642a46c1e4ebddb8389ff0a463a6328.js" integrity="sha256-H0j8eYHk24KRFGUNyY0nC2ZCpGweTr3bg4n/CkY6Yyg=" crossorigin="anonymous"></script>
+<script defer src="/js/click-to-copy.min.f724d3de49218995223b7316aa2e53e2b34bf42026bf399ebb21bb02212402d1.js" integrity="sha256-9yTT3kkhiZUiO3MWqi5T4rNL9CAmvzmeuyG7AiEkAtE=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3.5.2"
+  integrity="sha512-LzxWPDNELae1RSIsDRSitKYPJpRtjYo22GbOl+d+xLcjKiZQRRdxSTI3cRRHw7O05e0MbIIu33QnU2rt6ymQ6A=="
+  crossorigin="anonymous" ></script>
+<script type="text/javascript">
+const containers = ['#docsearch-0', '#docsearch-1'];
+for (let c of containers) {
+  docsearch({
+    container: c,
+    appId: "R2IYF7ETH7",
+    apiKey: "599cec31baffa4868cae4e79f180729b",
+    indexName: "docsearch",
+  });
+}
+</script>
+<script src='/js/tabpane-persist.js'></script>
+
+  </body>
+</html>
