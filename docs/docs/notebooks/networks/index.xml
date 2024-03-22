@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Palimpsest – Networks</title>
-    <link>/docs/notebooks/networks/</link>
+    <link>/palimpsest/docs/notebooks/networks/</link>
     <description>Recent content in Networks on Palimpsest</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	  <atom:link href="/docs/notebooks/networks/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/palimpsest/docs/notebooks/networks/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: Commands</title>
-      <link>/docs/notebooks/networks/commands/</link>
+      <link>/palimpsest/docs/notebooks/networks/commands/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/notebooks/networks/commands/</guid>
+      <guid>/palimpsest/docs/notebooks/networks/commands/</guid>
       <description>
         
         
@@ -47,10 +47,10 @@
     
     <item>
       <title>Docs: Fiber Optics</title>
-      <link>/docs/notebooks/networks/fiber_optics/</link>
+      <link>/palimpsest/docs/notebooks/networks/fiber_optics/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/notebooks/networks/fiber_optics/</guid>
+      <guid>/palimpsest/docs/notebooks/networks/fiber_optics/</guid>
       <description>
         
         
@@ -120,10 +120,10 @@
     
     <item>
       <title>Docs: Interfaces</title>
-      <link>/docs/notebooks/networks/interfaces/</link>
+      <link>/palimpsest/docs/notebooks/networks/interfaces/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/notebooks/networks/interfaces/</guid>
+      <guid>/palimpsest/docs/notebooks/networks/interfaces/</guid>
       <description>
         
         
@@ -255,10 +255,10 @@
     
     <item>
       <title>Docs: Networking</title>
-      <link>/docs/notebooks/networks/networking/</link>
+      <link>/palimpsest/docs/notebooks/networks/networking/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/notebooks/networks/networking/</guid>
+      <guid>/palimpsest/docs/notebooks/networks/networking/</guid>
       <description>
         
         
