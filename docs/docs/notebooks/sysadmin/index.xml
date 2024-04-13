@@ -224,6 +224,35 @@
     </item>
     
     <item>
+      <title>Docs: IPMI</title>
+      <link>/palimpsest/docs/notebooks/sysadmin/ipmi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/palimpsest/docs/notebooks/sysadmin/ipmi/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;strong&gt;Dell Poweredge R510&lt;/strong&gt; is LOUD! Make it quiter with IMPI&lt;/p&gt;
+&lt;p&gt;IPMI (Intelligent Platform Management Interface) is an open standard for monitoring,
+logging, recovery, inventory, and control of hardware that is implemented independent
+of the main CPU, BIOS, and OS.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/ipmitool/ipmitool&#34;&gt;ipmitool&lt;/a&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;IPMI-over-LAN must be enabled&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;apt-get install lm-sensors ipmitool&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# This command will enable manual fan control&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ipmitool raw 0x30 0x30 0x01 0x00
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# This command will control all fans, where ## is 00 to 64, which is mapped to 0% to 100%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ipmitool raw 0x30 0x30 0x02 0xff 0x##
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If you really want the &lt;a href=&#34;/palimpsest/assets/pdf/ipmi-spec-v2-rev1-1.pdf&#34;&gt;IPMI specification&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Docs: LVM</title>
       <link>/palimpsest/docs/notebooks/sysadmin/lvm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
