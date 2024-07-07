@@ -1,239 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Palimpsest – Databases</title>
-    <link>/palimpsest/docs/notebooks/databases/</link>
+    <title>Databases on Palimpsest</title>
+    <link>//localhost:1313///palimpsest/docs/notebooks/databases/</link>
     <description>Recent content in Databases on Palimpsest</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
-    
-	  <atom:link href="/palimpsest/docs/notebooks/databases/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-      
-        
-      
-    
-    
+    <atom:link href="//localhost:1313///palimpsest/docs/notebooks/databases/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Docs: MariaDB</title>
-      <link>/palimpsest/docs/notebooks/databases/mariadb/</link>
+      <title>MariaDB</title>
+      <link>//localhost:1313///palimpsest/docs/notebooks/databases/mariadb/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/palimpsest/docs/notebooks/databases/mariadb/</guid>
-      <description>
-        
-        
-        &lt;h3 id=&#34;connect-as-a-user&#34;&gt;Connect as a user&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mysql -u root -p
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mysql -u derek -p
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;create-a-new-user&#34;&gt;Create a new user&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;CREATE USER &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;derek&amp;#39;&lt;/span&gt;@&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;%&amp;#39;&lt;/span&gt; IDENTIFIED BY &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;SOMEPASSWORDSTRING&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;grant-all-privileges-to-the-new-user&#34;&gt;Grant all privileges to the new user&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;GRANT ALL PRIVILEGES ON *.* TO &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;derek&amp;#39;&lt;/span&gt;@&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;%&amp;#39;&lt;/span&gt; WITH GRANT OPTION&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;FLUSH PRIVILEGES&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;EXIT&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;alter-a-current-user&#34;&gt;Alter a current user&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ALTER USER &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;derek&amp;#39;&lt;/span&gt;@&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;localhost&amp;#39;&lt;/span&gt; IDENTIFIED BY &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;SOMEPASSWORDSTRING&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;FLUSH PRIVILEGES&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;EXIT&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;show-grants-for-a-user&#34;&gt;Show grants for a user&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;SHOW GRANTS FOR &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;derek&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;backup--restore&#34;&gt;Backup &amp;amp; Restore&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Dump structure and data&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mysqldump -u root -p database &amp;gt; /path/to/database.sql
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# If you only want the database structure, no data&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mysqldump -u root -p database --no-data &amp;gt; /path/to/database.sql
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# Restore a database from SQL backup&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mysql -u root -p database &amp;lt; /path/to/database.sql
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-      </description>
+      <guid>//localhost:1313///palimpsest/docs/notebooks/databases/mariadb/</guid>
+      <description>Connect as a user mysql -u root -p mysql -u derek -p Create a new user CREATE USER &amp;#39;derek&amp;#39;@&amp;#39;%&amp;#39; IDENTIFIED BY &amp;#39;SOMEPASSWORDSTRING&amp;#39;; Grant all privileges to the new user GRANT ALL PRIVILEGES ON *.* TO &amp;#39;derek&amp;#39;@&amp;#39;%&amp;#39; WITH GRANT OPTION; FLUSH PRIVILEGES; EXIT; Alter a current user ALTER USER &amp;#39;derek&amp;#39;@&amp;#39;localhost&amp;#39; IDENTIFIED BY &amp;#39;SOMEPASSWORDSTRING&amp;#39;; FLUSH PRIVILEGES; EXIT; Show grants for a user SHOW GRANTS FOR &amp;#39;derek&amp;#39;; Backup &amp;amp; Restore # Dump structure and data mysqldump -u root -p database &amp;gt; /path/to/database.</description>
     </item>
-    
     <item>
-      <title>Docs: PostgreSQL</title>
-      <link>/palimpsest/docs/notebooks/databases/postgres/</link>
+      <title>PostgreSQL</title>
+      <link>//localhost:1313///palimpsest/docs/notebooks/databases/postgres/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/palimpsest/docs/notebooks/databases/postgres/</guid>
-      <description>
-        
-        
-        &lt;h2 id=&#34;first-steps&#34;&gt;First Steps&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;Install PostgreSQL, preferably a pinned version&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew install postgresql@10
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;If you don&amp;rsquo;t have one, get the &lt;code&gt;psql&lt;/code&gt; client.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew install libpq
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;libpq&lt;/code&gt; won&amp;rsquo;t install itself in the &lt;code&gt;/usr/local/bin&lt;/code&gt; directory like other Homebrew applications. To make that happen, you need to run:&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew link --force libpq
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;Start Postgres services&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew services start postgresql
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
-&lt;p&gt;Check &lt;code&gt;brew info postgresql&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ol start=&#34;4&#34;&gt;
-&lt;li&gt;Create a database, and&amp;hellip;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;createdb &lt;span style=&#34;color:#4e9a06&#34;&gt;`&lt;/span&gt;first&lt;span style=&#34;color:#4e9a06&#34;&gt;`&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
-&lt;p&gt;Fix role &amp;ldquo;postgres&amp;rdquo; does not exist error&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;createuser -s postgres
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;initial-reading&#34;&gt;Initial Reading&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;http://postgresguide.com/&#34;&gt;PostgreSQL Guide&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;psql&#34;&gt;PSQL&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Run psql client as user postgres - &lt;code&gt;psql -U postgres&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Connect to local postgres database as a specific user - `psql -h localhost -U &amp;lt;postgres_user&amp;gt; &lt;database&gt;``&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;quick-start&#34;&gt;Quick Start&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;\?&lt;/code&gt; - List all available commands&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;\q&lt;/code&gt; - Quit/Exit&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;\l&lt;/code&gt; - List databases&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;\c &amp;lt;database&amp;gt;&lt;/code&gt; - Connect to a database&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;up-and-running-informational&#34;&gt;Up and Running, Informational&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;\d&lt;/code&gt; - List tables&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;\d &amp;lt;table&amp;gt;&lt;/code&gt; - Show table definition, including triggers&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;\d+ &amp;lt;table&amp;gt;&lt;/code&gt; - Show additional info about a table&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;\dy&lt;/code&gt; - List events&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;\df&lt;/code&gt; - List functions&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;\di&lt;/code&gt; - List indexes&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;\dn&lt;/code&gt; - List schemas&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;\dv&lt;/code&gt; - List views&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;\e&lt;/code&gt; - Open default text editor in psql shell&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;\copy (SELECT * FROM __table_name__) TO &#39;file_path_and_name.csv&#39; WITH CSV&lt;/code&gt; - Export a table as CSV&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;settings&#34;&gt;Settings&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;\timing&lt;/code&gt; - Turn on query timing&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;\x&lt;/code&gt; - Pretty-format query results&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;backup-and-restore&#34;&gt;Backup and Restore&lt;/h2&gt;
-&lt;h4 id=&#34;backup-plain-text&#34;&gt;Backup, plain text&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;pg_dump &amp;lt;dbname&amp;gt; &amp;gt; db.sql&lt;/code&gt; - plain text&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;backup-for-persistence-and-storage&#34;&gt;Backup, for persistence and storage&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;pg_dump -Fc &amp;lt;dbname&amp;gt; &amp;gt; db.bak&lt;/code&gt; - compressed binary format&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;pg_dump -Ft &amp;lt;dbname&amp;gt; &amp;gt; db.tar&lt;/code&gt; - tarball format&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;restore&#34;&gt;Restore&lt;/h4&gt;
-&lt;p&gt;If the database already exists,&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;pg_restore -Fc db.bak&lt;/code&gt; - restore compressed binary format&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;pg_restore -Ft db.tar&lt;/code&gt; - restore tarball format&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;If creating the database new from a dump, you&amp;rsquo;ll need to add the &lt;code&gt;-C&lt;/code&gt; flag.&lt;/p&gt;
-&lt;h4 id=&#34;import-as-a-new-database&#34;&gt;Import, as a new database&lt;/h4&gt;
-&lt;p&gt;Create the database&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;createdb -T template0 &amp;lt;dbname&amp;gt;&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Import database from dump&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;pg_restore --clean --no-owner --verbose -d &amp;lt;dbname&amp;gt; db.bak&lt;/code&gt; -&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;database-commands-outside-of-psql&#34;&gt;Database Commands, outside of psql&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Create database &lt;code&gt;createdb &amp;lt;database_name&amp;gt;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Drop database &lt;code&gt;dropdb &amp;lt;database_name&amp;gt;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Restore database &lt;code&gt;pg_restore --no-owner --dbname &amp;lt;database&amp;gt; &amp;lt;database.dump&amp;gt;&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;database-commands-inside-of-psql-dont-forget-&#34;&gt;Database Commands, inside of PSQL (DON&amp;rsquo;T FORGET &lt;code&gt;;&lt;/code&gt;)&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Create database &lt;code&gt;CREATE DATABASE &amp;lt;database&amp;gt;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Remove database &lt;code&gt;DROP DATABASE &amp;lt;database&amp;gt;&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-      </description>
+      <guid>//localhost:1313///palimpsest/docs/notebooks/databases/postgres/</guid>
+      <description>First Steps Install PostgreSQL, preferably a pinned version brew install postgresql@10 If you don&amp;rsquo;t have one, get the psql client. brew install libpq libpq won&amp;rsquo;t install itself in the /usr/local/bin directory like other Homebrew applications. To make that happen, you need to run:&#xA;brew link --force libpq Start Postgres services brew services start postgresql Check brew info postgresql&#xA;Create a database, and&amp;hellip; createdb `first` Fix role &amp;ldquo;postgres&amp;rdquo; does not exist error</description>
     </item>
-    
     <item>
-      <title>Docs: SQL</title>
-      <link>/palimpsest/docs/notebooks/databases/sql/</link>
+      <title>SQL</title>
+      <link>//localhost:1313///palimpsest/docs/notebooks/databases/sql/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/palimpsest/docs/notebooks/databases/sql/</guid>
-      <description>
-        
-        
-        &lt;p&gt;SQL (Structured Query Language) is used to manage data in a relational database management system.&lt;/p&gt;
-&lt;p&gt;Diagrams from &lt;a href=&#34;https://bytebytego.com/&#34;&gt;ByteByteGo&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;execution-order&#34;&gt;Execution Order&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;../assets/execution_order.jpg&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;sql-components&#34;&gt;SQL Components&lt;/h2&gt;
-&lt;p&gt;Engineering relational databases required an understanding of the following components&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;DDL&lt;/strong&gt;: (data definition language)
-&lt;ul&gt;
-&lt;li&gt;syntax for creating and modifying database objects such as tables, indices, and users&lt;/li&gt;
-&lt;li&gt;e.g., CREATE, ALTER, DROP&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;DQL&lt;/strong&gt;: (data query language)
-&lt;ul&gt;
-&lt;li&gt;used for performing queries on the data within schema objects&lt;/li&gt;
-&lt;li&gt;e.g., SELECT&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;DML&lt;/strong&gt;: (data manipulation language)
-&lt;ul&gt;
-&lt;li&gt;used for adding (inserting), deleting, and modifying (updating) data&lt;/li&gt;
-&lt;li&gt;e.g., INSERT, UPDATE, DELETE&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;DCL&lt;/strong&gt;: (data control language)
-&lt;ul&gt;
-&lt;li&gt;used to control access to data stored in a database i.e., authorization&lt;/li&gt;
-&lt;li&gt;e.g., GRANT, REVOKE&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;TCL&lt;/strong&gt;: (transaction control language)
-&lt;ul&gt;
-&lt;li&gt;used to maintain the integrity and consistency of the data stored in the database&lt;/li&gt;
-&lt;li&gt;e.g., COMMIT, ROLLBACK&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;../assets/sql_components.png&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;types-of-joins&#34;&gt;Types of Joins&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;../assets/join_types.png&#34;&gt;&lt;/p&gt;
-
-      </description>
+      <guid>//localhost:1313///palimpsest/docs/notebooks/databases/sql/</guid>
+      <description>SQL (Structured Query Language) is used to manage data in a relational database management system.&#xA;Diagrams from ByteByteGo&#xA;Execution Order SQL Components Engineering relational databases required an understanding of the following components&#xA;DDL: (data definition language) syntax for creating and modifying database objects such as tables, indices, and users e.g., CREATE, ALTER, DROP DQL: (data query language) used for performing queries on the data within schema objects e.g., SELECT DML: (data manipulation language) used for adding (inserting), deleting, and modifying (updating) data e.</description>
     </item>
-    
   </channel>
 </rss>

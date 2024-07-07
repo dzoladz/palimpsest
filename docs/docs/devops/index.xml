@@ -1,59 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Palimpsest – DevOps</title>
-    <link>/palimpsest/docs/devops/</link>
+    <title>DevOps on Palimpsest</title>
+    <link>//localhost:1313///palimpsest/docs/devops/</link>
     <description>Recent content in DevOps on Palimpsest</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
-    
-	  <atom:link href="/palimpsest/docs/devops/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-      
-        
-      
-    
-    
+    <atom:link href="//localhost:1313///palimpsest/docs/devops/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Docs: Coding</title>
-      <link>/palimpsest/docs/devops/coding/coding/</link>
+      <title>Coding</title>
+      <link>//localhost:1313///palimpsest/docs/devops/coding/coding/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/palimpsest/docs/devops/coding/coding/</guid>
-      <description>
-        
-        
-        &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://clig.dev/&#34;&gt;Command Line Interface Guidelines&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.conventionalcommits.org/&#34;&gt;Conventional Commits, a specification for human and machine-readable commit messages&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/mtdvio/every-programmer-should-know&#34;&gt;Every Programmer Should Know 🤔&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://refactoring.guru/design-patterns&#34;&gt;Design Patterns&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-      </description>
+      <guid>//localhost:1313///palimpsest/docs/devops/coding/coding/</guid>
+      <description> Command Line Interface Guidelines Conventional Commits, a specification for human and machine-readable commit messages Every Programmer Should Know 🤔 Design Patterns </description>
     </item>
-    
     <item>
-      <title>Docs: References</title>
-      <link>/palimpsest/docs/devops/references/</link>
+      <title>References</title>
+      <link>//localhost:1313///palimpsest/docs/devops/references/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/palimpsest/docs/devops/references/</guid>
-      <description>
-        
-        
-        &lt;h3 id=&#34;books&#34;&gt;Books&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://sre.google/books/&#34;&gt;Google SRE&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;systematic-approaches&#34;&gt;Systematic Approaches&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;product_realization_guide.pdf&#34;&gt;Product Realization Guide&lt;/a&gt;
-U.S. Department of Homeland Security&amp;rsquo;s Product Realization Guide, which contains an integration of the &lt;strong&gt;DoD/NASA Technology Readiness Levels&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-      </description>
+      <guid>//localhost:1313///palimpsest/docs/devops/references/</guid>
+      <description>Books Google SRE Systematic Approaches Product Realization Guide U.S. Department of Homeland Security&amp;rsquo;s Product Realization Guide, which contains an integration of the DoD/NASA Technology Readiness Levels </description>
     </item>
-    
   </channel>
 </rss>

@@ -1,17 +1,389 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Palimpsest – Palimpsest</title>
-    <link>/palimpsest/</link>
+    <title>Palimpsest</title>
+    <link>//localhost:1313///palimpsest/</link>
     <description>Recent content on Palimpsest</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
-    
-	  <atom:link href="/palimpsest/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-      
-      
-    
-    
+    <atom:link href="//localhost:1313///palimpsest/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Coding</title>
+      <link>//localhost:1313///palimpsest/docs/devops/coding/coding/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/docs/devops/coding/coding/</guid>
+      <description> Command Line Interface Guidelines Conventional Commits, a specification for human and machine-readable commit messages Every Programmer Should Know 🤔 Design Patterns </description>
+    </item>
+    <item>
+      <title>Kubernetes</title>
+      <link>//localhost:1313///palimpsest/docs/laboratory/kubernetes/kubernetes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/docs/laboratory/kubernetes/kubernetes/</guid>
+      <description>This is the future location for all of my application hosting experiments at OhioNET that are unusable by the organization. The idea is to build an environment for continued independent learning in technological areas that are focused on developing custom library-adjacent research applications, but are well beyond the capacities of my day job.&#xA;3-Node Cluster Computing Hardware K3s The lightweight, certified Kubernetes distribution K3s was selected. The K3s distro is designed from ARM64 architectures like the Raspberry Pi 4.</description>
+    </item>
+    <item>
+      <title>Network Description</title>
+      <link>//localhost:1313///palimpsest/docs/laboratory/network/networking-gear/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/docs/laboratory/network/networking-gear/</guid>
+      <description>Equipment Device Manufacturer Model Cable Modem, Spectrum Router/Firewall Ubiquiti UniFi Security Gateway UniFi Network Manager Ubiquiti UniFi Cloud Key Gen2 Plus Switch, S8a Ubiquiti 8-Port Managed with 802.3af PoE Access Point Ubiquiti 24V 802.3 af/A - AP AC LR Backup Disk NexStar 3.5 SATA 6 Gbps Switch, S5a TPLink 5-Port Unmanaged Switch, S5b TPLink 5-Port Unmanaged PiHole Raspberry Pi Foundation Pi 3, Model B, 1 GB Samba Server Raspberry Pi Foundation Pi 4, Model B, 2 GB Koha ILS Ligotti, Pi Cluster Raspberry Pi Foundation Pi 4, Model B, 4 GB Network Diagram </description>
+    </item>
+    <item>
+      <title>Rancher</title>
+      <link>//localhost:1313///palimpsest/docs/laboratory/kubernetes/rancher/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/docs/laboratory/kubernetes/rancher/</guid>
+      <description>As of Rancher v2.5, Rancher can be installed on any Kubernetes cluster.&#xA;RKE K3s on Raspberry Pi 4 cluster RKE2 Amazon EKS Installing Rancher via Helm3 Add the Rancher Helm chart repo helm repo add rancher-latest https://releases.rancher.com/server-charts/latest Create a Namespace for Rancher resources Rancher documentation states that this namespace should always be called cattle-system&#xA;kubectl create namespace cattle-system Install cert-manager Rancher supports multiple SSL/TLS termination methods. As the laboratory cluster is on the local network and only accepting connections from the LAN, the following set of instructions will configure Rancher to generate its own certificates.</description>
+    </item>
+    <item>
+      <title>Raspberry Pi Cluster</title>
+      <link>//localhost:1313///palimpsest/docs/laboratory/kubernetes/cluster/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/docs/laboratory/kubernetes/cluster/</guid>
+      <description>Ligotti - this 3 node pi cluster - is named after the philosophical horror writer Thomas Ligotti&#xA;ligotti 192.168.1.10 | Controller, Master ligotti-worker-one 192.168.1.11 | Worker One ligotti-worker-two 192.168.1.12 | Worker Two Hardware Quantity Device 3 Raspberry Pi 4, Model B, 4 GB RAM 3 64 GB, Samsung Evo, microSDXC UHS-I Card, Class 10, 1 FHD 1 TP-Link, TL-SG105, 5-Port Gigabit Switch 3 Micro Connectors Acrylic Stackable Raspberry Pi Case with Fan, Power 4 1&amp;rsquo; CAT6 Ethernet Cables OS Ubuntu Server 20.</description>
+    </item>
+    <item>
+      <title>References</title>
+      <link>//localhost:1313///palimpsest/docs/accessibility/references/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/docs/accessibility/references/</guid>
+      <description>Corporate, Design Systems &amp;amp; Accessibility Patterns IBM, Carbon Design System Google, Material Design Apple, Human Interface Guidelines Canonical, Web &amp;amp; Design Practices VoxMedia, Accessibility Guidelines Microsoft, Inclusive Design Cultural Heritage Institution, Design Systems &amp;amp; Accessibility Patterns Te Papa, Design System Language Government, Standards Body BBC, Accessibility Guidelines Web Content Accessibility Guidelines 18F, Accessibility Document Accessibility IDPF, EPUB3 Guidelines Accessibility Testing Tools Tanaguru, Contrast Finder Who Can Use? </description>
+    </item>
+    <item>
+      <title>References</title>
+      <link>//localhost:1313///palimpsest/docs/devops/references/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/docs/devops/references/</guid>
+      <description>Books Google SRE Systematic Approaches Product Realization Guide U.S. Department of Homeland Security&amp;rsquo;s Product Realization Guide, which contains an integration of the DoD/NASA Technology Readiness Levels </description>
+    </item>
+    <item>
+      <title>Helm</title>
+      <link>//localhost:1313///palimpsest/docs/laboratory/kubernetes/helm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/docs/laboratory/kubernetes/helm/</guid>
+      <description>Helm is a tool for managing Kubernetes applications.&#xA;For Helm, there are a few important concepts:&#xA;A Chart is a collection of files that describe a related set of Kubernetes resources that define an instance of a Kubernetes application. A Repo is a chart registry. Repositories can be added to Helm. A Config contains configuration information merged into a packaged chart to create a releasable object. A Release is a running instance of a chart using a specific configuration.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>//localhost:1313///palimpsest/docs/notebooks/ambiance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/docs/notebooks/ambiance/</guid>
+      <description>&amp;mdash; title: &amp;ldquo;Ambiance&amp;rdquo; description: &amp;gt; Sound generators for ambient coding environments &amp;mdash;&#xA;musicForProgramming myNoise noisesOnline Experiment in Time Polyrhythmic Music for Focus and Studying </description>
+    </item>
+    <item>
+      <title>Authentication</title>
+      <link>//localhost:1313///palimpsest/docs/notebooks/authentication/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/docs/notebooks/authentication/</guid>
+      <description> OpenID ISNI&#xA;ISNI (International Standard Name Identifier) is an ISO standard, in use by numerous libraries, publishers, databases, and rights management organizations around the world. It is used to uniquely identify persons and organizations involved in creative activities, as well as public personas of both, such as pseudonyms, stage names, record labels or publishing imprints </description>
+    </item>
+    <item>
+      <title>Business Apps</title>
+      <link>//localhost:1313///palimpsest/docs/notebooks/business_apps/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/docs/notebooks/business_apps/</guid>
+      <description>Sales Invoice Ninja Odoo Project Management Orangescrum Taiga Tuleap Security - Social Engineering GoPhish Infrastructure and Application Monitoring Prometheus Monit Cockpit Glances Grafana graylog Password Management Bitwarden Website Frameworks and Publishing Platforms Hugo ghost Identity Management &amp;amp; Directory Services Keycloak OpenLDAP Gluu Office Productivity LibreOffice File Sync and Share Nextcloud Pydio OwnCloud Messaging Platforms Mattermost </description>
+    </item>
+    <item>
+      <title>Cables</title>
+      <link>//localhost:1313///palimpsest/docs/notebooks/cables/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/docs/notebooks/cables/</guid>
+      <description> The Cable Bibles </description>
+    </item>
+    <item>
+      <title>Certbot</title>
+      <link>//localhost:1313///palimpsest/docs/notebooks/certbot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/docs/notebooks/certbot/</guid>
+      <description>Certbot certbot for Let&amp;rsquo;s Encrypt with code on GitHub&#xA;Common Commands certbot user guide&#xA;certbot renew Attempt to renew all certificates certbot certificates List all certificates certbot delete --cert-name domaintoremove.com Delete a certificate </description>
+    </item>
+    <item>
+      <title>Chroot SFTP Setup</title>
+      <link>//localhost:1313///palimpsest/docs/notebooks/sysadmin/chroot-sftp-setup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/docs/notebooks/sysadmin/chroot-sftp-setup/</guid>
+      <description>Scenario: Callimachus works at Miskatonic University. Callimachus is working on a project that requires the placement of data files onto a remote server owned by Permissible Data Corp. (PDC). PDC will be processing the files with an automated script and returning them to Callimachus.&#xA;You&amp;rsquo;ll need some users that will only be able to perform chrooted SFTP. You&amp;rsquo;ll probably want to place them into a group for simplfied administration.&#xA;#create SFTP only group groupadd sftponly Since we&amp;rsquo;ll be using this SFTP user group to allow some of our libraries to upload files for automated processing, we&amp;rsquo;ll call the SFTP directory /incoming, to identify the functional role of the directory in the automated processing chain.</description>
+    </item>
+    <item>
+      <title>Commands</title>
+      <link>//localhost:1313///palimpsest/docs/notebooks/networks/commands/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/docs/notebooks/networks/commands/</guid>
+      <description>Google Cloud Installing the SDK https://cloud.google.com/sdk/docs/&#xA;A Few Commands for Migrating a DNS zone gcloud auth login --project managed-dns-migration gcloud dns managed-zones create myzone --dns-name=&amp;#34;myzone.org&amp;#34; --description=&amp;#34;Zone for all the things&amp;#34; --visibility=public gcloud dns record-sets import -z=myzone --zone-file-format /path/to/zonefile/myzone.org.zonefile.txt --delete-all-existing gcloud dns managed-zones describe myzone DNS General DNS commands&#xA;dig # Query Cloudflare primary DNS to reply with the name servers for the cool-cat.org domain dig +short NS cool-cat.org 1.1.1.1 # Ask for the name servers every 2 seconds.</description>
+    </item>
+    <item>
+      <title>Cron</title>
+      <link>//localhost:1313///palimpsest/docs/notebooks/sysadmin/cron/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/docs/notebooks/sysadmin/cron/</guid>
+      <description>Scheduler Basics minute:hour:day-of-month:month:day-of-week /command/to/execute.sh&#xA;Field Values Notes Minute 0-59 Hour 0-23 Day of Month 1-31 Month 1-12 Day Of Week 0-6 [0 is Sunday] Common Commands w/ Cron crontab -l # List current Linux user&amp;#39;s crontab entries crontab -u &amp;lt;username&amp;gt; -l # List other Linux user&amp;#39;s crontan entries crontab -e # Edit crontab entries crontab /path/to/cronjobs.txt # Load cron jobs from file Examples of Crontab Entries Execute job every ten minutes */10 * * * * /path/to/command.</description>
+    </item>
+    <item>
+      <title>Diagramming Tool</title>
+      <link>//localhost:1313///palimpsest/docs/notebooks/diagramming/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/docs/notebooks/diagramming/</guid>
+      <description> Graphviz Docs Graphviz Attribute Reference Web-based Visual Editor Diagrams </description>
+    </item>
+    <item>
+      <title>Docker</title>
+      <link>//localhost:1313///palimpsest/docs/notebooks/docker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/docs/notebooks/docker/</guid>
+      <description>Warning These notes are likely stale Basic Info don&amp;rsquo;t run docker commands as root sudo usermod -aG docker callimachus Docker Hub Docker Compose Reference: Docker Commands docker info docker inspect docker exec -it docker run -d docker ps -a docker stop [my_container] docker rm [my_container] docker rmi [docker_image] docker volume rm [my_volume] docker volume create [my_volume] docker volume ls docker volume inspect [my_volume] docker container ls -aq # list all containers docker network ls # list them all docker network prune -a # get rid of them all Tags nginx # default to latest</description>
+    </item>
+    <item>
+      <title>Email</title>
+      <link>//localhost:1313///palimpsest/docs/notebooks/email/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/docs/notebooks/email/</guid>
+      <description>Top-Notch Resources Demystifying DMARC - Sean Whalen Email Authentication SPF (Sender Policy Framework) - List of authorized mail sources DKIM (DomainKeys Identified Mail ) - Mail signature Email sending server signs message with private key Email domain publishes public key in DNS Mail recipient server checks signature of mail against published DKIM values DMARC (Domain-based Message Authentication, Reporting and Conformance) RUA (Aggregate) RUF (Forensic) p= (Policy to Apply) max 2 recipients </description>
+    </item>
+    <item>
+      <title>Expanding Volumes</title>
+      <link>//localhost:1313///palimpsest/docs/notebooks/sysadmin/expand_volumes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/docs/notebooks/sysadmin/expand_volumes/</guid>
+      <description>At some point, you&amp;rsquo;re going to run out of space and need to provision some additional storage.&#xA;Steps:&#xA;Expand Volume Capacity Expand Partition to Volume Capacity Extend Filesystem to the size of partition You&amp;rsquo;ll need to know a few things like:&#xA;What block devices are available? lsblk What filesystem am I using on a partition? file -s /dev/sda1 lsblk -f blkid What is the current capacity of storage in the filesystem?</description>
+    </item>
+    <item>
+      <title>EZproxy</title>
+      <link>//localhost:1313///palimpsest/docs/notebooks/ezproxy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/docs/notebooks/ezproxy/</guid>
+      <description>A snippet of fragments useful for administering EZproxy&#xA;Reject connections that originate from IPs outside of Ohio region. Region codes should be specified using the two-character ISO 3166-2 subcountry code for the US.&#xA;GeoLite data must also be configured on EZproxy (see the Location section of the EZproxy manual).&#xA;::Common Set access = &amp;#34;deny&amp;#34;; If Region() eq &amp;#34;OH&amp;#34;; Set access = &amp;#34;allow&amp;#34; If access eq &amp;#34;deny&amp;#34;; Deny irefused.htm /Common Regex for use in the main authentication block.</description>
+    </item>
+    <item>
+      <title>fail2ban</title>
+      <link>//localhost:1313///palimpsest/docs/notebooks/sysadmin/fail2ban/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/docs/notebooks/sysadmin/fail2ban/</guid>
+      <description>Common Commands List Active Jails: fail2ban-client status Show Banned IPs in sshd Jail: fail2ban-client status sshd Manually Unban an IP from a Jail: fail2ban-client set {jail name} unbanip {ip address} Manually Ban an IP to a Jail: fail2ban-client set {jail name} banip {ip address} </description>
+    </item>
+    <item>
+      <title>Fiber Optics</title>
+      <link>//localhost:1313///palimpsest/docs/notebooks/networks/fiber_optics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/docs/notebooks/networks/fiber_optics/</guid>
+      <description>Optics Single Mode Fiber size 4 μm core (micron) use long-haul applications bandwidth theoretically, unlimited cost $$$ Multi-Mode Fiber size 50 - 62.5 μm core (micron) use internal building / data center bandwidth cost $ </description>
+    </item>
+    <item>
+      <title>Geospatial</title>
+      <link>//localhost:1313///palimpsest/docs/notebooks/geospatial/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/docs/notebooks/geospatial/</guid>
+      <description>Types of Geospatial Data Raster data - Suitable for continuous information without fixed borders, represented as a grid of cells with values indicating observed features. It is often monitored at regular intervals and interpolated to create a continuous surface.&#xA;Vector data - Uses points, lines, and polygons to represent spatial properties, including points of interest, transportation networks, administrative boundaries, and land parcels, often used for discrete data with precise positions or hard constraints.</description>
+    </item>
+    <item>
+      <title>Git</title>
+      <link>//localhost:1313///palimpsest/docs/notebooks/git/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/docs/notebooks/git/</guid>
+      <description>Configuration git config git config --global user.name &amp;#34;derekz&amp;#34; git config --global user.email derekz@derekzoladz.com # Remember my creds for 15 minutes git config credential.helper cache # Store my creds in a plain-text .git-credentials file git config --global credential.helper store Clone # Clone a Repository and history git clone https://github.com/dzoladz/dzoladz.git # Clone &amp;amp; Rename to &amp;#39;website&amp;#39; git clone https://github.com/dzoladz/dzoladz.git website # Clone a branch, &amp;lt;branch&amp;gt; &amp;lt;remote repo&amp;gt; git clone -b collab/berick/ansible-installer-ubuntu-16.04 git://git.evergreen-ils.org/working/random.git Basics Initialize Git Repository mkdir repo_name cd repo_name git init Remotes # Add initial remote named &amp;#39;origin&amp;#39; git remote add origin https://github.</description>
+    </item>
+    <item>
+      <title>GPG</title>
+      <link>//localhost:1313///palimpsest/docs/notebooks/gpg/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/docs/notebooks/gpg/</guid>
+      <description>Get gpg command brew install gnupg Generate GPG key gpg --full-generate-key List GPG keys for derek@derekzoladz.com gpg --list-secret-keys --keyid-format LONG derek@derekzoladz.com Copy the GPG key ID that starts with sec. In the following example, 488652B776349D07: sec rsa4096/488652B776349D07 2019-12-14 [SC] 8AAF3B17369BFB6A36171FFA76349D07488652B7 uid [ultimate] Derek Zoladz (None) &amp;lt;derek@derekzoladz.com&amp;gt; ssb rsa4096/8A3A7957EECFC9AA 2019-12-14 [E] Export the public key of that ID gpg --armor --export 488652B776349D07 Copy the public GPG key and it to both GitLab and GitHub accounts</description>
+    </item>
+    <item>
+      <title>Homebrew</title>
+      <link>//localhost:1313///palimpsest/docs/notebooks/homebrew/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/docs/notebooks/homebrew/</guid>
+      <description>Get it! /usr/bin/ruby -e &amp;#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;#34; COMMAND CHEAT SHEET Globals brew update&#x9;update packages brew list --versions&#x9;show installed packages brew cask list --versions&#x9;show installed casks brew doctor check system for potential problems brew help print help info Packages brew install hugo&#x9;install package brew uninstall hugo&#x9;uninstall package brew cask install atom&#x9;install cask atom brew upgrade hugo&#x9;upgrade a package brew switch hugo 0.5.3 switch package to specific version brew info hugo&#x9;list versions, caveats brew cleanup hugo&#x9;remove old versions brew edit hugo&#x9;edit formula brew cat hugo&#x9;print formula brew home hugo&#x9;open project homepage brew pin hugo prevent the specified formulae from being upgraded brew unpin hugo unpin package and allow upgrades Repos brew search hugo search repos based on the substring text.</description>
+    </item>
+    <item>
+      <title>Interfaces</title>
+      <link>//localhost:1313///palimpsest/docs/notebooks/networks/interfaces/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/docs/notebooks/networks/interfaces/</guid>
+      <description>root@proxmox:~# ip a 1: lo: &amp;lt;LOOPBACK,UP,LOWER_UP&amp;gt; mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000 link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00 inet 127.0.0.1/8 scope host lo valid_lft forever preferred_lft forever inet6 ::1/128 scope host noprefixroute valid_lft forever preferred_lft forever 2: eno1: &amp;lt;BROADCAST,MULTICAST,UP,LOWER_UP&amp;gt; mtu 1500 qdisc mq master vmbr0 state UP group default qlen 1000 link/ether 78:2b:cb:5a:13:8a brd ff:ff:ff:ff:ff:ff altname enp1s0f0 3: eno2: &amp;lt;BROADCAST,MULTICAST&amp;gt; mtu 1500 qdisc mq state DOWN group default qlen 1000 link/ether 78:2b:cb:5a:13:8b brd ff:ff:ff:ff:ff:ff altname enp1s0f1 5: vmbr0: &amp;lt;BROADCAST,MULTICAST,UP,LOWER_UP&amp;gt; mtu 1500 qdisc noqueue state UP group default qlen 1000 link/ether 78:2b:cb:5a:13:8a brd ff:ff:ff:ff:ff:ff inet 192.</description>
+    </item>
+    <item>
+      <title>IPMI</title>
+      <link>//localhost:1313///palimpsest/docs/notebooks/sysadmin/ipmi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/docs/notebooks/sysadmin/ipmi/</guid>
+      <description>Dell Poweredge R510 is LOUD! Make it quiter with IMPI&#xA;IPMI (Intelligent Platform Management Interface) is an open standard for monitoring, logging, recovery, inventory, and control of hardware that is implemented independent of the main CPU, BIOS, and OS.&#xA;ipmitool&#xA;IPMI-over-LAN must be enabled apt-get install lm-sensors ipmitool # This command will enable manual fan control ipmitool raw 0x30 0x30 0x01 0x00 # This command will control all fans, where ## is 00 to 64, which is mapped to 0% to 100% ipmitool raw 0x30 0x30 0x02 0xff 0x## # If you really want the IPMI specification</description>
+    </item>
+    <item>
+      <title>JavaScript</title>
+      <link>//localhost:1313///palimpsest/docs/notebooks/javascript/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/docs/notebooks/javascript/</guid>
+      <description> ECMAScript 2023, Language Specification CanIUse browser support of front-end web technologies General Tools Vue.js - framework for building web user interfaces Vite - build tooling Create-Vue - the recommended way to start a Vite-powered Vue project Axios - promise-based HTTP client </description>
+    </item>
+    <item>
+      <title>JS Forms</title>
+      <link>//localhost:1313///palimpsest/docs/notebooks/js_forms/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/docs/notebooks/js_forms/</guid>
+      <description>EBSCO Article Search &amp;lt;form action=&amp;#34;javascript:submitArticleDatabasesSearch();&amp;#34;&amp;gt; &amp;lt;label for=&amp;#34;searchbox&amp;#34;&amp;gt;Search for:&amp;lt;/label&amp;gt; &amp;lt;input name=&amp;#34;article_searchbox&amp;#34; type=&amp;#34;text&amp;#34; placeholder=&amp;#34;Enter Keywords&amp;#34;&amp;gt; &amp;lt;span class=&amp;#34;search-in&amp;#34;&amp;gt; &amp;lt;label for=&amp;#34;database&amp;#34; class=&amp;#34;libdata in&amp;#34;&amp;gt;in&amp;lt;/label&amp;gt; &amp;lt;select name=&amp;#34;database&amp;#34;&amp;gt; &amp;lt;option disabled=&amp;#34;disabled&amp;#34; value=&amp;#34;&amp;#34;&amp;gt;Choose a Database&amp;lt;/option&amp;gt; &amp;lt;option value=&amp;#34;a9h&amp;#34;&amp;gt;Academic Search Complete&amp;lt;/option&amp;gt; &amp;lt;option value=&amp;#34;jstor&amp;#34;&amp;gt;JSTOR&amp;lt;/option&amp;gt; &amp;lt;/select&amp;gt; &amp;lt;/span&amp;gt; &amp;lt;input name=&amp;#34;article_search_submit&amp;#34; type=&amp;#34;submit&amp;#34; value=&amp;#34;Search&amp;#34;&amp;gt; &amp;lt;/form&amp;gt; &amp;lt;script&amp;gt; function submitArticleDatabasesSearch() { const proxyPrefix = &amp;#34;https://YOUREZPROXYDOMAINHERE/login?url=&amp;#34;; var selected = document.getElementsByName(&amp;#39;database&amp;#39;)[0].value; var terms = document.getElementsByName(&amp;#39;article_searchbox&amp;#39;)[0].value; if (selected != &amp;#34;&amp;#34;) { console.log(&amp;#34;Okay&amp;#34;); if (selected == &amp;#34;a9h&amp;#34;) { console.log(&amp;#34;User selected: &amp;#34; + selected); const ebscoPrefix = &amp;#34;https://search.</description>
+    </item>
+    <item>
+      <title>LVM</title>
+      <link>//localhost:1313///palimpsest/docs/notebooks/sysadmin/lvm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/docs/notebooks/sysadmin/lvm/</guid>
+      <description>References Kernel Device Naming LVM Anatomy LVM Storage Management is divided into three parts: Physical Volumes (PV) – Actual disks or disk partitions (e.g. /dev/sda, /dev/sda2) Volume Groups (VG) – Physical volumes are combined into volume groups. (e.g. VolGroup1 = /dev/sda + /dev/sdb2) Logical Volumes (LV) – Volume groups are divided into logical volumes (e.g. VolGroup1 = LogicalVol1/data, LogicalVol2/home) Commands Display Disk Information&#xA;fdisk -l Display LVM Mapping&#xA;lvmdiskscan Display Physical Volumes</description>
+    </item>
+    <item>
+      <title>Mailman</title>
+      <link>//localhost:1313///palimpsest/docs/notebooks/mailman/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/docs/notebooks/mailman/</guid>
+      <description>Mailman Operator Binaries Remove an email address from all lists on the server remove_members --fromall --nouserack username@domain.edu&#xA;Add a single user to a list echo &#39;username@domain.edu&#39; | add_members -r - listname&#xA;List Membership list_members listname&#xA;Export Member List for Migration list_members --fullnames -o membership.txt listname&#xA;List All Mailing Lists list_lists&#xA;Find a Member in All Lists find_member username@domain.edu&#xA;Migration Tasks Mailman provides a few scripts to assist with migration tasks. Check out those scripts to see if something is already available for a specific task before using the one-liners below.</description>
+    </item>
+    <item>
+      <title>MariaDB</title>
+      <link>//localhost:1313///palimpsest/docs/notebooks/databases/mariadb/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/docs/notebooks/databases/mariadb/</guid>
+      <description>Connect as a user mysql -u root -p mysql -u derek -p Create a new user CREATE USER &amp;#39;derek&amp;#39;@&amp;#39;%&amp;#39; IDENTIFIED BY &amp;#39;SOMEPASSWORDSTRING&amp;#39;; Grant all privileges to the new user GRANT ALL PRIVILEGES ON *.* TO &amp;#39;derek&amp;#39;@&amp;#39;%&amp;#39; WITH GRANT OPTION; FLUSH PRIVILEGES; EXIT; Alter a current user ALTER USER &amp;#39;derek&amp;#39;@&amp;#39;localhost&amp;#39; IDENTIFIED BY &amp;#39;SOMEPASSWORDSTRING&amp;#39;; FLUSH PRIVILEGES; EXIT; Show grants for a user SHOW GRANTS FOR &amp;#39;derek&amp;#39;; Backup &amp;amp; Restore # Dump structure and data mysqldump -u root -p database &amp;gt; /path/to/database.</description>
+    </item>
+    <item>
+      <title>Monit</title>
+      <link>//localhost:1313///palimpsest/docs/notebooks/monit/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/docs/notebooks/monit/</guid>
+      <description>website&#xA;configuration examples&#xA;Setup Notes You&amp;rsquo;ll need to ensure that the standard mailutils are installed on the server.&#xA;apt-get install postfix mailutils Afterwards, modify the /etc/monit/monitrc file by uncommenting the following lines to enable emailed notifications&#xA;set mailserver localhost #Use localhost for email delivery. set mail-format { from: monit@$HOST subject: monit alert -- $EVENT $SERVICE message: $EVENT Service $SERVICE Date: $DATE Action: $ACTION Host: $HOST Description: $DESCRIPTION } set alert derekz@example.</description>
+    </item>
+    <item>
+      <title>networker</title>
+      <link>//localhost:1313///palimpsest/docs/notebooks/networker_commands/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/docs/notebooks/networker_commands/</guid>
+      <description>Warning Moved to Commvault Service Daemon is nsrexecd&#xA;service networker stop service networker start Logging Logging for previous versions of Networker configured logs to /nsr/logs/daemon.raw&#xA;Enter Administrative Shell of Networker nsradmin -p nsrexec Render .log from .raw cd /nsr/logs/ nsr_render_log -mepathy daemon.raw &amp;gt; daemon.log View most recent 25 entries in log tail -n 25 daemon.log View logging configuration From nsradmin shell:&#xA;print type: NSR log Update Runtime Loggging Location update runtime rendered log:/nsr/logs/daemon.</description>
+    </item>
+    <item>
+      <title>Networking</title>
+      <link>//localhost:1313///palimpsest/docs/notebooks/networks/networking/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/docs/notebooks/networks/networking/</guid>
+      <description>Organizations Internet Society - ISOC Internet Engineering Task Force - IETF Internet Architecture Board, IAB Internet Engineering Steering Group - IESG Internet Corporation for Assigned Names and Numbers - ICANN Internet Assigned Numbers Authority - IANA Standards IEEE LAN Standards 802. International Telecommunications Unions The ITU promotes and globally coordinates the use of the radio spectrum through standards and regulation.&#xA;H Series (e.g., H.323 - VoIP) V Series (e.g., V.9) X Series (e.</description>
+    </item>
+    <item>
+      <title>Packages</title>
+      <link>//localhost:1313///palimpsest/docs/notebooks/sysadmin/packages/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/docs/notebooks/sysadmin/packages/</guid>
+      <description>Intro What is a Package? An archive file format containing source code, executable files, and metadata used by a package manager.&#xA;What is a Package Manager? A tool to manage installed applications, automatically compute dependencies, and figure out what things should occur to install packages.&#xA;Debian-based (Debian, Ubuntu) Package Format .deb package format .snap (single, compressed filesystem)&#xA;Package Manager dpkg - can install .deb directly apt - works with software repos</description>
+    </item>
+    <item>
+      <title>Perlbrew</title>
+      <link>//localhost:1313///palimpsest/docs/notebooks/perlbrew/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/docs/notebooks/perlbrew/</guid>
+      <description> Get it curl -L https://install.perlbrew.pl | bash Add perlbrew to your PATH COMMAND CHEAT SHEET Initialize perlbrew init Get Crack&amp;rsquo;n perlbrew available perlbrew install 5.30.0 perlbrew list perlbrew switch 5.30.0 &amp;gt; set as default Turn it off completely. Useful when you messed up too deep. -perlbrew off&#xA;Install cpanm | a script to get, unpack, build and install modules from CPAN.&#xA;perlbrew install-cpanm cpanm Module::Name </description>
+    </item>
+    <item>
+      <title>PHP</title>
+      <link>//localhost:1313///palimpsest/docs/notebooks/php/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/docs/notebooks/php/</guid>
+      <description> PHP 8.2 Manual Packagist - PHP Package Repository PHP, the right way PHP, framework interop group </description>
+    </item>
+    <item>
+      <title>Postfix</title>
+      <link>//localhost:1313///palimpsest/docs/notebooks/postfix/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/docs/notebooks/postfix/</guid>
+      <description>Blacklist &amp;amp; Whitelist with Postfix 1. Create a file of IPs to blacklist - Postfix Reference Create a reject.cidr file in /etc/postfix. To it, add one or more problematic IPs or ranges from your logwatch reports, mail logs, email headers, etc.:&#xA;192.168.1.1 OK 192.168.0.0/16&#x9;REJECT 2001:db8::1&#x9;OK 2001:db8::/32&#x9;REJECT FROM THE DOCS - Rule order matters! Place specific whitelist entries before general blacklist entries.&#xA;2. Hash the reject.cidr file - Postfix Reference The reject.</description>
+    </item>
+    <item>
+      <title>PostgreSQL</title>
+      <link>//localhost:1313///palimpsest/docs/notebooks/databases/postgres/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/docs/notebooks/databases/postgres/</guid>
+      <description>First Steps Install PostgreSQL, preferably a pinned version brew install postgresql@10 If you don&amp;rsquo;t have one, get the psql client. brew install libpq libpq won&amp;rsquo;t install itself in the /usr/local/bin directory like other Homebrew applications. To make that happen, you need to run:&#xA;brew link --force libpq Start Postgres services brew services start postgresql Check brew info postgresql&#xA;Create a database, and&amp;hellip; createdb `first` Fix role &amp;ldquo;postgres&amp;rdquo; does not exist error</description>
+    </item>
+    <item>
+      <title>Python4Lib</title>
+      <link>//localhost:1313///palimpsest/docs/notebooks/python4lib/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/docs/notebooks/python4lib/</guid>
+      <description>Records https://github.com/kennethreitz/records Okay if you just want some tabular data in a single sheet OpenPyxl https://openpyxl.readthedocs.io/en/stable/ Manipulating xls, xlsx files XMLtoDict https://github.com/martinblech/xmltodict Paramiko http://docs.paramiko.org/en/2.4/api/sftp.html ftputil https://pypi.org/project/ftputil/ PyMarc https://github.com/edsu/pymarc pybibframe https://pypi.org/project/pybibframe/ CSV https://docs.python.org/3/library/csv.html Built in JSON https://docs.python.org/3/library/json.html Working With JSON Data in Python PyYAML https://pyyaml.org/wiki/PyYAMLDocumentation Psycops2 https://pypi.org/project/psycopg2/ PostgreSQL adaptor Shutil https://docs.python.org/3/library/shutil.html Shell util Fuzzy Wuzzy https://github.com/seatgeek/fuzzywuzzy pikepff https://github.com/pikepdf/pikepdf csvkit https://github.com/wireservice/csvkit </description>
+    </item>
+    <item>
+      <title>React.js</title>
+      <link>//localhost:1313///palimpsest/docs/notebooks/react/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/docs/notebooks/react/</guid>
+      <description>Some initial notes during the exploration of React.js JavaScript library.&#xA;Draft Everything on this page is in draft-mode. Expect errors, amendments, oversights, and corrections.&#xA;Quick Start Facebook&amp;rsquo;s create-react-app MDN web docs - JavaScript Compatibility checks with browser via Babel Reusable components! bit CONTENTdm Documentation CONTENTdm provides JavaScript Customization Docs to facilitate a general understanding of the React-based CONTENTdm application.&#xA;CSS Classes CSS Classes are broken down into the following classifications:</description>
+    </item>
+    <item>
+      <title>Samba</title>
+      <link>//localhost:1313///palimpsest/docs/notebooks/samba/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/docs/notebooks/samba/</guid>
+      <description>STEP 1 ## -------------------------- ## Set up Storage Block Disk ## -------------------------- # list block devices lsblk # Delete partitions and reboot sfdisk --delete /dev/sda # Write Files system mkfs.ext4 -j -L SambaStorage /dev/sda # List block ids blkid # update file system table vim /etc/fstab # mount all volumes in fs table mount -a # reboot reboot STEP 2 ## ------------------------- ## Install Samba ## ------------------------- # Install Samba apt-get install samba STEP 3 Update Samba Configuration to listen only to local network /etc/samba/smb.</description>
+    </item>
+    <item>
+      <title>Search Results</title>
+      <link>//localhost:1313///palimpsest/search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/search/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>sed &amp; awk</title>
+      <link>//localhost:1313///palimpsest/docs/notebooks/sysadmin/sed_awk/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/docs/notebooks/sysadmin/sed_awk/</guid>
+      <description>sed (stream editor) To perform an operation, use sed -i; otherwise, sed performs a dry-run.&#xA;You got 60+ logrotate configuration files in /etc/logrotate.d and you need to add the delaycompress directive, after the compress directive, to each of the files. The name of each configuration file that needs to be updated begins with ezproxy_. No problem!&#xA;sed &amp;#39;/compress/a\ delaycompress&amp;#39; ezproxy_* You&amp;rsquo;ve got 60+ Let&amp;rsquo;s Encrypt certificate .conf files that you need to increase the delay for propogation of the DNS TXT file challenge.</description>
+    </item>
+    <item>
+      <title>SIP2</title>
+      <link>//localhost:1313///palimpsest/docs/notebooks/sip/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/docs/notebooks/sip/</guid>
+      <description> NISO SIP 3M SIP2 Protocol pysip2-client Connect telnet cool-cat.org 6001 Format to pass credentials 9300CN&amp;lt;username&amp;gt;|CO&amp;lt;password&amp;gt;|CP&amp;lt;institutionid&amp;gt; 9300CNdz1|CO&amp;lt;password&amp;gt;|CPCOOL connection responses&#xA;941 # success 940 # failed Patron information request 6300320170218 201700 AO&amp;lt;institutionid&amp;gt;|AA&amp;lt;patronbarcode&amp;gt; </description>
+    </item>
+    <item>
+      <title>SQL</title>
+      <link>//localhost:1313///palimpsest/docs/notebooks/databases/sql/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/docs/notebooks/databases/sql/</guid>
+      <description>SQL (Structured Query Language) is used to manage data in a relational database management system.&#xA;Diagrams from ByteByteGo&#xA;Execution Order SQL Components Engineering relational databases required an understanding of the following components&#xA;DDL: (data definition language) syntax for creating and modifying database objects such as tables, indices, and users e.g., CREATE, ALTER, DROP DQL: (data query language) used for performing queries on the data within schema objects e.g., SELECT DML: (data manipulation language) used for adding (inserting), deleting, and modifying (updating) data e.</description>
+    </item>
+    <item>
+      <title>SSH</title>
+      <link>//localhost:1313///palimpsest/docs/notebooks/sysadmin/ssh/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/docs/notebooks/sysadmin/ssh/</guid>
+      <description> Generate Keys ed25519 ssh-keygen -t ed25519 Use an SSH config file: ~/.ssh/config </description>
+    </item>
+    <item>
+      <title>SSL</title>
+      <link>//localhost:1313///palimpsest/docs/notebooks/sysadmin/ssl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/docs/notebooks/sysadmin/ssl/</guid>
+      <description>The private key used to generate a CSR needs to match the private .key file placed on the server to match the .crt file.&#xA;X509 File Extensions Extension Description .der Binary DER encoded certificates. These files may also bear the CER or the CRT extension. .pem Extension is used for different types of X.509v3 files which contain ASCII (Base64) armored data prefixed with a “—– BEGIN …” line. .crt Used for certificates.</description>
+    </item>
+    <item>
+      <title>SysAdmin Tasks</title>
+      <link>//localhost:1313///palimpsest/docs/notebooks/sysadmin/sysadmin_tasks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/docs/notebooks/sysadmin/sysadmin_tasks/</guid>
+      <description>Convert PuTTY SSH2 Public Key to OpenSSH ssh-keygen -if ssh2publickey.pub &amp;gt;&amp;gt; opensshpublickey.pub Identify Responding Server curl -s -I sts.psychiatrist.com|sed -n &amp;#39;s/^S[erv]*: //p&amp;#39; Byte Order Mark (BOM) When EZproxy configuration files are edited in Microsoft NotePad, EZproxy will complain - upon restart - about the single byte character ï»¿ that begins the config.txt file. EZproxy expects UTF-8 encoding that does not start with a non-ASCII byte, like a BOM.&#xA;Using vim, does current file have a BOM?</description>
+    </item>
+    <item>
+      <title>UFW</title>
+      <link>//localhost:1313///palimpsest/docs/notebooks/sysadmin/ufw/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/docs/notebooks/sysadmin/ufw/</guid>
+      <description>Intro The default firewall configuration tool for Ubuntu is ufw. Developed to ease iptables firewall configuration, ufw provides a user-friendly way to create an IPv4 or IPv6 host-based firewall.&#xA;Once a rule is matched the others will not be evaluated. Putting the specific rules first and any generic rules second is expected. As rules change you may need to delete old rules to ensure that new rules are put in the proper order</description>
+    </item>
+    <item>
+      <title>Yaz</title>
+      <link>//localhost:1313///palimpsest/docs/notebooks/yaz/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313///palimpsest/docs/notebooks/yaz/</guid>
+      <description>Install Homebrew&#xA;/usr/bin/ruby -e &amp;#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;#34; Install Yaz&#xA;brew install yaz Read the YAZ Docs, find a z39.50 target, review bib-1 attribute set, and give it a whirl.&#xA;# start Yaz connection to Library of Congress z39.50 # z39.50 server is running on port 7090, via voyager yaz-client z3950.loc.gov:7090/voyager # open the connection for searching open z3950.loc.gov:7090/voyager # Send a boolean query find @and cats hot # Use Bib-1 Attributes (find &amp;#34;&amp;#34; in 245) find @attr 1=4 &amp;#34;rocco di pietro&amp;#34; # Use Bib-1 Attributes to search ISBN find @attr 1=7 &amp;#34;9780674015432&amp;#34; # Return one record s 1 # Change record format format xml format marc21 # Display client settings list_all # capture records in file set_marcdump /Users/Derek/Desktop/download.</description>
+    </item>
   </channel>
 </rss>
