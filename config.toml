@@ -1,5 +1,5 @@
 baseURL = "/palimpsest/"
-publishDir = "docs"
+#publishDir = "docs"
 
 # ----------------------------------------------------------------------------------
 # Language settings - See LANGUAGE below
