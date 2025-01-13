@@ -55,6 +55,33 @@ openssl rsa -noout -modulus -in some-domain.key | openssl md5
 ```
 
 #### General
+
+**Remember** from RFC5246: The server will select a cipher suite or, if no acceptable choices are presented, 
+return a handshake failure alert and close the connection.
+
+```bash
+# Check Version
+openssl version -a
+
+# Help Files 
+openssl help
+openssl help md4
+
+# Can I connect?
+openssl s_client -connect www.derekzoladz.com:443 -brief 
+
+# ... with a specific version of TLS?
+openssl s_client -connect www.derekzoladz.com:443 -tls1_3
+
+# Are the certificates expired? Do they cover the appropriate names?
+openssl s_client -connect www.derekzoladz.com:443 2>/dev/null | openssl x509 -noout -dates
+openssl s_client -connect www.derekzoladz.com:443 2>/dev/null | openssl x509 -noout -ext subjectAltName
+
+# What cipher suites are offered?
+nmap --script ssl-enum-ciphers -p 443 www.derekzoladz.com
+```
+
+#### Available Entropy
  
 - Check Available Entropy (0 - 4096): `cat /proc/sys/kernel/random/entropy_avail`
 - Watch Available Entropy: `watch -n .1 cat /proc/sys/kernel/random/entropy_avail`
