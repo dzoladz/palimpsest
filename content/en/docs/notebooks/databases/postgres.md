@@ -49,53 +49,54 @@ createuser -s postgres
 - Run psql client as user postgres - `psql -U postgres`
 - Connect to local postgres database as a specific user - `psql -h localhost -U <postgres_user> <database>``
 
-#### Quick Start
-- `\?` - List all available commands
-- `\q` - Quit/Exit
-- `\l` - List databases
-- `\c <database>` - Connect to a database
+## PSQL Commands
 
+|                 |                                           |
+|-----------------|-------------------------------------------|
+| Command         | Description                               |
+| `\?`            | List all available commands               |
+| `\q`            | Quit/Exit                                 |
+| `\l`            | List databases                            |
+| `\c <database>` | Connect to a database                     |
+| `\du`           | List all users                            |
+| `\d`            | List tables                               |
+| `\d <table>`    | Show table definition, including triggers |
+| `\d+ <table>`   | Show additional info about a table        |
+| `\dy`           | List events                               |
+| `\df`           | List functions                            |
+| `\di`           | List indexes                              |
+| `\dn`           | List schemas                              |
+| `\dv`           | List views                                |
+| `\dx`           | List extensions                           |
+| `\e`            | Open default text editor in psql shell    |
+| `\timing`       | Turn on query timing                      |
+| `\x`            | Pretty-format query results               |
 
-#### Up and Running, Informational
-- `\d` - List tables
-- `\d <table>` - Show table definition, including triggers
-- `\d+ <table>` - Show additional info about a table
+It's also possible to export a table as CSV
 
-- `\dy` - List events
-- `\df` - List functions
-- `\di` - List indexes
-- `\dn` - List schemas
-- `\dv` - List views
-- `\e` - Open default text editor in psql shell
-- `\copy (SELECT * FROM __table_name__) TO 'file_path_and_name.csv' WITH CSV` - Export a table as CSV
-
-#### Settings
-- `\timing` - Turn on query timing
-- `\x` - Pretty-format query results
+```psql
+\copy (SELECT * FROM __table_name__) TO 'file_path_and_name.csv' WITH CSV
+```
 
 ## Backup and Restore
 
-#### Backup, plain text
-- `pg_dump <dbname> > db.sql` - plain text
-
-#### Backup, for persistence and storage
-- `pg_dump -Fc <dbname> > db.bak` - compressed binary format
-- `pg_dump -Ft <dbname> > db.tar` - tarball format
-
-#### Restore
-If the database already exists,
-- `pg_restore -Fc db.bak` - restore compressed binary format
-- `pg_restore -Ft db.tar` - restore tarball format
+|                                     |                                                |
+|-------------------------------------|------------------------------------------------|
+| Command                             | Description                                    |
+| `pg_dump <dbname> > db.sql`         | Dump database to stdout                        |
+| `pg_dump -Fc <dbname> > db.sql.bin` | Dump database to a compressed binary file      |
+| `pg_dump -Ft <dbname> > db.tar`     | Dump database to a tarball file                |
+| `pg_restore -Fc <dbname>`           | Restore database from a compressed binary file |
+| `pg_restore -Ft <dbname>`           | Restore database from a tarball file           |
 
 If creating the database new from a dump, you'll need to add the `-C` flag.
 
-#### Import, as a new database
+### Import, as a new database
 Create the database
 - `createdb -T template0 <dbname>`
 
 Import database from dump
 - `pg_restore --clean --no-owner --verbose -d <dbname> db.bak` -
-
 
 ## Database Commands, outside of psql
 
@@ -107,3 +108,15 @@ Import database from dump
 
 - Create database `CREATE DATABASE <database>`
 - Remove database `DROP DATABASE <database>`
+
+## Resolve collation mismatch
+
+If you get the following error when connecting to a database:
+
+> WARNING:  database "postgres" has a collation version mismatch
+> DETAIL:  The database was created using collation version 2.39, but the operating system provides version 2.43.
+
+Execute the following commands:
+
+1. `REINDEX DATABASE <dbname>;`
+2. `ALTER DATABASE <dbname> REFRESH COLLATION VERSION;`
